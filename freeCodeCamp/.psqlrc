@@ -1,0 +1,3 @@
+\out | tee ~/project/freeCodeCamp/test/queryResults.log
+\pset title ' '
+\pset pager off
