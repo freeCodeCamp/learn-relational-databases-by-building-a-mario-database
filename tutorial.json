@@ -1,0 +1,63 @@
+{
+  "version": "0.1.0",
+  "summary": {
+    "title": "Introduction",
+    "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
+  },
+  "config": {
+    "testRunner": {
+      "command": "./node_modules/.bin/mocha",
+      "args": {
+        "tap": "--reporter=mocha-tap-reporter"
+      },
+      "setup": {
+        "commands": [
+          "npm install",
+          "cd / && sudo chmod 777 home && cd home && sudo chmod 777 strove && cd strove && sudo chmod 777 project && cd project && sudo chmod 777 coderoad && cd coderoad && sudo chmod 777 test && cd test && sudo chmod 777 pg.log",
+          "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
+        ],
+        "commits": [
+          "5236eb1e8142a910aa1cf522dfb9fa6c1cd0ce3c"
+        ]
+      },
+      "directory": "coderoad"
+    },
+    "repo": {
+      "uri": "https://github.com/moT01/sql-1",
+      "branch": "v0.1.0"
+    },
+    "dependencies": [
+      {
+        "name": "node",
+        "version": ">=10"
+      }
+    ]
+  },
+  "levels": [
+    {
+      "id": "L10",
+      "steps": [
+        {
+          "id": "L10S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "0dcba7ced917d0ab0e43c439a892f29b84e7ddf8"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "5ab10d01ddd6cafde91946c3c3cb2d2b1f7343cb"
+            ]
+          },
+          "content": "Start the PostgreSQL service"
+        }
+      ],
+      "title": "Start PostgreSQL",
+      "summary": "The first thing to do is start the database service so you can log in and pla...",
+      "content": "The first thing to do is start the database service so you can log in and play around with it. Your virtual machine comes with PostgreSQL (psql) installed. In order to start it, type this command into the terminal:\n\n```bash\nsudo service postgresql start\n```"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+version: '0.1.0'
+config:
+  testRunner:
+    command: ./node_modules/.bin/mocha
+    args:
+      tap: --reporter=mocha-tap-reporter
+    setup:
+      commands:
+        # run npm install in coderoad folder on load to install testing dependecies
+        - npm install
+        # update permissions to tree in strove
+        - cd / && sudo chmod 777 home && cd home && sudo chmod 777 strove && cd strove && sudo chmod 777 project && cd project && sudo chmod 777 coderoad && cd coderoad && sudo chmod 777 test && cd test && sudo chmod 777 pg.log
+        # change psql configs and connections allowed
+        - cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo "log_statement = 'all'" >> postgresql.conf && echo "log_min_error_statement = INFO" >> postgresql.conf && echo "log_min_messages = INFO" >> postgresql.conf && echo "logging_collector = on" >> postgresql.conf && echo "log_directory = '/home/strove/project/coderoad/test'" >> postgresql.conf && echo "log_filename = 'pg.log'" >> postgresql.conf && echo "log_connections = on" >> postgresql.conf && echo "log_line_prefix = ''" >> postgresql.conf && sudo sed -i "s/host    all             all             127.0.0.1\/32            md5/host    all             all             127.0.0.1\/32            trust/" pg_hba.conf
+    directory: coderoad
+  repo: 
+    uri: https://github.com/moT01/sql-1
+    branch: v0.1.0
+  dependencies:
+    - name: node
+      version: '>=10'
+levels:
+  - id: L10
+    steps:
+      - id: L10S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
+  - id: L20
+    steps:
+      - id: L20S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
