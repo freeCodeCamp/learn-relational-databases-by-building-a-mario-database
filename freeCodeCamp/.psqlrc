@@ -1,0 +1,5 @@
+\pset title " "
+\set ECHO all
+\pset border 2
+\pset pager off
+\out | tee ~/project/freeCodeCamp/test/queryResults.log
