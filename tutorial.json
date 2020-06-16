@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": {
     "title": "Introduction",
     "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
@@ -17,14 +17,14 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
         ],
         "commits": [
-          "5236eb1e8142a910aa1cf522dfb9fa6c1cd0ce3c"
+          "a2fcb71e0c58ab9684551968b72757c0f1a73724"
         ]
       },
       "directory": "coderoad"
     },
     "repo": {
       "uri": "https://github.com/moT01/sql-1",
-      "branch": "v0.1.0"
+      "branch": "v0.1.1"
     },
     "dependencies": [
       {
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "0dcba7ced917d0ab0e43c439a892f29b84e7ddf8"
+              "b84196fe82bf8811e9b09aa291614cd470511d30"
             ]
           },
           "solution": {
             "commits": [
-              "5ab10d01ddd6cafde91946c3c3cb2d2b1f7343cb"
+              "ab32919aa184de1ea5acb1e3908df4c21fc905bc"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -58,6 +58,231 @@
       "title": "Start PostgreSQL",
       "summary": "The first thing to do is start the database service so you can log in and pla...",
       "content": "The first thing to do is start the database service so you can log in and play around with it. Your virtual machine comes with PostgreSQL (psql) installed. In order to start it, type this command into the terminal:\n\n```bash\nsudo service postgresql start\n```"
+    },
+    {
+      "id": "L20",
+      "steps": [
+        {
+          "id": "L20S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "7c1a9da1ff08d466be716619326f0749a49c83fc"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "41765021f08c945dd08144ea8397c6549ebce22f"
+            ]
+          },
+          "content": "Log in to psql"
+        }
+      ],
+      "title": "Login",
+      "summary": "The psql service is now running. In order to interact with it, you need to lo...",
+      "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\nsudo -u postgres psql\n```\n\nThe `-u` stand for `username`. This will log you in as `postgres`."
+    },
+    {
+      "id": "L30",
+      "steps": [
+        {
+          "id": "L30S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "ab4c9f3fa87b0a8fa555cacffe4b5bacd3321dcb"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "16ab316c031ca3eb7cf1a989a1eae8127cb2cd8f"
+            ]
+          },
+          "content": "List the databases"
+        }
+      ],
+      "title": "View Databases",
+      "summary": "I noticed the prompt changed to `postgres=#`. That must mean you are connecte...",
+      "content": "I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.\n\nType `\\l` into the prompt to **l**ist them.\n\nIf you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again."
+    },
+    {
+      "id": "L40",
+      "steps": [
+        {
+          "id": "L40S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "b082445c54e523e277e71937e30c65aad0cf919c"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "a4f0b98243cc93c535d223dee6c3a853ed11bef8"
+            ]
+          },
+          "content": "Create `first_database`"
+        }
+      ],
+      "title": "Create `first_database`",
+      "summary": "The databases you see come with psql. You want to make your own. The command ...",
+      "content": "The databases you see come with psql. You want to make your own. The command to create a new database is:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**\n\nCreate a new database named `first_database`."
+    },
+    {
+      "id": "L50",
+      "steps": [
+        {
+          "id": "L50S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "3d5fa23f242b180f3afb918f476f5ebc48b604b8"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "d572a5885db53fefc2c8cc181910120d4412a181"
+            ]
+          },
+          "content": "View the databases"
+        }
+      ],
+      "title": "View `first_database`",
+      "summary": "Use the **l**ist command again to make sure your new database is there.",
+      "content": "Use the **l**ist command again to make sure your new database is there.\n\nHints:\n* Enter the `\\l` command"
+    },
+    {
+      "id": "L60",
+      "steps": [
+        {
+          "id": "L60S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "594d2dcf21eee5b242d26e5cabc5ced83beeb6c2"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "e0fd2953549fa3fcb18752c592c59399720ca901"
+            ]
+          },
+          "content": "Create `second_database`"
+        }
+      ],
+      "title": "Create `second_database`",
+      "summary": "It worked. If you don't get a message after entering a command, it means it's...",
+      "content": "It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command.\n\nCreate another database named `second_database`.\n\nHints:\n* Here's the example again: `CREATE DATABASE database_name;`\n* Try entering `CREATE DATABASE second_database;`"
+    },
+    {
+      "id": "L70",
+      "steps": [
+        {
+          "id": "L70S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "43107204bca8b3b802992d478ef7d680044009e1"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "e98039b96afd3411f958354089d7b937e11f52ef"
+            ]
+          },
+          "content": "View the databases"
+        }
+      ],
+      "title": "View Databases",
+      "summary": "You should have two new databases. Take another look at them to make sure.",
+      "content": "You should have two new databases. Take another look at them to make sure.\n\nHints:\n* Use the **l**ist shortcut command\n* Try entering `\\l`"
+    },
+    {
+      "id": "L80",
+      "steps": [
+        {
+          "id": "L80S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "0885dda07aa31d523ac65cf8af93c43dc28abbe5"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "948bafbb0ea11637ea60fdd5248cc9adc48b4950"
+            ]
+          },
+          "content": "Connect to `second_database`"
+        }
+      ],
+      "title": "Connect to `second_database`",
+      "summary": "You can **c**onnect to a database by entering `\\c database_name`. You need to...",
+      "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information to it.\n\nConnect to your `second_database`.\n\nHints:\n* Enter `\\c second_database` to connect"
+    },
+    {
+      "id": "L90",
+      "steps": [
+        {
+          "id": "L90S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "d2f8c60b439ad8fe6c2e489a9b5037815c36339a"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "cb9ce5087b9c2cef773404359090e84c7152249c"
+            ]
+          },
+          "content": "View tables in `second_database`"
+        }
+      ],
+      "title": "View `second_database` Tables",
+      "summary": "You should see a message that you are connected. I noticed the prompt changed...",
+      "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database.\n\nA database is made of tables that hold your data. You can enter `\\d` to **d**isplay the tables.\n\nTake a look at what tables are in this database.\n\nHints:\n* Try entering `\\d`"
+    },
+    {
+      "id": "L100",
+      "steps": [
+        {
+          "id": "L100S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "183ef4fcbd72af78bd951c97ce5b9aecaf3e0b1b"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "32359f1a115dc2e0f83e9e31bfda7862fff9b8d7"
+            ]
+          },
+          "content": "Create a table named `first_table`"
+        }
+      ],
+      "title": "Create `first_table`",
+      "summary": "You can create a table similar to how you created a database. Instead of `CRE...",
+      "content": "You can create a table similar to how you created a database. Instead of `CREATE DATABASE database_name;`, use `CREATE TABLE table_name();`. Note that the parenthesis are needed for this one.\n\nHints:\n* Don't forget the semi-colon\n* Try entering `CREATE TABLE first_table();`"
     }
   ]
 }
