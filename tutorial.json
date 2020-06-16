@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": {
     "title": "Introduction",
     "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
@@ -17,14 +17,14 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
         ],
         "commits": [
-          "a2fcb71e0c58ab9684551968b72757c0f1a73724"
+          "efc052e519574d4c1d6237bd491dc8d263bf62f9"
         ]
       },
       "directory": "coderoad"
     },
     "repo": {
       "uri": "https://github.com/moT01/sql-1",
-      "branch": "v0.1.1"
+      "branch": "v0.1.2"
     },
     "dependencies": [
       {
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "b84196fe82bf8811e9b09aa291614cd470511d30"
+              "8ed3379b56b064c79761ca54ade16984801829b0"
             ]
           },
           "solution": {
             "commits": [
-              "ab32919aa184de1ea5acb1e3908df4c21fc905bc"
+              "d90b2cd1067743d9de675f4b04fde23f0ce66cf3"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -69,12 +69,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "7c1a9da1ff08d466be716619326f0749a49c83fc"
+              "1c57e80623cdbc1f67969b393b5460cb5ad45d19"
             ]
           },
           "solution": {
             "commits": [
-              "41765021f08c945dd08144ea8397c6549ebce22f"
+              "b45ae9c2ce9cec9554bd6aff7bebf8aeca05dad1"
             ]
           },
           "content": "Log in to psql"
@@ -94,12 +94,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "ab4c9f3fa87b0a8fa555cacffe4b5bacd3321dcb"
+              "fba4451e7d97ea6999a5d25d7214960cb7b99b6d"
             ]
           },
           "solution": {
             "commits": [
-              "16ab316c031ca3eb7cf1a989a1eae8127cb2cd8f"
+              "c1384977be45f7030b4b9eaade549fbe54407574"
             ]
           },
           "content": "List the databases"
@@ -119,12 +119,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "b082445c54e523e277e71937e30c65aad0cf919c"
+              "473ea66e5c0c8bd6fda1220293246742a9560d0e"
             ]
           },
           "solution": {
             "commits": [
-              "a4f0b98243cc93c535d223dee6c3a853ed11bef8"
+              "6c8df0f46068317198aced65e42bf0fc46642bc3"
             ]
           },
           "content": "Create `first_database`"
@@ -144,12 +144,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "3d5fa23f242b180f3afb918f476f5ebc48b604b8"
+              "f89280c7775699eaac518bc3287054441330521d"
             ]
           },
           "solution": {
             "commits": [
-              "d572a5885db53fefc2c8cc181910120d4412a181"
+              "82136db4c818371edfd077b1846b6a8d778cf2d2"
             ]
           },
           "content": "View the databases"
@@ -169,12 +169,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "594d2dcf21eee5b242d26e5cabc5ced83beeb6c2"
+              "736d4c9cea6b5aa52a19eb1fe25355a6f9468f6f"
             ]
           },
           "solution": {
             "commits": [
-              "e0fd2953549fa3fcb18752c592c59399720ca901"
+              "9dcb876ef174d031f3b34992a5bbc5b1a76b5f1f"
             ]
           },
           "content": "Create `second_database`"
@@ -194,12 +194,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "43107204bca8b3b802992d478ef7d680044009e1"
+              "e175fe4d3f304ce38d7c6f8c87b1d5dda76b1d25"
             ]
           },
           "solution": {
             "commits": [
-              "e98039b96afd3411f958354089d7b937e11f52ef"
+              "dac02f2ae7407a6c825e267894283aea4cbcd55a"
             ]
           },
           "content": "View the databases"
@@ -219,12 +219,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "0885dda07aa31d523ac65cf8af93c43dc28abbe5"
+              "eab415d87e725910216786ab8e1e894aa8a5b75e"
             ]
           },
           "solution": {
             "commits": [
-              "948bafbb0ea11637ea60fdd5248cc9adc48b4950"
+              "6ac53abb6b8636e98cfa707f561af377729b892c"
             ]
           },
           "content": "Connect to `second_database`"
@@ -244,12 +244,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "d2f8c60b439ad8fe6c2e489a9b5037815c36339a"
+              "ac230d6c69a46a1ab2707561420e149d3b2aa999"
             ]
           },
           "solution": {
             "commits": [
-              "cb9ce5087b9c2cef773404359090e84c7152249c"
+              "55285370e24491e48a1532ede0b0f9f9d053efda"
             ]
           },
           "content": "View tables in `second_database`"
@@ -269,12 +269,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "183ef4fcbd72af78bd951c97ce5b9aecaf3e0b1b"
+              "ab550fdfec725b2d9cde3be0b5facd24db22c78c"
             ]
           },
           "solution": {
             "commits": [
-              "32359f1a115dc2e0f83e9e31bfda7862fff9b8d7"
+              "2e92384e1e8c5c3a7a5be62abb6071e32a856a8b"
             ]
           },
           "content": "Create a table named `first_table`"
