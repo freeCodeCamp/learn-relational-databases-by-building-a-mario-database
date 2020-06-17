@@ -56,3 +56,9 @@ levels:
         setup:
           watchers:
             - ./coderoad/test/pg.log
+  - id: L70
+    steps:
+      - id: L70S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log

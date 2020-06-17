@@ -82,3 +82,16 @@ Create `second_database`
 
 - Here's the example again: `CREATE DATABASE database_name;`
 - Try entering `CREATE DATABASE second_database;`
+
+## L70 View Databases
+
+You should have two new databases. Take another look at them to make sure.
+
+### L70S1
+
+View the databases
+
+#### HINTS
+
+- Use the **l**ist shortcut command
+- Try entering `\l`
