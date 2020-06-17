@@ -1,4 +1,4 @@
-version: '0.1.3'
+version: '0.2.0'
 config:
   testRunner:
     command: ./node_modules/.bin/mocha
@@ -15,7 +15,7 @@ config:
     directory: coderoad
   repo:
     uri: https://github.com/moT01/sql-1
-    branch: v0.1.3
+    branch: v0.2.0
   dependencies:
     - name: node
       version: '>=10'
@@ -47,6 +47,12 @@ levels:
   - id: L50
     steps:
       - id: L50S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
+  - id: L60
+    steps:
+      - id: L60S1
         setup:
           watchers:
             - ./coderoad/test/pg.log

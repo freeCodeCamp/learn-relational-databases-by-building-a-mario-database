@@ -67,3 +67,18 @@ View the databases
 #### HINTS
 
 - Enter the `\l` command
+
+## L60 Create `second_database`
+
+It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command.
+
+Create another database named `second_database`.
+
+### L60S1
+
+Create `second_database`
+
+#### HINTS
+
+- Here's the example again: `CREATE DATABASE database_name;`
+- Try entering `CREATE DATABASE second_database;`
