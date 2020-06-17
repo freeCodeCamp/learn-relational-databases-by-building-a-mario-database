@@ -17,7 +17,7 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
         ],
         "commits": [
-          "a03f7863beb16664f3ea479007836685def570a4"
+          "eb400d3190c58f28111edc17d25305b89f5b2898"
         ]
       },
       "directory": "coderoad"
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "fed9f0d52b4b7f729af240b9d87f074aaac10385"
+              "6a55408d11636bffcfedd0c90abce8903df2167f"
             ]
           },
           "solution": {
             "commits": [
-              "f2b19adc72e602d328b8b9beb8b5fe5bac18634c"
+              "be8ace9395ecca10e599c88655066ef90b7a59f2"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -69,12 +69,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "845d1d6083e9e4f0d69fef99f575d4594c285fc0"
+              "a318fd50a1d70e446d28a176aaafd32be602e9c9"
             ]
           },
           "solution": {
             "commits": [
-              "c9f14a52074c289f71a5dee9bd1c8f232ac99412"
+              "17f11d38bd73a2a79d28dc24b15aa93cc6d6f6d1"
             ]
           },
           "content": "Log in to psql"
@@ -94,12 +94,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "f51336aaeb4ef0e5428b3cb425da903a512bef00"
+              "7818b316af5666039f3c9b8e7aedd35b6b67c489"
             ]
           },
           "solution": {
             "commits": [
-              "5df04e653840ac24489e0b44c6dd369951aabf53"
+              "cf4457693a36789cf323cb86ee6cbf9c04732894"
             ]
           },
           "content": "List the databases"
@@ -108,6 +108,56 @@
       "title": "View Databases",
       "summary": "I noticed the prompt changed to `postgres=#`. That must mean you are connecte...",
       "content": "I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.\n\nType `\\l` into the prompt to **l**ist them.\n\nIf you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again."
+    },
+    {
+      "id": "L40",
+      "steps": [
+        {
+          "id": "L40S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "0829c137341ae6328702a424b37c695691e52778"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "1612d9e4db612c17fd598ee63b388b720363016c"
+            ]
+          },
+          "content": "Create `first_database`"
+        }
+      ],
+      "title": "Create `first_database`",
+      "summary": "The databases you see come with psql. You want to make your own. The command ...",
+      "content": "The databases you see come with psql. You want to make your own. The command to create a new database is:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**\n\nCreate a new database named `first_database`."
+    },
+    {
+      "id": "L50",
+      "steps": [
+        {
+          "id": "L50S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "385fe88e4c43c9d6ee21c218a68d779777dd6dee"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "787034badc9717cd1d7cf541df9c7e691057525e"
+            ]
+          },
+          "content": "View the databases"
+        }
+      ],
+      "title": "View `first_database`",
+      "summary": "Use the **l**ist command again to make sure your new database is there.",
+      "content": "Use the **l**ist command again to make sure your new database is there."
     }
   ]
 }
