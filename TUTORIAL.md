@@ -13,3 +13,17 @@ sudo service postgresql start
 ### L10S1
 
 Start the PostgreSQL service
+
+## L20 Login
+
+The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:
+
+```bash
+sudo -u postgres psql
+```
+
+The `-u` stand for `username`. This will log you in as `postgres`.
+
+### L20S1
+
+Log in to psql

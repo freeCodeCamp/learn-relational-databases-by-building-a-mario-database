@@ -26,3 +26,9 @@ levels:
         setup:
           watchers:
             - ./coderoad/test/pg.log
+  - id: L20
+    steps:
+      - id: L20S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
