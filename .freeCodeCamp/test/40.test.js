@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'postgres';
@@ -21,4 +21,4 @@ describe('You', () => {
       await client.end();
     }
   });
-});
+});*/
