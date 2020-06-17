@@ -40,7 +40,9 @@
         {
           "id": "L10S1",
           "setup": {
-            "subtasks": false,
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
             "commits": [
               "34a2e25d663f20aa733d93169325c3d2c25460c7"
             ]
@@ -113,9 +115,7 @@
         {
           "id": "L40S1",
           "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
+            "subtasks": false,
             "commits": [
               "08580c3a34567c4096ca50bcf5af2aa41eb0fb06"
             ]
