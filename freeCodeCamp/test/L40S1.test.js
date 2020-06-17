@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { client } = require('./utils');
 
 describe('You', () => {
@@ -15,6 +15,6 @@ describe('You', () => {
       await client.end();
     }
   });
-});
+});*/
 
 // solution
