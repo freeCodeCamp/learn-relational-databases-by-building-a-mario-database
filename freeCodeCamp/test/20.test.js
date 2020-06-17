@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastLog } = require('./utils');
 
 describe('You', () => {
@@ -11,4 +11,4 @@ describe('You', () => {
     const re = /connectionauthorized:user=freecodecampdatabase=postgresapplication_name=psql/;
     assert(re.test(lastLog));
   });
-});
+});*/
