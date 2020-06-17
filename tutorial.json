@@ -1,12 +1,12 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": {
     "title": "Introduction",
     "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
   },
   "config": {
     "testRunner": {
-      "command": "npm run programmatic-test",
+      "command": "./node_modules/.bin/mocha",
       "args": {
         "tap": "--reporter=mocha-tap-reporter"
       },
@@ -24,7 +24,7 @@
     },
     "repo": {
       "uri": "https://github.com/moT01/sql-1",
-      "branch": "v0.1.2"
+      "branch": "v0.1.3"
     },
     "dependencies": [
       {
@@ -58,106 +58,6 @@
       "title": "Start PostgreSQL",
       "summary": "The first thing to do is start the database service so you can log in and pla...",
       "content": "The first thing to do is start the database service so you can log in and play around with it. Your virtual machine comes with PostgreSQL (psql) installed. In order to start it, type this command into the terminal:\n\n```bash\nsudo service postgresql start\n```"
-    },
-    {
-      "id": "L20",
-      "steps": [
-        {
-          "id": "L20S1",
-          "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
-            "commits": [
-              "e8046a87aeed7937c46725ada4d12e198903bb68"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "2ba2a7d57ade641a91046d8f9691878ea0eb034a"
-            ]
-          },
-          "content": "Log in to psql"
-        }
-      ],
-      "title": "Login",
-      "summary": "The psql service is now running. In order to interact with it, you need to lo...",
-      "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\nsudo -u postgres psql\n```\n\nThe `-u` stand for `username`. This will log you in as `postgres`."
-    },
-    {
-      "id": "L30",
-      "steps": [
-        {
-          "id": "L30S1",
-          "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
-            "commits": [
-              "9be7c3d0565f7e368513de4a0e2c63e9b7a6181c"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "adccc97cadb790c68f1a5b55d72d771ff1dc1d75"
-            ]
-          },
-          "content": "List the databases"
-        }
-      ],
-      "title": "View Databases",
-      "summary": "I noticed the prompt changed to `postgres=#`. That must mean you are connecte...",
-      "content": "I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.\n\nType `\\l` into the prompt to **l**ist them.\n\nIf you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again."
-    },
-    {
-      "id": "L40",
-      "steps": [
-        {
-          "id": "L40S1",
-          "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
-            "commits": [
-              "32ffc316b118358b72e90ffbac1cc86d67c2aecb"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "0006e7c0557bf38df8616728069cab2847d23493"
-            ]
-          },
-          "content": "Create `first_database`"
-        }
-      ],
-      "title": "Create `first_database`",
-      "summary": "The databases you see come with psql. You want to make your own. The command ...",
-      "content": "The databases you see come with psql. You want to make your own. The command to create a new database is:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**\n\nCreate a new database named `first_database`."
-    },
-    {
-      "id": "L50",
-      "steps": [
-        {
-          "id": "L50S1",
-          "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
-            "commits": [
-              "e2f60a3c3f9dae9a23d09f8ff2230f4277334304"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "0a51f482e007f2d854d1b7da340ffb16acfea194"
-            ]
-          },
-          "content": "View the databases"
-        }
-      ],
-      "title": "View `first_database`",
-      "summary": "Use the **l**ist command again to make sure your new database is there.",
-      "content": "Use the **l**ist command again to make sure your new database is there.\n\nHints:\n\n- Enter the `\\l` command"
     }
   ]
 }
