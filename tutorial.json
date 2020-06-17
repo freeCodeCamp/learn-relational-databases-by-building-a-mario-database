@@ -17,7 +17,7 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
         ],
         "commits": [
-          "c8b31c5925e9ff6d8ae0a3eb0ea594c8d5352c78"
+          "a03f7863beb16664f3ea479007836685def570a4"
         ]
       },
       "directory": "coderoad"
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "7db2458adb7a5136cf3372f65820dddabdefa50a"
+              "fed9f0d52b4b7f729af240b9d87f074aaac10385"
             ]
           },
           "solution": {
             "commits": [
-              "bdaf07f2172d6dbdecc5389215543d6d81eb46b6"
+              "f2b19adc72e602d328b8b9beb8b5fe5bac18634c"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -69,12 +69,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "9e922f5ab0269fadc05b6dc7b57668fc9b4a801b"
+              "845d1d6083e9e4f0d69fef99f575d4594c285fc0"
             ]
           },
           "solution": {
             "commits": [
-              "9f7f4431fb82c944fc3def749eab474314a3ee2c"
+              "c9f14a52074c289f71a5dee9bd1c8f232ac99412"
             ]
           },
           "content": "Log in to psql"
@@ -83,6 +83,31 @@
       "title": "Login",
       "summary": "The psql service is now running. In order to interact with it, you need to lo...",
       "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\nsudo -u postgres psql\n```\n\nThe `-u` stand for `username`. This will log you in as `postgres`."
+    },
+    {
+      "id": "L30",
+      "steps": [
+        {
+          "id": "L30S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "f51336aaeb4ef0e5428b3cb425da903a512bef00"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "5df04e653840ac24489e0b44c6dd369951aabf53"
+            ]
+          },
+          "content": "List the databases"
+        }
+      ],
+      "title": "View Databases",
+      "summary": "I noticed the prompt changed to `postgres=#`. That must mean you are connecte...",
+      "content": "I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.\n\nType `\\l` into the prompt to **l**ist them.\n\nIf you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again."
     }
   ]
 }

@@ -39,3 +39,19 @@ If you don't see the prompt at the bottom after listing, it means there wasn't e
 ### L30S1
 
 List the databases
+
+## L40 Create `first_database`
+
+The databases you see come with psql. You want to make your own. The command to create a new database is:
+
+```sql
+CREATE DATABASE database_name;
+```
+
+The capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**
+
+Create a new database named `first_database`.
+
+### L40S1
+
+Create `first_database`
