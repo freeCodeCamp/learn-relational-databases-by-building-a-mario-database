@@ -12,6 +12,7 @@
       },
       "setup": {
         "commands": [
+          "mkdir test",
           "npm install",
           "cd / && sudo chmod 777 home && cd home && sudo chmod 777 strove && cd strove && sudo chmod 777 project && cd project && sudo chmod 777 coderoad && cd coderoad && sudo chmod 777 test && cd test && sudo chmod 777 pg.log",
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
@@ -183,6 +184,31 @@
       "title": "Create `second_database`",
       "summary": "It worked. If you don't get a message after entering a command, it means it's...",
       "content": "It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command.\n\nCreate another database named `second_database`."
+    },
+    {
+      "id": "L70",
+      "steps": [
+        {
+          "id": "L70S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "a8fca11c0dc5b729e0ae6920b6e016817e2246d8"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "3f96989cff6f39de8d0a76be2217d3291b2b4d2a"
+            ]
+          },
+          "content": "View the databases"
+        }
+      ],
+      "title": "View Databases",
+      "summary": "You should have two new databases. Take another look at them to make sure.",
+      "content": "You should have two new databases. Take another look at them to make sure."
     }
   ]
 }

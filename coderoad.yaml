@@ -6,7 +6,7 @@ config:
       tap: --reporter=mocha-tap-reporter
     setup:
       commands:
-        - mkdir test
+        - mkdir test2
         # run npm install in coderoad folder on load to install testing dependecies
         - npm install
         # update permissions to tree in strove
