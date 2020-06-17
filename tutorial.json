@@ -17,7 +17,7 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/host    all             all             127.0.0.1\\/32            md5/host    all             all             127.0.0.1\\/32            trust/\" pg_hba.conf"
         ],
         "commits": [
-          "4aa9f0b0b075c3d77a245fadd3ee52075b85cc92"
+          "c8b31c5925e9ff6d8ae0a3eb0ea594c8d5352c78"
         ]
       },
       "directory": "coderoad"
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "ba3695eee569be50fae6331431a2bf8954736bc1"
+              "7db2458adb7a5136cf3372f65820dddabdefa50a"
             ]
           },
           "solution": {
             "commits": [
-              "8111a4ea04a54d846a2f41d03e9af2e430449cfa"
+              "bdaf07f2172d6dbdecc5389215543d6d81eb46b6"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -58,6 +58,31 @@
       "title": "Start PostgreSQL",
       "summary": "The first thing to do is start the database service so you can log in and pla...",
       "content": "The first thing to do is start the database service so you can log in and play around with it. Your virtual machine comes with PostgreSQL (psql) installed. In order to start it, type this command into the terminal:\n\n```bash\nsudo service postgresql start\n```"
+    },
+    {
+      "id": "L20",
+      "steps": [
+        {
+          "id": "L20S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "9e922f5ab0269fadc05b6dc7b57668fc9b4a801b"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "9f7f4431fb82c944fc3def749eab474314a3ee2c"
+            ]
+          },
+          "content": "Log in to psql"
+        }
+      ],
+      "title": "Login",
+      "summary": "The psql service is now running. In order to interact with it, you need to lo...",
+      "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\nsudo -u postgres psql\n```\n\nThe `-u` stand for `username`. This will log you in as `postgres`."
     }
   ]
 }

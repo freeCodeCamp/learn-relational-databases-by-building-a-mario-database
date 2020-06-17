@@ -32,3 +32,9 @@ levels:
         setup:
           watchers:
             - ./coderoad/test/pg.log
+  - id: L30
+    steps:
+      - id: L30S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log

@@ -27,3 +27,15 @@ The `-u` stand for `username`. This will log you in as `postgres`.
 ### L20S1
 
 Log in to psql
+
+## L30 View Databases
+
+I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.
+
+Type `\l` into the prompt to **l**ist them.
+
+If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again.
+
+### L30S1
+
+List the databases
