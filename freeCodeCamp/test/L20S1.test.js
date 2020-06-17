@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { removeWhiteSpace, getPsqlLogFile } = require('./utils');
 
 describe('postgres', () => {
@@ -13,6 +13,6 @@ describe('postgres', () => {
     const re = /connectionauthorized:user=freecodecampdatabase=postgresapplication_name=psql/;
     assert(re.test(lastLog));
   });
-});
+});*/
 
 // solution
