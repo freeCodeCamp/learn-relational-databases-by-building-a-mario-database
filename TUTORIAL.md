@@ -55,3 +55,15 @@ Create a new database named `first_database`.
 ### L40S1
 
 Create `first_database`
+
+## L50 View `first_database`
+
+Use the **l**ist command again to make sure your new database is there.
+
+### L50S1
+
+View the databases
+
+#### HINTS
+
+- Enter the `\l` command

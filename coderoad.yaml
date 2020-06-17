@@ -44,3 +44,9 @@ levels:
         setup:
           watchers:
             - ./coderoad/test/pg.log
+  - id: L50
+    steps:
+      - id: L50S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
