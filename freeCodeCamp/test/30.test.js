@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastQueryResult } = require('./utils');
 
 describe('You', () => {
@@ -10,4 +10,4 @@ describe('You', () => {
   it('should list the databases', () => {
     assert(/Listofdatabases/.test(lastQueryResult))
   });
-});
+});*/
