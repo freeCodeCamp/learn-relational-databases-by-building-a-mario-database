@@ -14,3 +14,5 @@ describe('camper', () => {
     assert(re.test(lastLog));
   });
 });
+
+// solution
