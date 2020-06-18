@@ -23,6 +23,8 @@ levels:
   - id: L10
     steps:
       - id: L10S1
+        setup:
+          subtasks: false
   - id: L20
     steps:
       - id: L20S1
