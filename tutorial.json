@@ -17,7 +17,7 @@
           "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
         ],
         "commits": [
-          "00bfc57670e879969f3ae0b340b4d141dd4f6d30"
+          "89bc401798806f548b4d7227da59090ffdf21212"
         ]
       },
       "directory": "coderoad"
@@ -44,12 +44,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "b306f52e164fc80d1cad83af3bcb8c85270548a2"
+              "ddb6b5d588fc67d9137933e8311bdd060db11c42"
             ]
           },
           "solution": {
             "commits": [
-              "9442cd249d3f78175dff688d7b2e1ae8b91786b2"
+              "e05fed5b6bc8a43e1ff1b051f5f03c71b71f5779"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -69,12 +69,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "8f103981c2fb94663d53dab202b5f6ec5ff40399"
+              "a5ffafac3f2794706e96e64bef54a587a219e073"
             ]
           },
           "solution": {
             "commits": [
-              "cd8f78d740ac6b1188d2d60127d49bb3f3dafffc"
+              "19b4dfaf1b9eebd27d853d96c68d90c177ea0d0b"
             ]
           },
           "content": "Log in to psql"
@@ -94,12 +94,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "428d12a6dc4ead5f869d105b94f7d8e2220db08d"
+              "e945b9fba3ccdd5b11ac44b774ecb1de13ec0269"
             ]
           },
           "solution": {
             "commits": [
-              "9dab17c380253daa8ccf00b9c92e3dc9c4da6ea7"
+              "b41679ab28d068856998e352433f74fc14271f15"
             ]
           },
           "content": "List the databases"
@@ -119,12 +119,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "df457dd103c88a6842961abbc101ce0e6cd28ed5"
+              "3b78db9609b40e4aca10a9e8854fbc3e423b0085"
             ]
           },
           "solution": {
             "commits": [
-              "97bda623c0c258beac3d533815101ed42cd8e13c"
+              "83a200cef9963a52d92d8df87b144e4fef323190"
             ]
           },
           "content": "Create `first_database`"
@@ -144,12 +144,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "9c6de217ebc901cef74915a89b9fc01ad5693947"
+              "75c71619f30efeb9ee2e5524e265b309b3c8e2f6"
             ]
           },
           "solution": {
             "commits": [
-              "1575f33cb1bdbeee3541d8661402aea3f1e3816d"
+              "193b3da3c47e42511e575804ed16883388abc34e"
             ]
           },
           "content": "View the databases"
@@ -169,12 +169,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "d6211990653ce40f5a4051085c14c68f51d3a006"
+              "def682f0fb003368cf3dd4c617e637c7fd80a21e"
             ]
           },
           "solution": {
             "commits": [
-              "6a8c20a918e0c84bfc0b41f9ef2c6d5291b9c79f"
+              "a7f13276693c662ee16ffc907475cfcabee3d1be"
             ]
           },
           "content": "Create `second_database`"
@@ -194,12 +194,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "9e9d14145d21f00a972752614e28dec2872dd3d5"
+              "605a4c6981afc53c9e9602440bfe720f3bcf8df2"
             ]
           },
           "solution": {
             "commits": [
-              "c4c8a7057cf9c97c62d8f6d2a992d6353ed2dc5c"
+              "94b01631d690978723d4341de5129ea9e7ddbd7c"
             ]
           },
           "content": "View the databases"
@@ -208,6 +208,56 @@
       "title": "View Databases",
       "summary": "You should have two new databases. Take another look at them to make sure.",
       "content": "You should have two new databases. Take another look at them to make sure."
+    },
+    {
+      "id": "L80",
+      "steps": [
+        {
+          "id": "L80S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "4ce9790a4fabd3e6686927a1033a104e52642d7b"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "237ed6716ba68eccab58ac10230fbc46ffba6894"
+            ]
+          },
+          "content": "Connect to `second_database`"
+        }
+      ],
+      "title": "Connect to `second_database`",
+      "summary": "You can **c**onnect to a database by entering `\\c database_name`. You need to...",
+      "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information to it.\n\nConnect to your `second_database`."
+    },
+    {
+      "id": "L90",
+      "steps": [
+        {
+          "id": "L90S1",
+          "setup": {
+            "watchers": [
+              "./coderoad/test/pg.log"
+            ],
+            "commits": [
+              "7f446541b9db447baaee330c211c26be36d7edb3"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "ca4051c53fdf51343d7890a5b79f3a4af2adfc65"
+            ]
+          },
+          "content": "View tables in `second_database`"
+        }
+      ],
+      "title": "View `second_database` Tables",
+      "summary": "You should see a message that you are connected. I noticed the prompt changed...",
+      "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database.\n\nA database is made of tables that hold your data. You can enter `\\d` to **d**isplay the tables.\n\nTake a look at what tables are in this database."
     }
   ]
 }
