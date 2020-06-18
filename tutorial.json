@@ -14,10 +14,10 @@
         "commands": [
           "npm install",
           "cd / && sudo chmod 777 home && cd home && sudo chmod 777 strove && cd strove && sudo chmod 777 project && cd project && sudo chmod 777 coderoad && cd coderoad && sudo chmod 777 test && cd test && sudo chmod 777 pg.log",
-          "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
+          "cd /etc/postgresql/12/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/coderoad/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = ''\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
         ],
         "commits": [
-          "eb400d3190c58f28111edc17d25305b89f5b2898"
+          "00bfc57670e879969f3ae0b340b4d141dd4f6d30"
         ]
       },
       "directory": "coderoad"
@@ -40,16 +40,14 @@
         {
           "id": "L10S1",
           "setup": {
-            "watchers": [
-              "./coderoad/test/pg.log"
-            ],
+            "subtasks": false,
             "commits": [
-              "6a55408d11636bffcfedd0c90abce8903df2167f"
+              "b306f52e164fc80d1cad83af3bcb8c85270548a2"
             ]
           },
           "solution": {
             "commits": [
-              "be8ace9395ecca10e599c88655066ef90b7a59f2"
+              "9442cd249d3f78175dff688d7b2e1ae8b91786b2"
             ]
           },
           "content": "Start the PostgreSQL service"
@@ -69,12 +67,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "a318fd50a1d70e446d28a176aaafd32be602e9c9"
+              "8f103981c2fb94663d53dab202b5f6ec5ff40399"
             ]
           },
           "solution": {
             "commits": [
-              "17f11d38bd73a2a79d28dc24b15aa93cc6d6f6d1"
+              "cd8f78d740ac6b1188d2d60127d49bb3f3dafffc"
             ]
           },
           "content": "Log in to psql"
@@ -94,12 +92,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "7818b316af5666039f3c9b8e7aedd35b6b67c489"
+              "428d12a6dc4ead5f869d105b94f7d8e2220db08d"
             ]
           },
           "solution": {
             "commits": [
-              "cf4457693a36789cf323cb86ee6cbf9c04732894"
+              "9dab17c380253daa8ccf00b9c92e3dc9c4da6ea7"
             ]
           },
           "content": "List the databases"
@@ -119,12 +117,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "0829c137341ae6328702a424b37c695691e52778"
+              "df457dd103c88a6842961abbc101ce0e6cd28ed5"
             ]
           },
           "solution": {
             "commits": [
-              "1612d9e4db612c17fd598ee63b388b720363016c"
+              "97bda623c0c258beac3d533815101ed42cd8e13c"
             ]
           },
           "content": "Create `first_database`"
@@ -144,12 +142,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "385fe88e4c43c9d6ee21c218a68d779777dd6dee"
+              "9c6de217ebc901cef74915a89b9fc01ad5693947"
             ]
           },
           "solution": {
             "commits": [
-              "787034badc9717cd1d7cf541df9c7e691057525e"
+              "1575f33cb1bdbeee3541d8661402aea3f1e3816d"
             ]
           },
           "content": "View the databases"
@@ -169,12 +167,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "ac947c66f16377214fd4786b75ea1d5d744bb8a6"
+              "d6211990653ce40f5a4051085c14c68f51d3a006"
             ]
           },
           "solution": {
             "commits": [
-              "7ac9de365b1404232ce27079921ad774a4710613"
+              "6a8c20a918e0c84bfc0b41f9ef2c6d5291b9c79f"
             ]
           },
           "content": "Create `second_database`"
@@ -194,12 +192,12 @@
               "./coderoad/test/pg.log"
             ],
             "commits": [
-              "a8fca11c0dc5b729e0ae6920b6e016817e2246d8"
+              "9e9d14145d21f00a972752614e28dec2872dd3d5"
             ]
           },
           "solution": {
             "commits": [
-              "3f96989cff6f39de8d0a76be2217d3291b2b4d2a"
+              "c4c8a7057cf9c97c62d8f6d2a992d6353ed2dc5c"
             ]
           },
           "content": "View the databases"
