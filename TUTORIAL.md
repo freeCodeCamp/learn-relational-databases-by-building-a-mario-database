@@ -109,3 +109,19 @@ Connect to `second_database`
 #### HINTS
 
 - Enter `\c second_database` to connect
+
+## L90 View `second_database` Tables
+
+You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database.
+
+A database is made of tables that hold your data. You can enter `\d` to **d**isplay the tables.
+
+Take a look at what tables are in this database.
+
+### L90S1
+
+View tables in `second_database`
+
+#### HINTS
+
+- Try entering `\d`

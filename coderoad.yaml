@@ -66,3 +66,9 @@ levels:
         setup:
           watchers:
             - ./coderoad/test/pg.log
+  - id: L90
+    steps:
+      - id: L90S1
+        setup:
+          watchers:
+            - ./coderoad/test/pg.log
