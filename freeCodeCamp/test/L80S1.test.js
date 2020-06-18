@@ -14,3 +14,5 @@ describe('postgres', () => {
     assert(re.test(lastLog));
   });
 });
+
+// solution
