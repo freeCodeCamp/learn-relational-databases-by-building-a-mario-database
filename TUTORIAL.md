@@ -95,3 +95,17 @@ View the databases
 
 - Use the **l**ist shortcut command
 - Try entering `\l`
+
+## L80 Connect to `second_database`
+
+You can **c**onnect to a database by entering `\c database_name`. You need to connect to add information to it.
+
+Connect to your `second_database`.
+
+### L80S1
+
+Connect to `second_database`
+
+#### HINTS
+
+- Enter `\c second_database` to connect
