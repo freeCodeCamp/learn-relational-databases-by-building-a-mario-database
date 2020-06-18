@@ -125,18 +125,3 @@ View tables in `second_database`
 #### HINTS
 
 - Try entering `\d`
-
-## L100 Create `first_table`
-
-You can create a table similar to how you created a database. Instead of `CREATE DATABASE database_name;`, use `CREATE TABLE table_name();`. Note that the parenthesis are needed for this one.
-
-Create a table named `first_table`.
-
-### L100S1
-
-Create `first_table`
-
-#### HINTS
-
-- Don't forget the semi-colon
-- Try entering `CREATE TABLE first_table();`
