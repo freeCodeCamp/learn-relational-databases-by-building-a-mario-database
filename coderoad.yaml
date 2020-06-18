@@ -24,8 +24,7 @@ levels:
     steps:
       - id: L10S1
         setup:
-          watchers:
-            - ./coderoad/test/pg.log
+          subtasks: false
   - id: L20
     steps:
       - id: L20S1
@@ -42,8 +41,7 @@ levels:
     steps:
       - id: L40S1
         setup:
-          watchers:
-            - ./coderoad/test/pg.log
+          subtasks: false
   - id: L50
     steps:
       - id: L50S1
