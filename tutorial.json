@@ -13,7 +13,7 @@
       "setup": {
         "commands": [
           "npm install",
-          "cd / && sudo chmod 777 home && cd home && sudo chmod 777 strove && cd strove && sudo chmod 777 project && cd project && sudo chmod 777 freeCodeCamp && cd freeCodeCamp && sudo chmod 777 test && cd test && sudo chmod 777 pg.log",
+          "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
           "cd /etc/postgresql/9.6/main && sudo chmod 666 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
         ],
         "commits": [
@@ -67,7 +67,7 @@
           "id": "20.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "05eaf6422d10ad127912fca6fe1cc556460d7a1c"
@@ -92,7 +92,7 @@
           "id": "30.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "4e26612b34f0918af5159c4145fab254f62e72b7"
@@ -117,7 +117,7 @@
           "id": "40.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "0e6e1796e2b18c191aecfb43fbfe5898080f21fb"
@@ -142,7 +142,7 @@
           "id": "50.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "abaa3fd12a355635d363a332260d84e52f60b270"
@@ -170,7 +170,7 @@
           "id": "60.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "75bc40171102aa8261d7f269fe51d9d2edcd690f"
@@ -199,7 +199,7 @@
           "id": "70.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "ad77badc342eccda7790310766c137aaad770896"
@@ -228,7 +228,7 @@
           "id": "80.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "0c7f5148a3ffad74893727125befa91bf1512b04"
@@ -256,13 +256,17 @@
           "id": "90.1",
           "setup": {
             "watchers": [
-              "./coderoad/test/pg.log"
+              "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
               "1573340a055320ee1f4085f7c6498208ba608f2b"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
+          "hints": [
+            "Type `\\d` in the prompt and press enter",
+            "Hint2"
+          ],
           "solution": {
             "commits": [
               "a690cc3db25452df30ac61c39d070ba0d40132c5"
