@@ -119,3 +119,4 @@ You should see a message that you are connected. I noticed the prompt changed to
 #### HINTS
 
 - Type `\d` in the prompt and press enter
+- Hint2
