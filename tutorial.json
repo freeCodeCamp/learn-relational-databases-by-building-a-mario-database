@@ -13,7 +13,8 @@
       "setup": {
         "commands": [
           "npm install",
-          "sudo chmod 777 /etc && sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log"
+          "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
+          "sudo chmod 777 /etc && cd /etc/postgresql/9.6/main && sudo chmod 777 postgresql.conf && sudo chmod 777 pg_hba.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
         ],
         "commits": [
           "50070f73f8dc8b7d767427a9aaed020e12d07212"
