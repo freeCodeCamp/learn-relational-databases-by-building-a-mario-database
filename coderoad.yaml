@@ -15,7 +15,7 @@ config:
         - cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo "log_statement = 'all'" >> postgresql.conf && echo "log_checkpoints = on" >> postgresql.conf && echo "log_min_error_statement = INFO" >> postgresql.conf && echo "log_min_messages = INFO" >> postgresql.conf && echo "logging_collector = on" >> postgresql.conf && echo "log_directory = '/home/strove/project/freeCodeCamp/test'" >> postgresql.conf && echo "log_filename = 'pg.log'" >> postgresql.conf && echo "log_connections = on" >> postgresql.conf && echo "log_line_prefix = '%u '" >> postgresql.conf && sudo sed -i "s/peer/trust/" pg_hba.conf && sudo sed -i "s/md5/trust/" pg_hba.conf
     directory: freeCodeCamp
   repo:
-    uri: https://github.com/moT01/sql-1
+    uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
     branch: v0.2.0
   dependencies:
     - name: node
