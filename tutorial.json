@@ -23,7 +23,7 @@
       "directory": "freeCodeCamp"
     },
     "repo": {
-      "uri": "https://github.com/moT01/sql-1",
+      "uri": "https://github.com/moT01/learn-relational-databases-by-building-a-mario-database",
       "branch": "v0.2.0"
     },
     "dependencies": [
