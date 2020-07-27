@@ -19,10 +19,10 @@ Start the PostgreSQL service
 The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:
 
 ```bash
-sudo -u postgres psql
+psql -U freecodecamp postgres
 ```
 
-The `-u` stand for `username`. This will log you in as `postgres`.
+The `-U` stand for `username`. This will log you in as `freecodecamp`, a user I created for you.
 
 ### 20.1
 
