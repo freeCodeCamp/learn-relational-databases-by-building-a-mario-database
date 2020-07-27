@@ -35,7 +35,7 @@ The `-U` stand for `username`. This will log you in as `freecodecamp`.
 
 First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them. If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display everything. Press `Enter` until you see the prompt again.
 
-#### HINTS 
+#### HINTS
 
 - Type `\l` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
