@@ -14,7 +14,11 @@
         "commands": [
           "npm install",
           "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
-          "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf"
+          "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_checkpoints = on\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf",
+          "sudo service postgresql start",
+          "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\"",
+          "sudo -u postgres psql -c \"ALTER ROLE postgres SET log_min_duration_statement=-1;\"",
+          "sudo service postgresql stop"
         ],
         "commits": [
           "50070f73f8dc8b7d767427a9aaed020e12d07212"
@@ -63,7 +67,7 @@
       "id": "20",
       "title": "Login",
       "summary": "The psql service is now running. In order to interact with it, you need to lo...",
-      "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\nsudo -u postgres psql\n```\n\nThe `-u` stand for `username`. This will log you in as `postgres`.",
+      "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\npsql -U freecodecamp postgres\n```\n\nThe `-U` stand for `username`. This will log you in as `freecodecamp`, a user I created for you.",
       "steps": [
         {
           "id": "20.1",
