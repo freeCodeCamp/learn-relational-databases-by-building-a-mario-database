@@ -1,20 +1,20 @@
-# Introduction
+# Learn Relational Databases by Building a Mario Database
 
 > Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases.
 
 ## 10. Start PostgreSQL
 
-The first thing to do is start the database service so you can log in and play around with it. Your virtual machine comes with PostgreSQL (psql) installed. In order to start it, type this command into the terminal:
-
-```bash
-sudo service postgresql start
-```
-
 ### 10.1
 
-Start the PostgreSQL service
+Your virtual machine comes with PostgreSQL (psql) installed. Type `sudo service postgresql start` into the terminal and press enter to start the psql service.
+
+#### HINTS
+
+- If the terminal isn't open, find the "hamburger" menu at the top left of the window, navigate to the "Terminal" tab, and click "New Terminal"
 
 ## 20. Login
+
+### 20.1
 
 The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:
 
@@ -22,25 +22,27 @@ The psql service is now running. In order to interact with it, you need to log i
 psql -U freecodecamp postgres
 ```
 
-The `-U` stand for `username`. This will log you in as `freecodecamp`, a user I created for you.
+The `-U` stand for `username`. This will log you in as `freecodecamp`.
 
-### 20.1
+#### HINTS
 
-Log in to psql
+- Capitalization matters
+- Type `psql -U freecodecamp postgres` into the terminal and press enter
 
 ## 30. View Databases
 
-I noticed the prompt changed to `postgres=#`. That must mean you are connected to the service. First thing to do is see what databases are here.
-
-Type `\l` into the prompt to **l**ist them.
-
-If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display all the information. Press `Enter` until you see the prompt again.
-
 ### 30.1
 
-List the databases
+First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them. If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display everything. Press `Enter` until you see the prompt again.
+
+#### HINTS 
+
+- Type `\l` into the psql prompt and press enter
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 40. Create `first_database`
+
+### 40.1
 
 The databases you see come with psql. You want to make your own. The command to create a new database is:
 
@@ -52,63 +54,59 @@ The capitalized words are keywords telling psql what to do. The name of the data
 
 Create a new database named `first_database`.
 
-### 40.1
+#### HINTS
 
-Create `first_database`
+- Don't forget the semi-colon
+- Type `CREATE DATABASE first_database;` into the psql prompt and press enter
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 50. View `first_database`
 
-Use the **l**ist command again to make sure your new database is there.
-
 ### 50.1
 
-View the databases
+Use the **l**ist shortcut command again to make sure your new database is there.
 
 #### HINTS
 
-- Enter the `\l` command
+- Enter `\l` into the psql prompt and press enter
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 60. Create `second_database`
 
-It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command.
-
-Create another database named `second_database`.
-
 ### 60.1
 
-Create `second_database`
+It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.
 
 #### HINTS
 
+- Use the "CREATE DATABASE" keywords
 - Here's the example again: `CREATE DATABASE database_name;`
+- Don't forget the semi-colon
 - Try entering `CREATE DATABASE second_database;`
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 70. View Databases
 
-You should have two new databases. Take another look at them to make sure.
-
 ### 70.1
 
-View the databases
+You should have another new database now. Take another look at them to make sure.
 
 #### HINTS
 
 - Use the **l**ist shortcut command
 - Try entering `\l`
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 80. Connect to `second_database`
 
-You can **c**onnect to a database by entering `\c database_name`. You need to connect to add information to it.
-
-Connect to your `second_database`.
-
 ### 80.1
 
-Connect to `second_database`
+You can **c**onnect to a database by entering `\c database_name`. You need to connect to add information. Connect to your `second_database`.
 
 #### HINTS
 
-- Enter `\c second_database` to connect
+- Enter `\c second_database` into the psql prompt to connect
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 90. View `second_database` Tables
 
@@ -119,4 +117,4 @@ You should see a message that you are connected. I noticed the prompt changed to
 #### HINTS
 
 - Type `\d` in the prompt and press enter
-- Hint2
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
