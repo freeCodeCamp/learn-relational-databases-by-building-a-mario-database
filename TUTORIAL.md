@@ -6,7 +6,7 @@
 
 ### 20.1
 
-Your virtual machine comes with PostgreSQL (psql) installed. In order to interact with it, you need to log in. You can do that by typing `psql -U freecodecamp postgres` into the terminal and pressing enter. The `-U` stand for `username`. This will log you in as `freecodecamp`.
+Your virtual machine comes with PostgreSQL (psql) installed. Log into it by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.
 
 #### HINTS
 
@@ -18,7 +18,7 @@ Your virtual machine comes with PostgreSQL (psql) installed. In order to interac
 
 ### 30.1
 
-First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
+Notice that the prompt changed to let you know that you are now interacting the PostgreSQL. First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
 
 #### HINTS
 
@@ -29,11 +29,7 @@ First thing to do is see what databases are here. Type `\l` into the prompt to *
 
 ### 40.1
 
-The databases you see come with psql. You want to make your own. The command to create a new database is:
-
-```sql
-CREATE DATABASE database_name;
-```
+The databases you see are there by default. You want to make your own with `CREATE DATABASE database_name;`
 
 The capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**
 
@@ -79,7 +75,7 @@ You should have another new database now. Take another look at them to make sure
 #### HINTS
 
 - Use the **l**ist shortcut command
-- Try entering `\l`
+- Try entering `\l` into the prompt
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
 ## 80. Connect to `second_database`
