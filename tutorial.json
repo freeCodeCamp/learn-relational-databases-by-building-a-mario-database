@@ -21,7 +21,7 @@
           "sudo service postgresql stop"
         ],
         "commits": [
-          "50070f73f8dc8b7d767427a9aaed020e12d07212"
+          "99d78d8df7007e1b71fdf6cddc89e1ed4b50e0ea"
         ]
       },
       "directory": "freeCodeCamp"
@@ -51,7 +51,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ffbd96d12ad0e45c6e13fdb84143b346cac50488"
+              "334811d15507d95df7bd3faedd2d553a618a2d14"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL (psql) installed. Type `sudo service postgresql start` into the terminal and press enter to start the psql service.",
@@ -60,7 +60,7 @@
           ],
           "solution": {
             "commits": [
-              "9eb84e41905511e2cad356fa24f903b241274048"
+              "8495ae6ee8e565e0427b092f3bd48405d7e040b6"
             ]
           }
         }
@@ -79,7 +79,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "05eaf6422d10ad127912fca6fe1cc556460d7a1c"
+              "921d4e80b7b528d31a90c60e00fc84e854fd96c4"
             ]
           },
           "content": "The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:\n\n```bash\npsql -U freecodecamp postgres\n```\n\nThe `-U` stand for `username`. This will log you in as `freecodecamp`.",
@@ -89,7 +89,7 @@
           ],
           "solution": {
             "commits": [
-              "f7c3c84e827cb69e6ef770a089a02444a1b88148"
+              "c2086e9e9ac579169e3aa12d785099867a7f808e"
             ]
           }
         }
@@ -108,7 +108,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4e26612b34f0918af5159c4145fab254f62e72b7"
+              "3507b94d57db911ec688a1d0470564b008d5d8b6"
             ]
           },
           "content": "First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them. If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display everything. Press `Enter` until you see the prompt again.",
@@ -118,7 +118,7 @@
           ],
           "solution": {
             "commits": [
-              "ef1d98799585af4168b5419cba603ad487574a9d"
+              "f606b17f6d9dfe7c785254fdfb96fb6d6ca9196a"
             ]
           }
         }
@@ -137,7 +137,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "0e6e1796e2b18c191aecfb43fbfe5898080f21fb"
+              "9f5eaa925930cf4225d08f3ef62959bf4a6d3e3d"
             ]
           },
           "content": "The databases you see come with psql. You want to make your own. The command to create a new database is:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**\n\nCreate a new database named `first_database`.",
@@ -148,7 +148,7 @@
           ],
           "solution": {
             "commits": [
-              "e50fc79b9410fe6c5445d70785ac408f39f90d13"
+              "e33891af0c00de985ce100c81ac09abbd944b070"
             ]
           }
         }
@@ -167,7 +167,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "abaa3fd12a355635d363a332260d84e52f60b270"
+              "7ec374e596c82b381f030fa01d995494cc351085"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -177,7 +177,7 @@
           ],
           "solution": {
             "commits": [
-              "31d53e56cbd2f406b88695a9ede0435781545aca"
+              "31a1a3c08c8db630399e88150ffa6d7c238ad938"
             ]
           }
         }
@@ -196,7 +196,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "75bc40171102aa8261d7f269fe51d9d2edcd690f"
+              "5ec3b68efb6ff2c578a28c32d0a53a50ecc67a24"
             ]
           },
           "content": "It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
@@ -209,7 +209,7 @@
           ],
           "solution": {
             "commits": [
-              "8115171c914c8cc0bb6be7c25421c0418d0d0921"
+              "5a47434c188fbbe768ede10a96b6fdf1a743c3e0"
             ]
           }
         }
@@ -228,7 +228,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ad77badc342eccda7790310766c137aaad770896"
+              "4df86d9fd67ca13dd3b6805827a42613e45504d6"
             ]
           },
           "content": "You should have another new database now. Take another look at them to make sure.",
@@ -239,7 +239,7 @@
           ],
           "solution": {
             "commits": [
-              "5f968f44d6cd7a0dadbb30a09601a635d08a83c0"
+              "2293c8debf7059af68d0af58a5df3cf8982adfc0"
             ]
           }
         }
@@ -258,7 +258,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "0c7f5148a3ffad74893727125befa91bf1512b04"
+              "da26349f193b825be6c14b85aec669a5260d6388"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -268,7 +268,7 @@
           ],
           "solution": {
             "commits": [
-              "85e4545c98ec596a7f7753fbbb8205858b07f217"
+              "1750dfff360011de3a3eeb1fe3156345b5d65831"
             ]
           }
         }
@@ -287,7 +287,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1573340a055320ee1f4085f7c6498208ba608f2b"
+              "63fcbe0d5a08282c6027d7e755171eb0160cc0b0"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
@@ -297,7 +297,7 @@
           ],
           "solution": {
             "commits": [
-              "a690cc3db25452df30ac61c39d070ba0d40132c5"
+              "79c384bba0763fd494d48124858d3bcf1b15ec00"
             ]
           }
         }
