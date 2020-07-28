@@ -18,7 +18,7 @@ Your virtual machine comes with PostgreSQL (psql) installed. In order to interac
 
 ### 30.1
 
-First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them. If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display everything. Press `Enter` until you see the prompt again.
+First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
 
 #### HINTS
 
