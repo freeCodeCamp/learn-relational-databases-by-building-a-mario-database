@@ -6,6 +6,8 @@ config:
       tap: --reporter=mocha-tap-reporter
     setup:
       commands:
+        # stop postgresql in case it's running
+        - sudo service postgresql stop
         # run npm install in freeCodeCamp folder on load to install testing dependecies
         - npm install
         # update permissions to tree in strove
@@ -27,10 +29,8 @@ levels:
     steps:
       - id: '20.1'
         setup:
-          commands:
-            - cd freeCodeCamp && node index.js
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '30'
     steps:
       - id: '30.1'

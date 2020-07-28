@@ -46,7 +46,7 @@
           "id": "20.1",
           "setup": {
             "commands": [
-              "node index.js"
+              "cd freeCodeCamp && node index.js"
             ],
             "watchers": [
               "./freeCodeCamp/test/user.log"
