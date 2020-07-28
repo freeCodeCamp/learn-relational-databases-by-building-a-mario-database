@@ -14,7 +14,7 @@
         "commands": [
           "npm install",
           "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
-          "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf",
+          "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = 'moT01 %u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf",
           "sudo service postgresql start",
           "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
         ],
@@ -82,7 +82,7 @@
               "9d4832a0d723bd69d652635e65b71fe4400cc17b"
             ]
           },
-          "content": "First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them. If you don't see the prompt at the bottom after listing, it means there wasn't enough room to display everything. Press `Enter` until you see the prompt again.",
+          "content": "First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
           "hints": [
             "Type `\\l` into the psql prompt and press enter",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
