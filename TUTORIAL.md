@@ -2,31 +2,16 @@
 
 > Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases.
 
-## 10. Start PostgreSQL
-
-### 10.1
-
-Your virtual machine comes with PostgreSQL (psql) installed. Type `sudo service postgresql start` into the terminal and press enter to start the psql service.
-
-#### HINTS
-
-- If the terminal isn't open, find the "hamburger" menu at the top left of the window, navigate to the "Terminal" tab, and click "New Terminal"
-
 ## 20. Login
 
 ### 20.1
 
-The psql service is now running. In order to interact with it, you need to log in. Use this command to do so:
-
-```bash
-psql -U freecodecamp postgres
-```
-
-The `-U` stand for `username`. This will log you in as `freecodecamp`.
+Your virtual machine comes with PostgreSQL (psql) installed. In order to interact with it, you need to log in. You can do that by typing `psql -U freecodecamp postgres` into the terminal and pressing enter. The `-U` stand for `username`. This will log you in as `freecodecamp`.
 
 #### HINTS
 
 - Capitalization matters
+- If the terminal isn't open, find the "hamburger" menu at the top left of the window, navigate to the "Terminal" tab, and click "New Terminal"
 - Type `psql -U freecodecamp postgres` into the terminal and press enter
 
 ## 30. View Databases
