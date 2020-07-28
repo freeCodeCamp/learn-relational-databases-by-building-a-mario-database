@@ -16,7 +16,8 @@
           "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
           "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf",
           "sudo service postgresql start",
-          "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
+          "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\"",
+          "node index.js"
         ],
         "commits": [
           "1757e49cfe43572763579e5275cbb5c627b234e5"
