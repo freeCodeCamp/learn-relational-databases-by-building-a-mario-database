@@ -15,7 +15,6 @@ config:
         - sudo service postgresql start
         # create freecodecamp user
         - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
-        - node index.js
     directory: freeCodeCamp
   repo:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
@@ -28,6 +27,8 @@ levels:
     steps:
       - id: '20.1'
         setup:
+          commands:
+            - node index.js
           watchers:
             - ./freeCodeCamp/test/user.log
   - id: '30'
