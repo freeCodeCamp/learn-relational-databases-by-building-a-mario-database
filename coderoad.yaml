@@ -36,40 +36,40 @@ levels:
       - id: '30.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '40'
     steps:
       - id: '40.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '50'
     steps:
       - id: '50.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '60'
     steps:
       - id: '60.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '70'
     steps:
       - id: '70.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '80'
     steps:
       - id: '80.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
   - id: '90'
     steps:
       - id: '90.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/user.log
+            - ./freeCodeCamp/test/pg.log
