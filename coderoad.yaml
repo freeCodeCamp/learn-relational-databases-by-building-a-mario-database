@@ -67,3 +67,30 @@ levels:
         setup:
           watchers:
             - ./freeCodeCamp/test/pg.log
+  - id: '100'
+    steps:
+      - id: '100.1'
+  - id: '110'
+    steps:
+      - id: '110.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '120'
+    steps:
+      - id: '120.1'
+  - id: '130'
+    steps:
+      - id: '130.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '140'
+    steps:
+      - id: '140.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '150'
+    steps:
+      - id: '150.1'

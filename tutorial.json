@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "summary": {
     "title": "Learn Relational Databases by Building a Mario Database",
     "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
@@ -20,14 +20,14 @@
           "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
         ],
         "commits": [
-          "6bdccd6d18eec4bee10635371ad495541bd432f5"
+          "91c7b6be5288c43c791ca00db4a668c7c47fb58f"
         ]
       },
       "directory": "freeCodeCamp"
     },
     "repo": {
       "uri": "https://github.com/moT01/learn-relational-databases-by-building-a-mario-database",
-      "branch": "v0.2.1"
+      "branch": "v0.2.2"
     },
     "dependencies": [
       {
@@ -50,20 +50,15 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2a4e27911c0b70bf4c24c228a3a5e811ed86913a"
+              "1ce67adf57f7bc0c2c9edd5c0ed3e26491306392"
             ]
           },
-          "content": "Your virtual machine comes with PostgreSQL (psql) installed. Log into it by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
+          "content": "Your virtual machine comes with PostgreSQL installed. You can use psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
           "hints": [
             "Capitalization matters",
             "If the terminal isn't open, find the \"hamburger\" menu at the top left of the window, navigate to the \"Terminal\" tab, and click \"New Terminal\"",
             "Type `psql -U freecodecamp postgres` into the terminal and press enter"
-          ],
-          "solution": {
-            "commits": [
-              "04255025db84c3d4088473f3a606fb3cd51c576c"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -80,19 +75,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "54d28f21c6c9e44620a69bd91aee328938227d4c"
+              "e66a98680a05411be6d0fd55b2a6e0228d0344da"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
           "hints": [
             "Type `\\l` into the psql prompt and press enter",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ],
-          "solution": {
-            "commits": [
-              "6d0c7996d918eae3b2244f71e59936f671ef717f"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -104,7 +94,7 @@
       "steps": [
         {
           "id": "40.1",
-          "content": "The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;`\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**\n\nCreate a new database named `first_database`.",
+          "content": "The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;` The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
           "hints": [
             "Don't forget the semi-colon at the end",
             "Type `CREATE DATABASE first_database;` into the psql prompt and press enter",
@@ -112,12 +102,7 @@
           ],
           "setup": {
             "commits": [
-              "bc562675466025ddf713aa72df4a33cabd84d4d9"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "7fb7c70bf537cb34c98a9fe26917df1636b11891"
+              "96b3b65127f8938e9379cdf23195b72934b0a074"
             ]
           }
         }
@@ -136,7 +121,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "800af401fbf5157a374809bc16d7b836e9997334"
+              "fed5deb7879f2967795674d2835097508a0ff6ae"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -144,12 +129,7 @@
             "Type `\\` followed by the \"list\" shortcut letter",
             "Enter `\\l` into the psql prompt and press enter",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ],
-          "solution": {
-            "commits": [
-              "449fd7cdd83debd8e741f41787a6499b8a5a0683"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -171,12 +151,7 @@
           ],
           "setup": {
             "commits": [
-              "8e863c4641d3bdd704365aea752cbf5c7cc80213"
-            ]
-          },
-          "solution": {
-            "commits": [
-              "12bb9dc6d8193576ccf323b6a64f1c5e8a066529"
+              "562d381f5c3625a0c2a720087087356b01603e3b"
             ]
           }
         }
@@ -195,7 +170,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "58e5777937025ec860dcfc3c646d730d1d553d14"
+              "a2f3f822aed994754872470e483f423c43df2b26"
             ]
           },
           "content": "You should have another new database now. Take another look at them to make sure.",
@@ -203,12 +178,7 @@
             "Use the **l**ist shortcut command",
             "Try entering `\\l` into the prompt",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ],
-          "solution": {
-            "commits": [
-              "12ea2f5d62498d9d2816fbae9af9d796ac8eae7a"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -225,19 +195,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b4555f18eb95c952fc16e1033b001f38c8f0583e"
+              "90ac73d5de5e1a376b969a805721f5a5a2768331"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
           "hints": [
             "Enter `\\c second_database` into the psql prompt to connect",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ],
-          "solution": {
-            "commits": [
-              "7ec6fcae9959729773adbfd0f1ed7a718a96d847"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -254,19 +219,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1104e83c9661cb100c349015b04a5331d34289f8"
+              "e87d4a59d3d93b9c1232051bbdf76fb1be4433be"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
           "hints": [
             "Type `\\d` in the prompt and press enter",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ],
-          "solution": {
-            "commits": [
-              "d2d8e35130fd470ec42c41b9b56814c3b1685035"
-            ]
-          }
+          ]
         }
       ]
     }

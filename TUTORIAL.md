@@ -95,4 +95,90 @@ You should see a message that you are connected. I noticed the prompt changed to
 #### HINTS
 
 - Type `\d` in the prompt and press enter
-- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged before that
+
+## 100. Create `first_table`
+
+### 100.1
+
+Similar to how you created a database, you can create a table with `CREATE TABLE table_name();`. Note that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.
+
+#### HINTS
+
+- Enter `CREATE TABLE first_table();` into the prompt
+- Don't forget the semi-colon
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 110. View `second_database` Tables
+
+### 110.1
+
+View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.
+
+#### HINTS
+
+- A shortcut command starts with `\`
+- Try entering `\d` into the prompt
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 120. Create `second_table`
+
+### 120.1
+
+Create another new table in this database. Give it a name of `second_table`.
+
+#### HINTS
+
+- Use the "CREATE TABLE" keywords
+- Don't forget the semi-colon at the end
+- It needs parenthesis at the end as well
+- Here's an example: `CREATE TABLE table_name();`
+- Enter `CREATE TABLE second_table();` into the prompt
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 130. View `second_database` Tables
+
+### 130.1
+
+There should be two tables in this database now. Take another look at the tables to make sure.
+
+#### HINTS
+
+- Use the **display** shortcut command
+- Enter `\d` into the prompt
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 140. View `second_table` Details
+
+### 140.1
+
+You can view more details about a table by adding the table name after the **d**isplay command like this: `\d table_name`. View more details about your `second_table`.
+
+#### HINTS
+
+- Enter `\d second_table` into the prompt
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 150. Create `first_column`
+
+### 150.1
+
+Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+```
+
+Add a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:
+
+#### HINTS
+
+- Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
