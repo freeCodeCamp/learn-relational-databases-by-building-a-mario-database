@@ -18,7 +18,7 @@ Your virtual machine comes with PostgreSQL (psql) installed. Log into it by typi
 
 ### 30.1
 
-Notice that the prompt changed to let you know that you are now interacting the PostgreSQL. First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
+Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\l` into the prompt to **l**ist them.
 
 #### HINTS
 
@@ -29,15 +29,15 @@ Notice that the prompt changed to let you know that you are now interacting the 
 
 ### 40.1
 
-The databases you see are there by default. You want to make your own with `CREATE DATABASE database_name;`
+The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;`
 
-The capitalized words are keywords telling psql what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**
+The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**
 
 Create a new database named `first_database`.
 
 #### HINTS
 
-- Don't forget the semi-colon
+- Don't forget the semi-colon at the end
 - Type `CREATE DATABASE first_database;` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
@@ -49,6 +49,7 @@ Use the **l**ist shortcut command again to make sure your new database is there.
 
 #### HINTS
 
+- Type `\` followed by the "list" shortcut letter
 - Enter `\l` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
 
@@ -56,7 +57,7 @@ Use the **l**ist shortcut command again to make sure your new database is there.
 
 ### 60.1
 
-It worked. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.
+It worked. Do you see your new database? If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.
 
 #### HINTS
 

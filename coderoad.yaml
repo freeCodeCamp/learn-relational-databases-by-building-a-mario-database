@@ -56,6 +56,9 @@ levels:
   - id: '80'
     steps:
       - id: '80.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
   - id: '90'
     steps:
       - id: '90.1'
