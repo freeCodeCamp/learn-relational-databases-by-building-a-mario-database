@@ -14,13 +14,12 @@
         "commands": [
           "sudo service postgresql stop",
           "npm install",
-          "sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log",
-          "cd /etc/postgresql/12/main && sudo chmod 777 postgresql.conf && echo \"log_statement = 'all'\" >> postgresql.conf && echo \"log_min_error_statement = INFO\" >> postgresql.conf && echo \"log_min_messages = INFO\" >> postgresql.conf && echo \"logging_collector = on\" >> postgresql.conf && echo \"log_directory = '/home/strove/project/freeCodeCamp/test'\" >> postgresql.conf && echo \"log_filename = 'pg.log'\" >> postgresql.conf && echo \"log_connections = on\" >> postgresql.conf && echo \"log_line_prefix = '%u '\" >> postgresql.conf && sudo sed -i \"s/peer/trust/\" pg_hba.conf && sudo sed -i \"s/md5/trust/\" pg_hba.conf",
+          "sudo mv postgresql.conf /etc/postgresql/12/main/postgresql.conf",
           "sudo service postgresql start",
           "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
         ],
         "commits": [
-          "91c7b6be5288c43c791ca00db4a668c7c47fb58f"
+          "09d9b57ccbd678d74d6cd92c44652d9e813fc198"
         ]
       },
       "directory": "freeCodeCamp"
@@ -50,7 +49,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1ce67adf57f7bc0c2c9edd5c0ed3e26491306392"
+              "f265efd453d42f66ed624f97d1e6c8de9ba6055d"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL installed. You can use psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
@@ -75,7 +74,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e66a98680a05411be6d0fd55b2a6e0228d0344da"
+              "355a42b59788906dc4fbb1b84462dfa9e47d22ac"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -102,7 +101,7 @@
           ],
           "setup": {
             "commits": [
-              "96b3b65127f8938e9379cdf23195b72934b0a074"
+              "353ac756e93cf0036e5ebdaa5af786e042cf4ca6"
             ]
           }
         }
@@ -121,7 +120,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "fed5deb7879f2967795674d2835097508a0ff6ae"
+              "4c26a92ee47abb72dbf943347e37082182babdac"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -151,7 +150,7 @@
           ],
           "setup": {
             "commits": [
-              "562d381f5c3625a0c2a720087087356b01603e3b"
+              "a4c0140751f760a467f4a488e08dcd50d52a8bf2"
             ]
           }
         }
@@ -170,7 +169,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a2f3f822aed994754872470e483f423c43df2b26"
+              "576598aed5055092d0f03c4c3c7ba4d08df1b387"
             ]
           },
           "content": "You should have another new database now. Take another look at them to make sure.",
@@ -195,7 +194,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "90ac73d5de5e1a376b969a805721f5a5a2768331"
+              "cd158a277c4a0d51ccbc54322230772a314ff0df"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -219,14 +218,163 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e87d4a59d3d93b9c1232051bbdf76fb1be4433be"
+              "652ee2bab90d38c14eb47b41c952b53cb217106a"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
           "hints": [
             "Type `\\d` in the prompt and press enter",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged before that"
           ]
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "title": "Create `first_table`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "100.1",
+          "content": "Similar to how you created a database, you can create a table with `CREATE TABLE table_name();`. Note that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
+          "hints": [
+            "Enter `CREATE TABLE first_table();` into the prompt",
+            "Don't forget the semi-colon",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ],
+          "setup": {
+            "commits": [
+              "8d0a6b09202ee4860468c76496d18fb8798eff32"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "title": "View `second_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "110.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "1d52c91d5de79bea04356c802a09fd2518d580a5"
+            ]
+          },
+          "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
+          "hints": [
+            "A shortcut command starts with `\\`",
+            "Try entering `\\d` into the prompt",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "title": "Create `second_table`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "120.1",
+          "content": "Create another new table in this database. Give it a name of `second_table`.",
+          "hints": [
+            "Use the \"CREATE TABLE\" keywords",
+            "Don't forget the semi-colon at the end",
+            "It needs parenthesis at the end as well",
+            "Here's an example: `CREATE TABLE table_name();`",
+            "Enter `CREATE TABLE second_table();` into the prompt",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ],
+          "setup": {
+            "commits": [
+              "4590dbc8b1ae50a52eb5deb363016564dc19b57f"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "title": "View `second_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "130.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "c6596374d1c8826f66a1e3e5a4d8560861a5bf6a"
+            ]
+          },
+          "content": "There should be two tables in this database now. Take another look at the tables to make sure.",
+          "hints": [
+            "Use the **display** shortcut command",
+            "Enter `\\d` into the prompt",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "title": "View `second_table` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "140.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "cd1ebdc7933910f2421ceafb6760a6cee6977a46"
+            ]
+          },
+          "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
+          "hints": [
+            "Enter `\\d second_table` into the prompt",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "title": "Create `first_column`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "150.1",
+          "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
+          "hints": [
+            "Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first",
+            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+          ],
+          "setup": {
+            "commits": [
+              "c57cd338792dc986e4e9e55278beeb541e176dab"
+            ]
+          }
         }
       ]
     }
