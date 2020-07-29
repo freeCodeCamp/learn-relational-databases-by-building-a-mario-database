@@ -10,7 +10,9 @@ config:
         - sudo service postgresql stop
         # run npm install in freeCodeCamp folder on load to install testing dependecies
         - npm install
-        # update permissions to tree in strove
+        # update permissions to log file
+        - sudo chmod 777 test/pg.log
+        # copy config file to new location
         - sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf
         # - sudo chmod 777 /home && sudo chmod 777 /home/strove && sudo chmod 777 /home/strove/project && sudo chmod 777 /home/strove/project/freeCodeCamp && sudo chmod 777 /home/strove/project/freeCodeCamp/test && sudo chmod 777 /home/strove/project/freeCodeCamp/test/pg.log
         # change psql configs and connections allowed

@@ -14,7 +14,7 @@
         "commands": [
           "sudo service postgresql stop",
           "npm install",
-          "sudo mv postgresql.conf /etc/postgresql/12/main/postgresql.conf",
+          "sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf",
           "sudo service postgresql start",
           "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
         ],
