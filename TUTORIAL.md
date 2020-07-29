@@ -6,7 +6,7 @@
 
 ### 20.1
 
-Your virtual machine comes with PostgreSQL (psql) installed. Log into it by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.
+Your virtual machine comes with PostgreSQL installed. You can use psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.
 
 #### HINTS
 
@@ -29,11 +29,7 @@ Notice that the prompt changed to let you know that you are now interacting with
 
 ### 40.1
 
-The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;`
-
-The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.**
-
-Create a new database named `first_database`.
+The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;` The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.
 
 #### HINTS
 
