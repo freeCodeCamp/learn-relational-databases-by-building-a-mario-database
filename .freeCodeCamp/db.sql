@@ -58,7 +58,23 @@ CREATE TABLE public.first_table (
 ALTER TABLE public.first_table OWNER TO freecodecamp;
 
 --
+-- Name: second_table; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.second_table (
+);
+
+
+ALTER TABLE public.second_table OWNER TO freecodecamp;
+
+--
 -- Data for Name: first_table; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
+
+--
+-- Data for Name: second_table; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
 
