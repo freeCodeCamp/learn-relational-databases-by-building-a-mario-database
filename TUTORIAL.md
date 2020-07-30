@@ -182,3 +182,247 @@ Add a column to `second_table` named `first_column`. Give it a data type of `INT
 - Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`
 - If you aren't connected to `second_database`, type `\c second_database` into the terminal first
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 160. View `second_table` Details
+
+### 160.1
+
+Success! **D**isplay the details of `second_table` again to see your new column.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Put the table name at the end of the command
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 170. Add `id` Column
+
+### 170.1
+
+Your column is there :smile: Try adding another column. Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`. 
+
+#### HINTS
+
+- Don't forget the semi-colon :wink:
+- Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- You added the last column with: `ALTER TABLE second_table ADD COLUMN first_column INT;`
+- Try entering `ALTER TABLE second_table ADD COLUMN id INT;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 180. View `second_table` Details
+
+### 180.1
+
+Your table should have an `id` column added. View the details of `second_table` to make sure.
+
+#### HINTS
+
+- Use the **d**isplay command
+- Add a table name after the **d**isplay command to view details
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 190. Add `age` Column
+
+### 190.1
+
+The table has two columns now. Add another column to `second_table` named `age`. Give it a data type of `INT`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- You added the last column with: `ALTER TABLE second_table ADD COLUMN id INT;`
+- Try using `ALTER TABLE second_table ADD COLUMN age INT;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 200. View `second_table` Details
+
+### 200.1
+
+Take look at the details of `second_table` again.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the shortcut command to see details
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 210. Drop `age` Column
+
+### 210.1
+
+Look at all those columns. You will probably need to know how to remove them at some point. You can use `DROP COLUMN` instead of `ADD COLUMN` to do it. Here's an example:
+
+```sql
+ALTER TABLE table_name DROP COLUMN column_name;
+```
+
+Drop your `age` column.
+
+#### HINTS
+
+- Try entering `ALTER TABLE second_table DROP COLUMN age;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 220. View `second_table` Details
+
+### 220.1
+
+View the details of `second_table` to see if it's gone.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name to the shortcut command to see details
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 230. Drop `first_column` Column
+
+### 230.1
+
+It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.
+
+#### HINTS
+
+- Here's the example again: `ALTER TABLE table_name DROP COLUMN column_name;`
+- You dropped the last column with: `ALTER TABLE second_table DROP COLUMN age;`
+- Try entering `ALTER TABLE second_table DROP COLUMN first_column;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 240. Add `name` Column
+
+### 240.1
+
+A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(20)`.
+
+Add a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `ADD COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
+- You added the last column like this: `ALTER TABLE second_table ADD COLUMN age INT;`
+- Try entering `ALTER TABLE second_table ADD COLUMN name VARCHAR(30);`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 250. View `second_table` Details
+
+### 250.1
+
+Take look at the details of `second_table` to see all your columns.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Try entering `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 260. Rename `name` Column
+
+### 260.1
+
+You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. You can use the `RENAME COLUMN` and `TO` keywords to change it. Here's an example:
+
+```sql
+ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
+```
+
+Rename the `name` column to `username`.
+
+#### HINTS
+
+- Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column
+- Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 270. View `second_table` Details
+
+### 270.1
+
+Take look at the details of `second_table` again to if it got renamed.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Here's an example: `\d table_name`
+- Enter `\d second_table`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 280. Insert Samus Row
+
+### 280.1
+
+It worked. You can add a row to a table like this:
+
+```sql
+INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
+```
+
+Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.
+
+#### HINTS
+
+- The table is `second_table`, the column names are `id` and `username`, and the values to add are `1` and `'Samus'`
+- Don't forget the semi-colon
+- Try entering `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 290. View `second_table` Data
+
+### 290.1
+
+You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:
+
+```sql
+SELECT columns FROM table_name;
+```
+
+Use a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.
+
+#### HINTS
+
+- Replace `columns` in the example with the all(`*`) symbol
+- Don't forget the semi-colon
+- Enter `SELECT * FROM second_table;`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
+
+## 300. Insert Mario Row
+
+### 300.1
+
+**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.
+
+#### HINTS
+ 
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+- Did you make `Mario` a string?
+- Don't forget the semi-colon
+- If you missed a matching single quote, try entering `');` to finish the command
+- You added the last row with `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`
+- Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
+- If you aren't connected to `second_database`, type `\c second_database` into the terminal first
+- Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that
