@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'second_database';
@@ -30,4 +30,4 @@ describe('"second_table"', () => {
       await client.end();
     }
   });
-});
+});*/
