@@ -58,7 +58,8 @@ ALTER TABLE public.first_table OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.second_table (
-    first_column integer
+    first_column integer,
+    id integer
 );
 
 
