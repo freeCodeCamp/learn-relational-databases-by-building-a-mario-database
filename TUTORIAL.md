@@ -417,7 +417,7 @@ Use a `SELECT` statement to view **all** the columns in `second_table`. Use an a
 **Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.
 
 #### HINTS
- 
+
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
 - Did you make `Mario` a string?
 - Don't forget the semi-colon
