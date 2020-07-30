@@ -58,7 +58,8 @@ ALTER TABLE public.first_table OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.second_table (
-    id integer
+    id integer,
+    name character varying(30)
 );
 
 
