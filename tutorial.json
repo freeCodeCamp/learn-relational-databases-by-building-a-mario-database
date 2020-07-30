@@ -751,6 +751,15 @@
         {
           "id": "300.1",
           "content": "**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
+          "hints": [
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`",
+            "Did you make `Mario` a string?",
+            "Don't forget the semi-colon",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "You added the last row with `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`",
+            "Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`",
+            "If you aren't connected to `second_database`, type `\\c second_database` into the terminal first"
+          ],
           "setup": {
             "commits": [
               "0f0baae26d09011ce164e09a733e03c39a148d57"
