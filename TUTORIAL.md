@@ -359,7 +359,7 @@ Rename the `name` column to `username`.
 
 ### 270.1
 
-Take look at the details of `second_table` again to if it got renamed.
+Take look at the details of `second_table` again to see if it got renamed.
 
 #### HINTS
 
