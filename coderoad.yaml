@@ -20,7 +20,7 @@ config:
     branch: v0.2.3
   reset:
     command:
-      - reset.sh
+      - 'reset.sh'
   dependencies:
     - name: node
       version: '>=10'
