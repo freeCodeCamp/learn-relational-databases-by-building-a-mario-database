@@ -1,4 +1,4 @@
-version: '0.2.2'
+version: '0.2.3'
 config:
   testRunner:
     command: ./node_modules/.bin/mocha
@@ -17,7 +17,7 @@ config:
     directory: freeCodeCamp
   repo:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
-    branch: v0.2.2
+    branch: v0.2.3
   reset:
     command:
       - reset.sh
