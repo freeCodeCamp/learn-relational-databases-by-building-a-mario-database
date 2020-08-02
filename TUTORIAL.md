@@ -525,7 +525,7 @@ Only one more row should remain. **Delete** Samus **from** `second_table`.
 Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.
 
 #### HINTS
- 
+
 - Here's the example `SELECT columns FROM table_name;`
 - Use `*` to see all columns
 - Enter `SELECT * FROM second_table;`

@@ -987,7 +987,8 @@
             "Use the `ALTER TABLE` and `DROP COLUMN` keywords",
             "Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`",
             "You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`",
-            "Try `ALTER TABLE second_table DROP COLUMN username;`"
+            "Try `ALTER TABLE second_table DROP COLUMN username;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
