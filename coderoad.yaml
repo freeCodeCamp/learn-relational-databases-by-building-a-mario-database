@@ -38,6 +38,9 @@ levels:
   - id: '40'
     steps:
       - id: '40.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
   - id: '50'
     steps:
       - id: '50.1'
