@@ -14,6 +14,7 @@ config:
         - sudo cp pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
         - sudo service postgresql start
         - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
+        - sudo cp .psqlrc ~
     directory: freeCodeCamp
   repo:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
