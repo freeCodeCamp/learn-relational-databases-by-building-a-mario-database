@@ -414,3 +414,147 @@ Use a `SELECT` statement to view **all** the columns in `second_table`. Use an a
 - Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 310. View `second_table` Data
+
+### 310.1
+
+You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.
+
+#### HINTS
+
+- Here's the example: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM second_table;`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 320. Insert Luigi Row
+
+### 320.1
+
+**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.
+
+#### HINTS
+
+- Did you put `Luigi` in single quotes?
+- Here's the example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+- You added the last row with `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
+- Try entering `INSERT INTO second_table(id, username) VALUES(3, 'Luigi');`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 330. View `second_table` Data
+
+### 330.1
+
+You should now have three rows. Use `SELECT` again to see **all** the data you entered.
+
+#### HINTS
+
+- Here's the example again: `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Try entering `SELECT * FROM second_table;`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 340. Delete Luigi Row
+
+### 340.1
+
+That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+Remove Luigi from your table. The condition you want to use is `username='Luigi'`.
+
+#### HINTS
+
+- Check your table name and condition closely
+- Try entering `DELETE FROM second_table WHERE username='Luigi';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 350. View `second_table` Data
+
+### 350.1
+
+Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.
+
+#### HINTS
+
+- Here's the example: `SELECT columns FROM table_name;`
+- Use `*` to see all the columns
+- Try `SELECT * FROM second_table;`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 360. Delete Mario Row
+
+### 360.1
+
+Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.
+
+#### HINTS
+
+- Use the `DELETE FROM` and `WHERE` keywords
+- Here's the example: `DELETE FROM table_name WHERE condition;`
+- You deleted Luigi with `DELETE FROM second_table WHERE username='Luigi';`
+- Try entering `DELETE FROM second_table WHERE username='Mario';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 370. Delete Samus Row
+
+### 370.1
+
+Only one more row should remain. **Delete** Samus **from** `second_table`.
+
+#### HINTS
+
+- Here's the example: `DELETE FROM table_name WHERE condition;`
+- You deleted Mario with `DELETE FROM second_table WHERE username='Mario';`
+- Use `username='Samus'` as the condition
+- Try entering `DELETE FROM second_table WHERE username='Samus';`
+- If you missed a matching single quote, try entering `');` to finish the command
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 380. View `second_table` Data
+
+### 380.1
+
+Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.
+
+#### HINTS
+ 
+- Here's the example `SELECT columns FROM table_name;`
+- Use `*` to see all columns
+- Enter `SELECT * FROM second_table;`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 390. View `second_table` Details
+
+### 390.1
+
+Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.
+
+#### HINTS
+
+- Use the **d**isplay shortcut command
+- Add the table name after the shortcut command
+- Here's an example: `\d table_name`
+- Try `\d second_table`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+
+## 400. Drop `username` Column
+
+### 400.1
+
+You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
+
+#### HINTS
+
+- Use the `ALTER TABLE` and `DROP COLUMN` keywords
+- Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`
+- You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`
+- Try `ALTER TABLE second_table DROP COLUMN username;`
+- Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already

@@ -157,4 +157,64 @@ levels:
   - id: '300'
     steps:
       - id: '300.1'
+  - id: '310'
+    steps:
+      - id: '310.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '320'
+    steps:
+      - id: '320.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '330'
+    steps:
+      - id: '330.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '340'
+    steps:
+      - id: '340.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '350'
+    steps:
+      - id: '350.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '360'
+    steps:
+      - id: '360.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '370'
+    steps:
+      - id: '370.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '380'
+    steps:
+      - id: '380.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '390'
+    steps:
+      - id: '390.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
+  - id: '400'
+    steps:
+      - id: '400.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/pg.log
 
