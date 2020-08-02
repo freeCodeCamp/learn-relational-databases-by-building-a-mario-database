@@ -1,8 +1,8 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "summary": {
     "title": "Learn Relational Databases by Building a Mario Database",
-    "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS). My goal is to teach you everything I can about it and relatational databases."
+    "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS)."
   },
   "config": {
     "testRunner": {
@@ -18,17 +18,18 @@
           "sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf",
           "sudo cp pg_hba.conf /etc/postgresql/12/main/pg_hba.conf",
           "sudo service postgresql start",
-          "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
+          "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\"",
+          "sudo cp .psqlrc ~"
         ],
         "commits": [
-          "d456d5626ce8a15a957a8043c6bd4bdb81223766"
+          "71a8471f9f7f0f2a24099344d4e230fa7a4c6261"
         ]
       },
       "directory": "freeCodeCamp"
     },
     "repo": {
       "uri": "https://github.com/moT01/learn-relational-databases-by-building-a-mario-database",
-      "branch": "v0.2.2"
+      "branch": "v0.2.3"
     },
     "dependencies": [
       {
@@ -51,14 +52,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "220dddf9bc6faa359289d75573d500dbfae83150"
+              "bd945d81d9e11d441b024dfe4ab7ad87c07efcbc"
             ]
           },
-          "content": "Your virtual machine comes with PostgreSQL installed. You can use psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
+          "content": "Your virtual machine comes with PostgreSQL installed. You will use Psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
           "hints": [
             "Capitalization matters",
-            "If the terminal isn't open, find the \"hamburger\" menu at the top left of the window, navigate to the \"Terminal\" tab, and click \"New Terminal\"",
-            "Type `psql -U freecodecamp postgres` into the terminal and press enter"
+            "Type `psql -U freecodecamp postgres` into the terminal and press enter",
+            "If the terminal isn't open, find the \"hamburger\" menu at the top left of the window, navigate to the \"Terminal\" tab, and click \"New Terminal\""
           ]
         }
       ]
@@ -76,7 +77,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d87570079dadcea5b71cf2bda2a51b6769ede315"
+              "978db4a41164871253940698eab9df56840c8c47"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -95,7 +96,7 @@
       "steps": [
         {
           "id": "40.1",
-          "content": "The databases you see are there by default. You can make your own with `CREATE DATABASE database_name;` The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
+          "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
           "hints": [
             "Don't forget the semi-colon at the end",
             "Type `CREATE DATABASE first_database;` into the psql prompt and press enter",
@@ -103,7 +104,12 @@
           ],
           "setup": {
             "commits": [
-              "b458c10b93c8e4cb51a2428d061ca982e44be528"
+              "762b458a342fdcd7039f580e305575cfa00ce1f2"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "cc7e774efe2b5d3470bd4f01dc142a18ab52fc0a"
             ]
           }
         }
@@ -122,7 +128,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "faa68cfe5fbaa7d6d04784273f8561431f9443d6"
+              "760e6d852591d6e728f5f9e1622e0288c811a9f9"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -142,7 +148,7 @@
       "steps": [
         {
           "id": "60.1",
-          "content": "It worked. Do you see your new database? If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
+          "content": "It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
           "hints": [
             "Use the \"CREATE DATABASE\" keywords",
             "Here's the example again: `CREATE DATABASE database_name;`",
@@ -152,7 +158,7 @@
           ],
           "setup": {
             "commits": [
-              "75c872db31c3d627c8dd1fe2a5c46b7285d95b6a"
+              "5ff3a74a18323c724cc2c4b4232d23d9094cb6e4"
             ]
           }
         }
@@ -171,13 +177,13 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4809bfee75b51fbc31c7f931c0616483df1d953b"
+              "df154f23206cb3883b4b25504a07f80717e6f0bc"
             ]
           },
-          "content": "You should have another new database now. Take another look at them to make sure.",
+          "content": "You should have another new database now. **L**ist the databases to make sure.",
           "hints": [
             "Use the **l**ist shortcut command",
-            "Try entering `\\l` into the prompt",
+            "Enter `\\l` into the prompt",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
           ]
         }
@@ -196,7 +202,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b8849324505cd4abd0f6e9a7dee62f80eb6b84d7"
+              "143e5bbb3078dc20889e9b0b95248d4d098f6567"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -220,14 +226,13 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "fc7851b51946003f1c5804e5c3e6cada6c63aed9"
+              "d3d64635d6f3b486c40511b4747ad9c86d573e4e"
             ]
           },
-          "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant that you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
+          "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
           "hints": [
             "Type `\\d` in the prompt and press enter",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -240,16 +245,15 @@
       "steps": [
         {
           "id": "100.1",
-          "content": "Similar to how you created a database, you can create a table with `CREATE TABLE table_name();`. Note that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
+          "content": "Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
           "hints": [
             "Enter `CREATE TABLE first_table();` into the prompt",
             "Don't forget the semi-colon",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "daf2cad8a91080964c7c012baf34026ec12db16b"
+              "8656c8294a37f1383dfdac88b4e2adff586178c9"
             ]
           }
         }
@@ -268,15 +272,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "68ed0e6e17821bb3d3950b65fc3d37b5675b96ec"
+              "10788dd972aabc27f0dc3fc85cae9c7e616182e1"
             ]
           },
           "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
           "hints": [
-            "A shortcut command starts with `\\`",
+            "Use the **d**isplay shortcut command",
             "Try entering `\\d` into the prompt",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -292,16 +295,14 @@
           "content": "Create another new table in this database. Give it a name of `second_table`.",
           "hints": [
             "Use the \"CREATE TABLE\" keywords",
-            "Don't forget the semi-colon at the end",
-            "It needs parenthesis at the end as well",
+            "Don't forget the parenthesis and semi-colon at the end",
             "Here's an example: `CREATE TABLE table_name();`",
             "Enter `CREATE TABLE second_table();` into the prompt",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "0c72ad1156ec4122bce05a539a93170bdddc04bf"
+              "9797aff6da3837753d902349536211835a004ef0"
             ]
           }
         }
@@ -320,15 +321,14 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c988417e93b8745d589da234d899ec5a8c597341"
+              "6676990bf3b2d08b99536c36dee6396af74e50f0"
             ]
           },
-          "content": "There should be two tables in this database now. Take another look at the tables to make sure.",
+          "content": "There should be two tables in this database now. **D**isplay them again for me to make sure.",
           "hints": [
             "Use the **display** shortcut command",
             "Enter `\\d` into the prompt",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -346,14 +346,13 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f679d273a7c6ad1896ddded1e2c9ee90f15eeed2"
+              "5916e71f903fee37bc1c1ea9cb4f5e80e44ede3c"
             ]
           },
           "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
           "hints": [
             "Enter `\\d second_table` into the prompt",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -369,12 +368,11 @@
           "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
           "hints": [
             "Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "ea084843e173ea2a220d41e9b0416784933b70c2"
+              "497d9a350610049f3d1a4c41168a538492637e56"
             ]
           }
         }
@@ -393,17 +391,16 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2bd33fc19d69f201e2982299464bbd6b96a9ea46"
+              "bc5906e8a0303ff832ff86462044919ed2f70880"
             ]
           },
-          "content": "Success! **D**isplay the details of `second_table` again to see your new column.",
+          "content": "I think it worked. **D**isplay the details of `second_table` again to see if your new column is there.",
           "hints": [
             "Use the **d**isplay shortcut command",
-            "Put the table name at the end of the command",
+            "Put the table name after the command",
             "Here's an example: `\\d table_name`",
             "Try entering `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -416,18 +413,17 @@
       "steps": [
         {
           "id": "170.1",
-          "content": "Your column is there :smile: Try adding another column. Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
+          "content": "Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
           "hints": [
-            "Don't forget the semi-colon :wink:",
             "Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Don't forget the semi-colon :wink:",
             "You added the last column with: `ALTER TABLE second_table ADD COLUMN first_column INT;`",
             "Try entering `ALTER TABLE second_table ADD COLUMN id INT;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "edacf7aea517e168f4b3835e931b1c7a482d1544"
+              "3f79d83b0aa121df0e0fc6d9eb2158e55b11afed"
             ]
           }
         }
@@ -446,7 +442,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1c959eb1075f291fb6c105bf11be91e5aada9d3e"
+              "038d8c37779a1a336498e1c0f3b24863b833f0d5"
             ]
           },
           "content": "Your table should have an `id` column added. View the details of `second_table` to make sure.",
@@ -455,8 +451,7 @@
             "Add a table name after the **d**isplay command to view details",
             "Here's an example: `\\d table_name`",
             "Try entering `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -469,18 +464,17 @@
       "steps": [
         {
           "id": "190.1",
-          "content": "The table has two columns now. Add another column to `second_table` named `age`. Give it a data type of `INT`.",
+          "content": "Add another column to `second_table` named `age`. Give it a data type of `INT`.",
           "hints": [
             "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
             "Here's the example again: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
             "You added the last column with: `ALTER TABLE second_table ADD COLUMN id INT;`",
             "Try using `ALTER TABLE second_table ADD COLUMN age INT;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "04b2df91099f9b648387e3a9e5a6e7545cecb31f"
+              "1cd3b40b5ea9c734dbb71246c0148d784df985e1"
             ]
           }
         }
@@ -499,7 +493,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "74127d5abe9b8afd93083ab6f06a7961ec0dd3a5"
+              "a4484c01e11ebdcb87e5854ca0179daa9f8659cd"
             ]
           },
           "content": "Take look at the details of `second_table` again.",
@@ -508,8 +502,7 @@
             "Add the table name to the shortcut command to see details",
             "Here's an example: `\\d table_name`",
             "Enter `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -522,15 +515,14 @@
       "steps": [
         {
           "id": "210.1",
-          "content": "Look at all those columns. You will probably need to know how to remove them at some point. You can use `DROP COLUMN` instead of `ADD COLUMN` to do it. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
+          "content": "Those are some good looking columns. You will probably need to know how to remove them at some point. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
           "hints": [
             "Try entering `ALTER TABLE second_table DROP COLUMN age;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "ed6a6d436ee3fbac39d99a79f649693d4297662f"
+              "1a2855de5c4743bfaca280dc2c1b4846bfd3f8ae"
             ]
           }
         }
@@ -549,7 +541,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7fbf1b0ca4a49aaf6eb39c077d850b5ebdde98b6"
+              "13735aef24f6b14d6ba31385a8109b4f62930722"
             ]
           },
           "content": "View the details of `second_table` to see if it's gone.",
@@ -558,8 +550,7 @@
             "Add the table name to the shortcut command to see details",
             "Here's an example: `\\d table_name`",
             "Enter `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -577,12 +568,11 @@
             "Here's the example again: `ALTER TABLE table_name DROP COLUMN column_name;`",
             "You dropped the last column with: `ALTER TABLE second_table DROP COLUMN age;`",
             "Try entering `ALTER TABLE second_table DROP COLUMN first_column;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "82320ed25b18ead90d2425c3827842c0c2708c12"
+              "04edbead6b82e6b8207892a892f41888101827df"
             ]
           }
         }
@@ -602,12 +592,11 @@
             "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
             "You added the last column like this: `ALTER TABLE second_table ADD COLUMN age INT;`",
             "Try entering `ALTER TABLE second_table ADD COLUMN name VARCHAR(30);`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "dbb240debf5cfc2cb5985ab50694f39657593b52"
+              "9b4194e261dcbd29c7a070917a684b259c2f7554"
             ]
           }
         }
@@ -626,16 +615,15 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1ef24eff66d7cd25a88c81c45fd83ba1eb474b35"
+              "f2909a2de995acc1c81476dea818181ac8f10c1c"
             ]
           },
-          "content": "Take look at the details of `second_table` to see all your columns.",
+          "content": "Take look at the details of `second_table` to see your columns.",
           "hints": [
             "Use the **d**isplay shortcut command",
             "Here's an example: `\\d table_name`",
             "Try entering `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -648,16 +636,15 @@
       "steps": [
         {
           "id": "260.1",
-          "content": "You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. You can use the `RENAME COLUMN` and `TO` keywords to change it. Here's an example:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
+          "content": "You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
           "hints": [
             "Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column",
             "Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "7d814afec3618c258d90686b32b3707a075da12d"
+              "6e00d3acf9b6f6b6c0d14f9f8e647f0c89717f54"
             ]
           }
         }
@@ -676,7 +663,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ca4e304fe604e7dd2a7e9020613da525b496f15b"
+              "a74994d7fb667800bd3339065310de9c0669511f"
             ]
           },
           "content": "Take look at the details of `second_table` again to see if it got renamed.",
@@ -684,8 +671,7 @@
             "Use the **d**isplay shortcut command",
             "Here's an example: `\\d table_name`",
             "Enter `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -703,13 +689,12 @@
             "The table is `second_table`, the column names are `id` and `username`, and the values to add are `1` and `'Samus'`",
             "Don't forget the semi-colon",
             "Try entering `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`",
-            "If you missed a matching single quote, try entering `');` to finish the command",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "If you missed a matching single quote, try entering `');` to finish the command and try again",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "b78c7c6ba9b1479ee8f69e57288c2b5668c3520a"
+              "43a9c8fadf0438664117b13049f0c3d89998179b"
             ]
           }
         }
@@ -728,16 +713,15 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "15d02a552e41c153515ecee0cfe37f51c6cb475b"
+              "198dfbb25e5b831f15f500366fe16426448ed35f"
             ]
           },
           "content": "You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
           "hints": [
-            "Replace `columns` in the example with the all(`*`) symbol",
-            "Don't forget the semi-colon",
+            "Replace `columns` in the example with the all (`*`) symbol",
+            "Use `second_table` as the table name",
             "Enter `SELECT * FROM second_table;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -752,18 +736,16 @@
           "id": "300.1",
           "content": "**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
           "hints": [
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`",
+            "Here's the example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`",
             "Did you make `Mario` a string?",
-            "Don't forget the semi-colon",
-            "If you missed a matching single quote, try entering `');` to finish the command",
             "You added the last row with `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`",
             "Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ],
           "setup": {
             "commits": [
-              "0f0baae26d09011ce164e09a733e03c39a148d57"
+              "27c6984a302a6052aacc11ccc446ec4a7c0d0037"
             ]
           }
         }
@@ -777,13 +759,18 @@
       "steps": [
         {
           "id": "310.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
           "content": "You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.",
           "hints": [
             "Here's the example: `SELECT columns FROM table_name;`",
             "Use `*` to see all columns",
             "Try entering `SELECT * FROM second_table;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -796,7 +783,21 @@
       "steps": [
         {
           "id": "320.1",
-          "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time."
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
+          "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.",
+          "hints": [
+            "Did you put `Luigi` in single quotes?",
+            "Here's the example: `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`",
+            "You added the last row with `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`",
+            "Try entering `INSERT INTO second_table(id, username) VALUES(3, 'Luigi');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
@@ -808,13 +809,18 @@
       "steps": [
         {
           "id": "330.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
           "content": "You should now have three rows. Use `SELECT` again to see **all** the data you entered.",
           "hints": [
             "Here's the example again: `SELECT columns FROM table_name;`",
             "Use `*` to see all columns",
             "Try entering `SELECT * FROM second_table;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -827,13 +833,18 @@
       "steps": [
         {
           "id": "340.1",
-          "content": "That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. It's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
+          "content": "That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
           "hints": [
             "Check your table name and condition closely",
             "Try entering `DELETE FROM second_table WHERE username='Luigi';`",
             "If you missed a matching single quote, try entering `');` to finish the command",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -846,13 +857,18 @@
       "steps": [
         {
           "id": "350.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
           "content": "Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.",
           "hints": [
             "Here's the example: `SELECT columns FROM table_name;`",
             "Use `*` to see all the columns",
             "Try `SELECT * FROM second_table;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -865,15 +881,20 @@
       "steps": [
         {
           "id": "360.1",
-          "content": "Yea, I really want to start from scratch for the Mario database so you can **delete** Mario **from** `second_table`. Use the same command as before, except make the **where** condition `username='Mario'` this time.",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
+          "content": "Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.",
           "hints": [
             "Use the `DELETE FROM` and `WHERE` keywords",
             "Here's the example: `DELETE FROM table_name WHERE condition;`",
             "You deleted Luigi with `DELETE FROM second_table WHERE username='Luigi';`",
             "Try entering `DELETE FROM second_table WHERE username='Mario';`",
             "If you missed a matching single quote, try entering `');` to finish the command",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -886,6 +907,12 @@
       "steps": [
         {
           "id": "370.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
           "content": "Only one more row should remain. **Delete** Samus **from** `second_table`.",
           "hints": [
             "Here's the example: `DELETE FROM table_name WHERE condition;`",
@@ -893,8 +920,7 @@
             "Use `username='Samus'` as the condition",
             "Try entering `DELETE FROM second_table WHERE username='Samus';`",
             "If you missed a matching single quote, try entering `');` to finish the command",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -907,7 +933,13 @@
       "steps": [
         {
           "id": "380.1",
-          "content": "Use `SELECT` to verify that **all** the rows in `second_table` are gone."
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
+          "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone."
         }
       ]
     },
@@ -919,14 +951,19 @@
       "steps": [
         {
           "id": "390.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
           "content": "Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.",
           "hints": [
             "Use the **d**isplay shortcut command",
             "Add the table name after the shortcut command",
             "Here's an example: `\\d table_name`",
             "Try `\\d second_table`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
           ]
         }
       ]
@@ -939,2173 +976,18 @@
       "steps": [
         {
           "id": "400.1",
-          "content": "You won't need any of these for the Mario database. **Drop** the `username` **column** from `second_table`.",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": []
+          },
+          "content": "You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
           "hints": [
             "Use the `ALTER TABLE` and `DROP COLUMN` keywords",
-            "Don't forget the semi-colon",
             "Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`",
-            "You dropped a column before with  `ALTER TABLE second_table DROP COLUMN age;`",
-            "Try `ALTER TABLE second_table DROP COLUMN username;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "410",
-      "title": "Drop `id` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "410.1",
-          "content": "Next, drop the `id` column.",
-          "hints": [
-            "Keywords used are `ALTER TABLE` and `DROP COLUMN`",
-            "Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`",
-            "You previously dropped a column with `ALTER TABLE second_table DROP COLUMN username;`",
-            "Try `ALTER TABLE second_table DROP COLUMN id;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "420",
-      "title": "View `second_database` Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "420.1",
-          "content": "Okay, the table has no rows or columns left. Remind me what tables are in this database by displaying them.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "You don't need a table name with the command",
-            "Try entering `\\d`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "430",
-      "title": "Drop `second_table`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "430.1",
-          "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` command."
-        }
-      ]
-    },
-    {
-      "id": "440",
-      "title": "Drop `first_table`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "440.1",
-          "content": "Next, drop `first_table`.",
-          "hints": [
-            "Here's an example: `DROP TABLE table_name;`",
-            "Enter `DROP TABLE first_table;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "450",
-      "title": "View Databases",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "450.1",
-          "content": "All the tables are gone now, too. Remind me what databases you have by using the command to **l**ist them.",
-          "hints": [
-            "Use the **l**ist shortcut command",
-            "Enter `\\l`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "460",
-      "title": "Try Dropping `second_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "460.1",
-          "content": "It looks like you still have the two there that you created. Use the `DROP DATABASE` keywords to delete `second_database`. I don't think it will work.",
-          "hints": [
-            "Here's an example: `DROP DATABASE database_name;`",
-            "Enter `DROP DATABASE second_database;`",
-            "If you aren't connected to `second_database`, type `\\c second_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "470",
-      "title": "Connect to `first_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "470.1",
-          "content": "Nope, didn't work. It says you cannot drop the currently open database. Use the **c**onnect shortcut command to connect to `first_database`."
-        }
-      ]
-    },
-    {
-      "id": "480",
-      "title": "Drop `second_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "480.1",
-          "content": "Now that you aren't connected to `second_database`, try to drop it again.",
-          "hints": [
-            "Use the `DROP DATABASE` keywords",
-            "Here's an example: `DROP DATABASE database_name;`",
-            "Enter `DROP DATABASE second_database;`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "490",
-      "title": "Try Renaming `first_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "490.1",
-          "content": "Okay, your finally ready to start creating the Mario database. Instead of dropping `first_database`, you can just rename it. Use the `ALTER DATABASE` and `RENAME TO` keywords to rename `first_database` to `mario_database`. Be sure to put the groups of words in the right order. Hopefully it works.",
-          "hints": [
-            "Here's an example: `ALTER DATABASE database_name RENAME TO newname;`",
-            "Try entering `ALTER DATABASE first_database RENAME TO mario_database;`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "500",
-      "title": "Connect to `postgres`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "500.1",
-          "content": "Now what? Cannot drop currently opened database. :triumph: I remember starting on a database named `postgres`. Connect to that one quick so you can rename this one.",
-          "hints": [
-            "Use the **c**onnect shortcut command",
-            "Here's an example: `\\c database_name`",
-            "Try `\\c postgres`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "510",
-      "title": "Rename `first_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "510.1",
-          "content": "Now you should be able to rename `first_database` to `mario_database`. Hopefully it works this time. Give it a try. As a reminder, you use the `ALTER DATABASE` and `RENAME TO` keywords.",
-          "hints": [
-            "Here's an example: `ALTER DATABASE database_name RENAME TO newdatabase_name;`",
-            "Try entering `ALTER DATABASE first_database RENAME TO mario_database;`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "520",
-      "title": "Connect to `mario_database`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "520.1",
-          "content": "Yay! :smiley: Now that it has the right name, you can connect back to that one and start. Do that now.",
-          "hints": [
-            "Use the **c**onnect shortcut command",
-            "Here's an example: `\\c database_name`",
-            "Try entering `\\c mario_database`",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "530",
-      "title": "Display `mario_database` Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "530.1",
-          "content": "I don't think you created any tables here, take a look to make sure.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Try entering `\\d`",
-            "Try entering `\\c mario_database`",
-            "If you aren't connected to `mario_database`, type `\\c mario_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "540",
-      "title": "Create `characters` Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "540.1",
-          "content": "No tables. You have a clean slate now. Create a new table name `characters`, it will hold some basic information about Mario characters.",
-          "hints": [
-            "Use the `CREATE TABLE` keywords",
-            "Here's an example: `CREAT TABLE table_name();`",
-            "Try entering `CREATE TABLE characters();`",
-            "If you aren't connected to `mario_database`, type `\\c mario_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "550",
-      "title": "Create `characters` Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "550.1",
-          "content": "No tables. You have a clean slate now. Create a new table name `characters`, it will hold some basic information about Mario characters.",
-          "hints": [
-            "Use the `CREATE TABLE` keywords",
-            "Here's an example: `CREAT TABLE table_name();`",
-            "Try entering `CREATE TABLE characters();`",
-            "If you aren't connected to `mario_database`, type `\\c mario_database` into the prompt first",
-            "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in before that"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "560",
-      "title": "View `characters` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "560.1",
-          "content": "Constraints are additional features of a column. `NOT NULL` means the data entered cannot be null.\n\nView the details of `characters` to see the additional properties the `SERIAL` type gave your column.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "570",
-      "title": "Add `name` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "570.1",
-          "content": "What columns can you add to describe Mario characters? They all have a name... I think anyway :confused:\n\nAdd a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINTS;`",
-            "Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "580",
-      "title": "Add `homeland` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "580.1",
-          "content": "Video game characters are usually from fantasy worlds. You can make a column for that. Add another column to `characters` named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
-            "Try entering `ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "590",
-      "title": "Add `favorite_color` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "590.1",
-          "content": "Video game characters are quite colorful. Add one more column named `favorite_color`. Make it a `VARCHAR` with a max length of `30`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
-            "Try entering `ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "600",
-      "title": "View `characters` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "600.1",
-          "content": "You should have four columns in `characters`. Take a look at the details of it to see how things are going.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Add a table name to the shortcut command to see details",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "610",
-      "title": "Insert Mario Row",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "610.1",
-          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
-          "hints": [
-            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
-            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`",
-            "If you missed a matching single quote, try entering `');` to finish the command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "620",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "620.1",
-          "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "630",
-      "title": "Insert Luigi Row",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "630.1",
-          "content": "You can see the `character_id` was added automatically. Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Green`.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
-            "Don't forget the quotes and semi-colon",
-            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`",
-            "If you missed a matching single quote, try entering `');` to finish the command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "640",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "640.1",
-          "content": "View all the data in your `characters` table with `SELECT` again.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "650",
-      "title": "Insert Peach Row",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "650.1",
-          "content": "Okay, it looks like it's all working. Add another row for Peach. Give her the values: `Peach`, `Mushroom Kingdom`, and `Pink`.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
-            "Don't forget the quotes and semi-colon",
-            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');`",
-            "If you missed a matching single quote, try entering `');` to finish the command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "660",
-      "title": "Add Toadstool and Bowser Rows",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "660.1",
-          "content": "Adding rows one at a time is quite tedious. You can add many rows with one command by adding a comma and another group of parenthesis with more values. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red'), ('Luigi', 'Mushroom Kingdom', 'Green'), ('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two rows at once. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`.",
-          "hints": [
-            "Make sure you added commas and quotes where needed",
-            "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUE('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`",
-            "If you missed a matching single quote, try entering `');` to finish the command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "670",
-      "title": "Add Yoshi and Daisy Rows",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "670.1",
-          "content": "Hmm, \"INSERT 0 2\". That `2` must mean you added two rows. I mentioned earlier that if you don't get a message after a command, it is incomplete. This is because you can put a command on multiple lines. Here's an example:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES\n('Toadstool', 'Mushroom Kingdom', 'Red'), \n('Bowser', 'Mushroom Kingdom', 'Green');\n```\n\nThat's much easier to read :sunglasses:. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
-          "hints": [
-            "Don't forget the semi-colon",
-            "Make sure you added commas and quotes where needed",
-            "You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`",
-            "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Daisy', 'Sarasaland', 'Yellow'), ('Yoshi', 'Dinosaur Land', 'Green');`",
-            "If you missed a matching single quote, try entering `');` to finish the command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "680",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "680.1",
-          "content": "Take a look all the data in your table with `SELECT` to see where you stand.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "690",
-      "title": "Update Daisy's `favorite_color`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "690.1",
-          "content": "I see several mistakes. I got the favorite color wrong for three characters, the name wrong for one, and the homeland wrong for one. You can use `UPDATE` with `SET` and `WHERE` to update rows. Here's an example:\n\n```sql\nUPDATE table_name SET column_name=newvalue WHERE condition;\n```\n\nYou used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color` to `Orange` by using the condition `name='Daisy'`.",
-          "hints": [
-            "There should be two sets of single quotes in this command",
-            "Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`",
-            "Try `UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "700",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "700.1",
-          "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`.\n\nTake a look all the data in your table again to see if she got updated.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "710",
-      "title": "Update Toadstool's `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "710.1",
-          "content": "Yes, it changed to Orange. I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` his `name` to `Toad` where `favorite_color='Red'`.",
-          "hints": [
-            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
-            "Here's the second part of the command: `SET name='Toad' WHERE favorite_color='red'`",
-            "Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='red'`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "720",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "720.1",
-          "content": "UPDATE 2?! :open_mouth: What happened. Take a look all the data in your table to find out.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "730",
-      "title": "Update Mario's `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "730.1",
-          "content": "I see, using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row where `character_id=1`.",
-          "hints": [
-            "Don't forget the table name in there",
-            "Use the `UPDATE`, `SET`, and `WHERE` keywords and strings where needed",
-            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
-            "Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "740",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "740.1",
-          "content": "Take a look all the data in your table again to see if Mario's name got changed back.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "750",
-      "title": "Update Toad's `favorite_color`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "750.1",
-          "content": "Looks like it worked. I got Toad's favorite color wrong, too. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
-          "hints": [
-            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
-            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
-            "I recommend using `character_id=4` as the condition",
-            "Try entering `UPDATE characters SET favorite_color='Blue' WHERE character_id=4;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "760",
-      "title": "Update Bowser's `favorite_color`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "760.1",
-          "content": "Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update it without changing any of the other rows.",
-          "hints": [
-            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
-            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
-            "I recommand using `character_id=5` as the condition",
-            "Try entering `UPDATE characters SET favorite_color='yellow' WHERE character_id=5;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "770",
-      "title": "Update Bowser's `homeland`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "770.1",
-          "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows.",
-          "hints": [
-            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
-            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
-            "I recommand using `character_id=5` as the condition",
-            "Try entering `UPDATE characters SET favorite_color='yellow' WHERE character_id=5;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "780",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "780.1",
-          "content": "Take a look all the data in your table again so I can make sure there's no more issues.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example; `SELECT rows FROM table_name;`",
-            "Try entering `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "790",
-      "title": "View Sorted `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "790.1",
-          "content": "Umm, actually can you put that in order for me? Here's an example:\n\n```sql\nSELECT columns FROM table_name ORDER BY column_name;\n```\n\nView all the data again, but put it in order by `character_id`.",
-          "hints": [
-            "Try entering `SELECT * FROM characters ORDER BY character_id;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "800",
-      "title": "Add `name` Primary Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "800.1",
-          "content": "It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row and can be used to relate tables to each other. Here's an example of how to set a `PRIMARY KEY`:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\n```\n\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
-          "hints": [
-            "You don't need quotes, but you do need a semi-colon :smile:",
-            "Try entering `ALTER TABLE characters ADD PRIMARY KEY(name);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "810",
-      "title": "View `characters` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "810.1",
-          "content": "You should set a primary key on every table and there can only be one per table.\n\nTake a look at the details of your `characters` table to see the primary key at the bottom.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "820",
-      "title": "Drop `name` Primary Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "820.1",
-          "content": "It's possible a character comes along with the same name as an existing character. I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\n\n```sql\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\n```\n\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
-          "hints": [
-            "Try using `ALTER TABLE characters DROP CONSTRAIN characters_pkey;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "830",
-      "title": "View `character` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "830.1",
-          "content": "View the details of the `characters` table to make sure it's gone.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "840",
-      "title": "Add `character_id` Primary Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "840.1",
-          "content": "I still see the `NOT NULL` that was added when you set the primary key. It's fine to leave that, since you don't want a row without a name.\n\nSet the primary key again, but use the `character_id` column this time.",
-          "hints": [
-            "Here's the example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`",
-            "Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "850",
-      "title": "View `character` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "850.1",
-          "content": "View the details of the `characters` table to see the new primary key.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "860",
-      "title": "Create `more_info` Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "860.1",
-          "content": "I think that table is complete for now. Next, you will make a `more_info` table that has some extra info about the characters. As a reminder, here's how you created the `characters` table:\n\n```sql\nCREATE TABLE characters();\n```\n\nCreate a new table in your `mario_database` named `more_info`.",
-          "hints": [
-            "Try entering `CREATE TABLE more_info();`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "870",
-      "title": "View `mario_database` Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "870.1",
-          "content": "View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.",
-          "hints": [
-            "Enter the `\\d` command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "880",
-      "title": "View `characters` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "880.1",
-          "content": "Hmm, I wonder what that third one is. It says \"characters_character_id_seq\". Ahh, I think I have a clue. View the details of the `characters` table.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Add the table name after the command",
-            "You previously used `\\d second_table`",
-            "Enter `\\d characters`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "890",
-      "title": "Create `more_info_id` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "890.1",
-          "content": "Yes, I think that is what finds the next value for the `character_id` column. Moving along...\n\nYou usually want to create the primary key right away. You previously added a column like this:\n\n```sql\nALTER TABLE characters ADD COLUMN character_id SERIAL;\n```\n\nAdd a column to `more_info` named `more_info_id`. Give it a type of `SERIAL`, and make it the `PRIMARY KEY`. You can set the primary key constraint right away if you just add it after `SERIAL`.",
-          "hints": [
-            "Separate `SERIAL` and `PRIMARY KEY` constraints with a space",
-            "Try entering `ALTER TABLE more_info ADD COLUMN more_info_id SERIAL PRIMARY KEY;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "900",
-      "title": "View `mario_database` Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "900.1",
-          "content": "View the tables in `mario_database` again with the **d**isplay command. If my theory is correct, there should be another sequence there for the `more_info_id`.",
-          "hints": [
-            "Enter the `\\d` command"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "910",
-      "title": "Add `birthday` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "910.1",
-          "content": "Yup, there it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
-            "Try entering `ALTER TABLE more_info ADD COLUMN birthday DATE;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "920",
-      "title": "Add `height` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "920.1",
-          "content": "Add a `height` column to `more_info`. Give it type of `SMALLINT`. `SMALLINT` is just an integer that uses less space.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
-            "Try entering `ALTER TABLE more_info ADD COLUMN height SMALLINT;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "930",
-      "title": "Add `weight` Columns",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "930.1",
-          "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
-            "Try entering `ALTER TABLE more_info ADD COLUMN weight NUMERIC(4, 1);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "940",
-      "title": "View `more_info` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "940.1",
-          "content": "The `NUMERIC` type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be right of the decimal.\n\nTake a look at the details of `more_info` to see all your columns.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d more_info`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "950",
-      "title": "Add `character_id` Foreign Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "950.1",
-          "content": "How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. Create a `character_id` column in `more_info`. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
-          "hints": [
-            "You can do this!",
-            "Give it one more try, take a close look at all those values and keywords",
-            "Without the keywords, it looks like this: `more_info character_id characters(character_id);`",
-            "Don't forget the data type",
-            "Try this `ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "960",
-      "title": "View `more_info` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "960.1",
-          "content": "The values of your foreign key column will match the values of the primary key column it is referencing. To set a row in `more_info` for Mario, you just need to set the `character_id` value as `1`, since that's what his `character_id` is in `characters`.\n\nTake a look at the details of `more_info` to see your foreign key.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d more_info`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "970",
-      "title": "Add `UNIQUE`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "970.1",
-          "content": "I want your tables to have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD UNIQUE(column_name);\n```\n\nAdd the `UNIQUE` constraint to the column you just added.",
-          "hints": [
-            "It's the `character_id` column in `more_info`",
-            "Try `ALTER TABLE more_info ADD UNIQUE(character_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "980",
-      "title": "Add `NOT NULL`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "980.1",
-          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column."
-        }
-      ]
-    },
-    {
-      "id": "990",
-      "title": "View `more_info` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "990.1",
-          "content": "Take a look at the details of your `more_info` table to see all the keys and constraints you added.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d more_info`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1000",
-      "title": "Select `character_id`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1000.1",
-          "content": "I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.",
-          "hints": [
-            "Here's an example: `SELECT column FROM table_name;`",
-            "Try `SELECT character_id FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1010",
-      "title": "Select `character_id` and `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1010.1",
-          "content": "That list of numbers doesn't really help. Use `SELECT` again to display both the `character_id` and `name` columns from the `characters` table. You can separate the column names with a comma to view both.",
-          "hints": [
-            "Here's an example: `SELECT column1, column2 FROM table_name;`",
-            "Try entering `SELECT character_id, name FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1020",
-      "title": "Add `more_info` for Mario",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1020.1",
-          "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight | character_id |\n| ---------- | ------ | ------ | ------------ |\n| 1981-07-09 | 155    | 64.5   | 1            |\n\nAdd a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`."
-        }
-      ]
-    },
-    {
-      "id": "1030",
-      "title": "View `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1030.1",
-          "content": "View all the data in `more_info` to make sure it's looking good.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1040",
-      "title": "Select `character_id` and `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1040.1",
-          "content": "Next, you are going to add some info for Luigi. Use `SELECT` again to view the `character_id` and `name` columns **from** the `characters` table to find his id.",
-          "hints": [
-            "Here's an example: `SELECT column1, column2 FROM table_name;`",
-            "Try entering `SELECT character_id, name FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1050",
-      "title": "Add `more_info` for Luigi",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1050.1",
-          "content": "You can see Luigi's id there. Here's his info:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1983-07-14 | 175    | 48.8   |\n\nAdd a row for Luigi using the above info. Be sure to add his `character_id` as well.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`",
-            "Luigi's `character_id` is `2`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1060",
-      "title": "View `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1060.1",
-          "content": "View all the data in `more_info` to see more info for Luigi.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1070",
-      "title": "Select `character_id` and `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1070.1",
-          "content": "Peach is next. View the `character_id` and `name` columns from the `characters` table again so you can find out her id.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT column1, column2 FROM table_name;`",
-            "Try entering `SELECT character_id, name FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1080",
-      "title": "Add `more_info` for Peach",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1080.1",
-          "content": "Here's the additional info for Peach:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1985-10-18 | 173    | 52.2   |\n\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
-          "hints": [
-            "Her `character_id` is `3`",
-            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 173, 52.2, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1090",
-      "title": "Select Toad's `character_id` and `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1090.1",
-          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows, you can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` where `name='Toad'`.",
-          "hints": [
-            "Don't forget the semi-colon :smile:",
-            "Try entering `SELECT character_id, name FROM characters WHERE name='Toad';`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1100",
-      "title": "Add `more_info` for Toad",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1100.1",
-          "content": "Here's what Toad's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1950-01-10 | 66     | 35.6   |\n\nAdd the above info for Toad. Be sure to add his `character_id`.",
-          "hints": [
-            "Put `DATE` values in quotes",
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`",
-            "Toad's `character_id` is `4`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1110",
-      "title": "View `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1110.1",
-          "content": "View all the data in `more_info` to see the rows you added.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1120",
-      "title": "Select Bowser's Row",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1120.1",
-          "content": "Bowser is next. Find his id by viewing his row in the `characters` table. You can view whatever columns you want as long as you include the id column, but only view his row.",
-          "hints": [
-            "Use the `SELECT`, `FROM`, and `WHERE` keywords",
-            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
-            "I recommend `name='Bowser'` as the condition",
-            "Try entering `SELECT * FROM characters WHERE name='Bowser';`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1130",
-      "title": "Add `more_info` for Bowser",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1130.1",
-          "content": "Here's what Bowser's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-10-29 | 258    | 300    |\n\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
-          "hints": [
-            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`",
-            "Bowser's `character_id` is `5`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1140",
-      "title": "Select Daisy's Row",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1140.1",
-          "content": "Daisy is next. Find her id by viewing **all** the columns in **only Daisy's row** of the `characters` table.",
-          "hints": [
-            "Use the `SELECT`, `FROM`, and `WHERE` keywords",
-            "View **all** the columns this time",
-            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
-            "Use `name='Daisy'` as the condition",
-            "Try entering `SELECT * FROM characters WHERE name='Daisy';`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1150",
-      "title": "Add `more_info` for Daisy",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1150.1",
-          "content": "The info for Daisy looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1989-07-31 | NULL   | NULL   |\n\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well, and note that `NULL` values don't need quotes.",
-          "hints": [
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`",
-            "Daisy's `character_id` is `6`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1160",
-      "title": "View `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1160.1",
-          "content": "View all the data in `more_info` to see the rows you added.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to see all columns",
-            "Try entering `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1170",
-      "title": "Select Yoshi's `character_id` and `name`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1170.1",
-          "content": "I guess null values just show up as blank in the database. Yoshi is last. View only the `character_id` column from `characters` for only Yoshi's row to find his id.",
-          "hints": [
-            "Use the `SELECT`, `FROM` and `WHERE` keywords",
-            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
-            "You saw all Daisy's columns with `SELECT * FROM characters WHERE name='Daisy';`",
-            "Only view the `character_id` column",
-            "Try entering `SELECT character_id FROM characters WHERE name='Yoshi';`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1180",
-      "title": "Add `more_info` for Yoshi",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1180.1",
-          "content": "The info for Yoshi looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-04-13 | 162    | 59.1   |\n\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
-          "hints": [
-            "You got this one!",
-            "Yoshi's `character_id` is `7`",
-            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`",
-            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1190",
-      "title": "View all `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1190.1",
-          "content": "There should be a lot of data in `more_info` now. Take a look at **all** the rows and columns in it.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Try `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1200",
-      "title": "Rename `height` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1200.1",
-          "content": "It looks good, I don't think there's any mistakes this time... Actually, I do see something. The `height` and `weight` columns; what units do they use? It's centimeters and kilograms, but nobody will know.\n\nRename the `height` column to `height_in_cm`.",
-          "hints": [
-            "Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords",
-            "Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`",
-            "Try `ALTER TABLE more_info RENAME COLUMN height TO height_in_cm;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1210",
-      "title": "Rename `weight` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1210.1",
-          "content": "Rename the `weight` column to `weight_in_kg`.",
-          "hints": [
-            "Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords",
-            "Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`",
-            "Try `ALTER TABLE more_info RENAME COLUMN weight TO weight_in_kg;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1230",
-      "title": "View all `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1230.1",
-          "content": "Take a quick look at all the data in `more_info` to see the new column names.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Try `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1240",
-      "title": "Create `sounds` Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1240.1",
-          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
-          "hints": [
-            "Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "L1260",
-      "title": "View `mario_database` Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "L1260.1",
-          "content": "View the tables in `mario_database` to make sure it worked.",
-          "hints": [
-            "Use the **l**ist command",
-            "Try entering `\\l`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1270",
-      "title": "Add `filename` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1270.1",
-          "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "Give it three properties: `VARCHAR(40) NOT NULL UNIQUE`",
-            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINTS;`",
-            "Try entering `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1280",
-      "title": "Add `sounds` Foreign Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1280.1",
-          "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have have more than one character. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\n```\n\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
-          "hints": [
-            "You can do this!",
-            "Give it one more try, take a close look at all those values and keywords",
-            "Without the keywords, it looks like this: `sounds character_id characters(character_id);`",
-            "Try using `ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1290",
-      "title": "View `sounds ` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1290.1",
-          "content": "Take a look at the details of the `sounds` table to see all the columns.",
-          "hints": [
-            "Use the **d**isplay shortcut command",
-            "Here's an example: `\\d table_name`",
-            "Try entering `\\d sounds`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1300",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1300.1",
-          "content": "Next you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name ORDER BY column;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM characters ORDER BY character_id;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1310",
-      "title": "Insert `its-a-me.wav`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1310.1",
-          "content": "The first file is named `its-a-me.wav`. Insert it into the `sounds` table. Use that for the `filename` and Mario's id as the `character_id`.",
-          "hints": [
-            "Don't for get the quotes",
-            "Use `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`",
-            "Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1320",
-      "title": "Insert `yippee.wav`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1320.1",
-          "content": "Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` again for the foreign key value.",
-          "hints": [
-            "His `character_id` is `1`",
-            "Don't forget the quotes",
-            "You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
-            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1330",
-      "title": "Insert `ha-ha.wav`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1330.1",
-          "content": "Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.",
-          "hints": [
-            "His `character_id` is `2`",
-            "You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
-            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('ha-ha.wav', 2);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1340",
-      "title": "Insert `oh-yeah.wav`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1340.1",
-          "content": "Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.",
-          "hints": [
-            "His `character_id` is `2`",
-            "Try `INSERT INTO sounds(filename, character_id) VALUES('oh-yeah.wav', 2);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1350",
-      "title": "Insert Sounds for Peach",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1350.1",
-          "content": "Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.",
-          "hints": [
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "Find her `character_id` by viewing data in the `characters` table",
-            "Her `character_id` is `3`",
-            "Try `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1360",
-      "title": "Insert Two More Sounds",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1360.1",
-          "content": "Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.",
-          "hints": [
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "Find their `character_id` by viewing data in the `characters` table",
-            "Peach's `character_id` is `3`, Mario is `1`",
-            "Try `INSERT INTO sounds(filename, character_id) VALUES('mm-hmm.wav', 3), ('yahoo.wav', 1);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1370",
-      "title": "View `sounds` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1370.1",
-          "content": "View all the data in the `sounds`. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1380",
-      "title": "Create `actions` Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1380.1",
-          "content": "The sounds are looking good I think. Create another new table called `actions`. It will have the chacters abilities. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. As a reminder, you can add a column right away by putting in the parenthesis of the command.",
-          "hints": [
-            "Use `CREATE TABLE`, `SERIAL`, and `PRIMARY KEY`",
-            "You previously used `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`",
-            "Try entering `CREATE TABLE actions(action_id SERIAL PRIMARY KEY);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1390",
-      "title": "Add `action` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1390.1",
-          "content": "Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "You previously used `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`",
-            "Try entering `ALTER TABLE actions ADD COLUMN action VARCHAR(20) UNIQUE NOT NULL;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1400",
-      "title": "Insert `run`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1400.1",
-          "content": "The actions table won't have any foreign keys. It's going to have a \"many-to-many\" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later.\n\nInsert a row into the `actions` table. Give it an `action` of `run`.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Don't forget the single quotes",
-            "Here's an example `INSERT INTO table(column) VALUES(value);`",
-            "Try entering `INSERT INTO actions(action) VALUES('run');`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1410",
-      "title": "Insert `jump`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1410.1",
-          "content": "Insert another row into the `actions` table. Give it an `action` of `jump`.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Don't forget the single quotes",
-            "You previously used `INSERT INTO actions(action) VALUES('run');`",
-            "Try entering `INSERT INTO actions(action) VALUES('jump');`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1420",
-      "title": "Insert `duck`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1420.1",
-          "content": "Add another action row with an `action` of `duck`.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Don't forget the single quotes",
-            "You previously used `INSERT INTO actions(action) VALUES('jump');`",
-            "Try entering `INSERT INTO actions(action) VALUES('jump');`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1430",
-      "title": "View `actions` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1430.1",
-          "content": "View all the data in `actions` to make sure there's no mistakes.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM actions;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1440",
-      "title": "Create Junction Table",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1440.1",
-          "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
-          "hints": [
-            "Use the `CREATE TABLE` keywords",
-            "You previously used `CREATE TABLE more_info();`",
-            "Try entering `CREATE TABLE character_actions;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1450",
-      "title": "Add `character_id` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1450.1",
-          "content": "Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship.\n\nAdd a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "You previously used: `ALTER TABLE actions ADD COLUMN name VARCHAR(20) UNIQUE NOT NULL;`",
-            "Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1460",
-      "title": "Add `character_id` as Foreign Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1460.1",
-          "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nHmm, that doesn't seem any easier :disappointed: Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table. Use `character_actions_character_id_fkey` as the constraint name.",
-          "hints": [
-            "Without the keywords, it looks like this: `character_actions character_actions_character_id_fkey character_id characters(character_id);`",
-            "All the info you need is there, read it closely",
-            "This is a tough one, give it one more try",
-            "Try this: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1470",
-      "title": "View `character_actions` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1470.1",
-          "content": "View the details of the `character_actions` table to see the foreign key constraint you added.",
-          "hints": [
-            "Use the **d**isplay command",
-            "Add the table name after the command",
-            "Enter `\\d character_actions`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1480",
-      "title": "Add `action_id` Column",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1480.1",
-          "content": "Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.",
-          "hints": [
-            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
-            "You previously used: `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`",
-            "Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1500",
-      "title": "Add `action_id` as Foreign Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1500.1",
-          "content": "You're going to need to set that column as a foreign key as well. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `action_id` column you just added as a foreign key that references the `action_id` from the `actions` table. Use `character_actions_action_id_fkey` as the constraint name.",
-          "hints": [
-            "Without the keywords, it looks like this: `character_actions character_actions_action_id_fkey action_id actions(action_id);`",
-            "You previously used: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`",
-            "Here it is `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1510",
-      "title": "View `character_actions` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1510.1",
-          "content": "View the details of the `character_actions` table to see your keys.",
-          "hints": [
-            "Use the **d**isplay command",
-            "Add the table name after the command",
-            "Enter `\\d character_actions`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1520",
-      "title": "Create Composite Primary Key",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1520.1",
-          "content": "I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table."
-        }
-      ]
-    },
-    {
-      "id": "1530",
-      "title": "View `character_actions` Details",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1530.1",
-          "content": "This table will have multiple rows with the same `character_id`, and multiple rows the the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.\n\nView the details of the `character_actions` table to see your composite key.",
-          "hints": [
-            "Use the **d**isplay command",
-            "Add the table name after the command",
-            "Enter `\\d character_actions`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1540",
-      "title": "Insert Yoshi Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1540.1",
-          "content": "Insert three rows into `character_actions` for all the actions Yoshi can perform. His `character_id` is `7` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1550",
-      "title": "View `character_actions` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1550.1",
-          "content": "View all the data in `character_actions` to see your rows.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM character_actions;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1560",
-      "title": "Insert Daisy Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1560.1",
-          "content": "Add three more rows into `character_actions` for all of Daisy's actions. Her `character_id` is `6` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1570",
-      "title": "Insert Bowser Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1570.1",
-          "content": "Add three more rows for Bowser's actions. His `character_id` is `5`. He can perform all the actions as well.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Use `1`, `2`, and `3` for the `action_id` values",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1580",
-      "title": "Insert Toad Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1580.1",
-          "content": "Add three more rows for Toad's actions. His `character_id` is `4`.",
-          "hints": [
-            "Add a row for each action",
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3)`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1590",
-      "title": "Insert Peach Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1590.1",
-          "content": "Peach's `character_id` is `3`. She can perform all the actions as well, so add three more rows for those.",
-          "hints": [
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3)`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1600",
-      "title": "Insert Luigi Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1600.1",
-          "content": "Add three more rows for Luigi's actions.",
-          "hints": [
-            "He can do all the actions as well",
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3)`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1610",
-      "title": "Insert Mario Actions",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1610.1",
-          "content": "Last is Mario, add three rows for his actions.",
-          "hints": [
-            "He can do all the actions",
-            "Use the `INSERT INTO` and `VALUES` keywords",
-            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
-            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3)`",
-            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(1, 1), (1, 2), (1, 3);`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1620",
-      "title": "View `character_actions` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1620.1",
-          "content": "View all the data in `character_actions` to see your rows. If it doesn't fit on the screen, press enter to continue viewing the data.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM character_actions;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1630",
-      "title": "Display Tables",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1630.1",
-          "content": "Congratulations :tada: I think you've added enough data into the database. I love it! Take a look around to see what you ended up with. First, display all the tables you created.",
-          "hints": [
-            "Use the **d**isplay command",
-            "Enter `\\d`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1640",
-      "title": "View `characters` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1640.1",
-          "content": "There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM characters;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1650",
-      "title": "View `more_info` Data",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1650.1",
-          "content": "Those are some lovely characters. Next, view all the data in `more_info`.",
-          "hints": [
-            "Use the `SELECT` and `FROM` keywords",
-            "Here's an example: `SELECT columns FROM table_name;`",
-            "Use `*` to select all the columns",
-            "Try entering `SELECT * FROM more_info;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1660",
-      "title": "Full Join `characters` on `more_info`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1660.1",
-          "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or...\n\nYou added that as a foreign key, that means you can get all the data from both tables together. Introducing the `JOIN` command. Here's an example:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the keys.",
-          "hints": [
-            "Use `*` to see all the columns",
-            "Give it one more try, read closely",
-            "Without the keywords, it looks like this: `characters more_info characters.character_id = more_info.character_id`",
-            "Try entering `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1670",
-      "title": "Full Join `characters` on `sounds`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1670.1",
-          "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other.\n\nHere's the example again:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nUse another join command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
-          "hints": [
-            "Use `*` to see all the columns",
-            "You previously used `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`",
-            "Try entering `SELECT * FROM characters FULL JOIN sounds ON characters.character_id = sounds.character_id;`"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1680",
-      "title": "Join `character_actions` with `characters` and `actions`",
-      "summary": "",
-      "content": "",
-      "steps": [
-        {
-          "id": "1680.1",
-          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. Looks like we never got around to adding sounds for a few of the characters.\n\nLastly, how can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column \nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nView all the data from `characters`, `actions`, and `character_actions`. Use the correct keys.",
-          "hints": [
-            "Use the `character_id` column to join `character_actions` and `characters`",
-            "Use the `action_id` column to join `character_actions` and `actions`",
-            "Without the keywords, it looks like this: `character_actions characters character_actions.character_id = characters.character_id actions character_actions.action_id = actions.action_id;`",
-            "Try entering `SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;`"
+            "You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`",
+            "Try `ALTER TABLE second_table DROP COLUMN username;`"
           ]
         }
       ]
