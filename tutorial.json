@@ -38,7 +38,7 @@
       }
     ],
     "reset": {
-      "command": "bash reset.sh"
+      "command": "bash ./freeCodeCamp/reset.sh"
     }
   },
   "levels": [
