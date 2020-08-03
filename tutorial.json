@@ -96,17 +96,20 @@
       "steps": [
         {
           "id": "40.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": [
+              "762b458a342fdcd7039f580e305575cfa00ce1f2"
+            ]
+          },
           "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
           "hints": [
             "Don't forget the semi-colon at the end",
             "Type `CREATE DATABASE first_database;` into the psql prompt and press enter",
             "Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first"
           ],
-          "setup": {
-            "commits": [
-              "762b458a342fdcd7039f580e305575cfa00ce1f2"
-            ]
-          },
           "solution": {
             "commits": [
               "cc7e774efe2b5d3470bd4f01dc142a18ab52fc0a"
@@ -939,7 +942,13 @@
             ],
             "commits": []
           },
-          "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone."
+          "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.",
+          "hints": [
+            "Here's the example `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Enter `SELECT * FROM second_table;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
