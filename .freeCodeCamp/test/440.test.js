@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'second_database';
@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 describe('"second_database"', () => {
-  it('should not have a table named "second_table"', async () => {
+  it('should not have a table named "first_table"', async () => {
     const dQuery = `SELECT n.nspname as "Schema",
         c.relname as "Name",
         CASE c.relkind WHEN 'r' THEN 'table' WHEN 'v' THEN 'view' WHEN 'm' THEN 'materialized view' WHEN 'i' THEN 'index' WHEN 'S' THEN 'sequence' WHEN 's' THEN 'special' WHEN 'f' THEN 'foreign table' WHEN 'p' THEN 'partitioned table' WHEN 'I' THEN 'partitioned index' END as "Type",
@@ -26,15 +26,15 @@ describe('"second_database"', () => {
       await client.connect();
       const res = await client.query(dQuery);
 
-      const secondTable = res.rows.findIndex(row => {
-        return row.Name === 'second_table';
+      const firstTable = res.rows.findIndex(row => {
+        return row.Name === 'first_table';
       })
 
-      assert(secondTable < 0);
+      assert(firstTable < 0);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});*/
+});
