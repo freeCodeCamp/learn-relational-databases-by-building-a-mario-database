@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'second_database';
@@ -8,22 +8,22 @@ const client = new Client({
 });
 
 describe('"second_table"', () => {
-  it('should not have a "username" column', async () => {
+  it('should not have an "id" column', async () => {
     const query = `SELECT * FROM second_table;`;
 
     try {
       await client.connect();
       const res = await client.query(query);
 
-      const usernameColumn = res.fields.findIndex(column => {
-        return column.name === 'username';
+      const idColumn = res.fields.findIndex(column => {
+        return column.name === 'id';
       })
 
-      assert(usernameColumn < 0);
+      assert(idColumn < 0);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});*/
+});
