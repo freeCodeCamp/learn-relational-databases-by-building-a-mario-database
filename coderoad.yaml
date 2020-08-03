@@ -259,4 +259,63 @@ levels:
         setup:
           watchers:
             - ./freeCodeCamp/test/queryResults.log
-
+  - id: '410'
+    steps:
+      - id: '410.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '420'
+    steps:
+      - id: '420.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '430'
+    steps:
+      - id: '430.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '440'
+    steps:
+      - id: '440.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '450'
+    steps:
+      - id: '450.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '460'
+    steps:
+      - id: '460.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '470'
+    steps:
+      - id: '470.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '480'
+    steps:
+      - id: '480.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '490'
+    steps:
+      - id: '490.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
+  - id: '500'
+    steps:
+      - id: '500.1'
+        setup:
+          watchers:
+            - ./freeCodeCamp/test/queryResults.log
