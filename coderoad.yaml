@@ -22,6 +22,8 @@ config:
   dependencies:
     - name: node
       version: '>=10'
+  reset:
+    command: 'bash reset.sh'
 levels:
   - id: '20'
     steps:
