@@ -80,7 +80,6 @@ ALTER TABLE public.second_table OWNER TO freecodecamp;
 --
 
 INSERT INTO public.second_table VALUES (1, 'Samus');
-INSERT INTO public.second_table VALUES (2, 'Mario');
 
 
 --
