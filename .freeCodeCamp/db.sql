@@ -43,26 +43,6 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-SET default_tablespace = '';
-
-SET default_table_access_method = heap;
-
---
--- Name: first_table; Type: TABLE; Schema: public; Owner: freecodecamp
---
-
-CREATE TABLE public.first_table (
-);
-
-
-ALTER TABLE public.first_table OWNER TO freecodecamp;
-
---
--- Data for Name: first_table; Type: TABLE DATA; Schema: public; Owner: freecodecamp
---
-
-
-
 --
 -- PostgreSQL database dump complete
 --
