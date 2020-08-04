@@ -54,7 +54,8 @@ SET default_table_access_method = heap;
 CREATE TABLE public.characters (
     character_id integer NOT NULL,
     name character varying(30) NOT NULL,
-    homeland character varying(60)
+    homeland character varying(60),
+    favorite_color character varying(30)
 );
 
 
