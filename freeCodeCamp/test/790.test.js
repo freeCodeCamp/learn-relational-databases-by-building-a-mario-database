@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { getLastLog } = require('./utils');
 
 describe('You', () => {
@@ -7,8 +7,8 @@ describe('You', () => {
     lastLog = await getLastLog(true);
   });
 
-  it('should use "SELECT" to view all the data in "characters"', () => {
-    const selectAll = /statement:select\*fromcharacters;/i;
+  it('should view all the data in "characters" ordered by "name"', () => {
+    const selectAll = /statement:select\*fromcharactersorderbycharacter_id;/i;
     assert(selectAll.test(lastLog));
   });
-});*/
+});
