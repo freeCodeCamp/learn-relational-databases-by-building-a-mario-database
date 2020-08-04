@@ -52,15 +52,52 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.characters (
+    character_id integer NOT NULL
 );
 
 
 ALTER TABLE public.characters OWNER TO freecodecamp;
 
 --
+-- Name: characters_character_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.characters_character_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.characters_character_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: characters_character_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.characters_character_id_seq OWNED BY public.characters.character_id;
+
+
+--
+-- Name: characters character_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.characters ALTER COLUMN character_id SET DEFAULT nextval('public.characters_character_id_seq'::regclass);
+
+
+--
 -- Data for Name: characters; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+
+
+--
+-- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.characters_character_id_seq', 1, false);
 
 
 --
