@@ -22,6 +22,7 @@ SET row_security = off;
 
 DROP DATABASE IF EXISTS mario_database;
 DROP DATABASE IF EXISTS first_database;
+DROP DATABASE IF EXISTS second_database;
 --
 -- Name: mario_database; Type: DATABASE; Schema: -; Owner: freecodecamp
 --
