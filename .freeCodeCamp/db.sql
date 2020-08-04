@@ -99,13 +99,15 @@ INSERT INTO public.characters VALUES (2, 'Luigi', 'Mushroom Kingdom', 'Green');
 INSERT INTO public.characters VALUES (3, 'Peach', 'Mushroom Kingdom', 'Pink');
 INSERT INTO public.characters VALUES (4, 'Toadstool', 'Mushroom Kingdom', 'Red');
 INSERT INTO public.characters VALUES (5, 'Bowser', 'Mushroom Kingdom', 'Green');
+INSERT INTO public.characters VALUES (6, 'Daisy', 'Sarasaland', 'Yellow');
+INSERT INTO public.characters VALUES (7, 'Yoshi', 'Dinosaur Land', 'Green');
 
 
 --
 -- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.characters_character_id_seq', 5, true);
+SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 
 
 --
