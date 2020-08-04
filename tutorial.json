@@ -22,7 +22,7 @@
           "sudo cp .psqlrc ~"
         ],
         "commits": [
-          "b1aca20326d8ec4c5ece691f9260693bfea5fffe"
+          "c6f255d0f470ad432a4b82479bb6c6e51e05f238"
         ]
       },
       "directory": "freeCodeCamp"
@@ -55,7 +55,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5a03839e862ae65db7012ea2429998eedd95d66b"
+              "e101189812447973780077a1735c21940b90b13a"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL installed. You will use Psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
@@ -80,7 +80,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "808b1dcebc1a8207ea38a25f91a179a2649dba60"
+              "a3b6fbcfa68d5f76b8445f3fc1962186fcdcd5c1"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -104,7 +104,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "cc477cecfd62a3bfa9bcc8bead062481fbc5ba77"
+              "384d9abb6ea44df99acfbb2ae5e12b41ab64c841"
             ]
           },
           "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
@@ -115,7 +115,7 @@
           ],
           "solution": {
             "commits": [
-              "d6ae63f65ea4d0f19af2d06dec7d9cd04b2c573c"
+              "7397ac532f96ab8b7db2fb38c449053e76dfdfb7"
             ]
           }
         }
@@ -134,7 +134,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c534bbd85d5fb78dbebd3a77cf075c3949e1b153"
+              "42189e3d9fe4c2544d163215b2db71e1bcb187af"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -159,7 +159,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c664b0634f63fe3a2ca12eb01754a94634f7199c"
+              "9a65e5a7404f6dc8a131c892567b04500e11e65a"
             ]
           },
           "content": "It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
@@ -186,7 +186,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3015b7972570080d08667c1fec992db37710263e"
+              "ffd6d5b38dd7ccd61cda810e9c07722dffb350dd"
             ]
           },
           "content": "You should have another new database now. **L**ist the databases to make sure.",
@@ -211,7 +211,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "07d8d327b3a63176f130647a1d612c3ff2d03a1f"
+              "6d16b0679b8bc4202f082534ab510798e1059a70"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -235,7 +235,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "66f34b59616f1c74e94b1f28d5685a3c513c70dd"
+              "30c12dec0d421276426882fbb3c34884d648850c"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
@@ -259,7 +259,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6650d3d9e3c00e5ee8cc2634f2eaed3574468abd"
+              "549982b31ccffcbe69ea0804485681a94445cdb9"
             ]
           },
           "content": "Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
@@ -284,7 +284,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "42b91df75ba23fc52a890e56b6e750b3d575582d"
+              "db011c080c72a4692d9afc98b1e9a2ea9a55679e"
             ]
           },
           "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
@@ -309,7 +309,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f1eb28bfea0dcc28b17a8c0ecbcfddb44af05996"
+              "28e7733cf3e76dc283f24f34e77d4b30741f4592"
             ]
           },
           "content": "Create another new table in this database. Give it a name of `second_table`.",
@@ -336,7 +336,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a85cf43b3f0519acfea4a0bf0d7112f5ed40186f"
+              "1c3272182ae699876c2b132cb38efb43c6434fc7"
             ]
           },
           "content": "There should be two tables in this database now. **D**isplay them again for me to make sure.",
@@ -361,7 +361,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2748b0c3d1886d4128bb2d8035388ecd29ed1481"
+              "0e915f0b2ce6c37f7f360bb3a0b857546f6d6e6d"
             ]
           },
           "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
@@ -385,7 +385,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e103df149883baacd0b88373b5c75204bdc95527"
+              "b08246661a777a1813a211363f5e6ba17a1ebb9a"
             ]
           },
           "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
@@ -409,7 +409,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7044db5f35e5a2a308e0ded929548424a332fb57"
+              "5c05c97e79511bfdcfc3cf04a2dc009a3e32619f"
             ]
           },
           "content": "I think it worked. **D**isplay the details of `second_table` again to see if your new column is there.",
@@ -436,7 +436,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "06e6c18b6db814eca6018ff7714282bd0555340f"
+              "b5c3c8076b0c971aa82e75ac6c427e58a288646d"
             ]
           },
           "content": "Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
@@ -463,7 +463,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1ae915cabee2de92017a95868d51aa887e7aa138"
+              "0cba9f11ae3074a07ebdfd4a53b342e2332e4d84"
             ]
           },
           "content": "Your table should have an `id` column added. View the details of `second_table` to make sure.",
@@ -490,7 +490,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6a7756a9972d7cc09daf754fb4882063af19dd10"
+              "087e1a28a178627cb5841e10892625c5f3768b81"
             ]
           },
           "content": "Add another column to `second_table` named `age`. Give it a data type of `INT`.",
@@ -517,7 +517,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "66d58c410ba96115ef51110aa5617bfb42633e40"
+              "ba03225fa5524c7ab985f7885661e8d402995a9f"
             ]
           },
           "content": "Take look at the details of `second_table` again.",
@@ -544,7 +544,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c050550b64b867a895b55d8ae7aacb5f73e21d24"
+              "ed103065307ff4763fde06586ddebdf19e19ba81"
             ]
           },
           "content": "Those are some good looking columns. You will probably need to know how to remove them at some point. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
@@ -568,7 +568,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ebda3ddf6b28e70b64bbf816604b950cea865c34"
+              "922d8585b4ec620157673dea375afa43f47abbd3"
             ]
           },
           "content": "View the details of `second_table` to see if it's gone.",
@@ -595,7 +595,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f1f07b9028ce700f1d48b1d9958434ccb5809ca1"
+              "ffbc127245a5578d8e60b0f2e2e61f6ab6a44b35"
             ]
           },
           "content": "It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.",
@@ -621,7 +621,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "88d6b08edffaf0778679b053eec768068d7e92e8"
+              "36d3eb4d6a350ed53e63621c3024e71d521d10bc"
             ]
           },
           "content": "A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(20)`.\n\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
@@ -648,7 +648,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c746010e95ed492f45b40f1ad62728e5303bf434"
+              "a91daaf036c47b31d3554377f9f381b58f108fdc"
             ]
           },
           "content": "Take look at the details of `second_table` to see your columns.",
@@ -674,7 +674,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b67cf26e2319429af758bea05a944ca18c6f4d55"
+              "b3767fcd997dcf61784e61f30b3f28ed8e2b0d32"
             ]
           },
           "content": "You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
@@ -699,7 +699,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7d99ec6192cfbaa15d9d4df9e6c78bedb7706dce"
+              "e0a41004bc24d33f46cb2939431f32aa08851b38"
             ]
           },
           "content": "Take look at the details of `second_table` again to see if it got renamed.",
@@ -725,7 +725,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2d1c5a958cf43db433abd5ace9c347185de93e69"
+              "c6c3bb2a118c826b11a84256544d42cd4a517d70"
             ]
           },
           "content": "It worked. You can add a row to a table like this:\n\n```sql\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\n```\n\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
@@ -752,7 +752,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "27e79d8ee9a93a0826b1cd3ce8edcc1cf687b78e"
+              "804dead14c179e5b96a6369327c723a6bdea47a4"
             ]
           },
           "content": "You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
@@ -778,7 +778,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "21ee4649f0d7e13b751d7ea90927d0dd7d22d7f9"
+              "da9eeedeccb50feacb1a7fbedb9e14c28cc6b916"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
@@ -806,7 +806,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "407670dd5b4d95e527a89b15bab3733e06d17972"
+              "8c515f36e072ba2e4f21b873adc1a0a9ff479553"
             ]
           },
           "content": "You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.",
@@ -832,7 +832,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "cc071161f86f8c1a2d8f84abedc9df14086cfcb8"
+              "01e4e46e934393bf0a82573d248111f2ba7b8b7b"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.",
@@ -860,7 +860,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d2bb89ce95e66b44830895703ea66fc82f741e81"
+              "c2be85e951605c290b654829117d1add9ecf4cef"
             ]
           },
           "content": "You should now have three rows. Use `SELECT` again to see **all** the data you entered.",
@@ -886,7 +886,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d4e0479a5739368cd4d071e6cef9b15a79f63e41"
+              "4d9a4faac8702e7f497cf81f37cede8b40e08500"
             ]
           },
           "content": "That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
@@ -912,7 +912,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "809eb2d4d6fdc05b3a4f8b72e9b76f04694c1513"
+              "74fa88044eb3bdfec683a10b44a04f35b81756f8"
             ]
           },
           "content": "Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.",
@@ -938,7 +938,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f8d83683ba5cbf91a645c4dfa412b2a48f2c16b9"
+              "12e1d67b03f09a4a8a67afa7baf703337c2ea505"
             ]
           },
           "content": "Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.",
@@ -966,7 +966,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "57eb88102791032fe8e3654fc63090b97e61b677"
+              "4ab224cc538539c1b7b79e9476210c0e9a74ec74"
             ]
           },
           "content": "Only one more row should remain. **Delete** Samus **from** `second_table`.",
@@ -994,7 +994,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "63682d0e7ab7c9e067b6b8bf4b286f784542ce27"
+              "922e33a0087a9e2288591af4af306dfe30b9672f"
             ]
           },
           "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.",
@@ -1020,7 +1020,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "0ba3aa2519f76441ef4ac9bb292caf183d164650"
+              "0b35598fc4b343f315ffd789df38f9c07103345e"
             ]
           },
           "content": "Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.",
@@ -1047,7 +1047,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e797dc1fa8b8d8c7811e04b2ff8a53429621880d"
+              "73694bc1641d66151956728b16af2800a4d65966"
             ]
           },
           "content": "You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
@@ -1074,7 +1074,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "235d63f1f90adb4434773f90ec1eac3c3f2cdcaf"
+              "251d041f7583d4aafa90c784db8d428011a5dec2"
             ]
           },
           "content": "Next, drop the `id` column.",
@@ -1101,7 +1101,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a9a83586ad6013a85fd2c3fce500320b24dc06f7"
+              "2d4ce7f41fb9e8f26e868f7a5c76ee508942c1c4"
             ]
           },
           "content": "Okay, the table has no rows or columns left. Remind me what tables are in this database by displaying them.",
@@ -1127,7 +1127,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "df43cd628d46f9917a42849f2bc614bedf8d8c6f"
+              "b6372c7f94013d667043b751186a2509e026a494"
             ]
           },
           "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords.",
@@ -1152,7 +1152,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3eee2dff1681010bc7de03f18ff3789e90cec025"
+              "93622d6bf2341a5f4e0c1e195d8f81dd25829701"
             ]
           },
           "content": "Next, drop `first_table`.",
@@ -1177,7 +1177,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "9ad75c2b93004404cdaf31b0ba433ee945230e49"
+              "d517b7dd31d0ab5e39f27a6a3b4bb9d8c39e0f4e"
             ]
           },
           "content": "All the tables are gone now, too. Remind me what databases you have by using the command to **l**ist them.",
@@ -1199,10 +1199,10 @@
           "id": "460.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3b22fb4795af5579eb159ee44dc9512f5ab08e13"
+              "57af4844ac7820cc058f7c78e05c18ff55b2ee7f"
             ]
           },
           "content": "You should rename `first_database` to `mario_database`. You can rename a database like this:\n\n```sql\nALTER DATABASE database_name RENAME TO new_database_name;\n```",
