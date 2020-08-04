@@ -172,6 +172,14 @@ ALTER TABLE ONLY public.characters
 
 
 --
+-- Name: more_info more_info_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.more_info
+    ADD CONSTRAINT more_info_pkey PRIMARY KEY (more_info_id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
