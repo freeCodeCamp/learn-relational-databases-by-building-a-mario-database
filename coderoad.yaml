@@ -294,7 +294,7 @@ levels:
       - id: '460.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '470'
     steps:
       - id: '470.1'
