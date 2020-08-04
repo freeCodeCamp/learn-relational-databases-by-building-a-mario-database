@@ -94,13 +94,14 @@ ALTER TABLE ONLY public.characters ALTER COLUMN character_id SET DEFAULT nextval
 -- Data for Name: characters; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.characters VALUES (1, 'Mario', 'Mushroom Kingdom', 'Red');
 
 
 --
 -- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.characters_character_id_seq', 1, false);
+SELECT pg_catalog.setval('public.characters_character_id_seq', 1, true);
 
 
 --
