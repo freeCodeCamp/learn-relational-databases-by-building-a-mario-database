@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,22 +8,22 @@ const client = new Client({
 });
 
 describe('"more_info" table', () => {
-  it('should have a column named "birthday" of type "DATE"', async () => {
+  it('should have a column named "height" of type "INT"', async () => {
     const query = `SELECT * FROM more_info;`;
 
     try {
       await client.connect();
       const res = await client.query(query);
 
-      const birthdayColumn = res.fields.findIndex(column => {
-        return column.name === 'birthday' && column.dataTypeID === 1082;
+      const heightColumn = res.fields.findIndex(column => {
+        return column.name === 'height' && column.dataTypeID === 23;
       });
 
-      assert(birthdayColumn >= 0);
+      assert(heightColumn >= 0);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});*/
+});
