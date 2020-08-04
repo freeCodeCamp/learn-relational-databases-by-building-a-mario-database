@@ -1130,7 +1130,12 @@
               "df43cd628d46f9917a42849f2bc614bedf8d8c6f"
             ]
           },
-          "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords."
+          "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords.",
+          "hints": [
+            "Here's an example: `DROP TABLE table_name;`",
+            "Try `DROP TABLE second_table;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
@@ -1245,7 +1250,14 @@
             ],
             "commits": []
           },
-          "content": "**C**onnect to your newly named database so you can start adding your characters."
+          "content": "**C**onnect to your newly named database so you can start adding your characters.",
+          "hints": [
+            "Use the `\\c` shortcut command to connect to a database",
+            "Add the database name after the command",
+            "Here's an example: `\\c database_name`",
+            "Enter `\\c mario_database`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
@@ -2425,7 +2437,12 @@
             ],
             "commits": []
           },
-          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column."
+          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column.",
+          "hints": [
+            "The foreign key column is `character_id` in the `more_info` table",
+            "Try `ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
@@ -2513,7 +2530,13 @@
             ],
             "commits": []
           },
-          "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight | character_id |\n| ---------- | ------ | ------ | ------------ |\n| 1981-07-09 | 155    | 64.5   | 1            |\n\nAdd a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`."
+          "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight | character_id |\n| ---------- | ------ | ------ | ------------ |\n| 1981-07-09 | 155    | 64.5   | 1            |\n\nAdd a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`.",
+          "hints": [
+            "Here's an example: `INSERT INTO table_name(columns) VALUE(values);`",
+            "You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },
@@ -3657,7 +3680,11 @@
             ],
             "commits": []
           },
-          "content": "I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table."
+          "content": "I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table.",
+          "hints": [
+            "Try `ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
         }
       ]
     },

@@ -1775,7 +1775,7 @@ Create a new table named `sounds`. Give it a column named `sound_id` of type `SE
 - Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 
-## L1260 View `mario_database` Tables
+## 1260. View `mario_database` Tables
 
 ### 1260.1
 
