@@ -1,5 +1,5 @@
 {
-  "version": "0.2.3",
+  "version": "0.2.4",
   "summary": {
     "title": "Learn Relational Databases by Building a Mario Database",
     "description": "> Welcome to the Relational Database Lessons! You will be using PostgreSQL for this section. It's an extremely popular open source relational database management systems (RDBMS)."
@@ -22,14 +22,14 @@
           "sudo cp .psqlrc ~"
         ],
         "commits": [
-          "44fcd5dde75b555dcb28841d57292e7e1dc430b4"
+          "b1aca20326d8ec4c5ece691f9260693bfea5fffe"
         ]
       },
       "directory": "freeCodeCamp"
     },
     "repo": {
       "uri": "https://github.com/moT01/learn-relational-databases-by-building-a-mario-database",
-      "branch": "v0.2.3"
+      "branch": "v0.2.4"
     },
     "dependencies": [
       {
@@ -55,7 +55,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1edaf57d954dd6b9168523da1127d3db580bfe69"
+              "5a03839e862ae65db7012ea2429998eedd95d66b"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL installed. You will use Psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
@@ -80,7 +80,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f284f362332f9dcfdf3091308481037db0459fc6"
+              "808b1dcebc1a8207ea38a25f91a179a2649dba60"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -104,7 +104,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d72623f72a53f563d7deac77333d2165e1730c2f"
+              "cc477cecfd62a3bfa9bcc8bead062481fbc5ba77"
             ]
           },
           "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
@@ -115,7 +115,7 @@
           ],
           "solution": {
             "commits": [
-              "741fcffe97598e65b321761a0298f22d617afa5c"
+              "d6ae63f65ea4d0f19af2d06dec7d9cd04b2c573c"
             ]
           }
         }
@@ -134,7 +134,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c8b81d724a059d5b8d054a51b33b5de7a2b3f75c"
+              "c534bbd85d5fb78dbebd3a77cf075c3949e1b153"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -159,7 +159,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9b17f22d7ca30fc0bb61b2be3d3fb0c8e148e6b3"
+              "c664b0634f63fe3a2ca12eb01754a94634f7199c"
             ]
           },
           "content": "It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
@@ -186,7 +186,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d3222f0f7fe01857b5de336b60c3ff25293ad2d9"
+              "3015b7972570080d08667c1fec992db37710263e"
             ]
           },
           "content": "You should have another new database now. **L**ist the databases to make sure.",
@@ -211,7 +211,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f709adc88b993348ea346d85c760fa5d18930e18"
+              "07d8d327b3a63176f130647a1d612c3ff2d03a1f"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -235,7 +235,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d3d285246d5e3ce4260984c05458ce5baef1167e"
+              "66f34b59616f1c74e94b1f28d5685a3c513c70dd"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
@@ -259,7 +259,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "406854c745902ea6f8ff22e23f32309657058e62"
+              "6650d3d9e3c00e5ee8cc2634f2eaed3574468abd"
             ]
           },
           "content": "Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
@@ -284,7 +284,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ec7d506d71f9ddc4f5dc005cc65a8800259ab2a7"
+              "42b91df75ba23fc52a890e56b6e750b3d575582d"
             ]
           },
           "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
@@ -309,7 +309,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a4d373ff8ed736eaf3db356c05919c50969f0652"
+              "f1eb28bfea0dcc28b17a8c0ecbcfddb44af05996"
             ]
           },
           "content": "Create another new table in this database. Give it a name of `second_table`.",
@@ -336,7 +336,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ab5f32a29cf26e565e22021bfa1b3a41b0524913"
+              "a85cf43b3f0519acfea4a0bf0d7112f5ed40186f"
             ]
           },
           "content": "There should be two tables in this database now. **D**isplay them again for me to make sure.",
@@ -361,7 +361,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ddb68151ab8837c5126bee48eeec20d6d1dbf741"
+              "2748b0c3d1886d4128bb2d8035388ecd29ed1481"
             ]
           },
           "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
@@ -385,7 +385,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "23798086ba34669f6a8e50305e41d3173c661265"
+              "e103df149883baacd0b88373b5c75204bdc95527"
             ]
           },
           "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
@@ -409,7 +409,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1ae71c0e7807a039d75f7392698e192b2e446042"
+              "7044db5f35e5a2a308e0ded929548424a332fb57"
             ]
           },
           "content": "I think it worked. **D**isplay the details of `second_table` again to see if your new column is there.",
@@ -436,7 +436,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1d5990ef302d68e9aec23621ac0728f2b911a32c"
+              "06e6c18b6db814eca6018ff7714282bd0555340f"
             ]
           },
           "content": "Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
@@ -463,7 +463,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c2fdeb6ea5e2b67537b6628d77391efe2c3f82c8"
+              "1ae915cabee2de92017a95868d51aa887e7aa138"
             ]
           },
           "content": "Your table should have an `id` column added. View the details of `second_table` to make sure.",
@@ -490,7 +490,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "839879e4a8532e52cff0b08798a66933f457c311"
+              "6a7756a9972d7cc09daf754fb4882063af19dd10"
             ]
           },
           "content": "Add another column to `second_table` named `age`. Give it a data type of `INT`.",
@@ -517,7 +517,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "fad101ab7a42b41d74f4d9047ce4be102ea1efec"
+              "66d58c410ba96115ef51110aa5617bfb42633e40"
             ]
           },
           "content": "Take look at the details of `second_table` again.",
@@ -544,7 +544,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4d27ff427a9baf7da00d78206e8e7742ec8af13a"
+              "c050550b64b867a895b55d8ae7aacb5f73e21d24"
             ]
           },
           "content": "Those are some good looking columns. You will probably need to know how to remove them at some point. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
@@ -568,7 +568,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7992d4d4ad7d361859cdb5d084a85d93edd591bf"
+              "ebda3ddf6b28e70b64bbf816604b950cea865c34"
             ]
           },
           "content": "View the details of `second_table` to see if it's gone.",
@@ -595,7 +595,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4ac63a72266469c237251326c2a0319fe3481146"
+              "f1f07b9028ce700f1d48b1d9958434ccb5809ca1"
             ]
           },
           "content": "It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.",
@@ -621,7 +621,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3ab09e46cefe51d6c64b2c4e77fe0566ae9526fc"
+              "88d6b08edffaf0778679b053eec768068d7e92e8"
             ]
           },
           "content": "A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(20)`.\n\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
@@ -648,7 +648,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "400a4f7e5e151adc07b15e628af486dc1e4e23b1"
+              "c746010e95ed492f45b40f1ad62728e5303bf434"
             ]
           },
           "content": "Take look at the details of `second_table` to see your columns.",
@@ -674,7 +674,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "691a019c43746c5ac431cf0a7bf41841b46f6392"
+              "b67cf26e2319429af758bea05a944ca18c6f4d55"
             ]
           },
           "content": "You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
@@ -699,7 +699,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e8fd5453c435104cff44ff5d2eb063e3d6fdf681"
+              "7d99ec6192cfbaa15d9d4df9e6c78bedb7706dce"
             ]
           },
           "content": "Take look at the details of `second_table` again to see if it got renamed.",
@@ -725,7 +725,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "875f3dc002965cce2a9278bb122464cc4b73e802"
+              "2d1c5a958cf43db433abd5ace9c347185de93e69"
             ]
           },
           "content": "It worked. You can add a row to a table like this:\n\n```sql\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\n```\n\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
@@ -752,7 +752,7 @@
               "./freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "31114464600f91fc1a0ccaf5f6db1686d8a634eb"
+              "27e79d8ee9a93a0826b1cd3ce8edcc1cf687b78e"
             ]
           },
           "content": "You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
@@ -778,7 +778,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2319811ed925924cdafaac834063fbb8b58cb528"
+              "21ee4649f0d7e13b751d7ea90927d0dd7d22d7f9"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
@@ -803,9 +803,11 @@
           "id": "310.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/queryResults.log"
+              "./freeCodeCamp/test/pg.log"
             ],
-            "commits": []
+            "commits": [
+              "407670dd5b4d95e527a89b15bab3733e06d17972"
+            ]
           },
           "content": "You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.",
           "hints": [
@@ -827,9 +829,11 @@
           "id": "320.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
-            "commits": []
+            "commits": [
+              "cc071161f86f8c1a2d8f84abedc9df14086cfcb8"
+            ]
           },
           "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.",
           "hints": [
@@ -855,7 +859,9 @@
             "watchers": [
               "./freeCodeCamp/test/pg.log"
             ],
-            "commits": []
+            "commits": [
+              "d2bb89ce95e66b44830895703ea66fc82f741e81"
+            ]
           },
           "content": "You should now have three rows. Use `SELECT` again to see **all** the data you entered.",
           "hints": [
@@ -877,9 +883,11 @@
           "id": "340.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
-            "commits": []
+            "commits": [
+              "d4e0479a5739368cd4d071e6cef9b15a79f63e41"
+            ]
           },
           "content": "That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
           "hints": [
@@ -903,7 +911,9 @@
             "watchers": [
               "./freeCodeCamp/test/pg.log"
             ],
-            "commits": []
+            "commits": [
+              "809eb2d4d6fdc05b3a4f8b72e9b76f04694c1513"
+            ]
           },
           "content": "Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.",
           "hints": [
@@ -925,9 +935,11 @@
           "id": "360.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
-            "commits": []
+            "commits": [
+              "f8d83683ba5cbf91a645c4dfa412b2a48f2c16b9"
+            ]
           },
           "content": "Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.",
           "hints": [
@@ -951,9 +963,11 @@
           "id": "370.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
-            "commits": []
+            "commits": [
+              "57eb88102791032fe8e3654fc63090b97e61b677"
+            ]
           },
           "content": "Only one more row should remain. **Delete** Samus **from** `second_table`.",
           "hints": [
@@ -979,7 +993,9 @@
             "watchers": [
               "./freeCodeCamp/test/pg.log"
             ],
-            "commits": []
+            "commits": [
+              "63682d0e7ab7c9e067b6b8bf4b286f784542ce27"
+            ]
           },
           "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.",
           "hints": [
@@ -1003,7 +1019,9 @@
             "watchers": [
               "./freeCodeCamp/test/pg.log"
             ],
-            "commits": []
+            "commits": [
+              "0ba3aa2519f76441ef4ac9bb292caf183d164650"
+            ]
           },
           "content": "Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.",
           "hints": [
@@ -1028,7 +1046,9 @@
             "watchers": [
               "./freeCodeCamp/test/queryResults.log"
             ],
-            "commits": []
+            "commits": [
+              "e797dc1fa8b8d8c7811e04b2ff8a53429621880d"
+            ]
           },
           "content": "You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
           "hints": [
@@ -1037,6 +1057,3005 @@
             "You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`",
             "Try `ALTER TABLE second_table DROP COLUMN username;`",
             "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "410",
+      "title": "Drop `id` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "410.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": [
+              "235d63f1f90adb4434773f90ec1eac3c3f2cdcaf"
+            ]
+          },
+          "content": "Next, drop the `id` column.",
+          "hints": [
+            "Use the `ALTER TABLE` and `DROP COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`",
+            "You previously dropped a column with `ALTER TABLE second_table DROP COLUMN username;`",
+            "Try `ALTER TABLE second_table DROP COLUMN id;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "420",
+      "title": "View `second_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "420.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "a9a83586ad6013a85fd2c3fce500320b24dc06f7"
+            ]
+          },
+          "content": "Okay, the table has no rows or columns left. Remind me what tables are in this database by displaying them.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "You don't need a table name with the command",
+            "Try entering `\\d`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "430",
+      "title": "Drop `second_table`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "430.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": [
+              "df43cd628d46f9917a42849f2bc614bedf8d8c6f"
+            ]
+          },
+          "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords."
+        }
+      ]
+    },
+    {
+      "id": "440",
+      "title": "Drop `first_table`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "440.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": [
+              "3eee2dff1681010bc7de03f18ff3789e90cec025"
+            ]
+          },
+          "content": "Next, drop `first_table`.",
+          "hints": [
+            "Here's an example: `DROP TABLE table_name;`",
+            "Enter `DROP TABLE first_table;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "450",
+      "title": "View Databases",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "450.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "9ad75c2b93004404cdaf31b0ba433ee945230e49"
+            ]
+          },
+          "content": "All the tables are gone now, too. Remind me what databases you have by using the command to **l**ist them.",
+          "hints": [
+            "Use the **l**ist shortcut command",
+            "Enter `\\l`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "460",
+      "title": "Rename `first_database`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "460.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/pg.log"
+            ],
+            "commits": [
+              "3b22fb4795af5579eb159ee44dc9512f5ab08e13"
+            ]
+          },
+          "content": "You should rename `first_database` to `mario_database`. You can rename a database like this:\n\n```sql\nALTER DATABASE database_name RENAME TO new_database_name;\n```",
+          "hints": [
+            "Try entering `ALTER DATABASE first_database RENAME TO mario_database;`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "470",
+      "title": "View Databases",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "470.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "List the databases to make sure it got renamed.",
+          "hints": [
+            "Use the **l**ist shortcut command",
+            "Enter `\\l`",
+            "Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "480",
+      "title": "Connect to `mario_database`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "480.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "**C**onnect to your newly named database so you can start adding your characters."
+        }
+      ]
+    },
+    {
+      "id": "490",
+      "title": "Drop `second_database`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "490.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Now that you aren't connected to `second_database`, you can drop it. Use the `DROP DATABASE` keywords to do that.",
+          "hints": [
+            "Add the database name after the keywords",
+            "Don't forget the semi-colon",
+            "Here's an example: `DROP DATABASE database_name;`",
+            "Enter `DROP DATABASE second_database;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "500",
+      "title": "View Databases",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "500.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "List the databases again to make sure it's gone.",
+          "hints": [
+            "Use the **l**ist shortcut command",
+            "Enter `\\l`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "530",
+      "title": "Display `mario_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "530.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Okay, I think you're ready to get started. I don't think you created any tables here, take a look to make sure.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Try entering `\\d`",
+            "Try entering `\\c mario_database`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "540",
+      "title": "Create `characters` Table",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "540.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Create a new table name `characters`, it will hold some basic information about Mario characters.",
+          "hints": [
+            "Use the `CREATE TABLE` keywords",
+            "Don't forget the parenthesis and semi-colon at the end",
+            "Here's an example: `CREAT TABLE table_name();`",
+            "Try entering `CREATE TABLE characters();`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "550",
+      "title": "Add `character_id` column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "550.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Next, you can add some columns to the table. Add a column named `character_id` to your new table that is a type of `SERIAL`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`",
+            "Try entering `ALTER TABLE characters ADD COLUMN character_id SERIAL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "560",
+      "title": "View `characters` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "560.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The `SERIAL` type make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "570",
+      "title": "Add `name` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "570.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "What columns can you add to describe Mario characters? They all have a name... I think anyway :confused:\n\nAdd a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT;`",
+            "Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "580",
+      "title": "Add `homeland` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "580.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You can make another for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Try entering `ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "590",
+      "title": "Add `favorite_color` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "590.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Video game characters are quite colorful. Add one more column named `favorite_color`. Make it a `VARCHAR` with a max length of `30`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Try entering `ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "600",
+      "title": "View `characters` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "600.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You should have four columns in `characters`. Take a look at the details of it to see how things are going.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Add a table name to the shortcut command to see details",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "610",
+      "title": "Insert Mario Row",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "610.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
+          "hints": [
+            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
+            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "620",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "620.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "630",
+      "title": "Insert Luigi Row",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "630.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Green`.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
+            "Don't forget the quotes and semi-colon",
+            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "640",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "640.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in your `characters` table with `SELECT` again.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "650",
+      "title": "Insert Peach Row",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "650.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Okay, it looks like it's all working. Add another row for Peach. Give her the values: `Peach`, `Mushroom Kingdom`, and `Pink`.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
+            "Don't forget the quotes and semi-colon",
+            "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "660",
+      "title": "Add Toadstool and Bowser Rows",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "660.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red'), ('Luigi', 'Mushroom Kingdom', 'Green'), ('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
+          "hints": [
+            "Make sure you added commas and quotes where needed",
+            "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "670",
+      "title": "Add Yoshi and Daisy Rows",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "670.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "\"INSERT 0 2\" is the message. That \"2\" must mean you added two rows. I mentioned earlier that if you don't get a message after a command, it is incomplete. This is because you can put a command on multiple lines. Here's an example:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES\n('Toadstool', 'Mushroom Kingdom', 'Red'), \n('Bowser', 'Mushroom Kingdom', 'Green');\n```\n\nThat's much easier to read :sunglasses:. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
+          "hints": [
+            "Make sure you added commas and quotes where needed",
+            "You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`",
+            "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Daisy', 'Sarasaland', 'Yellow'), ('Yoshi', 'Dinosaur Land', 'Green');`",
+            "If you missed a matching single quote, try entering `');` to finish the command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "680",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "680.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look all the data in your table with `SELECT` to see where you stand.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "690",
+      "title": "Update Daisy's `favorite_color`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "690.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I see several mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
+          "hints": [
+            "There should be two sets of single quotes in this command",
+            "Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`",
+            "Try `UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "700",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "700.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`.\n\nTake a look all the data in your table again to see if she got updated.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "710",
+      "title": "Update Toadstool's `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "710.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.",
+          "hints": [
+            "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
+            "Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red'`",
+            "Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='Red'`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "720",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "720.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look all the data in your table.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "730",
+      "title": "Update Mario's `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "730.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row where `character_id=1`.",
+          "hints": [
+            "Numbers don't need quotes",
+            "Use the `UPDATE`, `SET`, and `WHERE` keywords and strings where needed",
+            "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
+            "Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "740",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "740.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look all the data in your table again to see if Mario's name got changed back.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "750",
+      "title": "Update Toad's `favorite_color`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "750.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Looks like it worked. I got Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
+          "hints": [
+            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
+            "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",
+            "I recommend using `character_id=4` as the condition",
+            "Try entering `UPDATE characters SET favorite_color='Blue' WHERE character_id=4;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "760",
+      "title": "Update Bowser's `favorite_color`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "760.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update it without changing any of the other rows.",
+          "hints": [
+            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
+            "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
+            "I recommand using `character_id=5` as the condition",
+            "Try entering `UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "770",
+      "title": "Update Bowser's `homeland`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "770.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows.",
+          "hints": [
+            "Use the `UPDATE`, `SET`, and `WHERE` keywords",
+            "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
+            "I recommand using `character_id=5` as the condition",
+            "Try entering `UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "780",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "780.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look all the data in your table again so I can make sure there's no more issues.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example; `SELECT rows FROM table_name;`",
+            "Try entering `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "790",
+      "title": "View Sorted `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "790.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Umm, actually can you put that in order for me? Here's an example:\n\n```sql\nSELECT columns FROM table_name ORDER BY column_name;\n```\n\nView all the data again, but put it in order by `character_id`.",
+          "hints": [
+            "Try entering `SELECT * FROM characters ORDER BY character_id;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "800",
+      "title": "Add `name` Primary Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "800.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row and can be used to relate tables to each other. Here's an example of how to set a `PRIMARY KEY`:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\n```\n\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
+          "hints": [
+            "You don't need quotes, but you do need a semi-colon :smile:",
+            "Try entering `ALTER TABLE characters ADD PRIMARY KEY(name);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "810",
+      "title": "View `characters` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "810.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You should set a primary key on every table and there can only be one per table. Take a look at the details of your `characters` table to see the primary key at the bottom.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "820",
+      "title": "Drop `name` Primary Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "820.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\n\n```sql\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\n```\n\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
+          "hints": [
+            "Try using `ALTER TABLE characters DROP CONSTRAIN characters_pkey;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "830",
+      "title": "View `character` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "830.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the details of the `characters` table to make sure it's gone.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "840",
+      "title": "Add `character_id` Primary Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "840.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Set the primary key again, but use the `character_id` column this time.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD PRIMARY KEY` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`",
+            "Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "850",
+      "title": "View `character` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "850.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the details of the `characters` table to see the new primary key.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "860",
+      "title": "Create `more_info` Table",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "860.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I think that table is complete for now. Next, create a new table named `more_info` for some extra info about the characters.",
+          "hints": [
+            "Use the `CREATE TABLE` keywords",
+            "Here's an example: `CREATE TABLE table_name();`",
+            "Try entering `CREATE TABLE more_info();`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "870",
+      "title": "View `mario_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "870.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.",
+          "hints": [
+            "Don't put a table name after the command",
+            "Enter the `\\d` command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "880",
+      "title": "View `characters` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "880.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Hmm, I wonder what that third one is. It says \"characters_character_id_seq\". Ahh, I think I have a clue. View the details of the `characters` table.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Add the table name after the command",
+            "You previously used `\\d second_table`",
+            "Enter `\\d characters`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "890",
+      "title": "Create `more_info_id` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "890.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "That is what finds the next value for the `character_id` column. \n\nAdd a column to your new table named `more_info_id`. Make it a type of `SERIAL`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`",
+            "Try entering `ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "895",
+      "title": "Create `more_info` Primary Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "895.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Set your new column as the primary key for this table.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD PRIMARY KEY` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`",
+            "Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "900",
+      "title": "View `mario_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "900.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the tables in `mario_database` again with the display command. If my theory is correct, there should be another sequence there for the `more_info_id`.",
+          "hints": [
+            "Enter the `\\d` command",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "910",
+      "title": "Add `birthday` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "910.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Yup, there it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Try entering `ALTER TABLE more_info ADD COLUMN birthday DATE;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "920",
+      "title": "Add `height` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "920.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add a `height` column to `more_info` that's a type of `INT`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Try entering `ALTER TABLE more_info ADD COLUMN height INT;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "930",
+      "title": "Add `weight` Columns",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "930.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be right of the decimal.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
+            "Try entering `ALTER TABLE more_info ADD COLUMN weight NUMERIC(4, 1);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "940",
+      "title": "View `more_info` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "940.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look at the details of `more_info` to see all your columns.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d more_info`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "950",
+      "title": "Add `character_id` Foreign Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "950.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. Create a `character_id` column in `more_info`. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
+          "hints": [
+            "You can do it!",
+            "Give it one more try",
+            "Without the keywords, it looks like this: `more_info character_id characters(character_id);`",
+            "Try this `ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "960",
+      "title": "View `more_info` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "960.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "To set a row in `more_info` for Mario, you just need to set the `character_id` value as `1`, since that's what his `character_id` is in `characters`.\n\nTake a look at the details of `more_info` to see your foreign key.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d more_info`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "970",
+      "title": "Add `UNIQUE`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "970.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I want your tables to have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD UNIQUE(column_name);\n```\n\nAdd the `UNIQUE` constraint to the column you just added.",
+          "hints": [
+            "It's the `character_id` column in `more_info`",
+            "Try `ALTER TABLE more_info ADD UNIQUE(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "980",
+      "title": "Add `NOT NULL`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "980.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column."
+        }
+      ]
+    },
+    {
+      "id": "990",
+      "title": "View `more_info` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "990.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look at the details of your `more_info` table to see all the keys and constraints you added.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d more_info`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1000",
+      "title": "Select `character_id`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1000.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.",
+          "hints": [
+            "Here's an example: `SELECT column FROM table_name;`",
+            "Try `SELECT character_id FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1010",
+      "title": "Select `character_id` and `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1010.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "That list of numbers doesn't really help. Use `SELECT` again to display both the `character_id` and `name` columns from the `characters` table. You can separate the column names with a comma to view both.",
+          "hints": [
+            "Here's an example: `SELECT column1, column2 FROM table_name;`",
+            "Try entering `SELECT character_id, name FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1020",
+      "title": "Add `more_info` for Mario",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1020.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight | character_id |\n| ---------- | ------ | ------ | ------------ |\n| 1981-07-09 | 155    | 64.5   | 1            |\n\nAdd a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`."
+        }
+      ]
+    },
+    {
+      "id": "1030",
+      "title": "View `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1030.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `more_info` to make sure it's looking good.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1040",
+      "title": "Select `character_id` and `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1040.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Next, you are going to add some info for Luigi. Use `SELECT` again to view the `character_id` and `name` columns **from** the `characters` table to find his id.",
+          "hints": [
+            "Here's an example: `SELECT column1, column2 FROM table_name;`",
+            "Try entering `SELECT character_id, name FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1050",
+      "title": "Add `more_info` for Luigi",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1050.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You can see Luigi's id there. Here's his info:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1983-07-14 | 175    | 48.8   |\n\nAdd a row for Luigi using the above info. Be sure to add his `character_id` as well.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`",
+            "Luigi's `character_id` is `2`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1060",
+      "title": "View `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1060.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `more_info` to see more info for Luigi.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1070",
+      "title": "Select `character_id` and `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1070.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Peach is next. View the `character_id` and `name` columns from the `characters` table again so you can find her id.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT column1, column2 FROM table_name;`",
+            "Try entering `SELECT character_id, name FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1080",
+      "title": "Add `more_info` for Peach",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1080.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Here's the additional info for Peach:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1985-10-18 | 173    | 52.2   |\n\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
+          "hints": [
+            "Her `character_id` is `3`",
+            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 173, 52.2, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1090",
+      "title": "Select Toad's `character_id` and `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1090.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows, you can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` where `name='Toad'`.",
+          "hints": [
+            "Don't forget the semi-colon :smile:",
+            "Try entering `SELECT character_id, name FROM characters WHERE name='Toad';`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1100",
+      "title": "Add `more_info` for Toad",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1100.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Here's what Toad's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1950-01-10 | 66     | 35.6   |\n\nAdd the above info for Toad. Be sure to add his `character_id`.",
+          "hints": [
+            "Put `DATE` values in quotes",
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`",
+            "Toad's `character_id` is `4`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1110",
+      "title": "View `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1110.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `more_info` to see the rows you added.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1120",
+      "title": "Select Bowser's Row",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1120.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Bowser is next. Find his id by viewing his row in the `characters` table. You can view whatever columns you want as long as you include the id column, but only view his row.",
+          "hints": [
+            "Use the `SELECT`, `FROM`, and `WHERE` keywords",
+            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
+            "I recommend `name='Bowser'` as the condition",
+            "Try entering `SELECT * FROM characters WHERE name='Bowser';`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1130",
+      "title": "Add `more_info` for Bowser",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1130.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Here's what Bowser's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-10-29 | 258    | 300    |\n\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
+          "hints": [
+            "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`",
+            "Bowser's `character_id` is `5`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1140",
+      "title": "Select Daisy's Row",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1140.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Daisy is next. Find her id by viewing **all** the columns in **only Daisy's row** of the `characters` table.",
+          "hints": [
+            "Use the `SELECT`, `FROM`, and `WHERE` keywords",
+            "View **all** the columns this time",
+            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
+            "Use `name='Daisy'` as the condition",
+            "Try entering `SELECT * FROM characters WHERE name='Daisy';`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1150",
+      "title": "Add `more_info` for Daisy",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1150.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The info for Daisy looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1989-07-31 | NULL   | NULL   |\n\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well, and note that `NULL` values don't need quotes.",
+          "hints": [
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`",
+            "Daisy's `character_id` is `6`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1160",
+      "title": "View `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1160.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `more_info` to see the rows you added.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to see all columns",
+            "Try entering `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1170",
+      "title": "Select Yoshi's `character_id` and `name`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1170.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I guess null values just show up as blank in the database. Yoshi is last. View only the `character_id` column from `characters` for only Yoshi's row to find his id.",
+          "hints": [
+            "Use the `SELECT`, `FROM` and `WHERE` keywords",
+            "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
+            "You saw all Daisy's columns with `SELECT * FROM characters WHERE name='Daisy';`",
+            "Only view the `character_id` column",
+            "Try entering `SELECT character_id FROM characters WHERE name='Yoshi';`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1180",
+      "title": "Add `more_info` for Yoshi",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1180.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The info for Yoshi looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-04-13 | 162    | 59.1   |\n\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
+          "hints": [
+            "You got this one!",
+            "Yoshi's `character_id` is `7`",
+            "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`",
+            "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1190",
+      "title": "View all `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1190.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "There should be a lot of data in `more_info` now. Take a look at **all** the rows and columns in it.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Try `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1200",
+      "title": "Rename `height` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1200.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "It looks good, I don't think there's any mistakes this time... Actually, I do see something. The `height` and `weight` columns; what units do they use? It's centimeters and kilograms, but nobody will know.\n\nRename the `height` column to `height_in_cm`.",
+          "hints": [
+            "Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords",
+            "Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`",
+            "Try `ALTER TABLE more_info RENAME COLUMN height TO height_in_cm;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1210",
+      "title": "Rename `weight` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1210.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Rename the `weight` column to `weight_in_kg`.",
+          "hints": [
+            "Use the `ALTER TABLE`, `RENAME COLUMN` and `TO` keywords",
+            "Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`",
+            "Try `ALTER TABLE more_info RENAME COLUMN weight TO weight_in_kg;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1230",
+      "title": "View all `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1230.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a quick look at all the data in `more_info` to see the new column names.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Try `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1240",
+      "title": "Create `sounds` Table",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1240.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
+          "hints": [
+            "Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1260",
+      "title": "View `mario_database` Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "L1260.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the tables in `mario_database` to make sure it worked.",
+          "hints": [
+            "Use the **l**ist command",
+            "Try entering `\\l`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1270",
+      "title": "Add `filename` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1270.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "Give it three properties: `VARCHAR(40) NOT NULL UNIQUE`",
+            "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINTS;`",
+            "Try entering `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1280",
+      "title": "Add `sounds` Foreign Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1280.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have have more than one character. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\n```\n\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
+          "hints": [
+            "You can do this!",
+            "Give it one more try, take a close look at all those values and keywords",
+            "Without the keywords, it looks like this: `sounds character_id characters(character_id);`",
+            "Try using `ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1290",
+      "title": "View `sounds ` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1290.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Take a look at the details of the `sounds` table to see all the columns.",
+          "hints": [
+            "Use the **d**isplay shortcut command",
+            "Here's an example: `\\d table_name`",
+            "Try entering `\\d sounds`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1300",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1300.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Next you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name ORDER BY column;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM characters ORDER BY character_id;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1310",
+      "title": "Insert `its-a-me.wav`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1310.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The first file is named `its-a-me.wav`. Insert it into the `sounds` table. Use that for the `filename` and Mario's id as the `character_id`.",
+          "hints": [
+            "Don't for get the quotes",
+            "Use `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`",
+            "Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1320",
+      "title": "Insert `yippee.wav`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1320.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` again for the foreign key value.",
+          "hints": [
+            "His `character_id` is `1`",
+            "Don't forget the quotes",
+            "You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
+            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1330",
+      "title": "Insert `ha-ha.wav`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1330.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.",
+          "hints": [
+            "His `character_id` is `2`",
+            "You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
+            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('ha-ha.wav', 2);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1340",
+      "title": "Insert `oh-yeah.wav`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1340.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.",
+          "hints": [
+            "His `character_id` is `2`",
+            "Try `INSERT INTO sounds(filename, character_id) VALUES('oh-yeah.wav', 2);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1350",
+      "title": "Insert Sounds for Peach",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1350.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.",
+          "hints": [
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "Find her `character_id` by viewing data in the `characters` table",
+            "Her `character_id` is `3`",
+            "Try `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1360",
+      "title": "Insert Two More Sounds",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1360.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.",
+          "hints": [
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "Find their `character_id` by viewing data in the `characters` table",
+            "Peach's `character_id` is `3`, Mario is `1`",
+            "Try `INSERT INTO sounds(filename, character_id) VALUES('mm-hmm.wav', 3), ('yahoo.wav', 1);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1370",
+      "title": "View `sounds` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1370.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in the `sounds`. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1380",
+      "title": "Create `actions` Table",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1380.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The sounds are looking good I think. Create another new table called `actions`. It will have the chacters abilities. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. As a reminder, you can add a column right away by putting in the parenthesis of the command.",
+          "hints": [
+            "Use `CREATE TABLE`, `SERIAL`, and `PRIMARY KEY`",
+            "You previously used `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`",
+            "Try entering `CREATE TABLE actions(action_id SERIAL PRIMARY KEY);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1390",
+      "title": "Add `action` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1390.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "You previously used `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`",
+            "Try entering `ALTER TABLE actions ADD COLUMN action VARCHAR(20) UNIQUE NOT NULL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1400",
+      "title": "Insert `run`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1400.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The actions table won't have any foreign keys. It's going to have a \"many-to-many\" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later.\n\nInsert a row into the `actions` table. Give it an `action` of `run`.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Don't forget the single quotes",
+            "Here's an example `INSERT INTO table(column) VALUES(value);`",
+            "Try entering `INSERT INTO actions(action) VALUES('run');`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1410",
+      "title": "Insert `jump`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1410.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Insert another row into the `actions` table. Give it an `action` of `jump`.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Don't forget the single quotes",
+            "You previously used `INSERT INTO actions(action) VALUES('run');`",
+            "Try entering `INSERT INTO actions(action) VALUES('jump');`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1420",
+      "title": "Insert `duck`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1420.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another action row with an `action` of `duck`.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Don't forget the single quotes",
+            "You previously used `INSERT INTO actions(action) VALUES('jump');`",
+            "Try entering `INSERT INTO actions(action) VALUES('jump');`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1430",
+      "title": "View `actions` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1430.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `actions` to make sure there's no mistakes.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM actions;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1440",
+      "title": "Create Junction Table",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1440.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
+          "hints": [
+            "Use the `CREATE TABLE` keywords",
+            "You previously used `CREATE TABLE more_info();`",
+            "Try entering `CREATE TABLE character_actions;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1450",
+      "title": "Add `character_id` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1450.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship.\n\nAdd a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "You previously used: `ALTER TABLE actions ADD COLUMN name VARCHAR(20) UNIQUE NOT NULL;`",
+            "Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1460",
+      "title": "Add `character_id` as Foreign Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1460.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nHmm, that doesn't seem any easier :disappointed: Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table. Use `character_actions_character_id_fkey` as the constraint name.",
+          "hints": [
+            "Without the keywords, it looks like this: `character_actions character_actions_character_id_fkey character_id characters(character_id);`",
+            "All the info you need is there, read it closely",
+            "This is a tough one, give it one more try",
+            "Try this: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1470",
+      "title": "View `character_actions` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1470.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the details of the `character_actions` table to see the foreign key constraint you added.",
+          "hints": [
+            "Use the **d**isplay command",
+            "Add the table name after the command",
+            "Enter `\\d character_actions`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1480",
+      "title": "Add `action_id` Column",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1480.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.",
+          "hints": [
+            "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
+            "You previously used: `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`",
+            "Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1500",
+      "title": "Add `action_id` as Foreign Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1500.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You're going to need to set that column as a foreign key as well. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `action_id` column you just added as a foreign key that references the `action_id` from the `actions` table. Use `character_actions_action_id_fkey` as the constraint name.",
+          "hints": [
+            "Without the keywords, it looks like this: `character_actions character_actions_action_id_fkey action_id actions(action_id);`",
+            "You previously used: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`",
+            "Here it is `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1510",
+      "title": "View `character_actions` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1510.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View the details of the `character_actions` table to see your keys.",
+          "hints": [
+            "Use the **d**isplay command",
+            "Add the table name after the command",
+            "Enter `\\d character_actions`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1520",
+      "title": "Create Composite Primary Key",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1520.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table."
+        }
+      ]
+    },
+    {
+      "id": "1530",
+      "title": "View `character_actions` Details",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1530.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "This table will have multiple rows with the same `character_id`, and multiple rows the the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.\n\nView the details of the `character_actions` table to see your composite key.",
+          "hints": [
+            "Use the **d**isplay command",
+            "Add the table name after the command",
+            "Enter `\\d character_actions`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1540",
+      "title": "Insert Yoshi Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1540.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Insert three rows into `character_actions` for all the actions Yoshi can perform. His `character_id` is `7` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1550",
+      "title": "View `character_actions` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1550.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `character_actions` to see your rows.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM character_actions;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1560",
+      "title": "Insert Daisy Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1560.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add three more rows into `character_actions` for all of Daisy's actions. Her `character_id` is `6` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1570",
+      "title": "Insert Bowser Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1570.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add three more rows for Bowser's actions. His `character_id` is `5`. He can perform all the actions as well.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Use `1`, `2`, and `3` for the `action_id` values",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1580",
+      "title": "Insert Toad Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1580.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add three more rows for Toad's actions. His `character_id` is `4`.",
+          "hints": [
+            "Add a row for each action",
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3)`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1590",
+      "title": "Insert Peach Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1590.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Peach's `character_id` is `3`. She can perform all the actions as well, so add three more rows for those.",
+          "hints": [
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3)`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1600",
+      "title": "Insert Luigi Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1600.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Add three more rows for Luigi's actions.",
+          "hints": [
+            "He can do all the actions as well",
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3)`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1610",
+      "title": "Insert Mario Actions",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1610.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Last is Mario, add three rows for his actions.",
+          "hints": [
+            "He can do all the actions",
+            "Use the `INSERT INTO` and `VALUES` keywords",
+            "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
+            "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3)`",
+            "Try `INSERT INTO character_actions(character_id, action_id) VALUES(1, 1), (1, 2), (1, 3);`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1620",
+      "title": "View `character_actions` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1620.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "View all the data in `character_actions` to see your rows. If it doesn't fit on the screen, press enter to continue viewing the data.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM character_actions;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1630",
+      "title": "Display Tables",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1630.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Congratulations :tada: I think you've added enough data into the database. I love it! Take a look around to see what you ended up with. First, display all the tables you created.",
+          "hints": [
+            "Use the **d**isplay command",
+            "Enter `\\d`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1640",
+      "title": "View `characters` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1640.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM characters;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1650",
+      "title": "View `more_info` Data",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1650.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Those are some lovely characters. Next, view all the data in `more_info`.",
+          "hints": [
+            "Use the `SELECT` and `FROM` keywords",
+            "Here's an example: `SELECT columns FROM table_name;`",
+            "Use `*` to select all the columns",
+            "Try entering `SELECT * FROM more_info;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1660",
+      "title": "Full Join `characters` on `more_info`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1660.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or...\n\nYou added that as a foreign key, that means you can get all the data from both tables together. Introducing the `JOIN` command. Here's an example:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the keys.",
+          "hints": [
+            "Use `*` to see all the columns",
+            "Give it one more try, read closely",
+            "Without the keywords, it looks like this: `characters more_info characters.character_id = more_info.character_id`",
+            "Try entering `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1670",
+      "title": "Full Join `characters` on `sounds`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1670.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other.\n\nHere's the example again:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nUse another join command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
+          "hints": [
+            "Use `*` to see all the columns",
+            "You previously used `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`",
+            "Try entering `SELECT * FROM characters FULL JOIN sounds ON characters.character_id = sounds.character_id;`",
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1680",
+      "title": "Join `character_actions` with `characters` and `actions`",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1680.1",
+          "setup": {
+            "watchers": [
+              "./freeCodeCamp/test/queryResults.log"
+            ],
+            "commits": []
+          },
+          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. Looks like we never got around to adding sounds for a few of the characters.\n\nLastly, how can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column \nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nView all the data from `characters`, `actions`, and `character_actions`. Use the correct keys.",
+          "hints": [
+            "Use the `character_id` column to join `character_actions` and `characters`",
+            "Use the `action_id` column to join `character_actions` and `actions`",
+            "Without the keywords, it looks like this: `character_actions characters character_actions.character_id = characters.character_id actions character_actions.action_id = actions.action_id;`",
+            "Try entering `SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;`"
           ]
         }
       ]

@@ -593,7 +593,7 @@ Okay, the table has no rows or columns left. Remind me what tables are in this d
 You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords.
 
 #### HINTS
- 
+
 - Here's an example: `DROP TABLE table_name;`
 - Try `DROP TABLE second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
@@ -656,7 +656,7 @@ List the databases to make sure it got renamed.
 **C**onnect to your newly named database so you can start adding your characters.
 
 #### HINTS
- 
+
 - Use the `\c` shortcut command to connect to a database
 - Add the database name after the command
 - Here's an example: `\c database_name`
@@ -1374,7 +1374,7 @@ ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 Add the `NOT NULL` constraint to your foreign key column.
 
 #### HINTS
- 
+
 - The foreign key column is `character_id` in the `more_info` table
 - Try `ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
@@ -1429,7 +1429,7 @@ That's better. You can see Mario's id there. Here's some more info for him:
 Add a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`.
 
 #### HINTS
- 
+
 - Here's an example: `INSERT INTO table_name(columns) VALUE(values);`
 - You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
@@ -2146,7 +2146,7 @@ ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);
 Use `character_id` and `action_id` to create a composite primary key for this table.
 
 #### HINTS
- 
+
 - Try `ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 
