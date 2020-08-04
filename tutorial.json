@@ -3056,13 +3056,13 @@
       ]
     },
     {
-      "id": "L1260",
+      "id": "1260",
       "title": "View `mario_database` Tables",
       "summary": "",
       "content": "",
       "steps": [
         {
-          "id": "L1260.1",
+          "id": "1260.1",
           "setup": {
             "watchers": [
               "./freeCodeCamp/test/queryResults.log"
