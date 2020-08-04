@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -15,15 +15,15 @@ describe('"more_info" table', () => {
       await client.connect();
       const res = await client.query(query);
 
-      const characterIdColumn = res.rows.findIndex(row => {
-        return row.table_name === 'characters' && row.column_name === 'character_id';
+      const moreInfoIdColumn = res.rows.findIndex(row => {
+        return row.table_name === 'more_info' && row.column_name === 'more_info_id';
       });
 
-      assert(characterIdColumn >= 0);
+      assert(moreInfoIdColumn >= 0);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});
+});*/
