@@ -94,13 +94,13 @@ ALTER TABLE ONLY public.characters ALTER COLUMN character_id SET DEFAULT nextval
 -- Data for Name: characters; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.characters VALUES (1, 'Mario', 'Mushroom Kingdom', 'Red');
 INSERT INTO public.characters VALUES (2, 'Luigi', 'Mushroom Kingdom', 'Green');
 INSERT INTO public.characters VALUES (3, 'Peach', 'Mushroom Kingdom', 'Pink');
-INSERT INTO public.characters VALUES (4, 'Toadstool', 'Mushroom Kingdom', 'Red');
 INSERT INTO public.characters VALUES (5, 'Bowser', 'Mushroom Kingdom', 'Green');
 INSERT INTO public.characters VALUES (7, 'Yoshi', 'Dinosaur Land', 'Green');
 INSERT INTO public.characters VALUES (6, 'Daisy', 'Sarasaland', 'Orange');
+INSERT INTO public.characters VALUES (1, 'Toad', 'Mushroom Kingdom', 'Red');
+INSERT INTO public.characters VALUES (4, 'Toad', 'Mushroom Kingdom', 'Red');
 
 
 --
