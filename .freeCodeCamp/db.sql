@@ -20,17 +20,18 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE IF EXISTS second_database;
+DROP DATABASE IF EXISTS mario_database;
+DROP DATABASE IF EXISTS first_database;
 --
--- Name: second_database; Type: DATABASE; Schema: -; Owner: freecodecamp
+-- Name: mario_database; Type: DATABASE; Schema: -; Owner: freecodecamp
 --
 
-CREATE DATABASE second_database WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
+CREATE DATABASE mario_database WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
 
 
-ALTER DATABASE second_database OWNER TO freecodecamp;
+ALTER DATABASE mario_database OWNER TO freecodecamp;
 
-\connect second_database
+\connect mario_database
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
