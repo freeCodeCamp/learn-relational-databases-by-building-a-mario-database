@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 describe('Bowser', () => {
-  it('should have the correct "favorite_color"', async () => {
+  it('should have the correct "homeland"', async () => {
     const query = `SELECT * FROM characters;`;
 
     try {
@@ -16,7 +16,7 @@ describe('Bowser', () => {
       const res = await client.query(query);
 
       const bowserRow = res.rows.findIndex(row => {
-        return row.name === 'Bowser' && row.homeland === 'Mushroom Kingdom' && row.favorite_color === 'Yellow' && row.character_id;
+        return row.name === 'Bowser' && row.homeland === 'Koopa Kingdom' && row.favorite_color === 'Yellow' && row.character_id;
       });
 
       assert(bowserRow >= 0);
@@ -26,4 +26,4 @@ describe('Bowser', () => {
       await client.end();
     }
   });
-});*/
+});
