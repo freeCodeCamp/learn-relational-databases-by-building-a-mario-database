@@ -99,8 +99,8 @@ INSERT INTO public.characters VALUES (2, 'Luigi', 'Mushroom Kingdom', 'Green');
 INSERT INTO public.characters VALUES (3, 'Peach', 'Mushroom Kingdom', 'Pink');
 INSERT INTO public.characters VALUES (4, 'Toadstool', 'Mushroom Kingdom', 'Red');
 INSERT INTO public.characters VALUES (5, 'Bowser', 'Mushroom Kingdom', 'Green');
-INSERT INTO public.characters VALUES (6, 'Daisy', 'Sarasaland', 'Yellow');
 INSERT INTO public.characters VALUES (7, 'Yoshi', 'Dinosaur Land', 'Green');
+INSERT INTO public.characters VALUES (6, 'Daisy', 'Sarasaland', 'Orange');
 
 
 --
