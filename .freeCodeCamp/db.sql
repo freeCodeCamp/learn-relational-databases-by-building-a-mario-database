@@ -111,6 +111,14 @@ SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 
 
 --
+-- Name: characters characters_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.characters
+    ADD CONSTRAINT characters_pkey PRIMARY KEY (character_id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
