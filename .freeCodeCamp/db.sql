@@ -84,6 +84,16 @@ ALTER SEQUENCE public.characters_character_id_seq OWNED BY public.characters.cha
 
 
 --
+-- Name: more_info; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.more_info (
+);
+
+
+ALTER TABLE public.more_info OWNER TO freecodecamp;
+
+--
 -- Name: characters character_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -101,6 +111,12 @@ INSERT INTO public.characters VALUES (6, 'Daisy', 'Sarasaland', 'Orange');
 INSERT INTO public.characters VALUES (1, 'Mario', 'Mushroom Kingdom', 'Red');
 INSERT INTO public.characters VALUES (4, 'Toad', 'Mushroom Kingdom', 'Blue');
 INSERT INTO public.characters VALUES (5, 'Bowser', 'Koopa Kingdom', 'Yellow');
+
+
+--
+-- Data for Name: more_info; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
 
 
 --
