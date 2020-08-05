@@ -151,6 +151,7 @@ INSERT INTO public.characters VALUES (5, 'Bowser', 'Koopa Kingdom', 'Yellow');
 -- Data for Name: more_info; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.more_info VALUES (1, '1981-07-09', 155, 64.5, 1);
 
 
 --
@@ -164,7 +165,7 @@ SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 -- Name: more_info_more_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 1, false);
+SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 1, true);
 
 
 --
