@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -9,7 +9,7 @@ const client = new Client({
 
 describe('The "more_info" table', () => {
   it('should have the correct row for "Mario"', async () => {
-    const query = `select * from more_info where birthday = '1981-07-09' AND height = 155 AND weight = 64.5 AND character_id = 1;`;
+    const query = `SELECT * FROM more_info WHERE birthday = '1981-07-09' AND height = 155 AND weight = 64.5 AND character_id = 1;`;
 
     try {
       await client.connect();
@@ -22,4 +22,4 @@ describe('The "more_info" table', () => {
       await client.end();
     }
   });
-});
+});*/
