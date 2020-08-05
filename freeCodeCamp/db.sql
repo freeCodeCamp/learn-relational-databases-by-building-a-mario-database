@@ -117,6 +117,39 @@ ALTER SEQUENCE public.more_info_more_info_id_seq OWNED BY public.more_info.more_
 
 
 --
+-- Name: sounds; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.sounds (
+    sound_id integer NOT NULL
+);
+
+
+ALTER TABLE public.sounds OWNER TO freecodecamp;
+
+--
+-- Name: sounds_sound_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.sounds_sound_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sounds_sound_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: sounds_sound_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.sounds_sound_id_seq OWNED BY public.sounds.sound_id;
+
+
+--
 -- Name: characters character_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -128,6 +161,13 @@ ALTER TABLE ONLY public.characters ALTER COLUMN character_id SET DEFAULT nextval
 --
 
 ALTER TABLE ONLY public.more_info ALTER COLUMN more_info_id SET DEFAULT nextval('public.more_info_more_info_id_seq'::regclass);
+
+
+--
+-- Name: sounds sound_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.sounds ALTER COLUMN sound_id SET DEFAULT nextval('public.sounds_sound_id_seq'::regclass);
 
 
 --
@@ -157,6 +197,12 @@ INSERT INTO public.more_info VALUES (7, '1990-04-13', 162, 59.1, 7);
 
 
 --
+-- Data for Name: sounds; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
+
+--
 -- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
@@ -168,6 +214,13 @@ SELECT pg_catalog.setval('public.characters_character_id_seq', 7, true);
 --
 
 SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 7, true);
+
+
+--
+-- Name: sounds_sound_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.sounds_sound_id_seq', 1, false);
 
 
 --
@@ -192,6 +245,14 @@ ALTER TABLE ONLY public.more_info
 
 ALTER TABLE ONLY public.more_info
     ADD CONSTRAINT more_info_pkey PRIMARY KEY (more_info_id);
+
+
+--
+-- Name: sounds sounds_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.sounds
+    ADD CONSTRAINT sounds_pkey PRIMARY KEY (sound_id);
 
 
 --
