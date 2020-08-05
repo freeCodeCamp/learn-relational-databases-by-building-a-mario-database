@@ -91,7 +91,8 @@ CREATE TABLE public.more_info (
     more_info_id integer NOT NULL,
     birthday date,
     height integer,
-    weight numeric(4,1)
+    weight numeric(4,1),
+    character_id integer
 );
 
 
@@ -180,6 +181,14 @@ ALTER TABLE ONLY public.characters
 
 ALTER TABLE ONLY public.more_info
     ADD CONSTRAINT more_info_pkey PRIMARY KEY (more_info_id);
+
+
+--
+-- Name: more_info more_info_character_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.more_info
+    ADD CONSTRAINT more_info_character_id_fkey FOREIGN KEY (character_id) REFERENCES public.characters(character_id);
 
 
 --
