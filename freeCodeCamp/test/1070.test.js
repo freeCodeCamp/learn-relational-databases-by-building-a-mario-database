@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastLog } = require('./utils');
 
 describe('You', () => {
@@ -12,4 +12,4 @@ describe('You', () => {
     const select2 = /statement:selectcharacter_id,namefromcharacters;/i;
     assert(select1.test(lastLog) || select2.test(lastLog));
   });
-});
+});*/
