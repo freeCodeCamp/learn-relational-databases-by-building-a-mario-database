@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,26 +8,26 @@ const client = new Client({
 });
 
 describe('The "more_info" table', () => {
-  it('should have a column named "height_in_cm" and no column named "height"', async () => {
+  it('should have a column named "weight_in_kg" and no column named "weight"', async () => {
     const query = `SELECT * FROM more_info;`;
 
     try {
       await client.connect();
       const res = await client.query(query);
 
-      const heightInCmColumn = res.fields.findIndex(column => {
-        return column.name === 'height_in_cm' && column.dataTypeID === 23;
+      const weightInKgColumn = res.fields.findIndex(column => {
+        return column.name === 'weight_in_kg' && column.dataTypeID === 1700 && column.dataTypeModifier === 262149;
       });
 
-      const heightColumn = res.fields.findIndex(column => {
-        return column.name === 'height';
+      const weightColumn = res.fields.findIndex(column => {
+        return column.name === 'weight';
       });
 
-      assert(heightInCmColumn >= 0 && heightColumn < 0);
+      assert(weightInKgColumn >= 0 && weightColumn < 0);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});*/
+});
