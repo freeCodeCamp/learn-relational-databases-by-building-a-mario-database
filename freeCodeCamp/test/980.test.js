@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -22,4 +22,4 @@ describe('The "character_id" column', () => {
       await client.end();
     }
   });
-});
+});*/
