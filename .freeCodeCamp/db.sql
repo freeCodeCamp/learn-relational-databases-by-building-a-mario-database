@@ -91,7 +91,7 @@ CREATE TABLE public.more_info (
     more_info_id integer NOT NULL,
     birthday date,
     height_in_cm integer,
-    weight numeric(4,1),
+    weight_in_kg numeric(4,1),
     character_id integer NOT NULL
 );
 
