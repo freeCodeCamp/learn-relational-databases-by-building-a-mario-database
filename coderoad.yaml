@@ -1,20 +1,20 @@
 version: '0.2.5'
 config:
+  setup:
+    commands:
+      # these commands run when a tutorial is started or continued
+      - sudo service postgresql stop
+      - npm install
+      - sudo chmod 777 test/pg.log
+      - sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf
+      - sudo cp pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
+      - sudo service postgresql start
+      - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
+      - sudo cp .psqlrc ~
   testRunner:
     command: ./node_modules/.bin/mocha
     args:
       tap: --reporter=mocha-tap-reporter
-    setup:
-      commands:
-        # these commands run when a tutorial is started or continued
-        - sudo service postgresql stop
-        - npm install
-        - sudo chmod 777 test/pg.log
-        - sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf
-        - sudo cp pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
-        - sudo service postgresql start
-        - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
-        - sudo cp .psqlrc ~
     directory: freeCodeCamp
   repo:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
