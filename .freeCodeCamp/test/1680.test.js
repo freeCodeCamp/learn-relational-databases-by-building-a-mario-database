@@ -1,15 +1,15 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { getLastQueryResult, getLastLog } = require('./utils');
 
 describe('You', () => {
   it('view all the data from "characters" and "more_info" with a JOIN statement', async () => {
     const lastLog = await getLastLog(true);
     const lastQueryResult = await getLastQueryResult();
-    const test1 = lastLog.match(/fulljoin/gi).length === 1;
+    const test1 = lastLog.match(/fulljoin/gi).length === 2;
     const column_1 = /character_id/.test(lastQueryResult);
-    const column_2 = /sound_id/.test(lastQueryResult);
-    const correctNumberOfRows = /\(12rows\)/.test(lastQueryResult);
+    const column_2 = /action_id/.test(lastQueryResult);
+    const correctNumberOfRows = /\(21rows\)/.test(lastQueryResult);
 
     assert(correctNumberOfRows && test1 && column_1 && column_2);
   });
-});*/
+});
