@@ -22,8 +22,6 @@ config:
   dependencies:
     - name: node
       version: '>=10'
-  reset:
-      - 'bash ./freeCodeCamp/reset.sh'
 levels:
   - id: '20'
     steps:
