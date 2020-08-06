@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,8 +8,8 @@ const client = new Client({
 });
 
 describe('The "actions" table', () => {
-  it('should have a row for "run"', async () => {
-    const query = `SELECT * FROM actions WHERE action = 'run';`;
+  it('should have a row for "jump"', async () => {
+    const query = `SELECT * FROM actions WHERE action = 'jump';`;
 
     try {
       await client.connect();
@@ -22,4 +22,4 @@ describe('The "actions" table', () => {
       await client.end();
     }
   });
-});*/
+});
