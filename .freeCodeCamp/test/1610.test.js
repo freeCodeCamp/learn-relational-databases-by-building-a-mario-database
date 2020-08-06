@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,8 +8,8 @@ const client = new Client({
 });
 
 describe('The "character_actions" table', () => {
-  it('should have three rows for Luigi\'s actions', async () => {
-    const query = `SELECT * FROM character_actions WHERE character_id = 2 AND action_id = 1 OR character_id = 2 AND action_id = 2 OR character_id = 2 AND action_id = 3;`;
+  it('should have three rows for Peach\'s actions', async () => {
+    const query = `SELECT * FROM character_actions WHERE character_id = 1 AND action_id = 1 OR character_id = 1 AND action_id = 2 OR character_id = 1 AND action_id = 3;`;
 
     try {
       await client.connect();
@@ -22,4 +22,4 @@ describe('The "character_actions" table', () => {
       await client.end();
     }
   });
-});*/
+});
