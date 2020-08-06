@@ -254,6 +254,9 @@ INSERT INTO public.character_actions VALUES (5, 3);
 INSERT INTO public.character_actions VALUES (4, 1);
 INSERT INTO public.character_actions VALUES (4, 2);
 INSERT INTO public.character_actions VALUES (4, 3);
+INSERT INTO public.character_actions VALUES (3, 1);
+INSERT INTO public.character_actions VALUES (3, 2);
+INSERT INTO public.character_actions VALUES (3, 3);
 
 
 --
