@@ -23,7 +23,6 @@ config:
     - name: node
       version: '>=10'
   reset:
-    command: 
       - 'bash ./freeCodeCamp/reset.sh'
 levels:
   - id: '20'
