@@ -207,6 +207,7 @@ INSERT INTO public.more_info VALUES (7, '1990-04-13', 162, 59.1, 7);
 --
 
 INSERT INTO public.sounds VALUES (1, 'its-a-me.wav', 1);
+INSERT INTO public.sounds VALUES (2, 'yippee.wav', 1);
 
 
 --
@@ -227,7 +228,7 @@ SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 7, true);
 -- Name: sounds_sound_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.sounds_sound_id_seq', 1, true);
+SELECT pg_catalog.setval('public.sounds_sound_id_seq', 2, true);
 
 
 --
