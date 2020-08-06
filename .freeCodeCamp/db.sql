@@ -242,6 +242,9 @@ INSERT INTO public.actions VALUES (3, 'duck');
 -- Data for Name: character_actions; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.character_actions VALUES (7, 1);
+INSERT INTO public.character_actions VALUES (7, 2);
+INSERT INTO public.character_actions VALUES (7, 3);
 
 
 --
