@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,8 +8,8 @@ const client = new Client({
 });
 
 describe('The "sounds" table', () => {
-  it('should have a row for "ha-ha.wav" that Luigi uses', async () => {
-    const query = `SELECT * FROM sounds WHERE filename = 'ha-ha.wav' AND character_id = 2;`;
+  it('should have a row for "oh-yeah.wav" that Luigi uses', async () => {
+    const query = `SELECT * FROM sounds WHERE filename = 'oh-yeah.wav' AND character_id = 2;`;
 
     try {
       await client.connect();
@@ -22,4 +22,4 @@ describe('The "sounds" table', () => {
       await client.end();
     }
   });
-});*/
+});
