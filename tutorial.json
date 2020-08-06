@@ -7,9 +7,8 @@
   "config": {
     "setup": {
       "commands": [
-        "cd freeCodeCamp",
         "sudo service postgresql stop",
-        "npm install",
+        "cd freeCodeCamp && npm install",
         "sudo chmod 777 test/pg.log",
         "sudo cp postgresql.conf /etc/postgresql/12/main/postgresql.conf",
         "sudo cp pg_hba.conf /etc/postgresql/12/main/pg_hba.conf",
