@@ -125,7 +125,8 @@ ALTER SEQUENCE public.more_info_more_info_id_seq OWNED BY public.more_info.more_
 --
 
 CREATE TABLE public.sounds (
-    sound_id integer NOT NULL
+    sound_id integer NOT NULL,
+    filename character varying(40) NOT NULL
 );
 
 
@@ -249,6 +250,14 @@ ALTER TABLE ONLY public.more_info
 
 ALTER TABLE ONLY public.more_info
     ADD CONSTRAINT more_info_pkey PRIMARY KEY (more_info_id);
+
+
+--
+-- Name: sounds sounds_filename_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.sounds
+    ADD CONSTRAINT sounds_filename_key UNIQUE (filename);
 
 
 --
