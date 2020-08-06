@@ -1003,4 +1003,3 @@ levels:
         setup:
           watchers:
             - ./freeCodeCamp/test/queryResults.log
-
