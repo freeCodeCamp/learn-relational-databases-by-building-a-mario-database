@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,22 +8,18 @@ const client = new Client({
 });
 
 describe('The "actions" table', () => {
-  it('should have a column named "action" with the correct properties', async () => {
-    const query = `SELECT * FROM actions;`;
+  it('should have a row for "run"', async () => {
+    const query = `SELECT * FROM actions WHERE action = 'run';`;
 
     try {
       await client.connect();
       const res = await client.query(query);
 
-      const filenameColumn = res.fields.findIndex(column => {
-        return column.name === 'action' && dataTypeID === 1043 && dataTypeModifier === 24;
-      });
-
-      assert(filenameColumn >= 0);
+  	  assert(!!res);
     } catch (err) {
       assert(false);
     } finally {
       await client.end();
     }
   });
-});*/
+});
