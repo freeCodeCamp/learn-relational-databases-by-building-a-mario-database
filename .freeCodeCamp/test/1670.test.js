@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { getLastQueryResult, getLastLog } = require('./utils');
 
 describe('You', () => {
@@ -6,9 +6,9 @@ describe('You', () => {
 		const lastLog = await getLastLog(true);
 		const lastQueryResult = await getLastQueryResult();
 		const test1 = /fulljoin/i.test(lastLog);
-		const test2 = /characters\.character_id=more_info\.character_id/i.test(lastLog) || /more_info\.character_id=characters\.character_id/i.test(lastLog);
-		const correctNumberOfRows = /\(7rows\)/.test(lastQueryResult);
+		const test2 = /characters\.character_id=sounds\.character_id/i.test(lastLog) || /sounds\.character_id=characters\.character_id/i.test(lastLog);
+		const correctNumberOfRows = /\(12rows\)/.test(lastQueryResult);
 
     assert(correctNumberOfRows && test1 && test2);
   });
-});*/
+});
