@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,8 +8,8 @@ const client = new Client({
 });
 
 describe('The "character_actions" table', () => {
-  it('should have three rows for Daisy\'s actions', async () => {
-    const query = `SELECT * FROM character_actions FULL JOIN characters USING(character_id) FULL JOIN actions USING(action_id) WHERE name = 'Daisy'`;
+  it('should have three rows for Bowser\'s actions', async () => {
+    const query = `SELECT * FROM character_actions FULL JOIN characters USING(character_id) FULL JOIN actions USING(action_id) WHERE name = 'Bowser'`;
 
     try {
       await client.connect();
@@ -22,4 +22,4 @@ describe('The "character_actions" table', () => {
       await client.end();
     }
   });
-});*/
+});
