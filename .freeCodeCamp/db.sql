@@ -82,6 +82,16 @@ ALTER SEQUENCE public.actions_action_id_seq OWNED BY public.actions.action_id;
 
 
 --
+-- Name: character_actions; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.character_actions (
+);
+
+
+ALTER TABLE public.character_actions OWNER TO freecodecamp;
+
+--
 -- Name: characters; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
@@ -224,6 +234,12 @@ ALTER TABLE ONLY public.sounds ALTER COLUMN sound_id SET DEFAULT nextval('public
 INSERT INTO public.actions VALUES (1, 'run');
 INSERT INTO public.actions VALUES (2, 'jump');
 INSERT INTO public.actions VALUES (3, 'duck');
+
+
+--
+-- Data for Name: character_actions; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
 
 
 --
