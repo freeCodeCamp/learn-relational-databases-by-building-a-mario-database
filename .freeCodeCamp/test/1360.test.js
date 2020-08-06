@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -24,4 +24,4 @@ describe('The "sounds" table', () => {
       await client.end();
     }
   });
-});
+});*/
