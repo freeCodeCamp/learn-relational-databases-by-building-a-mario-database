@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastQueryResult } = require('./utils');
 
 describe('You', () => {
@@ -10,4 +10,4 @@ describe('You', () => {
   it('should display the details of the "character_actions" table', () => {
     assert(/Table"public\.character_actions"/.test(lastQueryResult));
   });
-});
+});*/
