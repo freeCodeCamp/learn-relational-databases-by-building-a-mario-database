@@ -7,6 +7,7 @@
   "config": {
     "setup": {
       "commands": [
+        "cd freeCodeCamp",
         "sudo service postgresql stop",
         "npm install",
         "sudo chmod 777 test/pg.log",
