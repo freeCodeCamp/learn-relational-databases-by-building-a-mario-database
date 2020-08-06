@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -7,10 +7,10 @@ const client = new Client({
   connectionString: connectionString,
 });
 
-describe('"mario_database"', () => {
-  it('should have a table named "character_actions"', async () => {
-    const query = 'SELECT * FROM character_actions;'
-
+describe('The "character_actions" table', () => {
+  it('should have a column named "character_id" with the correct properties', async () => {
+    const query = `SELECT column_name FROM INFORMATION_SCHEMA.COLUMNS WHERE table_schema = 'public' AND is_nullable = 'NO' AND table_name = 'character_actions' AND column_name = 'character_id' AND data_type = 'integer';`;
+    
     try {
       await client.connect();
       const res = await client.query(query);
@@ -21,4 +21,4 @@ describe('"mario_database"', () => {
       await client.end();
     }
   });
-});*/
+});
