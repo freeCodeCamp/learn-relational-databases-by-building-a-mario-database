@@ -82,6 +82,7 @@ ALTER SEQUENCE public.actions_action_id_seq OWNED BY public.actions.action_id;
 --
 
 CREATE TABLE public.character_actions (
+    action_id integer NOT NULL
 );
 
 
