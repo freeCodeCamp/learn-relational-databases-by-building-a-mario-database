@@ -52,7 +52,8 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.actions (
-    action_id integer NOT NULL
+    action_id integer NOT NULL,
+    action character varying(20) NOT NULL
 );
 
 
@@ -288,6 +289,14 @@ SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 7, true);
 --
 
 SELECT pg_catalog.setval('public.sounds_sound_id_seq', 8, true);
+
+
+--
+-- Name: actions actions_action_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.actions
+    ADD CONSTRAINT actions_action_key UNIQUE (action);
 
 
 --
