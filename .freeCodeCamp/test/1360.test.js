@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'mario_database';
@@ -8,9 +8,9 @@ const client = new Client({
 });
 
 describe('The "sounds" table', () => {
-  it('should have "yay.wav" and "woo-hoo.wav" rows that Peach uses', async () => {
-    const query1 = `SELECT * FROM sounds WHERE filename = 'yay.wav' AND character_id = 3;`;
-    const query2 = `SELECT * FROM sounds WHERE filename = 'woo-hoo.wav' AND character_id = 3;`;
+  it('should have "mm-hmm.wav" and "yahoo.wav" rows with the correct foreign key values', async () => {
+    const query1 = `SELECT * FROM sounds WHERE filename = 'mm-hmm.wav' AND character_id = 3;`;
+    const query2 = `SELECT * FROM sounds WHERE filename = 'yahoo.wav' AND character_id = 1;`;
 
     try {
       await client.connect();
@@ -24,4 +24,4 @@ describe('The "sounds" table', () => {
       await client.end();
     }
   });
-});*/
+});
