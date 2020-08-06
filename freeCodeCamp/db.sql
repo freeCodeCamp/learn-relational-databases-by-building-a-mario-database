@@ -218,6 +218,7 @@ ALTER TABLE ONLY public.sounds ALTER COLUMN sound_id SET DEFAULT nextval('public
 --
 
 INSERT INTO public.actions VALUES (1, 'run');
+INSERT INTO public.actions VALUES (2, 'jump');
 
 
 --
@@ -264,7 +265,7 @@ INSERT INTO public.sounds VALUES (8, 'yahoo.wav', 1);
 -- Name: actions_action_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.actions_action_id_seq', 1, true);
+SELECT pg_catalog.setval('public.actions_action_id_seq', 2, true);
 
 
 --
