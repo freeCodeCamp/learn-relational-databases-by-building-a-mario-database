@@ -245,6 +245,9 @@ INSERT INTO public.actions VALUES (3, 'duck');
 INSERT INTO public.character_actions VALUES (7, 1);
 INSERT INTO public.character_actions VALUES (7, 2);
 INSERT INTO public.character_actions VALUES (7, 3);
+INSERT INTO public.character_actions VALUES (6, 1);
+INSERT INTO public.character_actions VALUES (6, 2);
+INSERT INTO public.character_actions VALUES (6, 3);
 
 
 --
