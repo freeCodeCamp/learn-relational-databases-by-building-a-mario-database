@@ -329,6 +329,14 @@ ALTER TABLE ONLY public.actions
 
 
 --
+-- Name: character_actions character_actions_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.character_actions
+    ADD CONSTRAINT character_actions_pkey PRIMARY KEY (character_id, action_id);
+
+
+--
 -- Name: characters characters_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
