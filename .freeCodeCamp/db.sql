@@ -126,7 +126,8 @@ ALTER SEQUENCE public.more_info_more_info_id_seq OWNED BY public.more_info.more_
 
 CREATE TABLE public.sounds (
     sound_id integer NOT NULL,
-    filename character varying(40) NOT NULL
+    filename character varying(40) NOT NULL,
+    character_id integer NOT NULL
 );
 
 
@@ -274,6 +275,14 @@ ALTER TABLE ONLY public.sounds
 
 ALTER TABLE ONLY public.more_info
     ADD CONSTRAINT more_info_character_id_fkey FOREIGN KEY (character_id) REFERENCES public.characters(character_id);
+
+
+--
+-- Name: sounds sounds_character_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.sounds
+    ADD CONSTRAINT sounds_character_id_fkey FOREIGN KEY (character_id) REFERENCES public.characters(character_id);
 
 
 --
