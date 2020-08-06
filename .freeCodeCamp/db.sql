@@ -368,6 +368,14 @@ ALTER TABLE ONLY public.sounds
 
 
 --
+-- Name: character_actions character_actions_character_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.character_actions
+    ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY (character_id) REFERENCES public.characters(character_id);
+
+
+--
 -- Name: more_info more_info_character_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
