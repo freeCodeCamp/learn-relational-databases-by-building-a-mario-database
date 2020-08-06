@@ -48,6 +48,39 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: actions; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.actions (
+    action_id integer NOT NULL
+);
+
+
+ALTER TABLE public.actions OWNER TO freecodecamp;
+
+--
+-- Name: actions_action_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.actions_action_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.actions_action_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: actions_action_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.actions_action_id_seq OWNED BY public.actions.action_id;
+
+
+--
 -- Name: characters; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
@@ -156,6 +189,13 @@ ALTER SEQUENCE public.sounds_sound_id_seq OWNED BY public.sounds.sound_id;
 
 
 --
+-- Name: actions action_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.actions ALTER COLUMN action_id SET DEFAULT nextval('public.actions_action_id_seq'::regclass);
+
+
+--
 -- Name: characters character_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -174,6 +214,12 @@ ALTER TABLE ONLY public.more_info ALTER COLUMN more_info_id SET DEFAULT nextval(
 --
 
 ALTER TABLE ONLY public.sounds ALTER COLUMN sound_id SET DEFAULT nextval('public.sounds_sound_id_seq'::regclass);
+
+
+--
+-- Data for Name: actions; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
 
 
 --
@@ -217,6 +263,13 @@ INSERT INTO public.sounds VALUES (8, 'yahoo.wav', 1);
 
 
 --
+-- Name: actions_action_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.actions_action_id_seq', 1, false);
+
+
+--
 -- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
@@ -235,6 +288,14 @@ SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 7, true);
 --
 
 SELECT pg_catalog.setval('public.sounds_sound_id_seq', 8, true);
+
+
+--
+-- Name: actions actions_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.actions
+    ADD CONSTRAINT actions_pkey PRIMARY KEY (action_id);
 
 
 --
