@@ -1,4 +1,4 @@
-version: '0.2.5'
+version: '0.2.6'
 config:
   setup:
     commands:
@@ -18,10 +18,12 @@ config:
     directory: freeCodeCamp
   repo:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
-    branch: v0.2.5
+    branch: v0.2.6
   dependencies:
     - name: node
       version: '>=10'
+  reset:
+    command: 'bash ./freeCodeCamp/reset.sh'
 levels:
   - id: '20'
     steps:
@@ -304,7 +306,7 @@ levels:
       - id: '480.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/queryResults.log
+            - ./freeCodeCamp/test/pg.log
   - id: '490'
     steps:
       - id: '490.1'
@@ -322,7 +324,7 @@ levels:
       - id: '530.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/queryResults.log
+            - ./freeCodeCamp/test/pg.log
   - id: '540'
     steps:
       - id: '540.1'
