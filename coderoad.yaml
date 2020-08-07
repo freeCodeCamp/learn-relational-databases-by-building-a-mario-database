@@ -20,7 +20,8 @@ config:
     uri: https://github.com/moT01/learn-relational-databases-by-building-a-mario-database
     branch: v0.2.6
   reset:
-    command: 'bash ./freeCodeCamp/reset.sh'
+    commands:
+      - 'bash ./freeCodeCamp/reset.sh'
   dependencies:
     - name: node
       version: '>=10'
