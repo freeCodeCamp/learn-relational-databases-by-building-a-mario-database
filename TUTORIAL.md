@@ -24,6 +24,7 @@ Notice that the prompt changed to let you know that you are now interacting with
 
 - Type `\l` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 40. Create `first_database`
 
@@ -42,6 +43,7 @@ The capitalized words are keywords telling PostgreSQL what to do. The name of th
 - Don't forget the semi-colon at the end
 - Type `CREATE DATABASE first_database;` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 50. View `first_database`
 
@@ -54,6 +56,7 @@ Use the **l**ist shortcut command again to make sure your new database is there.
 - Type `\` followed by the "list" shortcut letter
 - Enter `\l` into the psql prompt and press enter
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 60. Create `second_database`
 
@@ -68,6 +71,7 @@ It worked. Your new database is there. If you don't get a message after entering
 - Don't forget the semi-colon
 - Try entering `CREATE DATABASE second_database;`
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 70. View Databases
 
@@ -80,6 +84,7 @@ You should have another new database now. **L**ist the databases to make sure.
 - Use the **l**ist shortcut command
 - Enter `\l` into the prompt
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 80. Connect to `second_database`
 
@@ -91,6 +96,7 @@ You can **c**onnect to a database by entering `\c database_name`. You need to co
 
 - Enter `\c second_database` into the psql prompt to connect
 - Type `psql -U freecodecamp postgres` into the terminal to log in to psql if you aren't logged in first
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 90. View `second_database` Tables
 
@@ -102,6 +108,7 @@ You should see a message that you are connected. I noticed the prompt changed to
 
 - Type `\d` in the prompt and press enter
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 100. Create `first_table`
 
@@ -120,6 +127,7 @@ Note that the parenthesis are needed for this one. It will create the table in t
 - Enter `CREATE TABLE first_table();` into the prompt
 - Don't forget the semi-colon
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 110. View `second_database` Tables
 
@@ -132,6 +140,7 @@ View the tables in `second_database` again with the **d**isplay command. You sho
 - Use the **d**isplay shortcut command
 - Try entering `\d` into the prompt
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 120. Create `second_table`
 
@@ -146,6 +155,7 @@ Create another new table in this database. Give it a name of `second_table`.
 - Here's an example: `CREATE TABLE table_name();`
 - Enter `CREATE TABLE second_table();` into the prompt
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 130. View `second_database` Tables
 
@@ -158,6 +168,7 @@ There should be two tables in this database now. **D**isplay them again for me t
 - Use the **display** shortcut command
 - Enter `\d` into the prompt
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 140. View `second_table` Details
 
@@ -169,6 +180,7 @@ You can view more details about a table by adding the table name after the **d**
 
 - Enter `\d second_table` into the prompt
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 150. Create `first_column`
 
@@ -186,6 +198,7 @@ Add a column to `second_table` named `first_column`. Give it a data type of `INT
 
 - Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 160. View `second_table` Details
 
@@ -200,6 +213,7 @@ I think it worked. **D**isplay the details of `second_table` again to see if you
 - Here's an example: `\d table_name`
 - Try entering `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 170. Add `id` Column
 
@@ -214,6 +228,7 @@ Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another c
 - You added the last column with: `ALTER TABLE second_table ADD COLUMN first_column INT;`
 - Try entering `ALTER TABLE second_table ADD COLUMN id INT;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 180. View `second_table` Details
 
@@ -228,6 +243,7 @@ Your table should have an `id` column added. View the details of `second_table` 
 - Here's an example: `\d table_name`
 - Try entering `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 190. Add `age` Column
 
@@ -242,6 +258,7 @@ Add another column to `second_table` named `age`. Give it a data type of `INT`.
 - You added the last column with: `ALTER TABLE second_table ADD COLUMN id INT;`
 - Try using `ALTER TABLE second_table ADD COLUMN age INT;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 200. View `second_table` Details
 
@@ -256,6 +273,7 @@ Take look at the details of `second_table` again.
 - Here's an example: `\d table_name`
 - Enter `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 210. Drop `age` Column
 
@@ -273,6 +291,7 @@ Drop your `age` column.
 
 - Try entering `ALTER TABLE second_table DROP COLUMN age;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 220. View `second_table` Details
 
@@ -287,6 +306,7 @@ View the details of `second_table` to see if it's gone.
 - Here's an example: `\d table_name`
 - Enter `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 230. Drop `first_column` Column
 
@@ -300,6 +320,7 @@ It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first
 - You dropped the last column with: `ALTER TABLE second_table DROP COLUMN age;`
 - Try entering `ALTER TABLE second_table DROP COLUMN first_column;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 240. Add `name` Column
 
@@ -316,6 +337,7 @@ Add a new column to `second_table`, give it a name of `name` and a data type of 
 - You added the last column like this: `ALTER TABLE second_table ADD COLUMN age INT;`
 - Try entering `ALTER TABLE second_table ADD COLUMN name VARCHAR(30);`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 250. View `second_table` Details
 
@@ -329,6 +351,7 @@ Take look at the details of `second_table` to see your columns.
 - Here's an example: `\d table_name`
 - Try entering `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 260. Rename `name` Column
 
@@ -347,6 +370,7 @@ Rename the `name` column to `username`.
 - Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column
 - Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 270. View `second_table` Details
 
@@ -360,6 +384,7 @@ Take look at the details of `second_table` again to see if it got renamed.
 - Here's an example: `\d table_name`
 - Enter `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 280. Insert Samus Row
 
@@ -380,6 +405,7 @@ Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `S
 - Try entering `INSERT INTO second_table(id, username) VALUES(1, 'Samus');`
 - If you missed a matching single quote, try entering `');` to finish the command and try again
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 290. View `second_table` Data
 
@@ -399,6 +425,7 @@ Use a `SELECT` statement to view **all** the columns in `second_table`. Use an a
 - Use `second_table` as the table name
 - Enter `SELECT * FROM second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 300. Insert Mario Row
 
@@ -414,6 +441,7 @@ Use a `SELECT` statement to view **all** the columns in `second_table`. Use an a
 - Try entering `INSERT INTO second_table(id, username) VALUES(2, 'Mario');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 310. View `second_table` Data
 
@@ -427,6 +455,7 @@ You should now have two rows in the table. Use `SELECT` again to view **all** th
 - Use `*` to see all columns
 - Try entering `SELECT * FROM second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 320. Insert Luigi Row
 
@@ -442,6 +471,7 @@ You should now have two rows in the table. Use `SELECT` again to view **all** th
 - Try entering `INSERT INTO second_table(id, username) VALUES(3, 'Luigi');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 330. View `second_table` Data
 
@@ -455,6 +485,7 @@ You should now have three rows. Use `SELECT` again to see **all** the data you e
 - Use `*` to see all columns
 - Try entering `SELECT * FROM second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 340. Delete Luigi Row
 
@@ -474,6 +505,7 @@ Remove Luigi from your table. The condition you want to use is `username='Luigi'
 - Try entering `DELETE FROM second_table WHERE username='Luigi';`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 350. View `second_table` Data
 
@@ -487,6 +519,7 @@ Luigi should be gone. Use `SELECT` again to see all the data and make sure he's 
 - Use `*` to see all the columns
 - Try `SELECT * FROM second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 360. Delete Mario Row
 
@@ -502,6 +535,7 @@ Yea, you can scrap all this for the Mario database. **delete** Mario **from** `s
 - Try entering `DELETE FROM second_table WHERE username='Mario';`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 370. Delete Samus Row
 
@@ -517,6 +551,7 @@ Only one more row should remain. **Delete** Samus **from** `second_table`.
 - Try entering `DELETE FROM second_table WHERE username='Samus';`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 380. View `second_table` Data
 
@@ -530,6 +565,7 @@ Use `SELECT` again to see all the rows in `second_table` and make sure they're g
 - Use `*` to see all columns
 - Enter `SELECT * FROM second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 390. View `second_table` Details
 
@@ -544,6 +580,7 @@ Looks like they're all gone. Remind me what columns you have in `second_table` b
 - Here's an example: `\d table_name`
 - Try `\d second_table`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 400. Drop `username` Column
 
@@ -558,6 +595,7 @@ You won't need any of these for the Mario database. **Alter** the **table** `sec
 - You dropped a column before with: `ALTER TABLE second_table DROP COLUMN age;`
 - Try `ALTER TABLE second_table DROP COLUMN username;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 410. Drop `id` Column
 
@@ -572,6 +610,7 @@ Next, drop the `id` column.
 - You previously dropped a column with `ALTER TABLE second_table DROP COLUMN username;`
 - Try `ALTER TABLE second_table DROP COLUMN id;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 420. View `second_database` Tables
 
@@ -585,6 +624,7 @@ Okay, the table has no rows or columns left. Remind me what tables are in this d
 - You don't need a table name with the command
 - Try entering `\d`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 430. Drop `second_table`
 
@@ -597,6 +637,7 @@ You won't need any of these tables for the Mario database either. Drop `second_t
 - Here's an example: `DROP TABLE table_name;`
 - Try `DROP TABLE second_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 440. Drop `first_table`
 
@@ -609,6 +650,7 @@ Next, drop `first_table`.
 - Here's an example: `DROP TABLE table_name;`
 - Enter `DROP TABLE first_table;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 450. View Databases
 
@@ -621,6 +663,7 @@ All the tables are gone now, too. Remind me what databases you have by using the
 - Use the **l**ist shortcut command
 - Enter `\l`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 460. Rename `first_database`
 
@@ -636,6 +679,7 @@ ALTER DATABASE database_name RENAME TO new_database_name;
 
 - Try entering `ALTER DATABASE first_database RENAME TO mario_database;`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 470. View Databases
 
@@ -648,6 +692,7 @@ List the databases to make sure it got renamed.
 - Use the **l**ist shortcut command
 - Enter `\l`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 480. Connect to `mario_database`
 
@@ -662,6 +707,7 @@ List the databases to make sure it got renamed.
 - Here's an example: `\c database_name`
 - Enter `\c mario_database`
 - Enter `psql -U freecodecamp second_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 490. Drop `second_database`
 
@@ -676,6 +722,7 @@ Now that you aren't connected to `second_database`, you can drop it. Use the `DR
 - Here's an example: `DROP DATABASE database_name;`
 - Enter `DROP DATABASE second_database;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 500. View Databases
 
@@ -688,6 +735,7 @@ List the databases again to make sure it's gone.
 - Use the **l**ist shortcut command
 - Enter `\l`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 530. Display `mario_database` Tables
 
@@ -701,6 +749,7 @@ Okay, I think you're ready to get started. I don't think you created any tables 
 - Try entering `\d`
 - Try entering `\c mario_database`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 540. Create `characters` Table
 
@@ -715,6 +764,7 @@ Create a new table name `characters`, it will hold some basic information about 
 - Here's an example: `CREAT TABLE table_name();`
 - Try entering `CREATE TABLE characters();`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 550. Add `character_id` column
 
@@ -728,6 +778,7 @@ Next, you can add some columns to the table. Add a column named `character_id` t
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`
 - Try entering `ALTER TABLE characters ADD COLUMN character_id SERIAL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 560. View `characters` Details
 
@@ -741,6 +792,7 @@ The `SERIAL` type make your column an `INT` with a `NOT NULL` constraint, and au
 - Here's an example: `\d table_name`
 - Try entering `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 570. Add `name` Column
 
@@ -756,6 +808,7 @@ Add a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT;`
 - Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 580. Add `homeland` Column
 
@@ -769,6 +822,7 @@ You can make another for where they are from. Add another column named `homeland
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
 - Try entering `ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 590. Add `favorite_color` Column
 
@@ -782,6 +836,7 @@ Video game characters are quite colorful. Add one more column named `favorite_co
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
 - Try entering `ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 600. View `characters` Details
 
@@ -796,6 +851,7 @@ You should have four columns in `characters`. Take a look at the details of it t
 - Here's an example: `\d table_name`
 - Try entering `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 610. Insert Mario Row
 
@@ -815,6 +871,7 @@ The first parenthesis are the column names, you can put as many columns as you w
 - Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 620. View `characters` Data
 
@@ -829,6 +886,7 @@ Mario should have a row now and his `character_id` should have been automaticall
 - Use `*` to see all columns
 - Try entering `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 630. Insert Luigi Row
 
@@ -844,6 +902,7 @@ Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroo
 - Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 640. View `characters` Data
 
@@ -858,6 +917,7 @@ View all the data in your `characters` table with `SELECT` again.
 - Use `*` to see all columns
 - Try entering `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 650. Insert Peach Row
 
@@ -873,6 +933,7 @@ Okay, it looks like it's all working. Add another row for Peach. Give her the va
 - Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 660. Add Toadstool and Bowser Rows
 
@@ -892,6 +953,7 @@ Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`
 - Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 670. Add Yoshi and Daisy Rows
 
@@ -914,6 +976,7 @@ That's much easier to read :sunglasses:. Add two more rows. Give the first one v
 - Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Daisy', 'Sarasaland', 'Yellow'), ('Yoshi', 'Dinosaur Land', 'Green');`
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 680. View `characters` Data
 
@@ -928,6 +991,7 @@ Take a look all the data in your table with `SELECT` to see where you stand.
 - Use `*` to see all columns
 - Try `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 690. Update Daisy's `favorite_color`
 
@@ -947,6 +1011,7 @@ You used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color
 - Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`
 - Try `UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 700. View `characters` Data
 
@@ -963,6 +1028,7 @@ Take a look all the data in your table again to see if she got updated.
 - Use `*` to see all columns
 - Try `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 710. Update Toadstool's `name`
 
@@ -976,6 +1042,7 @@ I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` 
 - Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red'`
 - Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='Red'`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 720. View `characters` Data
 
@@ -990,6 +1057,7 @@ Take a look all the data in your table.
 - Use `*` to see all columns
 - Try `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 730. Update Mario's `name`
 
@@ -1004,6 +1072,7 @@ Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad b
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
 - Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 740. View `characters` Data
 
@@ -1018,6 +1087,7 @@ Take a look all the data in your table again to see if Mario's name got changed 
 - Use `*` to see all columns
 - Try `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 750. Update Toad's `favorite_color`
 
@@ -1032,6 +1102,7 @@ Looks like it worked. I got Toad's favorite color wrong. He likes blue. Change T
 - I recommend using `character_id=4` as the condition
 - Try entering `UPDATE characters SET favorite_color='Blue' WHERE character_id=4;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 760. Update Bowser's `favorite_color`
 
@@ -1046,6 +1117,7 @@ Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update 
 - I recommand using `character_id=5` as the condition
 - Try entering `UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 770. Update Bowser's `homeland`
 
@@ -1060,6 +1132,7 @@ Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't y
 - I recommand using `character_id=5` as the condition
 - Try entering `UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 780. View `characters` Data
 
@@ -1073,6 +1146,7 @@ Take a look all the data in your table again so I can make sure there's no more 
 - Here's an example; `SELECT rows FROM table_name;`
 - Try entering `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 790. View Sorted `characters` Data
 
@@ -1090,6 +1164,7 @@ View all the data again, but put it in order by `character_id`.
 
 - Try entering `SELECT * FROM characters ORDER BY character_id;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 800. Add `name` Primary Key
 
@@ -1108,6 +1183,7 @@ The `name` column is pretty unique, why don't you set that as the primary key fo
 - You don't need quotes, but you do need a semi-colon :smile:
 - Try entering `ALTER TABLE characters ADD PRIMARY KEY(name);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 810. View `characters` Details
 
@@ -1121,6 +1197,7 @@ You should set a primary key on every table and there can only be one per table.
 - Here's an example: `\d table_name`
 - Try entering `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 820. Drop `name` Primary Key
 
@@ -1138,6 +1215,7 @@ Drop the primary key on the `name` column. You can see the **constraint name** i
 
 - Try using `ALTER TABLE characters DROP CONSTRAIN characters_pkey;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 830. View `character` Details
 
@@ -1151,6 +1229,7 @@ View the details of the `characters` table to make sure it's gone.
 - Here's an example: `\d table_name`
 - Try entering `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 840. Add `character_id` Primary Key
 
@@ -1164,6 +1243,7 @@ Set the primary key again, but use the `character_id` column this time.
 - Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
 - Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 850. View `character` Details
 
@@ -1177,6 +1257,7 @@ View the details of the `characters` table to see the new primary key.
 - Here's an example: `\d table_name`
 - Try entering `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 860. Create `more_info` Table
 
@@ -1190,6 +1271,7 @@ I think that table is complete for now. Next, create a new table named `more_inf
 - Here's an example: `CREATE TABLE table_name();`
 - Try entering `CREATE TABLE more_info();`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 870. View `mario_database` Tables
 
@@ -1202,6 +1284,7 @@ View the tables in `mario_database` again with the **d**isplay command. You shou
 - Don't put a table name after the command
 - Enter the `\d` command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 880. View `characters` Details
 
@@ -1216,6 +1299,7 @@ Hmm, I wonder what that third one is. It says "characters_character_id_seq". Ahh
 - You previously used `\d second_table`
 - Enter `\d characters`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 890. Create `more_info_id` Column
 
@@ -1231,6 +1315,7 @@ Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name TYPE;`
 - Try entering `ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 895. Create `more_info` Primary Key
 
@@ -1244,6 +1329,7 @@ Set your new column as the primary key for this table.
 - Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
 - Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 900. View `mario_database` Tables
 
@@ -1255,6 +1341,7 @@ View the tables in `mario_database` again with the display command. If my theory
 
 - Enter the `\d` command
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 910. Add `birthday` Column 
 
@@ -1268,6 +1355,7 @@ Yup, there it is. Add another column to `more_info` named `birthday`. Give it a 
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
 - Try entering `ALTER TABLE more_info ADD COLUMN birthday DATE;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 920. Add `height` Column
 
@@ -1281,6 +1369,7 @@ Add a `height` column to `more_info` that's a type of `INT`.
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
 - Try entering `ALTER TABLE more_info ADD COLUMN height INT;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 930. Add `weight` Columns
 
@@ -1294,6 +1383,7 @@ Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for 
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`
 - Try entering `ALTER TABLE more_info ADD COLUMN weight NUMERIC(4, 1);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 940. View `more_info` Details
 
@@ -1307,6 +1397,7 @@ Take a look at the details of `more_info` to see all your columns.
 - Here's an example: `\d table_name`
 - Try entering `\d more_info`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 950. Add `character_id` Foreign Key
 
@@ -1327,6 +1418,7 @@ That's quite the command. Create a `character_id` column in `more_info`. Make it
 - Without the keywords, it looks like this: `more_info character_id characters(character_id);`
 - Try this `ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 960. View `more_info` Details
 
@@ -1342,6 +1434,7 @@ Take a look at the details of `more_info` to see your foreign key.
 - Here's an example: `\d table_name`
 - Try entering `\d more_info`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 970. Add `UNIQUE`
 
@@ -1360,6 +1453,7 @@ Add the `UNIQUE` constraint to the column you just added.
 - It's the `character_id` column in `more_info`
 - Try `ALTER TABLE more_info ADD UNIQUE(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 980. Add `NOT NULL`
 
@@ -1378,6 +1472,7 @@ Add the `NOT NULL` constraint to your foreign key column.
 - The foreign key column is `character_id` in the `more_info` table
 - Try `ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 990. View `more_info` Details
 
@@ -1391,6 +1486,7 @@ Take a look at the details of your `more_info` table to see all the keys and con
 - Here's an example: `\d table_name`
 - Try entering `\d more_info`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1000. Select `character_id`
 
@@ -1403,6 +1499,7 @@ I think the structure is set, now you can add some rows. First, you need to know
 - Here's an example: `SELECT column FROM table_name;`
 - Try `SELECT character_id FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1010. Select `character_id` and `name`
 
@@ -1415,6 +1512,7 @@ That list of numbers doesn't really help. Use `SELECT` again to display both the
 - Here's an example: `SELECT column1, column2 FROM table_name;`
 - Try entering `SELECT character_id, name FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1020. Add `more_info` for Mario
 
@@ -1434,6 +1532,7 @@ Add a row with the above info for Mario using the `INSERT INTO` and `VALUES` key
 - You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1030. View `more_info` Data
 
@@ -1448,6 +1547,7 @@ View all the data in `more_info` to make sure it's looking good.
 - Use `*` to see all columns
 - Try entering `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1040. Select `character_id` and `name`
 
@@ -1460,6 +1560,7 @@ Next, you are going to add some info for Luigi. Use `SELECT` again to view the `
 - Here's an example: `SELECT column1, column2 FROM table_name;`
 - Try entering `SELECT character_id, name FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1050. Add `more_info` for Luigi
 
@@ -1481,6 +1582,7 @@ Add a row for Luigi using the above info. Be sure to add his `character_id` as w
 - Luigi's `character_id` is `2`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1060. View `more_info` Data
 
@@ -1495,6 +1597,7 @@ View all the data in `more_info` to see more info for Luigi.
 - Use `*` to see all columns
 - Try entering `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1070. Select `character_id` and `name`
 
@@ -1508,6 +1611,7 @@ Peach is next. View the `character_id` and `name` columns from the `characters` 
 - Here's an example: `SELECT column1, column2 FROM table_name;`
 - Try entering `SELECT character_id, name FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1080. Add `more_info` for Peach
 
@@ -1528,6 +1632,7 @@ Add a row for Peach using the above info. Be sure to add her `character_id` as w
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 173, 52.2, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1090. Select Toad's `character_id` and `name`
 
@@ -1546,6 +1651,7 @@ A condition you used before was `username='Samus'`. Find Toad's id by viewing th
 - Don't forget the semi-colon :smile:
 - Try entering `SELECT character_id, name FROM characters WHERE name='Toad';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1100. Add `more_info` for Toad
 
@@ -1566,6 +1672,7 @@ Add the above info for Toad. Be sure to add his `character_id`.
 - Toad's `character_id` is `4`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1110. View `more_info` Data
 
@@ -1580,6 +1687,7 @@ View all the data in `more_info` to see the rows you added.
 - Use `*` to see all columns
 - Try entering `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1120. Select Bowser's Row
 
@@ -1594,6 +1702,7 @@ Bowser is next. Find his id by viewing his row in the `characters` table. You ca
 - I recommend `name='Bowser'` as the condition
 - Try entering `SELECT * FROM characters WHERE name='Bowser';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1130. Add `more_info` for Bowser
 
@@ -1614,6 +1723,7 @@ Add the above info for Bowser. Don't forget to add his `character_id`.
 - Bowser's `character_id` is `5`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1140. Select Daisy's Row
 
@@ -1629,6 +1739,7 @@ Daisy is next. Find her id by viewing **all** the columns in **only Daisy's row*
 - Use `name='Daisy'` as the condition
 - Try entering `SELECT * FROM characters WHERE name='Daisy';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1150. Add `more_info` for Daisy
 
@@ -1648,6 +1759,7 @@ Add the above info for Daisy to `more_info`. Be sure to add her `character_id` a
 - Daisy's `character_id` is `6`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1160. View `more_info` Data
 
@@ -1662,6 +1774,7 @@ View all the data in `more_info` to see the rows you added.
 - Use `*` to see all columns
 - Try entering `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1170. Select Yoshi's `character_id` and `name`
 
@@ -1677,6 +1790,7 @@ I guess null values just show up as blank in the database. Yoshi is last. View o
 - Only view the `character_id` column
 - Try entering `SELECT character_id FROM characters WHERE name='Yoshi';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1180. Add `more_info` for Yoshi
 
@@ -1697,6 +1811,7 @@ Add the above info for Yoshi to `more_info`. Be sure to include his `character_i
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1190. View all `more_info` Data
 
@@ -1710,6 +1825,7 @@ There should be a lot of data in `more_info` now. Take a look at **all** the row
 - Here's an example: `SELECT columns FROM table_name;`
 - Try `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1200. Rename `height` Column
 
@@ -1725,6 +1841,7 @@ Rename the `height` column to `height_in_cm`.
 - Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
 - Try `ALTER TABLE more_info RENAME COLUMN height TO height_in_cm;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1210. Rename `weight` Column
 
@@ -1738,6 +1855,7 @@ Rename the `weight` column to `weight_in_kg`.
 - Here's an example: `ALTER TABLE table_name RENAME COLUMN column_name TO new_name;`
 - Try `ALTER TABLE more_info RENAME COLUMN weight TO weight_in_kg;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1230. View all `more_info` Data
 
@@ -1751,6 +1869,7 @@ Take a quick look at all the data in `more_info` to see the new column names.
 - Here's an example: `SELECT columns FROM table_name;`
 - Try `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1240. Create `sounds` Table
 
@@ -1774,6 +1893,7 @@ Create a new table named `sounds`. Give it a column named `sound_id` of type `SE
 
 - Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1260. View `mario_database` Tables
 
@@ -1786,6 +1906,7 @@ View the tables in `mario_database` to make sure it worked.
 - Use the **l**ist command
 - Try entering `\l`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1270. Add `filename` Column
 
@@ -1800,6 +1921,7 @@ There's your `sounds` table. Add a column to it named `filename`. Make it a `VAR
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINTS;`
 - Try entering `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1280. Add `sounds` Foreign Key
 
@@ -1820,6 +1942,7 @@ Add a column to `sounds` named `character_id`. Give it the properties `INT`, `NO
 - Without the keywords, it looks like this: `sounds character_id characters(character_id);`
 - Try using `ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1290. View `sounds ` Details
 
@@ -1833,6 +1956,7 @@ Take a look at the details of the `sounds` table to see all the columns.
 - Here's an example: `\d table_name`
 - Try entering `\d sounds`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1300. View `characters` Data
 
@@ -1847,6 +1971,7 @@ Next you will add some rows. But first, view all the data in `characters` so you
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM characters ORDER BY character_id;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1310. Insert `its-a-me.wav`
 
@@ -1861,6 +1986,7 @@ The first file is named `its-a-me.wav`. Insert it into the `sounds` table. Use t
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1320. Insert `yippee.wav`
 
@@ -1875,6 +2001,7 @@ Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` aga
 - You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1330. Insert `ha-ha.wav`
 
@@ -1888,6 +2015,7 @@ Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` 
 - You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Try entering `INSERT INTO sounds(filename, character_id) VALUES('ha-ha.wav', 2);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1340. Insert `oh-yeah.wav`
 
@@ -1900,6 +2028,7 @@ Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well 
 - His `character_id` is `2`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('oh-yeah.wav', 2);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1350. Insert Sounds for Peach
 
@@ -1914,6 +2043,7 @@ Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav
 - Her `character_id` is `3`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1360. Insert Two More Sounds
 
@@ -1928,6 +2058,7 @@ Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one
 - Peach's `character_id` is `3`, Mario is `1`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('mm-hmm.wav', 3), ('yahoo.wav', 1);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1370. View `sounds` Data
 
@@ -1942,6 +2073,7 @@ View all the data in the `sounds`. You should be able to see the "one-to-many" r
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1380. Create `actions` Table
 
@@ -1955,6 +2087,7 @@ The sounds are looking good I think. Create another new table called `actions`. 
 - You previously used `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`
 - Try entering `CREATE TABLE actions(action_id SERIAL PRIMARY KEY);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1390. Add `action` Column
 
@@ -1968,6 +2101,7 @@ Add a column named `action` to your new table. Give it a type of `VARCHAR` that 
 - You previously used `ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;`
 - Try entering `ALTER TABLE actions ADD COLUMN action VARCHAR(20) UNIQUE NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1400. Insert `run`
 
@@ -1984,6 +2118,7 @@ Insert a row into the `actions` table. Give it an `action` of `run`.
 - Here's an example `INSERT INTO table(column) VALUES(value);`
 - Try entering `INSERT INTO actions(action) VALUES('run');`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1410. Insert `jump`
 
@@ -1998,6 +2133,7 @@ Insert another row into the `actions` table. Give it an `action` of `jump`.
 - You previously used `INSERT INTO actions(action) VALUES('run');`
 - Try entering `INSERT INTO actions(action) VALUES('jump');`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1420. Insert `duck`
 
@@ -2012,6 +2148,7 @@ Add another action row with an `action` of `duck`.
 - You previously used `INSERT INTO actions(action) VALUES('jump');`
 - Try entering `INSERT INTO actions(action) VALUES('jump');`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1430. View `actions` Data
 
@@ -2026,6 +2163,7 @@ View all the data in `actions` to make sure there's no mistakes.
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM actions;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1440. Create Junction Table
 
@@ -2039,6 +2177,7 @@ It look good. "Many-to-many" relationships usually use a **junction** table to l
 - You previously used `CREATE TABLE more_info();`
 - Try entering `CREATE TABLE character_actions;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1450. Add `character_id` Column
 
@@ -2054,6 +2193,7 @@ Add a column named `character_id` to your junction table. Give it the type of `I
 - You previously used: `ALTER TABLE actions ADD COLUMN name VARCHAR(20) UNIQUE NOT NULL;`
 - Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1460. Add `character_id` as Foreign Key
 
@@ -2074,6 +2214,7 @@ Hmm, that doesn't seem any easier :disappointed: Set the `character_id` column y
 - This is a tough one, give it one more try
 - Try this: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1470. View `character_actions` Details
 
@@ -2087,6 +2228,7 @@ View the details of the `character_actions` table to see the foreign key constra
 - Add the table name after the command
 - Enter `\d character_actions`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1480. Add `action_id` Column
 
@@ -2100,6 +2242,7 @@ Add another column to `character_actions` named `action_id`. Give it a type of `
 - You previously used: `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`
 - Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1500. Add `action_id` as Foreign Key
 
@@ -2119,6 +2262,7 @@ Set the `action_id` column you just added as a foreign key that references the `
 - You previously used: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
 - Here it is `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1510. View `character_actions` Details
 
@@ -2132,6 +2276,7 @@ View the details of the `character_actions` table to see your keys.
 - Add the table name after the command
 - Enter `\d character_actions`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1520. Create Composite Primary Key
 
@@ -2149,6 +2294,7 @@ Use `character_id` and `action_id` to create a composite primary key for this ta
 
 - Try `ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1530. View `character_actions` Details
 
@@ -2164,6 +2310,7 @@ View the details of the `character_actions` table to see your composite key.
 - Add the table name after the command
 - Enter `\d character_actions`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1540. Insert Yoshi Actions
 
@@ -2178,6 +2325,7 @@ Insert three rows into `character_actions` for all the actions Yoshi can perform
 - You previously used `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1550. View `character_actions` Data
 
@@ -2192,6 +2340,7 @@ View all the data in `character_actions` to see your rows.
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM character_actions;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1560. Insert Daisy Actions
 
@@ -2206,6 +2355,7 @@ Add three more rows into `character_actions` for all of Daisy's actions. Her `ch
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1570. Insert Bowser Actions
 
@@ -2221,6 +2371,7 @@ Add three more rows for Bowser's actions. His `character_id` is `5`. He can perf
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1580. Insert Toad Actions
 
@@ -2236,6 +2387,7 @@ Add three more rows for Toad's actions. His `character_id` is `4`.
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1590. Insert Peach Actions
 
@@ -2250,6 +2402,7 @@ Peach's `character_id` is `3`. She can perform all the actions as well, so add t
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1600. Insert Luigi Actions
 
@@ -2265,6 +2418,7 @@ Add three more rows for Luigi's actions.
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1610. Insert Mario Actions
 
@@ -2280,6 +2434,7 @@ Last is Mario, add three rows for his actions.
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(1, 1), (1, 2), (1, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1620. View `character_actions` Data
 
@@ -2294,6 +2449,7 @@ View all the data in `character_actions` to see your rows. If it doesn't fit on 
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM character_actions;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1630. Display Tables
 
@@ -2306,6 +2462,7 @@ Congratulations :tada: I think you've added enough data into the database. I lov
 - Use the **d**isplay command
 - Enter `\d`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1640. View `characters` Data
 
@@ -2320,6 +2477,7 @@ There's five tables there. Nice job. Next, take a look at all the data in the `c
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM characters;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1650. View `more_info` Data
 
@@ -2334,6 +2492,7 @@ Those are some lovely characters. Next, view all the data in `more_info`.
 - Use `*` to select all the columns
 - Try entering `SELECT * FROM more_info;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1660. Full Join `characters` on `more_info`
 
@@ -2356,6 +2515,7 @@ Enter a join command to see **all** the info from both tables. The two tables ar
 - Without the keywords, it looks like this: `characters more_info characters.character_id = more_info.character_id`
 - Try entering `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1670. Full Join `characters` on `sounds`
 
@@ -2377,6 +2537,7 @@ Use another join command to view the `characters` and `sounds` tables together. 
 - You previously used `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`
 - Try entering `SELECT * FROM characters FULL JOIN sounds ON characters.character_id = sounds.character_id;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
 ## 1680. Join `character_actions` with `characters` and `actions`
 
@@ -2401,3 +2562,4 @@ View all the data from `characters`, `actions`, and `character_actions`. Use the
 - Without the keywords, it looks like this: `character_actions characters character_actions.character_id = characters.character_id actions character_actions.action_id = actions.action_id;`
 - Try entering `SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
+- If the tests aren't running automatically, quit psql with `\q` and try logging in again
