@@ -955,7 +955,7 @@ Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
-## 670. Add Yoshi and Daisy Rows
+## 670. Add Daisy and Yoshi Rows
 
 ### 670.1
 
@@ -1039,8 +1039,8 @@ I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` 
 #### HINTS
 
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
-- Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red'`
-- Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='Red'`
+- Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red';`
+- Try entering `UPDATE characters SET name='Toad' WHERE favorite_color='Red';`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -1213,7 +1213,7 @@ Drop the primary key on the `name` column. You can see the **constraint name** i
 
 #### HINTS
 
-- Try using `ALTER TABLE characters DROP CONSTRAIN characters_pkey;`
+- Try using `ALTER TABLE characters DROP CONSTRAINT characters_pkey;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -1290,7 +1290,7 @@ View the tables in `mario_database` again with the **d**isplay command. You shou
 
 ### 880.1
 
-Hmm, I wonder what that third one is. It says "characters_character_id_seq". Ahh, I think I have a clue. View the details of the `characters` table.
+I wonder what that third one is. It says "characters_character_id_seq". Ahh, I think I have a clue. View the details of the `characters` table.
 
 #### HINTS
 
@@ -1305,9 +1305,7 @@ Hmm, I wonder what that third one is. It says "characters_character_id_seq". Ahh
 
 ### 890.1
 
-That is what finds the next value for the `character_id` column. 
-
-Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
+I think that is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
 
 #### HINTS
 
@@ -1327,7 +1325,7 @@ Set your new column as the primary key for this table.
 
 - Use the `ALTER TABLE` and `ADD PRIMARY KEY` keywords
 - Here's an example: `ALTER TABLE table_name ADD PRIMARY KEY(column_name);`
-- Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`
+- Try entering `ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -1572,7 +1570,7 @@ You can see Luigi's id there. Here's his info:
 | ---------- | ------ | ------ |
 | 1983-07-14 | 175    | 48.8   |
 
-Add a row for Luigi using the above info. Be sure to add his `character_id` as well.
+Add a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.
 
 #### HINTS
 
@@ -1630,7 +1628,7 @@ Add a row for Peach using the above info. Be sure to add her `character_id` as w
 - Her `character_id` is `3`
 - Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
-- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 173, 52.2, 3);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -1721,7 +1719,7 @@ Add the above info for Bowser. Don't forget to add his `character_id`.
 - Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
 - Bowser's `character_id` is `5`
-- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`
+- Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 258, 300, 5);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -1729,7 +1727,7 @@ Add the above info for Bowser. Don't forget to add his `character_id`.
 
 ### 1140.1
 
-Daisy is next. Find her id by viewing **all** the columns in **only Daisy's row** of the `characters` table.
+Daisy is next. Find her id by viewing **only** her row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.
 
 #### HINTS
 
@@ -1780,7 +1778,7 @@ View all the data in `more_info` to see the rows you added.
 
 ### 1170.1
 
-I guess null values just show up as blank in the database. Yoshi is last. View only the `character_id` column from `characters` for only Yoshi's row to find his id.
+I guess null values just show up as blank. Yoshi is last. Find his id by viewing **only** his row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.
 
 #### HINTS
 
@@ -1927,7 +1925,7 @@ There's your `sounds` table. Add a column to it named `filename`. Make it a `VAR
 
 ### 1280.1
 
-You want to use `character_id` as a foreign key again. This will be a "one-to-many" relationship because **one** character will have **many** sounds, but no sound will have have more than one character. Here's the example again:
+You want to use `character_id` as a foreign key again. This will be a "one-to-many" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
@@ -1977,7 +1975,7 @@ Next you will add some rows. But first, view all the data in `characters` so you
 
 ### 1310.1
 
-The first file is named `its-a-me.wav`. Insert it into the `sounds` table. Use that for the `filename` and Mario's id as the `character_id`.
+The first file is named `its-a-me.wav`. Insert it into the `sounds` table with Mario's id as the `character_id`.
 
 #### HINTS
 
@@ -2146,7 +2144,7 @@ Add another action row with an `action` of `duck`.
 - Use the `INSERT INTO` and `VALUES` keywords
 - Don't forget the single quotes
 - You previously used `INSERT INTO actions(action) VALUES('jump');`
-- Try entering `INSERT INTO actions(action) VALUES('jump');`
+- Try entering `INSERT INTO actions(action) VALUES('duck');`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -2175,7 +2173,7 @@ It look good. "Many-to-many" relationships usually use a **junction** table to l
 
 - Use the `CREATE TABLE` keywords
 - You previously used `CREATE TABLE more_info();`
-- Try entering `CREATE TABLE character_actions;`
+- Try entering `CREATE TABLE character_actions();`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -2183,9 +2181,7 @@ It look good. "Many-to-many" relationships usually use a **junction** table to l
 
 ### 1450.1
 
-Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship.
-
-Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.
+Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship. Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.
 
 #### HINTS
 
@@ -2212,7 +2208,7 @@ Hmm, that doesn't seem any easier :disappointed: Set the `character_id` column y
 - Without the keywords, it looks like this: `character_actions character_actions_character_id_fkey character_id characters(character_id);`
 - All the info you need is there, read it closely
 - This is a tough one, give it one more try
-- Try this: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
+- Try this: `ALTER TABLE character_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -2260,7 +2256,7 @@ Set the `action_id` column you just added as a foreign key that references the `
 
 - Without the keywords, it looks like this: `character_actions character_actions_action_id_fkey action_id actions(action_id);`
 - You previously used: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
-- Here it is `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`
+- Here it is `ALTER TABLE character_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
@@ -2440,7 +2436,7 @@ Last is Mario, add three rows for his actions.
 
 ### 1620.1
 
-View all the data in `character_actions` to see your rows. If it doesn't fit on the screen, press enter to continue viewing the data.
+View all the data in `character_actions` to see your rows.
 
 #### HINTS
 
