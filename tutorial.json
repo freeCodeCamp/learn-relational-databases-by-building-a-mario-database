@@ -4413,7 +4413,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c0c41d62aeb483a156eff701854aa1e82f4e349b"
+              "eabbfac3a62451d8fe7850e92ab8da33689372c9"
             ]
           },
           "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or...\n\nYou added that as a foreign key, that means you can get all the data from both tables together. Introducing the `JOIN` command. Here's an example:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the keys.",
@@ -4441,7 +4441,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e118093b58066086c980fe1e528b019b307fcec7"
+              "2700961cfa337f1fcc2100845974c15dbcfd78f7"
             ]
           },
           "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other.\n\nHere's the example again:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nUse another join command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
@@ -4468,7 +4468,7 @@
               "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "942b0f87e26268974e971f47cf45708cffc99546"
+              "e795c1e5169d62fa0f04995f50230ca3fad24f49"
             ]
           },
           "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. Looks like we never got around to adding sounds for a few of the characters.\n\nLastly, how can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column \nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nView all the data from `characters`, `actions`, and `character_actions`. Use the correct keys.",
