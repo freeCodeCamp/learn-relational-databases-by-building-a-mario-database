@@ -114,7 +114,7 @@ You should see a message that you are connected. I noticed the prompt changed to
 
 ### 100.1
 
-Similar to how you created a database, you can create a table like this:
+Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:
 
 ```sql
 CREATE TABLE table_name();

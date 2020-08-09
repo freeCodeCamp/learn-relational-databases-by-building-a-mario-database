@@ -103,7 +103,7 @@ levels:
       - id: '140.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '150'
     steps:
       - id: '150.1'
@@ -115,7 +115,7 @@ levels:
       - id: '160.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '170'
     steps:
       - id: '170.1'
@@ -127,7 +127,7 @@ levels:
       - id: '180.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '190'
     steps:
       - id: '190.1'
@@ -139,7 +139,7 @@ levels:
       - id: '200.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '210'
     steps:
       - id: '210.1'
@@ -151,7 +151,7 @@ levels:
       - id: '220.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '230'
     steps:
       - id: '230.1'
@@ -169,7 +169,7 @@ levels:
       - id: '250.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '260'
     steps:
       - id: '260.1'
@@ -181,7 +181,7 @@ levels:
       - id: '270.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '280'
     steps:
       - id: '280.1'
@@ -253,7 +253,7 @@ levels:
       - id: '390.1'
         setup:
           watchers:
-            - ./freeCodeCamp/test/pg.log
+            - ./freeCodeCamp/test/queryResults.log
   - id: '400'
     steps:
       - id: '400.1'
