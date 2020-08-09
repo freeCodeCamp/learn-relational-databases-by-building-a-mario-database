@@ -266,7 +266,7 @@
               "d96dda30a386ac45d6ec5bb37a1a7ce2af70df37"
             ]
           },
-          "content": "Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
+          "content": "Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
           "hints": [
             "Enter `CREATE TABLE first_table();` into the prompt",
             "Don't forget the semi-colon",
@@ -366,7 +366,7 @@
           "id": "140.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "83c8c04ce39f810c7082c8d97407510de57057a9"
@@ -416,7 +416,7 @@
           "id": "160.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "b96c1967c3e9a8a0d5387522c6e2be672b28364a"
@@ -472,7 +472,7 @@
           "id": "180.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "1a3bfb8e83e5661a9152c12864f7c0635411088d"
@@ -528,7 +528,7 @@
           "id": "200.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "f8f05a4744450cfc96f26d760ba34615f93072c3"
@@ -581,7 +581,7 @@
           "id": "220.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "7911c7cbd658b49db5bbe655105cfaab00bcd0ac"
@@ -664,7 +664,7 @@
           "id": "250.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "c3e27f3daafcc0c60bbe0edad044b74065512a2f"
@@ -717,7 +717,7 @@
           "id": "270.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "d16b2d190db20957fed401b257d46fa01e7a8925"
@@ -1050,7 +1050,7 @@
           "id": "390.1",
           "setup": {
             "watchers": [
-              "./freeCodeCamp/test/pg.log"
+              "./freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "c83f212d98698795c0f31d52ad553ac48ee0a0ec"
