@@ -784,7 +784,7 @@ Next, you can add some columns to the table. Add a column named `character_id` t
 
 ### 560.1
 
-The `SERIAL` type make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.
+The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.
 
 #### HINTS
 
@@ -1203,7 +1203,7 @@ You should set a primary key on every table and there can only be one per table.
 
 ### 820.1
 
-I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:
+You can see key on your `name` column at the bottom. I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:
 
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
@@ -1235,7 +1235,7 @@ View the details of the `characters` table to make sure it's gone.
 
 ### 840.1
 
-Set the primary key again, but use the `character_id` column this time.
+It's gone. Set the primary key again, but use the `character_id` column this time.
 
 #### HINTS
 
@@ -1263,7 +1263,7 @@ View the details of the `characters` table to see the new primary key.
 
 ### 860.1
 
-I think that table is complete for now. Next, create a new table named `more_info` for some extra info about the characters.
+I think the primary key is on a better column now. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.
 
 #### HINTS
 
@@ -1401,13 +1401,13 @@ Take a look at the details of `more_info` to see all your columns.
 
 ### 950.1
 
-How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:
+There’s your four columns and the primary key you created for one of them at the bottom. How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
 ```
 
-That's quite the command. Create a `character_id` column in `more_info`. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.
+That's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.
 
 #### HINTS
 
@@ -1422,7 +1422,7 @@ That's quite the command. Create a `character_id` column in `more_info`. Make it
 
 ### 960.1
 
-To set a row in `more_info` for Mario, you just need to set the `character_id` value as `1`, since that's what his `character_id` is in `characters`.
+To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value as `1`, since that's what his `character_id` is in `characters`.
 
 Take a look at the details of `more_info` to see your foreign key.
 
@@ -1438,7 +1438,7 @@ Take a look at the details of `more_info` to see your foreign key.
 
 ### 970.1
 
-I want your tables to have a "one-to-one" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:
+There's your foreign key at the bottom. I want your tables to have a "one-to-one" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:
 
 ```sql
 ALTER TABLE table_name ADD UNIQUE(column_name);
@@ -1490,7 +1490,7 @@ Take a look at the details of your `more_info` table to see all the keys and con
 
 ### 1000.1
 
-I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.
+I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.
 
 #### HINTS
 
@@ -1642,7 +1642,7 @@ Toad is next. Instead of viewing all the rows to find his id, you can just view 
 SELECT columns FROM table_name WHERE condition;
 ```
 
-A condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` where `name='Toad'`.
+A condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.
 
 #### HINTS
 
@@ -1910,7 +1910,7 @@ View the tables in `mario_database` to make sure it worked.
 
 ### 1270.1
 
-There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`.
+There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put all those contraints at the end of the query to add them all.
 
 #### HINTS
 
@@ -2077,7 +2077,7 @@ View all the data in the `sounds`. You should be able to see the "one-to-many" r
 
 ### 1380.1
 
-The sounds are looking good I think. Create another new table called `actions`. It will have the chacters abilities. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. As a reminder, you can add a column right away by putting in the parenthesis of the command.
+The sounds are looking good I think. Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.
 
 #### HINTS
 
@@ -2187,7 +2187,7 @@ Your junction table will use the primary keys from the `characters` and `actions
 
 - Use the `ALTER TABLE` and `ADD COLUMN` keywords
 - You previously used: `ALTER TABLE actions ADD COLUMN name VARCHAR(20) UNIQUE NOT NULL;`
-- Try entering `ALTER TABLE character_actions ADD COLUMN action_id INT NOT NULL;`
+- Try entering `ALTER TABLE character_actions ADD COLUMN character_id INT NOT NULL;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
 
