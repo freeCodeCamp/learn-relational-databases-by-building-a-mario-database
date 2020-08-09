@@ -326,7 +326,7 @@ It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first
 
 ### 240.1
 
-A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(20)`.
+A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.
 
 Add a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.
 
