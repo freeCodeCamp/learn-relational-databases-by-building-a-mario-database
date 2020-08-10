@@ -4,7 +4,7 @@ config:
     commands:
       # these commands run when a tutorial is started or continued
       - sudo service postgresql stop
-      - cd freeCodeCamp && npm install
+      - cd .freeCodeCamp && npm install
       - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
       - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
       - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
