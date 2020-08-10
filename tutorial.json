@@ -17,7 +17,7 @@
         "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
       ],
       "commits": [
-        "54cf36039cbca266e58d9dc7a84d51ff988970eb"
+        "391545c88987aeddb042018ba6b9e3712e79a222"
       ]
     },
     "testRunner": {
@@ -57,7 +57,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "79ae962f9273273cb3ee2115da7e3d9b483d3d68"
+              "c868233d787d3501f10046b40a026c7adda2f9a9"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL installed. You will use Psql to interact with it. Log in by typing `psql -U freecodecamp postgres` into the terminal and pressing enter.",
@@ -82,7 +82,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "be03ec73a08337350c18d566465f407ba666bbdd"
+              "4a3b3e3097a3994b73f3a42fa43bf4f58c459f82"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -107,7 +107,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6964bc5d54d2ed076420a67eeeb416c3e501c3bd"
+              "948f61a6146b0522676075823d4f50ef007d334c"
             ]
           },
           "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
@@ -133,7 +133,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "43e9217828b865586cb5f0bd51634f9976c3c879"
+              "4d6670700975e59b8e5c55ee3989f507026ed767"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -159,7 +159,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "34dc54d4c741189fade8eaf4b7b441f37f4c96d9"
+              "88bd99d032f40f43fc593648b71135e079920754"
             ]
           },
           "content": "It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
@@ -187,7 +187,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "019a72f41cc3b439bcf8f5129837c6ebdba1a16b"
+              "bac6807a14e91e946bf6c74443d44963604ef473"
             ]
           },
           "content": "You should have another new database now. **L**ist the databases to make sure.",
@@ -213,7 +213,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "62005b0a845b07eb3456a5786e09d5c84c8851bd"
+              "157e84cb7ba3de7bc382f8ecc65941df13ac8cea"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -238,7 +238,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f2a005def2bb2306a4dd76ae3945ea344cb62bfa"
+              "2f234e1be5b1caf03afe820e060f55ac356f5101"
             ]
           },
           "content": "You should see a message that you are connected. I noticed the prompt changed to `second_database=#`. So the `postgres=#` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
@@ -263,7 +263,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "60a0815933da3c4bc9f7363b38f4f172e4c5b2ed"
+              "ec308bd6f082f1a6bfa42ec714bfc0822aac0e5b"
             ]
           },
           "content": "Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
@@ -289,7 +289,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "abe91c5f8a38619762771f6586b610793aa73ef9"
+              "065f385ab389be1c5f2cbc536c5fd2eb3021a215"
             ]
           },
           "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
@@ -315,7 +315,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "19fb73626f2e7838878e9f87d04e6140ca4b9bce"
+              "252e8efb6284783ccea21ec1ee7bca047293b615"
             ]
           },
           "content": "Create another new table in this database. Give it a name of `second_table`.",
@@ -343,7 +343,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "35406f213acabd2f5f0dda4bdf3caf4a6e490903"
+              "f7845995d803ab720c0f258ef03e9dc789896dee"
             ]
           },
           "content": "There should be two tables in this database now. **D**isplay them again for me to make sure.",
@@ -369,7 +369,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6e9a5d2d4eb0267614456942f23f3d55034ee1cc"
+              "3571f49fa63c31a619c0239ce77b3a58fbc33239"
             ]
           },
           "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
@@ -394,7 +394,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e9e73a2b63371423db6c9b4c37e1fcd32e6a6dd4"
+              "3731b46ad9c133d6d841495727fb7f7790d16bfa"
             ]
           },
           "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
@@ -419,7 +419,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c8918dcc8961dc47b7eb74928508a9c9a1da8b0e"
+              "b685d21fe5898bae32f91636b1eea3256b75481e"
             ]
           },
           "content": "I think it worked. **D**isplay the details of `second_table` again to see if your new column is there.",
@@ -447,7 +447,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3c841dc398427176b16a06a3c3b2714cbffe2d60"
+              "78e06312f6118151e91c8c02c2b6c83c7eaea744"
             ]
           },
           "content": "Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
@@ -475,7 +475,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c753011189705f9b1439c6c4dbd13ace08500515"
+              "ab7966ac53049590c847bbc16bce1e2616fb7005"
             ]
           },
           "content": "Your table should have an `id` column added. View the details of `second_table` to make sure.",
@@ -503,7 +503,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2fb91220d3a6069e45bfc762bfe66dcaff092415"
+              "c79490057a6b562d87e2608beb475f95147f56ce"
             ]
           },
           "content": "Add another column to `second_table` named `age`. Give it a data type of `INT`.",
@@ -531,7 +531,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "bb5c9dd9a137de09a7defb1f161dac48f8593210"
+              "1ae08a0555cce739f3f9dc8f6364cd889e40aa37"
             ]
           },
           "content": "Take look at the details of `second_table` again.",
@@ -559,7 +559,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a0f460e5f2411308a7dde4e2ef7fbefb6d7a6381"
+              "64c1fde12485f4a2b18023dcfdf6191d8f12bbb7"
             ]
           },
           "content": "Those are some good looking columns. You will probably need to know how to remove them at some point. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
@@ -584,7 +584,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e185f41884e3f4e7d4b85124ad34d15d53f2c043"
+              "cec8f15119b3243fe500fa32914440c5f8b748ce"
             ]
           },
           "content": "View the details of `second_table` to see if it's gone.",
@@ -612,7 +612,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "888bef2113284eb2aa1c032259c416cfc5853a75"
+              "580335347a988cd688e04bd5fd767471c1ced30a"
             ]
           },
           "content": "It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.",
@@ -639,7 +639,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "5462c903684462957fd82d6ab4cb4e9c08f7bf8f"
+              "30fb5c8f76b434d883108537c6467528edd7dd9e"
             ]
           },
           "content": "A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.\n\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
@@ -667,7 +667,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9aeff2a34c938bcc4d08252a918054522043b9b2"
+              "0decc01f6d7db12554a465c374447d0408f69f8c"
             ]
           },
           "content": "Take look at the details of `second_table` to see your columns.",
@@ -694,7 +694,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "53feed0cc308bd75ef9b3c8b37214cc26e162476"
+              "5e0365b378ab2f636d0f4b83400be5087c49d203"
             ]
           },
           "content": "You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
@@ -720,7 +720,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "eb2dc22bc53fda9d41c059418d89870af6cc48f8"
+              "b72795c8df16bf93f3e9b915acc2ec42c0af0d69"
             ]
           },
           "content": "Take look at the details of `second_table` again to see if it got renamed.",
@@ -747,7 +747,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f96ea30651e1c11113d83d25160aa24d397d8d3f"
+              "21678d2fa83054ef0b5dd5abea6fa9bcd0c5a529"
             ]
           },
           "content": "It worked. You can add a row to a table like this:\n\n```sql\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\n```\n\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
@@ -775,7 +775,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "dd521059e6edb9d4f8db2399b32c57d517f7ea53"
+              "81707f7fb0b68333107e34e95298c89dd0b5ae7d"
             ]
           },
           "content": "You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
@@ -802,7 +802,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7a66a53572994b8705c468da29a3829d4d7fca21"
+              "e4639f9dd8f08cc2e62115a326dd73dd62f41b27"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
@@ -831,7 +831,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f357db6723ff125ed96a31151d21817aca305822"
+              "0bd27bdd93e910247fddf26ccd3bf4a35cd692d0"
             ]
           },
           "content": "You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.",
@@ -858,7 +858,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "035cbaf8c3b2f00ba1ccb52df164606d23a8604a"
+              "daabb030dc4497533e2dfc28cf994579ec99a228"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.",
@@ -887,7 +887,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1d38bb0124bb0abb425d2ee019cad2703a5ea45d"
+              "2e821477eeab5a2d47fc928e3a8f3ead5461142c"
             ]
           },
           "content": "You should now have three rows. Use `SELECT` again to see **all** the data you entered.",
@@ -914,7 +914,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9415eaf0d7fc7eb431b0bde6a2bb6f10ca0f93dc"
+              "fe75bf90dffa920d4f8b0bb01f255e15be534cc9"
             ]
           },
           "content": "That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
@@ -941,7 +941,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "6912f1df36fe234e225495ccb5f5c0c2626df401"
+              "46b8848afeaa046a2a59b428c00087acbd7bd9a9"
             ]
           },
           "content": "Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.",
@@ -968,7 +968,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "38bc21da062114ecf9d69ac058be66d5ad5cfb9e"
+              "24ddef5850c31356b4fd7e37d14e8cadbce75b20"
             ]
           },
           "content": "Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.",
@@ -997,7 +997,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b1fc2edb10ed125b64c79040a16d44e72692b979"
+              "0b683b0af4cf227ea1752db997422a355f6bde51"
             ]
           },
           "content": "Only one more row should remain. **Delete** Samus **from** `second_table`.",
@@ -1026,7 +1026,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d9f01298251b4e33e259f951c37c15ae152059c3"
+              "cb42bb8f798b237230851033614f2cc526c5f9c2"
             ]
           },
           "content": "Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.",
@@ -1053,7 +1053,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f601de6feff3a6d7e5fe7f07c45144168bbd31e9"
+              "4931d7ffe0fe65b4fd2c2ee2a5d39a570172c5fa"
             ]
           },
           "content": "Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.",
@@ -1081,7 +1081,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c9ae64de30a1ae4fa44108d56d8ad124789a3e6a"
+              "374a90e7a449f46e66eefe6eaf95115dfd184b57"
             ]
           },
           "content": "You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
@@ -1109,7 +1109,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e3b088b0745c98c8a61ae1593448739509e5fde9"
+              "def341735d2d357a29292d5b426644c7357990c6"
             ]
           },
           "content": "Next, drop the `id` column.",
@@ -1137,7 +1137,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "57c56cd7d6856b9fd3e494354cb5ad7bd3e95a83"
+              "24d37973e6f2c4969b45a5018fb0b2a1c2488334"
             ]
           },
           "content": "Okay, the table has no rows or columns left. Remind me what tables are in this database by displaying them.",
@@ -1164,7 +1164,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "bad0708a3b70ab145271b063353d6cc45afe3e94"
+              "cfb0ba91d4a1bd5798fd7f2e5284e280686ad3be"
             ]
           },
           "content": "You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords.",
@@ -1190,7 +1190,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8738a7b8337f6dae26158d3a0aff31e1a3b0b251"
+              "94c76d18141097118425ab69534c298f377028f2"
             ]
           },
           "content": "Next, drop `first_table`.",
@@ -1216,7 +1216,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7f23a4497444d496e51bdaa1fef03df271e341a5"
+              "d0803e542a6bb49be480a502d01c7eea3fe04db3"
             ]
           },
           "content": "All the tables are gone now, too. Remind me what databases you have by using the command to **l**ist them.",
@@ -1242,7 +1242,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b3d682b180c39eb5076537c33bf3a7b4f02ce783"
+              "6e295cba328e44a325a006382b09d5c3897476f3"
             ]
           },
           "content": "You should rename `first_database` to `mario_database`. You can rename a database like this:\n\n```sql\nALTER DATABASE database_name RENAME TO new_database_name;\n```",
@@ -1267,7 +1267,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6520f7da220820f8df42b5352d3a677b0e5c43f7"
+              "c9fa3e69cd2f399cd5d26f0c511c79ac6a74e56a"
             ]
           },
           "content": "List the databases to make sure it got renamed.",
@@ -1293,7 +1293,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ca02e7701e63bd72cba7677a11361790bc8cac3d"
+              "f45ffbe9e7e6cff1d7c28cfaa5b1effb573aa6ec"
             ]
           },
           "content": "**C**onnect to your newly named database so you can start adding your characters.",
@@ -1321,7 +1321,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c6d26c8eccfff3a0c9dcf767c5ee2cb587eba6fc"
+              "0c16a030d6bd772176c4c0d4d080a25f984fbb50"
             ]
           },
           "content": "Now that you aren't connected to `second_database`, you can drop it. Use the `DROP DATABASE` keywords to do that.",
@@ -1349,7 +1349,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c56eb85663ed790434f9396125ff01f38dbcaaca"
+              "8f12080227a4b55dd758528ec3b09a3cbd42cdc7"
             ]
           },
           "content": "List the databases again to make sure it's gone.",
@@ -1375,7 +1375,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3fdcbad369fb46b6420d9c2b2ad0749f6992feea"
+              "b3f3d70158e8f4e1c2980cabc12b0a000dbc194c"
             ]
           },
           "content": "Okay, I think you're ready to get started. I don't think you created any tables here, take a look to make sure.",
@@ -1402,7 +1402,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e4daa0c654a17c0c0d23bdf955fed4e0e03fb1bc"
+              "efa1497e66aa586fc39996a7fc6bae3a16f0addb"
             ]
           },
           "content": "Create a new table name `characters`, it will hold some basic information about Mario characters.",
@@ -1430,7 +1430,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6114d9c97d35fd1f41799e948dc962ea684f630f"
+              "2f69ed99f5426be0d2b56e3ac7db9396cc3a4823"
             ]
           },
           "content": "Next, you can add some columns to the table. Add a column named `character_id` to your new table that is a type of `SERIAL`.",
@@ -1457,7 +1457,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "df4ea2af84a1b5f7fa4586b3efb9496db2621758"
+              "f08836029e7c65453f99add0f8b60c06a975694c"
             ]
           },
           "content": "The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.",
@@ -1484,7 +1484,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "30c89f8689470f6a4af1b20f717aa1ef4df89f4e"
+              "ef5e0498327f68307b86ccddefbcc1b7b8cb37ff"
             ]
           },
           "content": "What columns can you add to describe Mario characters? They all have a name... I think anyway :confused:\n\nAdd a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.",
@@ -1511,7 +1511,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "dd5f0af541dabc40c31efdf43a8e78e6227f369c"
+              "d43873d83525fcab973d3fc092b219ac247ff432"
             ]
           },
           "content": "You can make another for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
@@ -1538,7 +1538,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "33b3861e5a1acef64c51694fa3d63e898d78c407"
+              "eb33f7840fe8241c65bfce57b95da7c1a7876d69"
             ]
           },
           "content": "Video game characters are quite colorful. Add one more column named `favorite_color`. Make it a `VARCHAR` with a max length of `30`.",
@@ -1565,7 +1565,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "98273b89d0150970c2f2d30427e84b7a1bde1232"
+              "60e4673f463c801f710ea09327c72524ceb08e43"
             ]
           },
           "content": "You should have four columns in `characters`. Take a look at the details of it to see how things are going.",
@@ -1593,7 +1593,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2736a25c0fcddb7b788d24568b9beec7279d1f35"
+              "2cf0db7e98a316c3c4327dab3afcf82bae2f0335"
             ]
           },
           "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
@@ -1620,7 +1620,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "62ae39868cf65ef331a2452d697b0bed65006285"
+              "bcc3bd5147b2d52c385a296fa5a1f88bb53437f7"
             ]
           },
           "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see.",
@@ -1648,7 +1648,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "187d81332a9d2ebd05c8eaaa18c3b2e02dfbbf33"
+              "cd280bfd9223368b01c7672803419d5a65a80160"
             ]
           },
           "content": "Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Green`.",
@@ -1677,7 +1677,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b145284cc91ff338688e47b7e46dc544b994b2fc"
+              "6632974e9f06aa192eae4da13b2e87175a516725"
             ]
           },
           "content": "View all the data in your `characters` table with `SELECT` again.",
@@ -1705,7 +1705,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "347c0c95db2559e9110224c79ca0eef92143d6f5"
+              "0a6371397ee045996ed7e36e08ca06ec6ce06cb8"
             ]
           },
           "content": "Okay, it looks like it's all working. Add another row for Peach. Give her the values: `Peach`, `Mushroom Kingdom`, and `Pink`.",
@@ -1734,7 +1734,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6d1b344fc1e513bbe988b20520b91cd3d6405d6e"
+              "bfa772ff9768b0fce2ac29598655f836e32426d7"
             ]
           },
           "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red'), ('Luigi', 'Mushroom Kingdom', 'Green'), ('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
@@ -1761,7 +1761,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a10b7c730257b7b278c96c45c22eeae3661636b1"
+              "1ebd949eccd17697fcae324a986e90e3d7055612"
             ]
           },
           "content": "\"INSERT 0 2\" is the message. That \"2\" must mean you added two rows. I mentioned earlier that if you don't get a message after a command, it is incomplete. This is because you can put a command on multiple lines. Here's an example:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color) VALUES\n('Toadstool', 'Mushroom Kingdom', 'Red'), \n('Bowser', 'Mushroom Kingdom', 'Green');\n```\n\nThat's much easier to read :sunglasses:. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
@@ -1789,7 +1789,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fcda72a423eb6dcd212245caa8618e455c711df7"
+              "d6ea00743fbb48ef48552b87b738db011713a9b8"
             ]
           },
           "content": "Take a look all the data in your table with `SELECT` to see where you stand.",
@@ -1817,7 +1817,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "13be67699fb2e31f7b4ee9ec9fa7e1517cabda1f"
+              "e75d32b1c717dbc19add11ec61d2de4175dab313"
             ]
           },
           "content": "I see several mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
@@ -1844,7 +1844,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "878fc77dca3381bb72f83cfeafd9d277538dd121"
+              "8152fdeeb3e537aa31c844e0d3b3e97788b00619"
             ]
           },
           "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`.\n\nTake a look all the data in your table again to see if she got updated.",
@@ -1872,7 +1872,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "35fe44f68f876666d87dae7dc90d9e20c82a05ba"
+              "dc0c2ad86a3f4c60d747bad30b31503abae5bad2"
             ]
           },
           "content": "I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.",
@@ -1899,7 +1899,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c4320fec2b98d68c9195a9227ead7b39bd2cfbfa"
+              "8ddfffd1f9c0b2133b8d84e385d3a1fad5f94152"
             ]
           },
           "content": "Take a look all the data in your table.",
@@ -1927,7 +1927,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4aee67ed930629aa1c9b7e914793011a0b419129"
+              "c132c3364429ca68a502578fd4aebe5e92de0961"
             ]
           },
           "content": "Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row where `character_id=1`.",
@@ -1955,7 +1955,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8612c6aea733b40c6974c5ce40baabf2c16d3b24"
+              "60ed31fbe881d4b267d87203c7699724ca3c0efe"
             ]
           },
           "content": "Take a look all the data in your table again to see if Mario's name got changed back.",
@@ -1983,7 +1983,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ddd35deca656bf8684d0f909df9cbeda2c043867"
+              "feea4b1a50feaa347fbebb308a165c8be48d1637"
             ]
           },
           "content": "Looks like it worked. I got Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
@@ -2011,7 +2011,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "db0eee5a672db86b9d50e5134a6a99fc8185374f"
+              "e42140811ba37682cf9af65069a4839fc7801237"
             ]
           },
           "content": "Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update it without changing any of the other rows.",
@@ -2039,7 +2039,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a72d853e4db9cc5f65276a26c5bf4d068fed7e56"
+              "95f32c2753a2d95db02bf8fb6f263d4e7b255f46"
             ]
           },
           "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows.",
@@ -2067,7 +2067,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ad9d22b9b469e24403a6a18ffa92bd2ff936d76a"
+              "94e6f587c069ec7dba4535d2c7101f740a9780a1"
             ]
           },
           "content": "Take a look all the data in your table again so I can make sure there's no more issues.",
@@ -2094,7 +2094,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1888cb776daea993c0d1a7014ee60cc20878edd2"
+              "18beb027575bdf496cc5a03309c04a10cc39e3e1"
             ]
           },
           "content": "Umm, actually can you put that in order for me? Here's an example:\n\n```sql\nSELECT columns FROM table_name ORDER BY column_name;\n```\n\nView all the data again, but put it in order by `character_id`.",
@@ -2119,7 +2119,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "302edffbba0041fa633f8e695f669718c883501e"
+              "924f51120373cc7d72ee6e98a65422646685dd89"
             ]
           },
           "content": "It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row and can be used to relate tables to each other. Here's an example of how to set a `PRIMARY KEY`:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\n```\n\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
@@ -2145,7 +2145,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "defb0491d7e02a7647b97b7f150988a5a52e933d"
+              "8ec2e1baa3e59c96bd55edc835d25160303b3c0e"
             ]
           },
           "content": "You should set a primary key on every table and there can only be one per table. Take a look at the details of your `characters` table to see the primary key at the bottom.",
@@ -2172,7 +2172,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9a722feae7550763b2fc4377bf8f4b4676418784"
+              "624a33da3720aebae92f189e773e9d68d237d619"
             ]
           },
           "content": "You can see key on your `name` column at the bottom. I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\n\n```sql\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\n```\n\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
@@ -2197,7 +2197,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c4e3533480af14dcddbbda52686ce6da139bf383"
+              "b1e5c0b2ada36d6ac53b360f2369d921746740ea"
             ]
           },
           "content": "View the details of the `characters` table to make sure it's gone.",
@@ -2224,7 +2224,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e308a5d7f930d15fb9e1a70808f3c6c509024f8c"
+              "85b4e74c49e490a4d621f8858da37c829fba6ae6"
             ]
           },
           "content": "It's gone. Set the primary key again, but use the `character_id` column this time.",
@@ -2251,7 +2251,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9197995793e29b7054f1a6fd0bf9cac6f7440ceb"
+              "a36518226af25b24b8f7062bdc94a6426e5d17e9"
             ]
           },
           "content": "View the details of the `characters` table to see the new primary key.",
@@ -2278,7 +2278,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "344aaedc4b11ea4f5a17a2e448f8414ad4d8df40"
+              "99023ae974ea925554b8882054aac885467f2542"
             ]
           },
           "content": "I think the primary key is on a better column now. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.",
@@ -2305,7 +2305,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "bad92437737615985808e5ce82c623852ca9062f"
+              "4a197451a3f903487cbb39abdf41f8631b505209"
             ]
           },
           "content": "View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.",
@@ -2331,7 +2331,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ba70baab3e827ac28518df986fc406b4b70010d0"
+              "bcce68ff136e4755ac282de5ac04b385b2ff3aff"
             ]
           },
           "content": "I wonder what that third one is. It says \"characters_character_id_seq\". Ahh, I think I have a clue. View the details of the `characters` table.",
@@ -2359,7 +2359,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "bf34a3d18063b142304a06d7ad3966bf7a03b6dd"
+              "b5cae735ba74b8a13f11a1fecf849fc55c75167e"
             ]
           },
           "content": "I think that is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.",
@@ -2386,7 +2386,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4f792c408be5b28c7b373747c76c4fd22155299c"
+              "84f6e55d7d7ffa89ea717ed3398424ca0788ab13"
             ]
           },
           "content": "Set your new column as the primary key for this table.",
@@ -2413,7 +2413,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7cb5b56578d874f01a4119752aa293e1547a1db8"
+              "7e2bdfec7e180c001c84a0493b9cc7a6d16f44df"
             ]
           },
           "content": "View the tables in `mario_database` again with the display command. If my theory is correct, there should be another sequence there for the `more_info_id`.",
@@ -2438,7 +2438,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e29f7312b06614396c2e66e2be412dc33e07810a"
+              "ed793a32f97c103e26cd02a9a13671955738d9e7"
             ]
           },
           "content": "Yup, there it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.",
@@ -2465,7 +2465,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "41e66d90194dbe919881d55fc8f57b84b84a214b"
+              "370da7baabf652e39b2f0d8cd722ac4c099e9903"
             ]
           },
           "content": "Add a `height` column to `more_info` that's a type of `INT`.",
@@ -2492,7 +2492,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a8afe936d01d5f8697bfdaff5533487f68c2f121"
+              "0f49b888a116b62d655592b886a80de1dcb4b5c0"
             ]
           },
           "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be right of the decimal.",
@@ -2519,7 +2519,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "83dc8195d92ba0bf6578722d4c62c78c43cd4afc"
+              "a55e8c9f9878d50ff5c67db43f142d3a133917d1"
             ]
           },
           "content": "Take a look at the details of `more_info` to see all your columns.",
@@ -2546,7 +2546,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "900838d8c67430e32f274aeeda55c3476903331a"
+              "878007bdf7f23848c5dd6e79bd05173450c3470c"
             ]
           },
           "content": "There’s your four columns and the primary key you created for one of them at the bottom. How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
@@ -2574,7 +2574,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "388cb474ef924246f004953ffe72226c0bd65b77"
+              "1878627770a2ca4b2fa861f5321363d16a8666f1"
             ]
           },
           "content": "To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value as `1`, since that's what his `character_id` is in `characters`.\n\nTake a look at the details of `more_info` to see your foreign key.",
@@ -2601,7 +2601,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "176f078e63a17d9a3284831d042a8ff918a36a89"
+              "be52e5ddcfc3ec5189b249f693d65dc63872dd18"
             ]
           },
           "content": "There's your foreign key at the bottom. I want your tables to have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD UNIQUE(column_name);\n```\n\nAdd the `UNIQUE` constraint to the column you just added.",
@@ -2627,7 +2627,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b814847047935334c0df4c831701d496f788878b"
+              "b0510dffaebbcbcb0eeca7430a42c4d46c7c4fd4"
             ]
           },
           "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column.",
@@ -2653,7 +2653,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "16c291c125059da455e906e16313eb76ac059207"
+              "84003e70d9411a13058dfed22faf4840533f632b"
             ]
           },
           "content": "Take a look at the details of your `more_info` table to see all the keys and constraints you added.",
@@ -2680,7 +2680,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "735e3b20d1e022ec40017378070850785869ec26"
+              "05d001958c20ced2539774f69fca6305fe44ec0b"
             ]
           },
           "content": "I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.",
@@ -2706,7 +2706,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8d19bff7eadfc1140a5d908631f273a400d193ea"
+              "b1b1854469de3d4a42df2f49b25feb503cf8062a"
             ]
           },
           "content": "That list of numbers doesn't really help. Use `SELECT` again to display both the `character_id` and `name` columns from the `characters` table. You can separate the column names with a comma to view both.",
@@ -2732,7 +2732,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "369c9a01828645caa1f4f76f87dbec66a140f67a"
+              "57a5246b69ed6256c2ed2c43e95a430b7ca8a2ad"
             ]
           },
           "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight | character_id |\n| ---------- | ------ | ------ | ------------ |\n| 1981-07-09 | 155    | 64.5   | 1            |\n\nAdd a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`.",
@@ -2759,7 +2759,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f77b5ab24eedf3f0535efbc9c5e17e8a0a137171"
+              "f9285ca7d5abde74d9fdcdb9b89259850e582a94"
             ]
           },
           "content": "View all the data in `more_info` to make sure it's looking good.",
@@ -2787,7 +2787,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1d84603c139b8188ddcf7bda40bb9716cbe9f254"
+              "3374cb88ccaba6cc485398c132d9ce461b1e1753"
             ]
           },
           "content": "Next, you are going to add some info for Luigi. Use `SELECT` again to view the `character_id` and `name` columns **from** the `characters` table to find his id.",
@@ -2813,7 +2813,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d5c42df5b9789a5a36c9b95bd76cf4c9e002f6d0"
+              "929395fac9a65cd5abd0b8af73e572aaa5af6c42"
             ]
           },
           "content": "You can see Luigi's id there. Here's his info:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1983-07-14 | 175    | 48.8   |\n\nAdd a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.",
@@ -2842,7 +2842,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3c62c7c4232997efcbae9e83bed7ed7913a4bb84"
+              "d628d65f22e7ef886af144645d1a61abd85e7663"
             ]
           },
           "content": "View all the data in `more_info` to see more info for Luigi.",
@@ -2870,7 +2870,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b5c735902c5827f7a557b9c6cf70b5d982f79abd"
+              "3537c6795a27cc3fb234681348f7663d218c9d51"
             ]
           },
           "content": "Peach is next. View the `character_id` and `name` columns from the `characters` table again so you can find her id.",
@@ -2897,7 +2897,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "856dc65d68082975890f009e7eb66bce7faeee44"
+              "c538d7db0bd576b3c6459fbc7fac1dd0a7e893bd"
             ]
           },
           "content": "Here's the additional info for Peach:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1985-10-18 | 173    | 52.2   |\n\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
@@ -2925,7 +2925,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fc9f5929b03b64d937828ee01dde510413512bfb"
+              "8f8fbe97a01993c791b81d4e3624533db6658a78"
             ]
           },
           "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows, you can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
@@ -2951,7 +2951,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ef7938dd66797cf7430f9da11b7ecf343c4e3e0d"
+              "7854c9b38f72476be87d6b0bf9933fac9001225d"
             ]
           },
           "content": "Here's what Toad's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1950-01-10 | 66     | 35.6   |\n\nAdd the above info for Toad. Be sure to add his `character_id`.",
@@ -2979,7 +2979,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "56e09582594c94656dd309ce696b54382b9a24da"
+              "9bc3466e215a185d527c02267d8536b6043296a7"
             ]
           },
           "content": "View all the data in `more_info` to see the rows you added.",
@@ -3007,7 +3007,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e754e4d84c6fbdfec0b557dc2c5e6501820b1562"
+              "3a39385dc74889ddf93986a345c2a2b6ab944532"
             ]
           },
           "content": "Bowser is next. Find his id by viewing his row in the `characters` table. You can view whatever columns you want as long as you include the id column, but only view his row.",
@@ -3035,7 +3035,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c02b3bafacb013dd7a407e7e8aba9511ce7a6b18"
+              "0dee8cb6a72d01d49d6a4808422c5d519a7639ed"
             ]
           },
           "content": "Here's what Bowser's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-10-29 | 258    | 300    |\n\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
@@ -3063,7 +3063,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e27d8c721edbbcaa743e8ed2541002adff68ad7e"
+              "e79adb65976c5baa323e8cb47e201f9ebc6c5c93"
             ]
           },
           "content": "Daisy is next. Find her id by viewing **only** her row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.",
@@ -3092,7 +3092,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ccf5cc554ac484b54edf481a1fb48a2e9cd64d89"
+              "b44cb5ece634a6ada7788c22b5a27f40439958ab"
             ]
           },
           "content": "The info for Daisy looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1989-07-31 | NULL   | NULL   |\n\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well, and note that `NULL` values don't need quotes.",
@@ -3119,7 +3119,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "dcd20bb26f880be6ad817cc755454f8de05bb543"
+              "c199df85daa37ade290305478be093d957361dea"
             ]
           },
           "content": "View all the data in `more_info` to see the rows you added.",
@@ -3147,7 +3147,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "0b01eaecadb2d10eeec26213591971f0e828a94f"
+              "0ae504c088bc272a50e929c1579d0bf3f3f33dce"
             ]
           },
           "content": "I guess null values just show up as blank. Yoshi is last. Find his id by viewing **only** his row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.",
@@ -3176,7 +3176,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "837a0fae13cedc4752dc582a473eb6fd178f948c"
+              "9502b825188cebe41d6439eacb9b9fc688554af3"
             ]
           },
           "content": "The info for Yoshi looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-04-13 | 162    | 59.1   |\n\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
@@ -3204,7 +3204,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9cd56cf04e2eb681acaff39dedde399077d61c0b"
+              "262e6ed65c79bcdf8b5ba8219597ee915ba3cc82"
             ]
           },
           "content": "There should be a lot of data in `more_info` now. Take a look at **all** the rows and columns in it.",
@@ -3231,7 +3231,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7f4b99eed88ba5938bdb98caef513e75bdfe554f"
+              "35b5b84357280f9287c2231ee580fd4910be5640"
             ]
           },
           "content": "It looks good, I don't think there's any mistakes this time... Actually, I do see something. The `height` and `weight` columns; what units do they use? It's centimeters and kilograms, but nobody will know.\n\nRename the `height` column to `height_in_cm`.",
@@ -3258,7 +3258,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "47119ad54a33014c38914213699c39af485925dc"
+              "89d4372d02b17ec77ab40eecccd271def90b3498"
             ]
           },
           "content": "Rename the `weight` column to `weight_in_kg`.",
@@ -3285,7 +3285,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a904ceb2d210e5a07bb642f459ea8272845fff55"
+              "b900cbbbed91ceb7df7805a49ddb71d0a8e9944d"
             ]
           },
           "content": "Take a quick look at all the data in `more_info` to see the new column names.",
@@ -3312,7 +3312,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "0aaf9c0160c93eeb814b58b6961e7dc7d58fa91b"
+              "4df7946eca7b72746b3164a07813ea2753449faf"
             ]
           },
           "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
@@ -3337,7 +3337,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c412f82a3f270ce24136f23baf58d1a16ac873a7"
+              "de23af228005eb6092ae13dd5c70eb604cb189aa"
             ]
           },
           "content": "View the tables in `mario_database` to make sure it worked.",
@@ -3363,7 +3363,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9c325792d56f2031af6ec9139ef601ecdb88f3fa"
+              "0b53195603efcdb583d7806a75638424460b6652"
             ]
           },
           "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put all those contraints at the end of the query to add them all.",
@@ -3391,7 +3391,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c601bf1654294e19621544bff4121670bf5754eb"
+              "8b341d9a3e46f9901f434f350280afc943508f91"
             ]
           },
           "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\n```\n\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
@@ -3419,7 +3419,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "03f71752ea383ba91501e83241941437010438b0"
+              "7cb49c234974c77e8e40a08d8e83b46df73451af"
             ]
           },
           "content": "Take a look at the details of the `sounds` table to see all the columns.",
@@ -3446,7 +3446,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1ab500accdffafa09b19545a70f959f80199555d"
+              "8df05e2ddac5de3396a42385076039b0fdac315c"
             ]
           },
           "content": "Next you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
@@ -3474,7 +3474,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "e56ec77b7a4f7fc0192704a5afe9985b2337fe4b"
+              "d7bb43b4a28be87826d3860e083ca07e80b5388b"
             ]
           },
           "content": "The first file is named `its-a-me.wav`. Insert it into the `sounds` table with Mario's id as the `character_id`.",
@@ -3502,7 +3502,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c804bde06e25a88592e586838dcf523bc89ae1a9"
+              "57c7d4d7577848578a4c009de5efc91ab45aedc0"
             ]
           },
           "content": "Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` again for the foreign key value.",
@@ -3530,7 +3530,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "55543c5dd2d2c232cff2d994429bce068aaa3d6b"
+              "c27ab6054a52ab17b2f6682c36cbcea1880d7797"
             ]
           },
           "content": "Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.",
@@ -3557,7 +3557,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f61e92549eb629c001b6444785d9c1d825f9bee3"
+              "f7747433aa80d6728452f92abc8f718d0d32384c"
             ]
           },
           "content": "Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.",
@@ -3583,7 +3583,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7416360e9088ad6ffb45bb27913a58f017645e08"
+              "3ea6ee05d1e047b05e33cd26fc1e4438429bd3d5"
             ]
           },
           "content": "Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.",
@@ -3611,7 +3611,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fe5f5be35bfcb96a413287c352167d4e5d7bfd48"
+              "5238d3464800fbc4fec6eca0cdd98d3f7ede1e9d"
             ]
           },
           "content": "Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.",
@@ -3639,7 +3639,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fb2744066d0be21fcb86433e9d772c442f2dcaa9"
+              "4fa39b7aca3404c32963d42ec98aa53101a79ea6"
             ]
           },
           "content": "View all the data in the `sounds`. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
@@ -3667,7 +3667,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "034c1ccf0a379a061d4ac8c7a8218983819dab5c"
+              "7422600b9f44ee9f6921ffebb2c8b811e28a55c1"
             ]
           },
           "content": "The sounds are looking good I think. Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.",
@@ -3694,7 +3694,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "869b80915bbbed5a3eae0a00022da48af53c0869"
+              "fba01039b48dec91f19c1f300a38b32f5c12c0ad"
             ]
           },
           "content": "Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.",
@@ -3721,7 +3721,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9f6d4a63e6ab168424acd1b9c6cbfb5cae87c72d"
+              "2b3ef60871314aaf2e96d7665398b1868710de35"
             ]
           },
           "content": "The actions table won't have any foreign keys. It's going to have a \"many-to-many\" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later.\n\nInsert a row into the `actions` table. Give it an `action` of `run`.",
@@ -3749,7 +3749,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d3b259b2c1da40cccf9122bd3fb481f3b2f0437e"
+              "47f2d19a00a479fa3fbe7b47d383d50b3b43ab41"
             ]
           },
           "content": "Insert another row into the `actions` table. Give it an `action` of `jump`.",
@@ -3777,7 +3777,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1c628bc6d95dac9e7e1c169ea645a723828e4ce5"
+              "6a4ce44fb7abe90fcf5cd00a6d17c2d4383f1def"
             ]
           },
           "content": "Add another action row with an `action` of `duck`.",
@@ -3805,7 +3805,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3fd992d9456fe7b39623bc9880565ce2f86984b8"
+              "4a97261ffdc5a2905b8a6f44bc3901165476023c"
             ]
           },
           "content": "View all the data in `actions` to make sure there's no mistakes.",
@@ -3833,7 +3833,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f3275aeb7880cc3daf3c7be56f9fa05064d4ad46"
+              "de5f9cc29e0b4e21b6994c70f084081fded0e7c4"
             ]
           },
           "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
@@ -3860,7 +3860,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "52931f041ba74abe8fa252232f301722b5e56d84"
+              "6e3d8f2c6b0e6a60069a4288a1da021fd1d3a06d"
             ]
           },
           "content": "Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship. Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.",
@@ -3887,7 +3887,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2aa5a549e912f2dc712dc15694948bf1f1864d6f"
+              "d441542bddbcdfb6460001a412738d7a366536e9"
             ]
           },
           "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nHmm, that doesn't seem any easier :disappointed: Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table. Use `character_actions_character_id_fkey` as the constraint name.",
@@ -3915,7 +3915,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2fd606d1243441ecb1723acd210cb86d6322dffe"
+              "a7d8f207c94673ed8b5446f639308d8319c946e7"
             ]
           },
           "content": "View the details of the `character_actions` table to see the foreign key constraint you added.",
@@ -3942,7 +3942,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a533a75f656b711cda9303fcdcc63783a5c54773"
+              "859c7805d7eeb4c35b21dd7b2ef3dff990286433"
             ]
           },
           "content": "Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.",
@@ -3969,7 +3969,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2241a3d6b4a754af1869b4cb60c6cc8273776b9f"
+              "dbe9ee28a90df3e213f0752328bad7a74b1c6449"
             ]
           },
           "content": "You're going to need to set that column as a foreign key as well. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `action_id` column you just added as a foreign key that references the `action_id` from the `actions` table. Use `character_actions_action_id_fkey` as the constraint name.",
@@ -3996,7 +3996,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7f98e6fc1c50650af1f9bc14ea0bba8d354ae531"
+              "402f323810a39b6cfa306fa65d851ac419d9cae6"
             ]
           },
           "content": "View the details of the `character_actions` table to see your keys.",
@@ -4023,7 +4023,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a728245aa4c78837fad1eed834c335733374398d"
+              "c2e5e8143929b4f808f05181ed755569e6f01803"
             ]
           },
           "content": "I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table.",
@@ -4048,7 +4048,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fe72fcc2d4b819e72b5e799f42e29d8eacfdab47"
+              "873014ec8e9e8ed62634bf49799fe22f570400a2"
             ]
           },
           "content": "This table will have multiple rows with the same `character_id`, and multiple rows the the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.\n\nView the details of the `character_actions` table to see your composite key.",
@@ -4075,7 +4075,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d3822d7e18e051aeb84a9a8167e028e9dd605614"
+              "1966d3b6b2f9f580e58a2e1ae01cbe06af465f7a"
             ]
           },
           "content": "Insert three rows into `character_actions` for all the actions Yoshi can perform. His `character_id` is `7` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
@@ -4103,7 +4103,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "11279d6153f79559e95533b8c8b4955e6a26b8bd"
+              "36f420556e8f87cf7ee65ebc9616a33c1003a320"
             ]
           },
           "content": "View all the data in `character_actions` to see your rows.",
@@ -4131,7 +4131,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "359501dbd02ccaf4d42b9c25cf36e486072dfec6"
+              "f83171fb68314368523ded0ebe30a84ef268a146"
             ]
           },
           "content": "Add three more rows into `character_actions` for all of Daisy's actions. Her `character_id` is `6` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.",
@@ -4159,7 +4159,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "b58f6bd620a72aa8a05a7113e2063b19c3e41ad5"
+              "e5672823adbb3e4fdefabc3e01eb6c66bcd49bf6"
             ]
           },
           "content": "Add three more rows for Bowser's actions. His `character_id` is `5`. He can perform all the actions as well.",
@@ -4188,7 +4188,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f977c3491307019e6239e0ac8292c1e5f0bbfed5"
+              "0fafcc87050e86a48b89c40b9aa8a8cf8bce9fc8"
             ]
           },
           "content": "Add three more rows for Toad's actions. His `character_id` is `4`.",
@@ -4217,7 +4217,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7174a56ab80bfb5089affd4ba56142d93eae3ff9"
+              "732a144a13c37fe166fec36b97bc5e923c36d257"
             ]
           },
           "content": "Peach's `character_id` is `3`. She can perform all the actions as well, so add three more rows for those.",
@@ -4245,7 +4245,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "f5d39f72acb960d08516d92563e772e060f08dc3"
+              "8fda1e668c253626294f64576b72e5f4779462aa"
             ]
           },
           "content": "Add three more rows for Luigi's actions.",
@@ -4274,7 +4274,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ede1dd4fac4a3243d12d3db1818355ceac391b1c"
+              "a650807d7a6440af225fd5758c74a43cc04c2d88"
             ]
           },
           "content": "Last is Mario, add three rows for his actions.",
@@ -4303,7 +4303,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "5cc70155914ff274fd24f4e6439beff6354b0dd8"
+              "f2c7ee8af20a7f61353b6a626fc59529493d6261"
             ]
           },
           "content": "View all the data in `character_actions` to see your rows.",
@@ -4331,7 +4331,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "28c2ddcb7f121a8a1978892d4b40f77a71fc79f8"
+              "d98ca77196ba7a1968623fca021f251804542dbc"
             ]
           },
           "content": "Congratulations :tada: I think you've added enough data into the database. I love it! Take a look around to see what you ended up with. First, display all the tables you created.",
@@ -4357,7 +4357,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8b8f875176ab6c3d9860e77fba3fa7402f0dc417"
+              "e0ad1f24adb50f4205e4d4a7a348d6db8919603c"
             ]
           },
           "content": "There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.",
@@ -4385,7 +4385,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "92f8849cec5129015502ae960485013cd80e18b6"
+              "92b2348b50551163396b33b8ddff4ca5ee467748"
             ]
           },
           "content": "Those are some lovely characters. Next, view all the data in `more_info`.",
@@ -4413,7 +4413,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "531a22af67cd9c658069bd537ef430625660659b"
+              "7854647b880e3413c3f5773e2b629673cad09901"
             ]
           },
           "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or...\n\nYou added that as a foreign key, that means you can get all the data from both tables together. Introducing the `JOIN` command. Here's an example:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the keys.",
@@ -4441,7 +4441,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8cbaacc0b5680aaf51a0a8c6e1f3cb8c5b60fb84"
+              "ed6fed562b6991333a0245b2da1c4b1b4bb06506"
             ]
           },
           "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other.\n\nHere's the example again:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nUse another join command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
@@ -4468,7 +4468,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "de6dd140764460a3812dcc91e7d1d598ec5eade5"
+              "e07a74d4ecb85c259af5c7e6a59cb0611d4769a9"
             ]
           },
           "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. Looks like we never got around to adding sounds for a few of the characters.\n\nLastly, how can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column \nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nView all the data from `characters`, `actions`, and `character_actions`. Use the correct keys.",
