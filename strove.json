@@ -1,6 +1,6 @@
 {
   "init": "exit",
   "envVariables": [
-    ["CODEROAD_TUTORIAL_URL", "https://raw.githubusercontent.com/moT01/learn-relational-databases-by-building-a-mario-database/master/tutorial.json"]
+    ["CODEROAD_TUTORIAL_URL", "https://raw.githubusercontent.com/moT01/learn-relational-databases-by-building-a-mario-database/main/tutorial.json"]
   ]
 }
