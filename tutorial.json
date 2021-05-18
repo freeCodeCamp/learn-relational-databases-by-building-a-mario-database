@@ -1820,7 +1820,7 @@
               "43822df94869a3428dea2e60f79118de2343592d"
             ]
           },
-          "content": "I see several mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
+          "content": "I see several mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
           "hints": [
             "There should be two sets of single quotes in this command",
             "Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`",
@@ -2018,7 +2018,7 @@
           "hints": [
             "Use the `UPDATE`, `SET`, and `WHERE` keywords",
             "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
-            "I recommand using `character_id=5` as the condition",
+            "I recommend using `character_id=5` as the condition",
             "Try entering `UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;`",
             "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already",
             "If the tests aren't running automatically, quit psql with `\\q` and try logging in again"
@@ -2046,7 +2046,7 @@
           "hints": [
             "Use the `UPDATE`, `SET`, and `WHERE` keywords",
             "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
-            "I recommand using `character_id=5` as the condition",
+            "I recommend using `character_id=5` as the condition",
             "Try entering `UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;`",
             "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already",
             "If the tests aren't running automatically, quit psql with `\\q` and try logging in again"
@@ -4051,7 +4051,7 @@
               "6383ff5f93bce843d09242173fc48ffe96b1d127"
             ]
           },
-          "content": "This table will have multiple rows with the same `character_id`, and multiple rows the the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.\n\nView the details of the `character_actions` table to see your composite key.",
+          "content": "This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.\n\nView the details of the `character_actions` table to see your composite key.",
           "hints": [
             "Use the **d**isplay command",
             "Add the table name after the command",
@@ -4477,7 +4477,8 @@
             "Use the `action_id` column to join `character_actions` and `actions`",
             "Without the keywords, it looks like this: `character_actions characters character_actions.character_id = characters.character_id actions character_actions.action_id = actions.action_id;`",
             "Try entering `SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;`",
-            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already"
+            "Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already",
+            "If the tests aren't running automatically, quit psql with `\\q` and try logging in again"
           ]
         }
       ]
