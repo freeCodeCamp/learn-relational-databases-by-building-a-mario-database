@@ -1003,7 +1003,7 @@ I see several mistakes. You can change a value like this:
 UPDATE table_name SET column_name=new_value WHERE condition;
 ```
 
-You used `username='Samus'` as a condition ealier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.
+You used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.
 
 #### HINTS
 
@@ -1114,7 +1114,7 @@ Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update 
 
 - Use the `UPDATE`, `SET`, and `WHERE` keywords
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
-- I recommand using `character_id=5` as the condition
+- I recommend using `character_id=5` as the condition
 - Try entering `UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
@@ -1129,7 +1129,7 @@ Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't y
 
 - Use the `UPDATE`, `SET`, and `WHERE` keywords
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
-- I recommand using `character_id=5` as the condition
+- I recommend using `character_id=5` as the condition
 - Try entering `UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;`
 - Enter `psql -U freecodecamp mario_database` into the terminal to log in if you aren't already
 - If the tests aren't running automatically, quit psql with `\q` and try logging in again
@@ -2296,7 +2296,7 @@ Use `character_id` and `action_id` to create a composite primary key for this ta
 
 ### 1530.1
 
-This table will have multiple rows with the same `character_id`, and multiple rows the the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.
+This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.
 
 View the details of the `character_actions` table to see your composite key.
 
