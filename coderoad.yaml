@@ -1,24 +1,24 @@
-version: '0.2.9'
+version: '0.3.0'
 config:
   setup:
     commands:
-      # these commands run when a tutorial is started or continued
       - sudo service postgresql stop
-      - cd .freeCodeCamp && npm install
+      - sudo cp ~/project/.freeCodeCamp/.bashrc ~
       - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
       - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
       - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
       - sudo cp ~/project/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
+      - cd .freeCodeCamp && npm install
       - sudo service postgresql start
       - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
   testRunner:
-    command: ./node_modules/.bin/mocha
+    command: npm run programmatic-test
     args:
       tap: --reporter=mocha-tap-reporter
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-relational-databases-by-building-a-mario-database
-    branch: v0.2.9
+    branch: v0.3.0
   reset:
     commands:
       - 'bash ./.freeCodeCamp/reset.sh'
@@ -26,6 +26,12 @@ config:
     - name: node
       version: '>=10'
 levels:
+  - id: '10'
+    steps:
+      - id: '10.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '20'
     steps:
       - id: '20.1'
