@@ -107,7 +107,7 @@ You can **c**onnect to a database by entering `\c database_name`. You need to co
 
 ### 90.1
 
-You should see a message that you are connected. I noticed the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\d` to **d**isplay the tables.
+You should see a message that you are connected. Notice that the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\d` to **d**isplay the tables.
 
 #### HINTS
 
@@ -162,7 +162,7 @@ Create another new table in this database. Give it a name of `second_table`.
 
 ### 130.1
 
-There should be two tables in this database now. **D**isplay them again for me to make sure.
+There should be two tables in this database now. **D**isplay them again to make sure.
 
 #### HINTS
 
@@ -316,7 +316,7 @@ It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first
 
 ### 240.1
 
-A common data type is `VARCHAR`. It is just a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.
+A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.
 
 Add a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.
 
@@ -345,7 +345,7 @@ Take look at the details of `second_table` to see your columns.
 
 ### 260.1
 
-You can see the `VARCHAR` type there. You named that column `name`, I wanted it to be `username`. Here's how you can rename a column:
+You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
 
 ```sql
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
@@ -376,7 +376,7 @@ Take look at the details of `second_table` again to see if it got renamed.
 
 ### 280.1
 
-It worked. You can add a row to a table like this:
+It worked. Rows are the actual data in the table. You can one like this:
 
 ```sql
 INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
@@ -396,7 +396,7 @@ Insert a row into `second_table`. Give it an `id` of `1`, and a `username` of `S
 
 ### 290.1
 
-You should have one row in your table. How can you see it? Introducing, the `SELECT` statement. Here's how it looks:
+You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:
 
 ```sql
 SELECT columns FROM table_name;
@@ -415,7 +415,7 @@ Use a `SELECT` statement to view **all** the columns in `second_table`. Use an a
 
 ### 300.1
 
-**Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.
+There's your one row. **Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.
 
 #### HINTS
 
@@ -471,7 +471,7 @@ You should now have three rows. Use `SELECT` again to see **all** the data you e
 
 ### 340.1
 
-That gives me an idea :smiley: You can help me make a database of characters from the Mario video games. That sounds like fun. I think it's best to start from scratch for this. Why don't you delete the record you just entered. Here's an example of how to delete a row:
+That gives me an idea :smiley: You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:
 
 ```sql
 DELETE FROM table_name WHERE condition;
@@ -503,7 +503,7 @@ Luigi should be gone. Use `SELECT` again to see all the data and make sure he's 
 
 ### 360.1
 
-Yea, you can scrap all this for the Mario database. **delete** Mario **from** `second_table` using the same command as before, except make the **where** condition `username='Mario'` this time.
+It's gone. You can scrap all this for the new database. **delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.
 
 #### HINTS
 
@@ -533,7 +533,7 @@ Only one more row should remain. **Delete** Samus **from** `second_table`.
 
 ### 380.1
 
-Use `SELECT` again to see all the rows in `second_table` and make sure they're gone.
+Use `SELECT` again to see all the rows in `second_table` to make sure they're gone.
 
 #### HINTS
 
@@ -546,7 +546,7 @@ Use `SELECT` again to see all the rows in `second_table` and make sure they're g
 
 ### 390.1
 
-Looks like they're all gone. Remind me what columns you have in `second_table` by looking at its **d**etails.
+Looks like they're all gone. Remind yourself what columns you have in `second_table` by looking at its **d**etails.
 
 #### HINTS
 
@@ -560,7 +560,7 @@ Looks like they're all gone. Remind me what columns you have in `second_table` b
 
 ### 400.1
 
-You won't need any of these for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
+There's two columns. You won't either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
 
 #### HINTS
 
@@ -581,63 +581,66 @@ Next, drop the `id` column.
 - Use the `ALTER TABLE` and `DROP COLUMN` keywords
 - Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`
 - You previously dropped a column with `ALTER TABLE second_table DROP COLUMN username;`
-- Try `ALTER TABLE second_table DROP COLUMN id;`
+- Enter `ALTER TABLE second_table DROP COLUMN id;` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 420. View `second_database` Tables
 
 ### 420.1
 
-Okay, the table has no rows or columns left. Remind me what tables are in this database by displaying them.
+Okay, the table has no rows or columns left. View the tables in this database to see what is here.
 
 #### HINTS
 
 - Use the **d**isplay shortcut command
 - You don't need a table name with the command
-- Try entering `\d`
+- Try entering `\d` 
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 430. Drop `second_table`
 
 ### 430.1
 
-You won't need any of these tables for the Mario database either. Drop `second_table` with the `DROP TABLE` keywords.
+Still two. You won't either of those for the new database either. Drop `second_table` from your database. Here's an example:
+
+```sql
+DROP TABLE table_name;
+```
 
 #### HINTS
 
-- Here's an example: `DROP TABLE table_name;`
-- Try `DROP TABLE second_table;`
+- Enter `DROP TABLE second_table;` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 440. Drop `first_table`
 
 ### 440.1
 
-Next, drop `first_table`.
+Next, drop `first_table` from the database.
 
 #### HINTS
 
 - Here's an example: `DROP TABLE table_name;`
-- Enter `DROP TABLE first_table;`
+- Enter `DROP TABLE first_table;` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 450. View Databases
 
 ### 450.1
 
-All the tables are gone now, too. Remind me what databases you have by using the command to **l**ist them.
+All the tables are gone now, too. View all the databases using the command to **l**ist them.
 
 #### HINTS
 
 - Use the **l**ist shortcut command
-- Enter `\l`
+- Enter `\l` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 460. Rename `first_database`
 
 ### 460.1
 
-You should rename `first_database` to `mario_database`. You can rename a database like this:
+Rename `first_database` to `mario_database`. You can rename a database like this:
 
 ```sql
 ALTER DATABASE database_name RENAME TO new_database_name;
@@ -757,15 +760,13 @@ The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, a
 
 ### 570.1
 
-What columns can you add to describe Mario characters? They all have a name... I think anyway :confused:
-
 Add a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.
 
 #### HINTS
 
 - Use the `ALTER TABLE` and `ADD COLUMN` keywords
 - Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT;`
-- Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;`
+- Try entering `ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 580. Add `homeland` Column
@@ -892,7 +893,10 @@ Okay, it looks like it's all working. Add another row for Peach. Give her the va
 Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:
 
 ```sql
-INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red'), ('Luigi', 'Mushroom Kingdom', 'Green'), ('Peach', 'Mushroom Kingdom', 'Pink');
+INSERT INTO characters(name, homeland, favorite_color)
+VALUES('Mario', 'Mushroom Kingdom', 'Red'),
+('Luigi', 'Mushroom Kingdom', 'Green'),
+('Peach', 'Mushroom Kingdom', 'Pink');
 ```
 
 Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.
@@ -900,7 +904,7 @@ Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`
 #### HINTS
 
 - Make sure you added commas and quotes where needed
-- Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`
+- Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');` in the psql prompt
 - If you missed a matching single quote, try entering `');` to finish the command
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
@@ -908,15 +912,7 @@ Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`
 
 ### 670.1
 
-"INSERT 0 2" is the message. That "2" must mean you added two rows. I mentioned earlier that if you don't get a message after a command, it is incomplete. This is because you can put a command on multiple lines. Here's an example:
-
-```sql
-INSERT INTO characters(name, homeland, favorite_color) VALUES
-('Toadstool', 'Mushroom Kingdom', 'Red'), 
-('Bowser', 'Mushroom Kingdom', 'Green');
-```
-
-That's much easier to read :sunglasses:. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.
+If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.
 
 #### HINTS
 
@@ -944,7 +940,7 @@ Take a look all the data in your table with `SELECT` to see where you stand.
 
 ### 690.1
 
-I see several mistakes. You can change a value like this:
+It looks good, but there's a few mistakes. You can change a value like this:
 
 ```sql
 UPDATE table_name SET column_name=new_value WHERE condition;
@@ -963,9 +959,7 @@ You used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_colo
 
 ### 700.1
 
-The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`.
-
-Take a look all the data in your table again to see if she got updated.
+The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look all the data in your table again to see if she got updated.
 
 #### HINTS
 
@@ -979,7 +973,7 @@ Take a look all the data in your table again to see if she got updated.
 
 ### 710.1
 
-I got Toadstool's name wrong as well, it's actually Toad. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.
+Her favorite color was updated. Toadstool's name wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.
 
 #### HINTS
 
@@ -1006,14 +1000,14 @@ Take a look all the data in your table.
 
 ### 730.1
 
-Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row where `character_id=1`.
+Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for one of the row with 
 
 #### HINTS
 
 - Numbers don't need quotes
 - Use the `UPDATE`, `SET`, and `WHERE` keywords and strings where needed
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
-- Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;`
+- Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;` in the psql prompt. Or whatever the correct `character_id` is.
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 740. View `characters` Data
@@ -1034,7 +1028,7 @@ Take a look all the data in your table again to see if Mario's name got changed 
 
 ### 750.1
 
-Looks like it worked. I got Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.
+Looks like it worked. Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.
 
 #### HINTS
 
@@ -1048,7 +1042,7 @@ Looks like it worked. I got Toad's favorite color wrong. He likes blue. Change T
 
 ### 760.1
 
-Bowser's `favorite_color` is wrong too. He likes `Yellow`. Why don't you update it without changing any of the other rows.
+Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows.
 
 #### HINTS
 
@@ -1076,7 +1070,7 @@ Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't y
 
 ### 780.1
 
-Take a look all the data in your table again so I can make sure there's no more issues.
+Take a look all the data in your table again to make sure there's no more issues.
 
 #### HINTS
 
@@ -1089,7 +1083,7 @@ Take a look all the data in your table again so I can make sure there's no more 
 
 ### 790.1
 
-Umm, actually can you put that in order for me? Here's an example:
+Actually, you should put that in order. Here's an example:
 
 ```sql
 SELECT columns FROM table_name ORDER BY column_name;
@@ -1106,7 +1100,7 @@ View all the data again, but put it in order by `character_id`.
 
 ### 800.1
 
-It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row and can be used to relate tables to each other. Here's an example of how to set a `PRIMARY KEY`:
+It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:
 
 ```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column_name);
@@ -1137,7 +1131,7 @@ You should set a primary key on every table and there can only be one per table.
 
 ### 820.1
 
-You can see key on your `name` column at the bottom. I think it would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:
+You can see the key for your `name` column at the bottom. It would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:
 
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
@@ -1193,7 +1187,7 @@ View the details of the `characters` table to see the new primary key.
 
 ### 860.1
 
-I think the primary key is on a better column now. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.
+That's better. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.
 
 #### HINTS
 
@@ -1218,7 +1212,7 @@ View the tables in `mario_database` again with the **d**isplay command. You shou
 
 ### 880.1
 
-I wonder what that third one is. It says "characters_character_id_seq". Ahh, I think I have a clue. View the details of the `characters` table.
+I wonder what that third one is. It says "characters_character_id_seq". I think I have a clue. View the details of the `characters` table.
 
 #### HINTS
 
@@ -1232,7 +1226,7 @@ I wonder what that third one is. It says "characters_character_id_seq". Ahh, I t
 
 ### 890.1
 
-I think that is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
+That is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.
 
 #### HINTS
 
@@ -1258,7 +1252,7 @@ Set your new column as the primary key for this table.
 
 ### 900.1
 
-View the tables in `mario_database` again with the display command. If my theory is correct, there should be another sequence there for the `more_info_id`.
+View the tables in `mario_database` again with the display command. There should be another sequence there for the `more_info_id` because it also automatically increments.
 
 #### HINTS
 
@@ -1269,7 +1263,7 @@ View the tables in `mario_database` again with the display command. If my theory
 
 ### 910.1
 
-Yup, there it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.
+There it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.
 
 #### HINTS
 
@@ -1321,7 +1315,7 @@ Take a look at the details of `more_info` to see all your columns.
 
 ### 950.1
 
-There’s your four columns and the primary key you created for one of them at the bottom. How would you know what character a row here is for since there's no name? You need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. A foreign key needs to **reference** a primary key from a different table. Here's an example that creates a column as a foreign key:
+There’s your four columns and the primary key you created at the bottom. To know what row a character is for, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
@@ -1341,9 +1335,7 @@ That's quite the command. In the `more_info` table, create a `character_id` colu
 
 ### 960.1
 
-To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value as `1`, since that's what his `character_id` is in `characters`.
-
-Take a look at the details of `more_info` to see your foreign key.
+To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value to whatever it is in the `characters` table. Take a look at the details of `more_info` to see your foreign key.
 
 #### HINTS
 
@@ -1356,7 +1348,7 @@ Take a look at the details of `more_info` to see your foreign key.
 
 ### 970.1
 
-There's your foreign key at the bottom. I want your tables to have a "one-to-one" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. I want to help enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:
+There's your foreign key at the bottom. These tables have a "one-to-one" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. Enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:
 
 ```sql
 ALTER TABLE table_name ADD UNIQUE(column_name);
@@ -1405,12 +1397,12 @@ Take a look at the details of your `more_info` table to see all the keys and con
 
 ### 1000.1
 
-I think the structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. What if you only want some of them? You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.
+The structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.
 
 #### HINTS
 
 - Here's an example: `SELECT column FROM table_name;`
-- Try `SELECT character_id FROM characters;`
+- Enter `SELECT character_id FROM characters;` in the psql prompt
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1010. Select `character_id` and `name`
@@ -1431,17 +1423,18 @@ That list of numbers doesn't really help. Use `SELECT` again to display both the
 
 That's better. You can see Mario's id there. Here's some more info for him:
 
-| birthday   | height | weight | character_id |
-| ---------- | ------ | ------ | ------------ |
-| 1981-07-09 | 155    | 64.5   | 1            |
+| birthday   | height | weight |
+| ---------- | ------ | ------ |
+| 1981-07-09 | 155    | 64.5   |
 
-Add a row with the above info for Mario using the `INSERT INTO` and `VALUES` keywords. You should know that `DATE` values need a string with the format: `'YYYY-MM-DD'`.
+Add a row to `more_info` with the above data for Mario using the `INSERT INTO` and `VALUES` keywords. Be sure to set his `character_id` when adding him. Also, `DATE` values need a string with the format: `'YYYY-MM-DD'`.
 
 #### HINTS
 
 - Here's an example: `INSERT INTO table_name(columns) VALUE(values);`
 - You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1030. View `more_info` Data
@@ -1487,8 +1480,8 @@ Add a row in `more_info` for Luigi using the above info. Be sure to add his `cha
 - Use the `INSERT INTO` and `VALUES` keywords
 - Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
-- Luigi's `character_id` is `2`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1060. View `more_info` Data
@@ -1532,17 +1525,17 @@ Add a row for Peach using the above info. Be sure to add her `character_id` as w
 
 #### HINTS
 
-- Her `character_id` is `3`
 - Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`
+- Or, enter the above command and replace the `3` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1090. Select Toad's `character_id` and `name`
 
 ### 1090.1
 
-Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows, you can use it to view rows as well. Here's an example:
+Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:
 
 ```sql
 SELECT columns FROM table_name WHERE condition;
@@ -1553,6 +1546,7 @@ A condition you used before was `username='Samus'`. Find Toad's id by viewing th
 #### HINTS
 
 - Don't forget the semi-colon :smile:
+- Use `name='Toad'` for the condition
 - Try entering `SELECT character_id, name FROM characters WHERE name='Toad';`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
@@ -1572,8 +1566,8 @@ Add the above info for Toad. Be sure to add his `character_id`.
 
 - Put `DATE` values in quotes
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`
-- Toad's `character_id` is `4`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
+- Or, enter the above command and replace the `4` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1110. View `more_info` Data
@@ -1594,14 +1588,14 @@ View all the data in `more_info` to see the rows you added.
 
 ### 1120.1
 
-Bowser is next. Find his id by viewing his row in the `characters` table. You can view whatever columns you want as long as you include the id column, but only view his row.
+Bowser is next. Find his ID by viewing the `character_id` and `name` columns for only his row.
 
 #### HINTS
 
 - Use the `SELECT`, `FROM`, and `WHERE` keywords
 - Here's an example: `SELECT columns FROM table_name WHERE condition;`
 - I recommend `name='Bowser'` as the condition
-- Try entering `SELECT * FROM characters WHERE name='Bowser';`
+- Try entering `SELECT character_id, name FROM characters WHERE name='Bowser';`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1130. Add `more_info` for Bowser
@@ -1620,23 +1614,22 @@ Add the above info for Bowser. Don't forget to add his `character_id`.
 
 - Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`
-- Bowser's `character_id` is `5`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 258, 300, 5);`
+- Or, enter the above command and replace the `5` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1140. Select Daisy's Row
 
 ### 1140.1
 
-Daisy is next. Find her id by viewing **only** her row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.
+Daisy is next. Find her ID by viewing the `character_id` and `name` columns for only her row.
 
 #### HINTS
 
 - Use the `SELECT`, `FROM`, and `WHERE` keywords
-- View **all** the columns this time
 - Here's an example: `SELECT columns FROM table_name WHERE condition;`
 - Use `name='Daisy'` as the condition
-- Try entering `SELECT * FROM characters WHERE name='Daisy';`
+- Try entering `SELECT character_id, name FROM characters WHERE name='Daisy';`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1150. Add `more_info` for Daisy
@@ -1649,13 +1642,13 @@ The info for Daisy looks like this:
 | ---------- | ------ | ------ |
 | 1989-07-31 | NULL   | NULL   |
 
-Add the above info for Daisy to `more_info`. Be sure to add her `character_id` as well, and note that `NULL` values don't need quotes.
+Add the above info for Daisy to `more_info`. Be sure to add her `character_id` as well. You can use `NULL` or simply not include the null columns when inserting.
 
 #### HINTS
 
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`
-- Daisy's `character_id` is `6`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
+- Or, enter the above command and replace the `6` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1160. View `more_info` Data
@@ -1676,15 +1669,13 @@ View all the data in `more_info` to see the rows you added.
 
 ### 1170.1
 
-I guess null values just show up as blank. Yoshi is last. Find his id by viewing **only** his row in the `characters` table. View whatever columns you want as long as you include the `character_id` column.
+Null values show up as blank. Yoshi is last. Find his ID by viewing the `character_id` and `name` columns for only his row.
 
 #### HINTS
 
 - Use the `SELECT`, `FROM` and `WHERE` keywords
 - Here's an example: `SELECT columns FROM table_name WHERE condition;`
-- You saw all Daisy's columns with `SELECT * FROM characters WHERE name='Daisy';`
-- Only view the `character_id` column
-- Try entering `SELECT character_id FROM characters WHERE name='Yoshi';`
+- Try entering `SELECT character_id, name FROM characters WHERE name='Yoshi';`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1180. Add `more_info` for Yoshi
@@ -1702,9 +1693,9 @@ Add the above info for Yoshi to `more_info`. Be sure to include his `character_i
 #### HINTS
 
 - You got this one!
-- Yoshi's `character_id` is `7`
 - You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);`
+- Or, enter the above command and replace the `7` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1190. View all `more_info` Data
@@ -1724,9 +1715,7 @@ There should be a lot of data in `more_info` now. Take a look at **all** the row
 
 ### 1200.1
 
-It looks good, I don't think there's any mistakes this time... Actually, I do see something. The `height` and `weight` columns; what units do they use? It's centimeters and kilograms, but nobody will know.
-
-Rename the `height` column to `height_in_cm`.
+It looks good. There is something you can do to help out though. What units do the `height` and `weight` columns use? It's centimeters and kilograms, but nobody will know. Rename the `height` column to `height_in_cm`.
 
 #### HINTS
 
@@ -1800,7 +1789,7 @@ View the tables in `mario_database` to make sure it worked.
 
 ### 1270.1
 
-There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put all those contraints at the end of the query to add them all.
+There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those contraints at the end of the query to add them all.
 
 #### HINTS
 
@@ -1869,6 +1858,7 @@ The first file is named `its-a-me.wav`. Insert it into the `sounds` table with M
 - Use `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1320. Insert `yippee.wav`
@@ -1879,10 +1869,10 @@ Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` aga
 
 #### HINTS
 
-- His `character_id` is `1`
 - Don't forget the quotes
 - You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`
+- Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1330. Insert `ha-ha.wav`
@@ -1893,9 +1883,9 @@ Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` 
 
 #### HINTS
 
-- His `character_id` is `2`
 - You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Try entering `INSERT INTO sounds(filename, character_id) VALUES('ha-ha.wav', 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1340. Insert `oh-yeah.wav`
@@ -1906,8 +1896,8 @@ Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well 
 
 #### HINTS
 
-- His `character_id` is `2`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('oh-yeah.wav', 2);`
+- Or, enter the above command and replace the `2` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1350. Insert Sounds for Peach
@@ -1920,8 +1910,8 @@ Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav
 
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - Find her `character_id` by viewing data in the `characters` table
-- Her `character_id` is `3`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`
+- Or, enter the above command and replace the `3` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1360. Insert Two More Sounds
@@ -1934,8 +1924,8 @@ Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one
 
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - Find their `character_id` by viewing data in the `characters` table
-- Peach's `character_id` is `3`, Mario is `1`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('mm-hmm.wav', 3), ('yahoo.wav', 1);`
+- Or, enter the above command and replace the `3` and `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1370. View `sounds` Data
@@ -1982,9 +1972,7 @@ Add a column named `action` to your new table. Give it a type of `VARCHAR` that 
 
 ### 1400.1
 
-The actions table won't have any foreign keys. It's going to have a "many-to-many" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later.
-
-Insert a row into the `actions` table. Give it an `action` of `run`.
+The actions table won't have any foreign keys. It's going to have a "many-to-many" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later. Insert a row into the `actions` table. Give it an `action` of `run`.
 
 #### HINTS
 
@@ -2069,24 +2057,23 @@ Your junction table will use the primary keys from the `characters` and `actions
 The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
 ```
 
-Hmm, that doesn't seem any easier :disappointed: Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table. Use `character_actions_character_id_fkey` as the constraint name.
+Set the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.
 
 #### HINTS
 
-- Without the keywords, it looks like this: `character_actions character_actions_character_id_fkey character_id characters(character_id);`
+- Without the keywords, it looks like this: `character_actions character_id characters(character_id);`
 - All the info you need is there, read it closely
-- This is a tough one, give it one more try
-- Try this: `ALTER TABLE character_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
+- Try this: `ALTER TABLE character_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1470. View `character_actions` Details
 
 ### 1470.1
 
-View the details of the `character_actions` table to see the foreign key constraint you added.
+View the details of the `character_actions` table to see the foreign key you added.
 
 #### HINTS
 
@@ -2112,19 +2099,14 @@ Add another column to `character_actions` named `action_id`. Give it a type of `
 
 ### 1500.1
 
-You're going to need to set that column as a foreign key as well. Here's the example again:
-
-```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
-```
-
-Set the `action_id` column you just added as a foreign key that references the `action_id` from the `actions` table. Use `character_actions_action_id_fkey` as the constraint name.
+This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table. 
 
 #### HINTS
 
-- Without the keywords, it looks like this: `character_actions character_actions_action_id_fkey action_id actions(action_id);`
-- You previously used: `ALTER TABLE characters_actions ADD CONSTRAINT character_actions_character_id_fkey FOREIGN KEY(character_id) REFERENCES characters(character_id);`
-- Here it is `ALTER TABLE character_actions ADD CONSTRAINT character_actions_action_id_fkey FOREIGN KEY(action_id) REFERENCES actions(action_id);`
+- Here's the example again: `ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);`
+- Without the keywords, it looks like this: `character_actions action_id actions(action_id);`
+- You previously used: `ALTER TABLE characters_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);`
+- Here it is `ALTER TABLE character_actions ADD FOREIGN KEY(action_id) REFERENCES actions(action_id);`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1510. View `character_actions` Details
@@ -2144,7 +2126,7 @@ View the details of the `character_actions` table to see your keys.
 
 ### 1520.1
 
-I mentioned earlier that every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns known as a **composite** primary key. Here's an example:
+Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:
 
 ```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);
@@ -2161,9 +2143,7 @@ Use `character_id` and `action_id` to create a composite primary key for this ta
 
 ### 1530.1
 
-This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row.
-
-View the details of the `character_actions` table to see your composite key.
+This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row. View the details of the `character_actions` table to see your composite key.
 
 #### HINTS
 
@@ -2176,14 +2156,14 @@ View the details of the `character_actions` table to see your composite key.
 
 ### 1540.1
 
-Insert three rows into `character_actions` for all the actions Yoshi can perform. His `character_id` is `7` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.
+Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the actions table. View the data in the `characters` and `actions` table to find the correct id's for the information.
 
 #### HINTS
 
 - Use the `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
-- You previously used `INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
+- Or, enter the above command and use the correct ID's
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1550. View `character_actions` Data
@@ -2212,6 +2192,7 @@ Add three more rows into `character_actions` for all of Daisy's actions. Her `ch
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
+- Or, enter the above command and use the correct ID's
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1570. Insert Bowser Actions
@@ -2227,13 +2208,14 @@ Add three more rows for Bowser's actions. His `character_id` is `5`. He can perf
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`
+- Or, enter the above command and use the correct ID's
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1580. Insert Toad Actions
 
 ### 1580.1
 
-Add three more rows for Toad's actions. His `character_id` is `4`.
+Add three more rows for Toad's actions.
 
 #### HINTS
 
@@ -2248,7 +2230,7 @@ Add three more rows for Toad's actions. His `character_id` is `4`.
 
 ### 1590.1
 
-Peach's `character_id` is `3`. She can perform all the actions as well, so add three more rows for those.
+Peach can perform all the actions as well, so add three more rows for hey.
 
 #### HINTS
 
@@ -2306,7 +2288,7 @@ View all the data in `character_actions` to see your rows.
 
 ### 1630.1
 
-Congratulations :tada: I think you've added enough data into the database. I love it! Take a look around to see what you ended up with. First, display all the tables you created.
+Congratulations :tada: You've added enough data into the database. Take a look around to see what you ended up with. First, display all the tables you created.
 
 #### HINTS
 
@@ -2332,7 +2314,7 @@ There's five tables there. Nice job. Next, take a look at all the data in the `c
 
 ### 1650.1
 
-Those are some lovely characters. Next, view all the data in `more_info`.
+Those are some lovely characters. View all the data in the `more_info` table.
 
 #### HINTS
 
@@ -2346,15 +2328,13 @@ Those are some lovely characters. Next, view all the data in `more_info`.
 
 ### 1660.1
 
-You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or...
-
-You added that as a foreign key, that means you can get all the data from both tables together. Introducing the `JOIN` command. Here's an example:
+You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both with a `JOIN` command:
 
 ```sql
 SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
 ```
 
-Enter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the keys.
+Enter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.
 
 #### HINTS
 
@@ -2368,18 +2348,11 @@ Enter a join command to see **all** the info from both tables. The two tables ar
 
 ### 1670.1
 
-Now you can see all the info from both tables. If you recall, that's a "one-to-one" relationship. So there's one row in each table that matches a row from the other.
-
-Here's the example again:
-
-```sql
-SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
-```
-
-Use another join command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.
+Now you can see all the info from both tables. If you recall, that's a "one-to-one" relationship. So there's one row in each table that matches a row from the other. Use another `JOIN` command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.
 
 #### HINTS
 
+- Here's the example again: `SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;`
 - Use `*` to see all the columns
 - You previously used `SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;`
 - Try entering `SELECT * FROM characters FULL JOIN sounds ON characters.character_id = sounds.character_id;`
@@ -2389,9 +2362,7 @@ Use another join command to view the `characters` and `sounds` tables together. 
 
 ### 1680.1 
 
-This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have **many** sounds. Looks like we never got around to adding sounds for a few of the characters.
-
-Lastly, how can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:
+This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:
 
 ```sql
 SELECT columns FROM junction_table
@@ -2399,7 +2370,7 @@ FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_col
 FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
 ```
 
-View all the data from `characters`, `actions`, and `character_actions`. Use the correct keys.
+Congratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables.
 
 #### HINTS
 
