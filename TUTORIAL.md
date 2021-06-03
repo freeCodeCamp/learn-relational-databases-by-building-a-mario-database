@@ -1000,11 +1000,10 @@ Take a look all the data in your table.
 
 ### 730.1
 
-Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for one of the row with 
+Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row with the lowest `character_id`.
 
 #### HINTS
 
-- Numbers don't need quotes
 - Use the `UPDATE`, `SET`, and `WHERE` keywords and strings where needed
 - Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`
 - Try entering `UPDATE characters SET name='Mario' WHERE character_id=1;` in the psql prompt. Or whatever the correct `character_id` is.
@@ -1100,7 +1099,7 @@ View all the data again, but put it in order by `character_id`.
 
 ### 800.1
 
-It looks good. Next, you are going to add a **primary key**. It is a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:
+It looks good. Next, you are going to add a **primary key**. It's a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:
 
 ```sql
 ALTER TABLE table_name ADD PRIMARY KEY(column_name);
@@ -1212,7 +1211,7 @@ View the tables in `mario_database` again with the **d**isplay command. You shou
 
 ### 880.1
 
-I wonder what that third one is. It says "characters_character_id_seq". I think I have a clue. View the details of the `characters` table.
+I wonder what that third one is. It says `characters_character_id_seq`. I think I have a clue. View the details of the `characters` table.
 
 #### HINTS
 
@@ -1946,7 +1945,7 @@ View all the data in the `sounds`. You should be able to see the "one-to-many" r
 
 ### 1380.1
 
-The sounds are looking good I think. Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.
+See the "one-to-many" relationship? Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.
 
 #### HINTS
 
@@ -2156,7 +2155,7 @@ This table will have multiple rows with the same `character_id`, and multiple ro
 
 ### 1540.1
 
-Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the actions table. View the data in the `characters` and `actions` table to find the correct id's for the information.
+Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the `actions` table. View the data in the `characters` and `actions` table to find the correct id's for the information.
 
 #### HINTS
 
@@ -2184,10 +2183,11 @@ View all the data in `character_actions` to see your rows.
 
 ### 1560.1
 
-Add three more rows into `character_actions` for all of Daisy's actions. Her `character_id` is `6` so use that on each row, and the `action_id` values are `1`, `2`, and `3`. Try to add them all with one command.
+Add three more rows into `character_actions` for all of Daisy's actions. She can perform all of the actions, as well.
 
 #### HINTS
 
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Use the `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
@@ -2199,10 +2199,11 @@ Add three more rows into `character_actions` for all of Daisy's actions. Her `ch
 
 ### 1570.1
 
-Add three more rows for Bowser's actions. His `character_id` is `5`. He can perform all the actions as well.
+Bowser can perform all the actions. Add three rows to the table for him.
 
 #### HINTS
 
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Use the `INSERT INTO` and `VALUES` keywords
 - Use `1`, `2`, and `3` for the `action_id` values 
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
@@ -2215,11 +2216,12 @@ Add three more rows for Bowser's actions. His `character_id` is `5`. He can perf
 
 ### 1580.1
 
-Add three more rows for Toad's actions.
+Next it Toad. Add three more rows his actions.
 
 #### HINTS
 
-- Add a row for each action
+- Add a row into `character_actions` for each action `Toad` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Use the `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3)`
@@ -2230,11 +2232,12 @@ Add three more rows for Toad's actions.
 
 ### 1590.1
 
-Peach can perform all the actions as well, so add three more rows for hey.
+You guessed it. Peach can perform all the actions as well, so add three more rows for her.
 
 #### HINTS
 
-- Use the `INSERT INTO` and `VALUES` keywords
+- Add a row into `character_actions` for each action `Peach` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(4, 1), (4, 2), (4, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3);`
@@ -2248,7 +2251,9 @@ Add three more rows for Luigi's actions.
 
 #### HINTS
 
-- He can do all the actions as well
+- Add a row into `character_actions` for each action `Luigi` can perform
+- He can perform all the actions
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Use the `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(3, 1), (3, 2), (3, 3)`
@@ -2263,8 +2268,8 @@ Last is Mario, add three rows for his actions.
 
 #### HINTS
 
-- He can do all the actions
-- Use the `INSERT INTO` and `VALUES` keywords
+- Add a row into `character_actions` for each action `Mario` can perform
+- View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(2, 1), (2, 2), (2, 3)`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(1, 1), (1, 2), (1, 3);`
@@ -2274,7 +2279,7 @@ Last is Mario, add three rows for his actions.
 
 ### 1620.1
 
-View all the data in `character_actions` to see your rows.
+That was a lot of work. View all the data in `character_actions` to see the rows you ended up with.
 
 #### HINTS
 
@@ -2288,7 +2293,7 @@ View all the data in `character_actions` to see your rows.
 
 ### 1630.1
 
-Congratulations :tada: You've added enough data into the database. Take a look around to see what you ended up with. First, display all the tables you created.
+Well done. The database is complete for now. Take a look around to see what you ended up with. First, display all the tables you created.
 
 #### HINTS
 
@@ -2328,7 +2333,7 @@ Those are some lovely characters. View all the data in the `more_info` table.
 
 ### 1660.1
 
-You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both with a `JOIN` command:
+You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:
 
 ```sql
 SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
