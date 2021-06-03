@@ -2375,7 +2375,7 @@ FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_col
 FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
 ```
 
-Congratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables.
+Congratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the "many-to_many" relationship. Many characters will have many actions.
 
 #### HINTS
 
