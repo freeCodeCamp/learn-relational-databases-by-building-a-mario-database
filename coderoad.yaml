@@ -2,6 +2,7 @@ version: '0.3.1'
 config:
   setup:
     commands:
+      - sudo chown -R postgres:postgres /var/lib/postgresql/12/main
       - sudo service postgresql stop
       - sudo cp ~/project/.freeCodeCamp/.bashrc ~
       - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
