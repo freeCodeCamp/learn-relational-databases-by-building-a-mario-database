@@ -1,4 +1,4 @@
-version: '0.3.1'
+version: '0.3.2'
 config:
   setup:
     commands:
@@ -19,7 +19,7 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-relational-databases-by-building-a-mario-database
-    branch: v0.3.1
+    branch: v0.3.2
   reset:
     commands:
       - 'bash ./.freeCodeCamp/reset.sh'
