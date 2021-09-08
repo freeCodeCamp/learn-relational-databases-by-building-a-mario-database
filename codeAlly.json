@@ -1,7 +1,7 @@
 {
   "init": "exit",
   "envVariables": [
-    ["CODEROAD_TUTORIAL_URL", "https://raw.githubusercontent.com/moT01/learn-relational-databases-by-building-a-mario-database/main/tutorial.json"],
+    ["CODEROAD_TUTORIAL_URL", "https://raw.githubusercontent.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database/main/tutorial.json"],
     ["CODEROAD_DISABLE_RUN_ON_SAVE", true]
   ],
   "extensions": ["coderoad.coderoad"]
