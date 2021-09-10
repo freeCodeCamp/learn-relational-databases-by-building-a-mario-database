@@ -18,7 +18,7 @@ config:
       tap: --reporter=mocha-tap-reporter
     directory: .freeCodeCamp
   repo:
-    uri: https://github.com/freeCodeCamp/.learn-relational-databases-by-building-a-mario-database
+    uri: https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database
     branch: v1.0.0
   reset:
     commands:
