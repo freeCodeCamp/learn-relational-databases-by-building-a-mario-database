@@ -9,3 +9,11 @@ Whenever something on the version branch gets changed, add the new branch name a
 ## [v1.0.0]
 
 - Initial soft release with news article
+
+## [v1.0.1]
+
+- Fix issues with logs not being generated after reset
+  - Move the two SQL log files to ~
+  - Change to that location in postgresql.conf
+  - Update all watchers to that location
+  - Change tests to get logs from those locations
