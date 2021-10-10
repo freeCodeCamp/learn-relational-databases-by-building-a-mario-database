@@ -1076,7 +1076,7 @@
               "f8a8e972a9058c169bf1e366e23a72db30b5234c"
             ]
           },
-          "content": "There's two columns. You won't either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
+          "content": "There's two columns. You won't need either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
           "hints": [
             "Use the `ALTER TABLE` and `DROP COLUMN` keywords",
             "Here's an example: `ALTER TABLE table_name DROP COLUMN column_name;`",
@@ -1156,7 +1156,7 @@
               "a766005ceb1e52dc01371bcb0575a09567363f81"
             ]
           },
-          "content": "Still two. You won't either of those for the new database either. Drop `second_table` from your database. Here's an example:\n\n```sql\nDROP TABLE table_name;\n```",
+          "content": "Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:\n\n```sql\nDROP TABLE table_name;\n```",
           "hints": [
             "Enter `DROP TABLE second_table;` in the psql prompt",
             "Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already"
@@ -1837,7 +1837,7 @@
               "d7dc8f47f42bf1a9370c57e45a12be439880daf3"
             ]
           },
-          "content": "Her favorite color was updated. Toadstool's name wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.",
+          "content": "Her favorite color was updated. Toadstool's name is wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.",
           "hints": [
             "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
             "Here's the second part of the command: `SET name='Toad' WHERE favorite_color='Red';`",
@@ -4071,7 +4071,7 @@
               "4ee414c340930842095c937f1a2370bb4309149f"
             ]
           },
-          "content": "Next it Toad. Add three more rows his actions.",
+          "content": "Next is Toad. Add three more rows for his actions.",
           "hints": [
             "Add a row into `character_actions` for each action `Toad` can perform",
             "View the data in the `characters` and `actions` table to find the correct id's for the information.",

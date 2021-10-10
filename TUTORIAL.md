@@ -560,7 +560,7 @@ Looks like they're all gone. Remind yourself what columns you have in `second_ta
 
 ### 400.1
 
-There's two columns. You won't either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
+There's two columns. You won't need either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.
 
 #### HINTS
 
@@ -601,7 +601,7 @@ Okay, the table has no rows or columns left. View the tables in this database to
 
 ### 430.1
 
-Still two. You won't either of those for the new database either. Drop `second_table` from your database. Here's an example:
+Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:
 
 ```sql
 DROP TABLE table_name;
@@ -973,7 +973,7 @@ The command you just used does exactly what it sounds like. It finds the row whe
 
 ### 710.1
 
-Her favorite color was updated. Toadstool's name wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.
+Her favorite color was updated. Toadstool's name is wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.
 
 #### HINTS
 
@@ -2216,7 +2216,7 @@ Bowser can perform all the actions. Add three rows to the table for him.
 
 ### 1580.1
 
-Next it Toad. Add three more rows his actions.
+Next is Toad. Add three more rows for his actions.
 
 #### HINTS
 
