@@ -1,4 +1,4 @@
-version: '1.0.1'
+version: '1.0.2'
 config:
   setup:
     commands:
@@ -21,8 +21,8 @@ config:
       tap: --reporter=mocha-tap-reporter
     directory: .freeCodeCamp
   repo:
-    uri: https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database
-    branch: v1.0.1
+    uri: https://github.com/gikf/learn-relational-databases-by-building-a-mario-database
+    branch: v1.0.2
   reset:
     commands:
       - 'bash ./.freeCodeCamp/reset.sh'

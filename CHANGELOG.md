@@ -17,3 +17,10 @@ Whenever something on the version branch gets changed, add the new branch name a
   - Change to that location in postgresql.conf
   - Update all watchers to that location
   - Change tests to get logs from those locations
+
+## [v1.0.2]
+
+- Fix typo in `yippee.wav`
+  - Change `TUTORIAL.md`
+  - Change test `.freeCodeCamp/test/1320.test.js` in step `1320.1`
+  - Change `.freeCodeCamp/db.sql` in step `1330.1`
