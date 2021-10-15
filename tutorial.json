@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": {
     "title": "Learn Relational Databases by Building a Mario Database",
     "description": "> Welcome to the Relational Database Lessons!"
@@ -33,8 +33,8 @@
       "directory": ".freeCodeCamp"
     },
     "repo": {
-      "uri": "https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database",
-      "branch": "v1.0.1"
+      "uri": "https://github.com/gikf/learn-relational-databases-by-building-a-mario-database",
+      "branch": "v1.0.2"
     },
     "reset": {
       "commands": [
@@ -3403,14 +3403,14 @@
               "../queryResults.log"
             ],
             "commits": [
-              "bd3c282c350e383db96b320ade01c4fc5eb5b3ed"
+              "9d175997ff599c57acae2932a9c42f6cd32e4409"
             ]
           },
-          "content": "Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` again for the foreign key value.",
+          "content": "Add another row with a `filename` of `yippee.wav`. Use Mario's `character_id` again for the foreign key value.",
           "hints": [
             "Don't forget the quotes",
             "You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`",
-            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`",
+            "Try entering `INSERT INTO sounds(filename, character_id) VALUES('yippee.wav', 1);`",
             "Or, enter the above command and replace the `1` with the correct `character_id`",
             "Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already"
           ]
@@ -3430,7 +3430,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "baa5e945de47bd24814553b9b67864cb840d9099"
+              "31f5035ccec360935d228158e936b24ba926a7a1"
             ]
           },
           "content": "Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.",
@@ -3456,7 +3456,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9a68324b39da72ea078b7f7818019d099426157d"
+              "c4273ae3390904cf60b40823ab9bf92f7295fe77"
             ]
           },
           "content": "Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.",
@@ -3481,7 +3481,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "bb5979eae181e5eb183b236f9b8683adeafe4e91"
+              "25bbe705f833b6d6b67ff722ab152eae04078b2a"
             ]
           },
           "content": "Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.",
@@ -3508,7 +3508,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b20468401ef9b145407120394927ea75ddd6e9ee"
+              "9e15a33b81779f6036bafddb99db868aad87cba0"
             ]
           },
           "content": "Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.",
@@ -3535,7 +3535,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c26942361ff268b6956f6781f11e60c377c4f0ac"
+              "90a161beb64141d0f5ebcaab5f7041517281f4aa"
             ]
           },
           "content": "View all the data in the `sounds`. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
@@ -3562,7 +3562,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a885596310648a0d9442d14717c67f1c6b70c447"
+              "15d7e1a4b45a6d6d92f93ac947413f94607edb1d"
             ]
           },
           "content": "See the \"one-to-many\" relationship? Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.",
@@ -3588,7 +3588,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fd15ef3e144250e6a915e918ee1603b1cfdc5652"
+              "45d846611f3844276bd559cd823be9544a886508"
             ]
           },
           "content": "Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.",
@@ -3614,7 +3614,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "11bd632346c8042aeb4aa658a502ea3e54b9be7c"
+              "44bcf8bd6f1f1abff44fdc380847f9712cd546a8"
             ]
           },
           "content": "The actions table won't have any foreign keys. It's going to have a \"many-to-many\" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later. Insert a row into the `actions` table. Give it an `action` of `run`.",
@@ -3641,7 +3641,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "095fdf9af296a4d4bf7f6ccf357d467b329d4112"
+              "664fb7fc8e8f62e85ba2c36d150e84fda5ca387f"
             ]
           },
           "content": "Insert another row into the `actions` table. Give it an `action` of `jump`.",
@@ -3668,7 +3668,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "16f2992785beb8ab6667843e902841b2749ab82c"
+              "bdffb135be3dc955549fb418dd5ef0999d9edd8d"
             ]
           },
           "content": "Add another action row with an `action` of `duck`.",
@@ -3695,7 +3695,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c64d1581445e579fc098b23626a51f7eece65bc9"
+              "8171853c5bfe14f31e5058b78157b6809e53da78"
             ]
           },
           "content": "View all the data in `actions` to make sure there's no mistakes.",
@@ -3722,7 +3722,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "00e3fbf3be8cab5b008b3219b3c3a2b7c26acfaa"
+              "79e33f2f8ff93a8590888fe2e4d05d137020aa4f"
             ]
           },
           "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
@@ -3748,7 +3748,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b0d2d38916e8c803308a7e6c8e9cb75c5530568f"
+              "c9e8d0838fa1e07639979f0e2fddc761eb41cfd3"
             ]
           },
           "content": "Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship. Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.",
@@ -3774,7 +3774,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ab82da0eef2ed9afe5a5d18fdcf73792a23f9225"
+              "93191f5adbc3ce289ee7aac8c3d017b597dba003"
             ]
           },
           "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.",
@@ -3800,7 +3800,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0e732a26a6181550742e8e56514e46a30d0ec190"
+              "03476d345f403213787b457fe8ae8f13e6e6ae31"
             ]
           },
           "content": "View the details of the `character_actions` table to see the foreign key you added.",
@@ -3826,7 +3826,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "288674c8e8909528df8545e6b1ea22f598d4c6b9"
+              "69f610abd283f44e4951d56c96cfb869f12485db"
             ]
           },
           "content": "Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.",
@@ -3852,7 +3852,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "528454884f9d76aae44c6a2acb00a04ca89e2597"
+              "1ddbaa61482a54f78b2f1305bf77147797e5152d"
             ]
           },
           "content": "This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table.",
@@ -3879,7 +3879,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "91f192706a2d1706476d333ad83eb8424a2875ef"
+              "1c1dd62f48531667d7f593e7a2f4680ce42acb0d"
             ]
           },
           "content": "View the details of the `character_actions` table to see your keys.",
@@ -3905,7 +3905,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "dc49a3323906703ff0507b5c67fb2e05d4b1bfdf"
+              "44b1e56773d2d68ea078002c0508eaeafa56754a"
             ]
           },
           "content": "Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table.",
@@ -3929,7 +3929,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2377a60ea43adbc17f695f8e2455ac9f5ffa8e08"
+              "f5ef97475e48798acf6f7f1723bc21e976439425"
             ]
           },
           "content": "This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row. View the details of the `character_actions` table to see your composite key.",
@@ -3955,7 +3955,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "aa19afab8a85664152e888cd735974f15a8f077f"
+              "8c1a44e3157f1554496884b06dfc50e3efa4f974"
             ]
           },
           "content": "Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the `actions` table. View the data in the `characters` and `actions` table to find the correct id's for the information.",
@@ -3982,7 +3982,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "053dd77ca0caa65fed2ab0125cd7d13d4d30d732"
+              "24c4df3f252de1cb381b8249c01b88cd65e77c0b"
             ]
           },
           "content": "View all the data in `character_actions` to see your rows.",
@@ -4009,7 +4009,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fc849a771275b9eba7d84bb318e90ba3c0423002"
+              "92d955fa1754b80bc750d03bfc3f219292280ad9"
             ]
           },
           "content": "Add three more rows into `character_actions` for all of Daisy's actions. She can perform all of the actions, as well.",
@@ -4038,7 +4038,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8b90195419f046a2f0373bb2021945eaf3c0cd44"
+              "e2067a6abf3d96d78bf0721def025d583a2b66f3"
             ]
           },
           "content": "Bowser can perform all the actions. Add three rows to the table for him.",
@@ -4068,7 +4068,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "4ee414c340930842095c937f1a2370bb4309149f"
+              "ba752dd5ae0fe35f4052fa548a94a7398f542701"
             ]
           },
           "content": "Next is Toad. Add three more rows for his actions.",
@@ -4097,7 +4097,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "589bd0a6deca8c0d9086ea5c0591c965256ea1c4"
+              "5d1feb88772931d4fe6bb8bb5dff18b256ebb90d"
             ]
           },
           "content": "You guessed it. Peach can perform all the actions as well, so add three more rows for her.",
@@ -4125,7 +4125,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "245c46b38c9d9ef19c0e5ab58da30a62f0e10afb"
+              "f693bbd70ed0afa268d9826201517d1b9f640354"
             ]
           },
           "content": "Add three more rows for Luigi's actions.",
@@ -4155,7 +4155,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9668e90d0973a7d68d7c2d758b295308fc43947a"
+              "a441b3aed93a4ea9283edc86ecf4697589cccf00"
             ]
           },
           "content": "Last is Mario, add three rows for his actions.",
@@ -4183,7 +4183,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e63974c9535126d4dd129ff54b2e48b2475b3b60"
+              "059d1332a4caa940aaf911018f99245f87567777"
             ]
           },
           "content": "That was a lot of work. View all the data in `character_actions` to see the rows you ended up with.",
@@ -4210,7 +4210,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8a42f4ab0fada6430f01010b3bfd78216358222f"
+              "6884e75f399058a4e97879e25f4a79cb562c76d5"
             ]
           },
           "content": "Well done. The database is complete for now. Take a look around to see what you ended up with. First, display all the tables you created.",
@@ -4235,7 +4235,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f603ddc3d4e06a997df8c79b76be9d9694e9edf5"
+              "f6b6b1e5d4f603036210f8d12c1ec11a3f32ac1b"
             ]
           },
           "content": "There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.",
@@ -4262,7 +4262,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "63cb1e04bdd13ab8f6f5da87665bfd9a18dc3260"
+              "ab412eae0c0329dd6b87f67f11cb2ba2cf3ee703"
             ]
           },
           "content": "Those are some lovely characters. View all the data in the `more_info` table.",
@@ -4289,7 +4289,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fb82d0cf2db4499a922ce534a36e4faea1386279"
+              "9c4d45f9c861007f5d5bf50bdbe1312146c958c6"
             ]
           },
           "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.",
@@ -4316,7 +4316,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a5e8f444ae9063b5fd34ef5f92f3ab52c8e1fccb"
+              "4739acddb8a8fc492f8f5f25150057dbf220c8c5"
             ]
           },
           "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other. Use another `JOIN` command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
@@ -4343,10 +4343,10 @@
               "../queryResults.log"
             ],
             "commits": [
-              "48d1dbc994a8419e56f0c6591b61a3b8c56aad12"
+              "0f3905f9dbf548f35838a26544a820c579682823"
             ]
           },
-          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column \nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nCongratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the \"many-to_many\" relationship. Many characters will have many actions.",
+          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column\nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nCongratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the \"many-to_many\" relationship. Many characters will have many actions.",
           "hints": [
             "Use the `character_id` column to join `character_actions` and `characters`",
             "Use the `action_id` column to join `character_actions` and `actions`",
