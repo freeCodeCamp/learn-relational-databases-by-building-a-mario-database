@@ -216,7 +216,7 @@ Looks like it worked. **D**isplay the details of `second_table` again to see if 
 
 ### 170.1
 
-Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`. 
+Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.
 
 #### HINTS
 
@@ -594,7 +594,7 @@ Okay, the table has no rows or columns left. View the tables in this database to
 
 - Use the **d**isplay shortcut command
 - You don't need a table name with the command
-- Try entering `\d` 
+- Try entering `\d`
 - Enter `psql --username=freecodecamp dbname=second_database` into the terminal to log in if you aren't already
 
 ## 430. Drop `second_table`
@@ -1258,7 +1258,7 @@ View the tables in `mario_database` again with the display command. There should
 - Enter the `\d` command
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
-## 910. Add `birthday` Column 
+## 910. Add `birthday` Column
 
 ### 910.1
 
@@ -1864,13 +1864,13 @@ The first file is named `its-a-me.wav`. Insert it into the `sounds` table with M
 
 ### 1320.1
 
-Add another row with a `filename` of `yipee.wav`. Use Mario's `character_id` again for the foreign key value.
+Add another row with a `filename` of `yippee.wav`. Use Mario's `character_id` again for the foreign key value.
 
 #### HINTS
 
 - Don't forget the quotes
 - You previously used: `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
-- Try entering `INSERT INTO sounds(filename, character_id) VALUES('yipee.wav', 1);`
+- Try entering `INSERT INTO sounds(filename, character_id) VALUES('yippee.wav', 1);`
 - Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
@@ -2098,7 +2098,7 @@ Add another column to `character_actions` named `action_id`. Give it a type of `
 
 ### 1500.1
 
-This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table. 
+This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table.
 
 #### HINTS
 
@@ -2205,7 +2205,7 @@ Bowser can perform all the actions. Add three rows to the table for him.
 
 - View the data in the `characters` and `actions` table to find the correct id's for the information.
 - Use the `INSERT INTO` and `VALUES` keywords
-- Use `1`, `2`, and `3` for the `action_id` values 
+- Use `1`, `2`, and `3` for the `action_id` values
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`
@@ -2365,13 +2365,13 @@ Now you can see all the info from both tables. If you recall, that's a "one-to-o
 
 ## 1680. Join `character_actions` with `characters` and `actions`
 
-### 1680.1 
+### 1680.1
 
 This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:
 
 ```sql
 SELECT columns FROM junction_table
-FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column 
+FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column
 FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
 ```
 
