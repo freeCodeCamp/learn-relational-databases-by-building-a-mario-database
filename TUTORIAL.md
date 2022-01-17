@@ -345,7 +345,7 @@ Take look at the details of `second_table` to see your columns.
 
 ### 260.1
 
-You can see the `VARCHAR` type there (displayed as `character varying (30)`). The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
+You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
 
 ```sql
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
