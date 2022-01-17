@@ -1199,7 +1199,7 @@ That's better. The table looks complete for now. Next, create a new table named 
 
 ### 870.1
 
-View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.
+View the tables in `mario_database` again with the **d**isplay command. You should have two tables now (and one `sequence`, which is the iterator for the primary key of the `characters` table).
 
 #### HINTS
 
