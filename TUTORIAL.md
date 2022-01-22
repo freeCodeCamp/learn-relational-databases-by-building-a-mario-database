@@ -376,7 +376,7 @@ Take look at the details of `second_table` again to see if it got renamed.
 
 ### 280.1
 
-It worked. Rows are the actual data in the table. You can one like this:
+It worked. Rows are the actual data in the table. You can add one like this:
 
 ```sql
 INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
