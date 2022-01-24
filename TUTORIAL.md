@@ -1430,7 +1430,7 @@ Add a row to `more_info` with the above data for Mario using the `INSERT INTO` a
 
 #### HINTS
 
-- Here's an example: `INSERT INTO table_name(columns) VALUE(values);`
+- Here's an example: `INSERT INTO table_name(columns) VALUES(values);`
 - You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
 - Or, enter the above command and replace the `1` with the correct `character_id`
