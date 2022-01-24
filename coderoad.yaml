@@ -1,21 +1,10 @@
 id: 'freeCodeCamp/learn-relational-databases-by-building-a-mario-database:v1.0.0'
-version: '1.0.2'
+version: '1.0.3'
 config:
   setup:
     commands:
-      - sudo touch ~/pg.log
-      - sudo chmod 777 ~/pg.log
-      - sudo touch ~/queryResults.log
-      - sudo chmod 777 ~/queryResults.log
-      - sudo cp ~/project/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
-      - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
-      - sudo cp ~/project/.freeCodeCamp/.bashrc ~
-      - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
-      - sudo chown -R postgres:postgres /var/lib/postgresql/12/main
-      - sudo service postgresql stop
+      - ./.freeCodeCamp/reset.sh
       - cd .freeCodeCamp && npm install
-      - sudo service postgresql start
-      - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
   testRunner:
     command: npm run programmatic-test
     args:
@@ -23,15 +12,18 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database
-    branch: v1.0.2
+    branch: v1.0.3
+  continue:
+    commands:
+      - './.freeCodeCamp/reset.sh'
   reset:
     commands:
-      - 'bash ./.freeCodeCamp/reset.sh'
+      - './.freeCodeCamp/reset.sh'
   dependencies:
     - name: node
       version: '>=10'
   webhook:
-    url: 'http://freecodecamp.org/coderoad-challenge-completed'
+    url: 'http://freecodecamp.dev/coderoad-challenge-completed'
     events:
       init: false
       reset: false

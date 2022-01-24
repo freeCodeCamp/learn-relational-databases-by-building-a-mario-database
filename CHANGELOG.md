@@ -24,3 +24,10 @@ Whenever something on the version branch gets changed, add the new branch name a
   - Change `TUTORIAL.md`
   - Change test `.freeCodeCamp/test/1320.test.js` in step `1320.1`
   - Change `.freeCodeCamp/db.sql` in step `1330.1`
+
+## [v1.0.3]
+
+- Move startup commands to `reset.sh`
+- Run `reset.sh` on continue
+- Add `IF EXISTS` to `db.sql` when dropping database to stop warnings
+- Terminate only user `freeCodeCamp` from db when resetting
