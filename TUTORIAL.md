@@ -1534,7 +1534,7 @@ Add a row for Peach using the above info. Be sure to add her `character_id` as w
 
 ### 1090.1
 
-Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:
+Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition you used several times earlier to delete and update rows. You can use it to view rows as well. Here's an example:
 
 ```sql
 SELECT columns FROM table_name WHERE condition;
