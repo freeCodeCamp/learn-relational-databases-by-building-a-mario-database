@@ -1855,7 +1855,7 @@ The first file is named `its-a-me.wav`. Insert it into the `sounds` table with M
 
 - Don't for get the quotes
 - Use `INSERT INTO` and `VALUES` keywords
-- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2);`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
