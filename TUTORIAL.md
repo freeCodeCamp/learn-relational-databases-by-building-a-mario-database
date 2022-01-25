@@ -1938,7 +1938,7 @@ View all the data in the `sounds`. You should be able to see the "one-to-many" r
 - Use the `SELECT` and `FROM` keywords
 - Here's an example: `SELECT columns FROM table_name;`
 - Use `*` to select all the columns
-- Try entering `SELECT * FROM characters;`
+- Try entering `SELECT * FROM sounds;`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1380. Create `actions` Table
