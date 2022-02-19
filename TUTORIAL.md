@@ -1430,7 +1430,7 @@ Add a row to `more_info` with the above data for Mario using the `INSERT INTO` a
 
 #### HINTS
 
-- Here's an example: `INSERT INTO table_name(columns) VALUE(values);`
+- Here's an example: `INSERT INTO table_name(columns) VALUES(values);`
 - You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`
 - Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);`
 - Or, enter the above command and replace the `1` with the correct `character_id`
@@ -1855,7 +1855,7 @@ The first file is named `its-a-me.wav`. Insert it into the `sounds` table with M
 
 - Don't for get the quotes
 - Use `INSERT INTO` and `VALUES` keywords
-- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUE(value_1, value_2);`
+- Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2);`
 - Try `INSERT INTO sounds(filename, character_id) VALUES('its-a-me.wav', 1);`
 - Or, enter the above command and replace the `1` with the correct `character_id`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
@@ -1938,7 +1938,7 @@ View all the data in the `sounds`. You should be able to see the "one-to-many" r
 - Use the `SELECT` and `FROM` keywords
 - Here's an example: `SELECT columns FROM table_name;`
 - Use `*` to select all the columns
-- Try entering `SELECT * FROM characters;`
+- Try entering `SELECT * FROM sounds;`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1380. Create `actions` Table
