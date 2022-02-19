@@ -2856,7 +2856,7 @@
               "048ad891c35293e16f36724faf9b68b5da882ee2"
             ]
           },
-          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition you used several times earlier to delete and update rows. You can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
+          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
           "hints": [
             "Don't forget the semi-colon :smile:",
             "Use `name='Toad'` for the condition",
