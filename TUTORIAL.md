@@ -1781,7 +1781,7 @@ View the tables in `mario_database` to make sure it worked.
 #### HINTS
 
 - Use the **l**ist command
-- Try entering `\l`
+- Try entering `\d`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1270. Add `filename` Column
