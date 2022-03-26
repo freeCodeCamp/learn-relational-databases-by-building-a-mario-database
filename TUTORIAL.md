@@ -1780,7 +1780,7 @@ View the tables in `mario_database` to make sure it worked.
 
 #### HINTS
 
-- Use the **l**ist command
+- Use the **d**isplay shortcut command
 - Try entering `\d`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
