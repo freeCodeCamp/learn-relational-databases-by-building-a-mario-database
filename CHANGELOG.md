@@ -31,3 +31,11 @@ Whenever a new version is created, add the new branch name and the changes here
 - Run `reset.sh` on continue
 - Add `IF EXISTS` to `db.sql` when dropping database to stop warnings
 - Terminate only user `freeCodeCamp` from db when resetting
+
+## [v1.0.4]
+
+- This is an attempt to fix the frequent [issues that have come up on the forum](https://forum.freecodecamp.org/t/bug-in-building-a-mario-database/493206)
+  - Instead of loading a new test file, and commenting out the old one on each commit, this loads all the tests in the `INIT` commit and uses mocha settings to only run tests in a specific file. The commits now just change the test file that should run.
+- There was an issue with the last commit not loading after using the reset button in a tutorial. I added a final commit at end that seems to have resolved it.
+- Fix test text on 1660, 1670, and 1680
+- Fix bad hints on 1260 - [Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/45532)
