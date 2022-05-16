@@ -1948,7 +1948,7 @@
               "c52086cab70c4062f3a9a35f5f2dfd56c2180f3f"
             ]
           },
-          "content": "Looks like it worked. Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
+          "content": "Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
           "hints": [
             "Use the `UPDATE`, `SET`, and `WHERE` keywords",
             "Here's an example: `UPDATE table_name SET column_name=newvalue WHERE condition;`",

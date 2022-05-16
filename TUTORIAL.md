@@ -1027,7 +1027,7 @@ Take a look all the data in your table again to see if Mario's name got changed 
 
 ### 750.1
 
-Looks like it worked. Toad's favorite color wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.
+Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.
 
 #### HINTS
 
