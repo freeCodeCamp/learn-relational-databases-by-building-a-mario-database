@@ -97,7 +97,7 @@
           "content": "Your virtual machine comes with PostgreSQL installed. You will use the Psql terminal application to interact with it. Log in by typing `psql --username=freecodecamp dbname=postgres` into the terminal and pressing enter.",
           "hints": [
             "Capitalization matters",
-            "Type `psql --username=freecodecamp dbname=postgres` into the terminal and press enter",
+            "Type `psql --username=freecodecamp --dbname=postgres` into the terminal and press enter",
             "If the terminal isn't open, find the \"hamburger\" menu at the top left of the window, navigate to the \"Terminal\" tab, and click \"New Terminal\""
           ]
         }
