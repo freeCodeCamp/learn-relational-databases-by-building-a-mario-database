@@ -726,7 +726,7 @@ Create a new table name `characters`, it will hold some basic information about 
 
 - Use the `CREATE TABLE` keywords
 - Don't forget the parenthesis and semi-colon at the end
-- Here's an example: `CREAT TABLE table_name();`
+- Here's an example: `CREATE TABLE table_name();`
 - Try entering `CREATE TABLE characters();`
 - Enter `psql --username=freecodecamp dbname=mario_database` into the terminal to log in if you aren't already
 
