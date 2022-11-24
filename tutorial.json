@@ -143,7 +143,7 @@
               "ec6c88734c3a3548725e476727cc50c6b8f8e31d"
             ]
           },
-          "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
+          "content": "The databases you see are there by default. You can make your own like this:\r\n\r\n```sql\r\nCREATE DATABASE database_name;\r\n```\r\n\r\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
           "hints": [
             "Don't forget the semi-colon at the end",
             "Type `CREATE DATABASE first_database;` into the psql prompt and press enter",
@@ -293,7 +293,7 @@
               "55ce121eab3b854427010c69435da9dccd0afee1"
             ]
           },
-          "content": "Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
+          "content": "Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:\r\n\r\n```sql\r\nCREATE TABLE table_name();\r\n```\r\n\r\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
           "hints": [
             "Enter `CREATE TABLE first_table();` into the prompt",
             "Don't forget the semi-colon",
@@ -419,7 +419,7 @@
               "a67b9b7bd708cab7b3ce594b23f5426af2dd6677"
             ]
           },
-          "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
+          "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\r\n\r\n```sql\r\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\r\n```\r\n\r\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
           "hints": [
             "Try entering `ALTER TABLE second_table ADD COLUMN first_column INT;`",
             "Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already"
@@ -578,7 +578,7 @@
               "52bcb62d077a52d37255a7f746d08d3a7acd41fc"
             ]
           },
-          "content": "Those are some good looking columns. You will probably need to know how to remove them. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
+          "content": "Those are some good looking columns. You will probably need to know how to remove them. Here's an example:\r\n\r\n```sql\r\nALTER TABLE table_name DROP COLUMN column_name;\r\n```\r\n\r\nDrop your `age` column.",
           "hints": [
             "Try entering `ALTER TABLE second_table DROP COLUMN age;`",
             "Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already"
@@ -655,7 +655,7 @@
               "b8d3e51d3c0b531fd599bcb23915a557cc8e7c0f"
             ]
           },
-          "content": "A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.\n\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
+          "content": "A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.\r\n\r\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
           "hints": [
             "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
             "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
@@ -708,7 +708,7 @@
               "fe093d8a8d2d2ee757d0012aa9b97543a58df020"
             ]
           },
-          "content": "You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
+          "content": "You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:\r\n\r\n```sql\r\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\r\n```\r\n\r\nRename the `name` column to `username`.",
           "hints": [
             "Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column",
             "Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`",
@@ -759,7 +759,7 @@
               "1b76a40529407c5e7a58c3ead0b7529a607e8ef0"
             ]
           },
-          "content": "It worked. Rows are the actual data in the table. You can add one like this:\n\n```sql\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\n```\n\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
+          "content": "It worked. Rows are the actual data in the table. You can add one like this:\r\n\r\n```sql\r\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\r\n```\r\n\r\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
           "hints": [
             "The table is `second_table`, the column names are `id` and `username`, and the values to add are `1` and `'Samus'`",
             "Don't forget the semi-colon",
@@ -786,7 +786,7 @@
               "f101b5efcfa400825420434b7c01da7fbe3995a2"
             ]
           },
-          "content": "You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
+          "content": "You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:\r\n\r\n```sql\r\nSELECT columns FROM table_name;\r\n```\r\n\r\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
           "hints": [
             "Replace `columns` in the example with the all (`*`) symbol",
             "Use `second_table` as the table name",
@@ -920,7 +920,7 @@
               "6592d43206c35e69f321fdb41988bdd83d901b82"
             ]
           },
-          "content": "That gives me an idea :smiley: You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
+          "content": "That gives me an idea :smiley: You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:\r\n\r\n```sql\r\nDELETE FROM table_name WHERE condition;\r\n```\r\n\r\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
           "hints": [
             "Check your table name and condition closely",
             "Try entering `DELETE FROM second_table WHERE username='Luigi';`",
@@ -1161,7 +1161,7 @@
               "4184241c562b8c42aecfe62525ee5bfd8d0af537"
             ]
           },
-          "content": "Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:\n\n```sql\nDROP TABLE table_name;\n```",
+          "content": "Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:\r\n\r\n```sql\r\nDROP TABLE table_name;\r\n```",
           "hints": [
             "Enter `DROP TABLE second_table;` in the psql prompt",
             "Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already"
@@ -1235,7 +1235,7 @@
               "444e0d81c097bd49b87cf17b55e2da4f519de75f"
             ]
           },
-          "content": "Rename `first_database` to `mario_database`. You can rename a database like this:\n\n```sql\nALTER DATABASE database_name RENAME TO new_database_name;\n```",
+          "content": "Rename `first_database` to `mario_database`. You can rename a database like this:\r\n\r\n```sql\r\nALTER DATABASE database_name RENAME TO new_database_name;\r\n```",
           "hints": [
             "Try entering `ALTER DATABASE first_database RENAME TO mario_database;`",
             "Enter `psql --username=freecodecamp --dbname=second_database` into the terminal to log in if you aren't already"
@@ -1573,7 +1573,7 @@
               "3e592006d6878829b576cba203f4b5d937f72d49"
             ]
           },
-          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
+          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\r\n\r\n```sql\r\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\r\n```\r\n\r\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
           "hints": [
             "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
             "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`",
@@ -1709,7 +1709,7 @@
               "6b444ea219c8bb09048b9ce58ce4de15e0598f53"
             ]
           },
-          "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color)\nVALUES('Mario', 'Mushroom Kingdom', 'Red'),\n('Luigi', 'Mushroom Kingdom', 'Green'),\n('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
+          "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\r\n\r\n```sql\r\nINSERT INTO characters(name, homeland, favorite_color)\r\nVALUES('Mario', 'Mushroom Kingdom', 'Red'),\r\n('Luigi', 'Mushroom Kingdom', 'Green'),\r\n('Peach', 'Mushroom Kingdom', 'Pink');\r\n```\r\n\r\nAdd two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
           "hints": [
             "Make sure you added commas and quotes where needed",
             "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');` in the psql prompt",
@@ -1789,7 +1789,7 @@
               "6e84bf7a75252733494e9a920f4b90ef39e338e1"
             ]
           },
-          "content": "It looks good, but there's a few mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
+          "content": "It looks good, but there's a few mistakes. You can change a value like this:\r\n\r\n```sql\r\nUPDATE table_name SET column_name=new_value WHERE condition;\r\n```\r\n\r\nYou used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
           "hints": [
             "There should be two sets of single quotes in this command",
             "Without the keywords, it looks like this: `characters favorite_color='Orange' name='Daisy';`",
@@ -2055,7 +2055,7 @@
               "ca58b66c3ade77af5d7489970241dc14ef92713e"
             ]
           },
-          "content": "Actually, you should put that in order. Here's an example:\n\n```sql\nSELECT columns FROM table_name ORDER BY column_name;\n```\n\nView all the data again, but put it in order by `character_id`.",
+          "content": "Actually, you should put that in order. Here's an example:\r\n\r\n```sql\r\nSELECT columns FROM table_name ORDER BY column_name;\r\n```\r\n\r\nView all the data again, but put it in order by `character_id`.",
           "hints": [
             "Try entering `SELECT * FROM characters ORDER BY character_id;`",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
@@ -2079,7 +2079,7 @@
               "13f2eb6efbbccf36d52c74e8ee4520b453fa03db"
             ]
           },
-          "content": "It looks good. Next, you are going to add a **primary key**. It's a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\n```\n\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
+          "content": "It looks good. Next, you are going to add a **primary key**. It's a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:\r\n\r\n```sql\r\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\r\n```\r\n\r\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
           "hints": [
             "You don't need quotes, but you do need a semi-colon :smile:",
             "Try entering `ALTER TABLE characters ADD PRIMARY KEY(name);`",
@@ -2130,7 +2130,7 @@
               "3b1415ab8ff87145275556449f77652bce37850b"
             ]
           },
-          "content": "You can see the key for your `name` column at the bottom. It would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\n\n```sql\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\n```\n\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
+          "content": "You can see the key for your `name` column at the bottom. It would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\r\n\r\n```sql\r\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\r\n```\r\n\r\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
           "hints": [
             "Try using `ALTER TABLE characters DROP CONSTRAINT characters_pkey;`",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
@@ -2490,7 +2490,7 @@
               "a42b841eccbe204dab47abc31452b9970e44561d"
             ]
           },
-          "content": "There’s your four columns and the primary key you created at the bottom. To know what row a character is for, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
+          "content": "There’s your four columns and the primary key you created at the bottom. To know what row a character is for, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:\r\n\r\n```sql\r\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\r\n```\r\n\r\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
           "hints": [
             "You can do it!",
             "Give it one more try",
@@ -2543,7 +2543,7 @@
               "00b80d1291899caf8c8b7ec813313beb5c3d8a0e"
             ]
           },
-          "content": "There's your foreign key at the bottom. These tables have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. Enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD UNIQUE(column_name);\n```\n\nAdd the `UNIQUE` constraint to the column you just added.",
+          "content": "There's your foreign key at the bottom. These tables have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. Enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\r\n\r\n```sql\r\nALTER TABLE table_name ADD UNIQUE(column_name);\r\n```\r\n\r\nAdd the `UNIQUE` constraint to the column you just added.",
           "hints": [
             "It's the `character_id` column in `more_info`",
             "Try `ALTER TABLE more_info ADD UNIQUE(character_id);`",
@@ -2568,7 +2568,7 @@
               "e0680950082a3327c0bf9389176241667b56c578"
             ]
           },
-          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column.",
+          "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\r\n\r\n```sql\r\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\r\n```\r\n\r\nAdd the `NOT NULL` constraint to your foreign key column.",
           "hints": [
             "The foreign key column is `character_id` in the `more_info` table",
             "Try `ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;`",
@@ -2669,7 +2669,7 @@
               "fbdc3943fa2cfdda0088806bad83596b5b7741db"
             ]
           },
-          "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1981-07-09 | 155    | 64.5   |\n\nAdd a row to `more_info` with the above data for Mario using the `INSERT INTO` and `VALUES` keywords. Be sure to set his `character_id` when adding him. Also, `DATE` values need a string with the format: `'YYYY-MM-DD'`.",
+          "content": "That's better. You can see Mario's id there. Here's some more info for him:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1981-07-09 | 155    | 64.5   |\r\n\r\nAdd a row to `more_info` with the above data for Mario using the `INSERT INTO` and `VALUES` keywords. Be sure to set his `character_id` when adding him. Also, `DATE` values need a string with the format: `'YYYY-MM-DD'`.",
           "hints": [
             "Here's an example: `INSERT INTO table_name(columns) VALUES(values);`",
             "You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');`",
@@ -2748,7 +2748,7 @@
               "6374ec92fbcdd8f21640706197f1fe3221d82f17"
             ]
           },
-          "content": "You can see Luigi's id there. Here's his info:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1983-07-14 | 175    | 48.8   |\n\nAdd a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.",
+          "content": "You can see Luigi's id there. Here's his info:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1983-07-14 | 175    | 48.8   |\r\n\r\nAdd a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.",
           "hints": [
             "Use the `INSERT INTO` and `VALUES` keywords",
             "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
@@ -2829,7 +2829,7 @@
               "e73b7208e11daa831f904ae87e2b58cefabbe37d"
             ]
           },
-          "content": "Here's the additional info for Peach:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1985-10-18 | 173    | 52.2   |\n\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
+          "content": "Here's the additional info for Peach:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1985-10-18 | 173    | 52.2   |\r\n\r\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
           "hints": [
             "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
             "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);`",
@@ -2856,7 +2856,7 @@
               "87b6532a4a39866dc2e2cf25b537f4c732d26575"
             ]
           },
-          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
+          "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:\r\n\r\n```sql\r\nSELECT columns FROM table_name WHERE condition;\r\n```\r\n\r\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
           "hints": [
             "Don't forget the semi-colon :smile:",
             "Use `name='Toad'` for the condition",
@@ -2882,7 +2882,7 @@
               "9b890931c7230d1758b07f0c30b4998f3448d113"
             ]
           },
-          "content": "Here's what Toad's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1950-01-10 | 66     | 35.6   |\n\nAdd the above info for Toad. Be sure to add his `character_id`.",
+          "content": "Here's what Toad's info looks like:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1950-01-10 | 66     | 35.6   |\r\n\r\nAdd the above info for Toad. Be sure to add his `character_id`.",
           "hints": [
             "Put `DATE` values in quotes",
             "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1985-10-18', 173, 52.2, 3);`",
@@ -2963,7 +2963,7 @@
               "ce5cbd88a996a28028f58d9f9afc125d9bdab5a0"
             ]
           },
-          "content": "Here's what Bowser's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-10-29 | 258    | 300    |\n\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
+          "content": "Here's what Bowser's info looks like:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1990-10-29 | 258    | 300    |\r\n\r\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
           "hints": [
             "Be sure to put `DATE` values in quotes with the format: `'YYYY-MM-DD'`",
             "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);`",
@@ -3017,7 +3017,7 @@
               "956c25d667e3d15d325c84abccc9fb9a18d96e0f"
             ]
           },
-          "content": "The info for Daisy looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1989-07-31 | NULL   | NULL   |\n\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well. You can use `NULL` or simply not include the null columns when inserting.",
+          "content": "The info for Daisy looks like this:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1989-07-31 | NULL   | NULL   |\r\n\r\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well. You can use `NULL` or simply not include the null columns when inserting.",
           "hints": [
             "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 173, 300, 5);`",
             "Try `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`",
@@ -3096,7 +3096,7 @@
               "c32c1c287460e83a0da123e868aba224b94789c2"
             ]
           },
-          "content": "The info for Yoshi looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-04-13 | 162    | 59.1   |\n\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
+          "content": "The info for Yoshi looks like this:\r\n\r\n| birthday   | height | weight |\r\n| ---------- | ------ | ------ |\r\n| 1990-04-13 | 162    | 59.1   |\r\n\r\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
           "hints": [
             "You got this one!",
             "You previously used `INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);`",
@@ -3227,7 +3227,7 @@
               "7ea5035e61379aabb08fb0e0f07966d702344f8a"
             ]
           },
-          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
+          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\r\n\r\n```sql\r\nCREATE TABLE table_name();\r\n```\r\n\r\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\r\n\r\n```sql\r\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\r\n```\r\n\r\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
           "hints": [
             "Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
@@ -3303,7 +3303,7 @@
               "cd61337b0d4b518b7b1993c4e2051b68f0ca4cb8"
             ]
           },
-          "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\n```\n\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
+          "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:\r\n\r\n```sql\r\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\r\n```\r\n\r\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
           "hints": [
             "You can do this!",
             "Give it one more try, take a close look at all those values and keywords",
@@ -3730,7 +3730,7 @@
               "933ea7cc0f466b79270f0d3969e8b331df041cda"
             ]
           },
-          "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
+          "content": "It looks good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
           "hints": [
             "Use the `CREATE TABLE` keywords",
             "You previously used `CREATE TABLE more_info();`",
@@ -3782,7 +3782,7 @@
               "230295f235e67450c083192d77c73098084c51d1"
             ]
           },
-          "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.",
+          "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\r\n\r\n```sql\r\nALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\r\n```\r\n\r\nSet the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.",
           "hints": [
             "Without the keywords, it looks like this: `character_actions character_id characters(character_id);`",
             "All the info you need is there, read it closely",
@@ -3913,7 +3913,7 @@
               "8794f8c04ff270ad74b5c5980e4cba9cbdcfa062"
             ]
           },
-          "content": "Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table.",
+          "content": "Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:\r\n\r\n```sql\r\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\r\n```\r\n\r\nUse `character_id` and `action_id` to create a composite primary key for this table.",
           "hints": [
             "Try `ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);`",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
@@ -4297,7 +4297,7 @@
               "73fa39e730074622a27f4000564faca42e08df00"
             ]
           },
-          "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.",
+          "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:\r\n\r\n```sql\r\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\r\n```\r\n\r\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.",
           "hints": [
             "Use `*` to see all the columns",
             "Give it one more try, read closely",
@@ -4351,7 +4351,7 @@
               "bd5ba8c103f250bc1f054951b9c20d2aeec6fa34"
             ]
           },
-          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column\nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nCongratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the \"many-to_many\" relationship. Many characters will have many actions.",
+          "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\r\n\r\n```sql\r\nSELECT columns FROM junction_table\r\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column\r\nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\r\n```\r\n\r\nCongratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the \"many-to_many\" relationship. Many characters will have many actions.",
           "hints": [
             "Use the `character_id` column to join `character_actions` and `characters`",
             "Use the `action_id` column to join `character_actions` and `actions`",
