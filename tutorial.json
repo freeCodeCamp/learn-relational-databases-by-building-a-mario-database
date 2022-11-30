@@ -1,6 +1,6 @@
 {
   "id": "freeCodeCamp/learn-relational-databases-by-building-a-mario-database:v1.0.0",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "summary": {
     "title": "Learn Relational Databases by Building a Mario Database",
     "description": "> Welcome to the Relational Database Lessons!"
@@ -23,8 +23,8 @@
       "directory": ".freeCodeCamp"
     },
     "repo": {
-      "uri": "https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database",
-      "branch": "v1.0.4"
+      "uri": "https://github.com/deirdrelk/learn-relational-databases-by-building-a-mario-database",
+      "branch": "v1.0.5"
     },
     "continue": {
       "commands": [
@@ -2344,7 +2344,12 @@
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
           ]
         }
-      ]
+      ],
+      "setup": {
+        "commits": [
+          "00c6ddb33866e2ca314a66cc473023d7e605d279"
+        ]
+      }
     },
     {
       "id": "900",
