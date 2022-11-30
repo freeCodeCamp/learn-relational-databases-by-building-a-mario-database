@@ -39,3 +39,7 @@ Whenever a new version is created, add the new branch name and the changes here
 - There was an issue with the last commit not loading after using the reset button in a tutorial. I added a final commit at end that seems to have resolved it.
 - Fix test text on 1660, 1670, and 1680
 - Fix bad hints on 1260 - [Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/45532)
+
+## [v1.0.5]
+
+- Fix test 895 - [Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/48521)
