@@ -258,7 +258,7 @@ Add another column to `second_table` named `age`. Give it a data type of `INT`.
 
 ### 200.1
 
-Take look at the details of `second_table` again.
+Take a look at the details of `second_table` again.
 
 #### HINTS
 
@@ -332,7 +332,7 @@ Add a new column to `second_table`, give it a name of `name` and a data type of 
 
 ### 250.1
 
-Take look at the details of `second_table` to see your columns.
+Take a look at the details of `second_table` to see your columns.
 
 #### HINTS
 
@@ -345,7 +345,7 @@ Take look at the details of `second_table` to see your columns.
 
 ### 260.1
 
-You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
+You can see the `VARCHAR` type there. The `30` means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:
 
 ```sql
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
@@ -363,7 +363,7 @@ Rename the `name` column to `username`.
 
 ### 270.1
 
-Take look at the details of `second_table` again to see if it got renamed.
+Take a look at the details of `second_table` again to see if it got renamed.
 
 #### HINTS
 
@@ -503,7 +503,7 @@ Luigi should be gone. Use `SELECT` again to see all the data and make sure he's 
 
 ### 360.1
 
-It's gone. You can scrap all this for the new database. **delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.
+It's gone. You can scrap all this for the new database. **Delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.
 
 #### HINTS
 
@@ -720,7 +720,7 @@ Okay, I think you're ready to get started. I don't think you created any tables 
 
 ### 540.1
 
-Create a new table name `characters`, it will hold some basic information about Mario characters.
+Create a new table named `characters`, it will hold some basic information about Mario characters.
 
 #### HINTS
 
@@ -773,7 +773,7 @@ Add a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`
 
 ### 580.1
 
-You can make another for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.
+You can make another column for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.
 
 #### HINTS
 
@@ -819,7 +819,7 @@ You are ready to start adding some rows. First is Mario. Earlier, you used this 
 INSERT INTO second_table(id, username) VALUES(1, 'Samus');
 ```
 
-The first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.
+The first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.
 
 #### HINTS
 
@@ -832,7 +832,7 @@ The first parenthesis are the column names, you can put as many columns as you w
 
 ### 620.1
 
-Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see.
+Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see this.
 
 #### HINTS
 
@@ -899,7 +899,7 @@ VALUES('Mario', 'Mushroom Kingdom', 'Red'),
 ('Peach', 'Mushroom Kingdom', 'Pink');
 ```
 
-Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.
+Add two more rows. Give the first one the values: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.
 
 #### HINTS
 
@@ -912,7 +912,7 @@ Add two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`
 
 ### 670.1
 
-If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.
+If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.
 
 #### HINTS
 
@@ -926,7 +926,7 @@ If you don't get a message after a command, it is likely incomplete. This is bec
 
 ### 680.1
 
-Take a look all the data in your table with `SELECT` to see where you stand.
+Take a look at all the data in your table with `SELECT` to see where you stand.
 
 #### HINTS
 
@@ -959,7 +959,7 @@ You used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_colo
 
 ### 700.1
 
-The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look all the data in your table again to see if she got updated.
+The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look at all the data in your table again to see if she got updated.
 
 #### HINTS
 
@@ -986,7 +986,7 @@ Her favorite color was updated. Toadstool's name is wrong as well, it's actually
 
 ### 720.1
 
-Take a look all the data in your table.
+Take a look at all the data in your table.
 
 #### HINTS
 
@@ -1013,7 +1013,7 @@ Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad b
 
 ### 740.1
 
-Take a look all the data in your table again to see if Mario's name got changed back.
+Take a look at all the data in your table again to see if Mario's name got changed back.
 
 #### HINTS
 
@@ -1041,7 +1041,7 @@ Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad
 
 ### 760.1
 
-Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows.
+Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows?
 
 #### HINTS
 
@@ -1055,7 +1055,7 @@ Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it w
 
 ### 770.1
 
-Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows.
+Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows?
 
 #### HINTS
 
@@ -1069,7 +1069,7 @@ Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't y
 
 ### 780.1
 
-Take a look all the data in your table again to make sure there's no more issues.
+Take a look at all the data in your table again to make sure there's no more issues.
 
 #### HINTS
 
@@ -1143,7 +1143,7 @@ Drop the primary key on the `name` column. You can see the **constraint name** i
 - Try using `ALTER TABLE characters DROP CONSTRAINT characters_pkey;`
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-## 830. View `character` Details
+## 830. View `characters` Details
 
 ### 830.1
 
@@ -1169,7 +1169,7 @@ It's gone. Set the primary key again, but use the `character_id` column this tim
 - Try entering `ALTER TABLE characters ADD PRIMARY KEY(character_id);`
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-## 850. View `character` Details
+## 850. View `characters` Details
 
 ### 850.1
 
@@ -1288,7 +1288,7 @@ Add a `height` column to `more_info` that's a type of `INT`.
 
 ### 930.1
 
-Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be right of the decimal.
+Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be to the right of the decimal.
 
 #### HINTS
 
@@ -1314,7 +1314,7 @@ Take a look at the details of `more_info` to see all your columns.
 
 ### 950.1
 
-There’s your four columns and the primary key you created at the bottom. To know what row a character is for, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:
+There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
@@ -1587,7 +1587,7 @@ View all the data in `more_info` to see the rows you added.
 
 ### 1120.1
 
-Bowser is next. Find his ID by viewing the `character_id` and `name` columns for only his row.
+Bowser is next. Find his id by viewing the `character_id` and `name` columns for only his row.
 
 #### HINTS
 
@@ -1621,7 +1621,7 @@ Add the above info for Bowser. Don't forget to add his `character_id`.
 
 ### 1140.1
 
-Daisy is next. Find her ID by viewing the `character_id` and `name` columns for only her row.
+Daisy is next. Find her id by viewing the `character_id` and `name` columns for only her row.
 
 #### HINTS
 
@@ -1668,7 +1668,7 @@ View all the data in `more_info` to see the rows you added.
 
 ### 1170.1
 
-Null values show up as blank. Yoshi is last. Find his ID by viewing the `character_id` and `name` columns for only his row.
+Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and `name` columns for only his row.
 
 #### HINTS
 
@@ -1818,7 +1818,7 @@ Add a column to `sounds` named `character_id`. Give it the properties `INT`, `NO
 - Try using `ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);`
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
-## 1290. View `sounds ` Details
+## 1290. View `sounds` Details
 
 ### 1290.1
 
@@ -1835,7 +1835,7 @@ Take a look at the details of the `sounds` table to see all the columns.
 
 ### 1300.1
 
-Next you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.
+Next, you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.
 
 #### HINTS
 
@@ -1931,7 +1931,7 @@ Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one
 
 ### 1370.1
 
-View all the data in the `sounds`. You should be able to see the "one-to-many" relationship better. One character has many sounds.
+View all the data in the `sounds` table. You should be able to see the "one-to-many" relationship better. One character has many sounds.
 
 #### HINTS
 
@@ -2162,7 +2162,7 @@ Insert three rows into `character_actions` for all the actions Yoshi can perform
 - Use the `INSERT INTO` and `VALUES` keywords
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
-- Or, enter the above command and use the correct ID's
+- Or, enter the above command and use the correct id's
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1550. View `character_actions` Data
@@ -2192,7 +2192,7 @@ Add three more rows into `character_actions` for all of Daisy's actions. She can
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
-- Or, enter the above command and use the correct ID's
+- Or, enter the above command and use the correct id's
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1570. Insert Bowser Actions
@@ -2209,7 +2209,7 @@ Bowser can perform all the actions. Add three rows to the table for him.
 - Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`
 - You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`
 - Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`
-- Or, enter the above command and use the correct ID's
+- Or, enter the above command and use the correct id's
 - Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already
 
 ## 1580. Insert Toad Actions
