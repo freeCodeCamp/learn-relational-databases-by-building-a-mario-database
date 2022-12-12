@@ -551,7 +551,7 @@
               "72aa3eaed530d398d47458c70fc3bd7b3fab617d"
             ]
           },
-          "content": "Take look at the details of `second_table` again.",
+          "content": "Take a look at the details of `second_table` again.",
           "hints": [
             "Use the **d**isplay shortcut command",
             "Add the table name to the shortcut command to see details",
@@ -682,7 +682,7 @@
               "706aac4aae8db9f4502c2aac4fee33dbfdd6f4b1"
             ]
           },
-          "content": "Take look at the details of `second_table` to see your columns.",
+          "content": "Take a look at the details of `second_table` to see your columns.",
           "hints": [
             "Use the **d**isplay shortcut command",
             "Here's an example: `\\d table_name`",
@@ -708,7 +708,7 @@
               "fe093d8a8d2d2ee757d0012aa9b97543a58df020"
             ]
           },
-          "content": "You can see the `VARCHAR` type there. The `30` means the data in it can a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
+          "content": "You can see the `VARCHAR` type there. The `30` means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
           "hints": [
             "Use `second_table` as the table name, `name` as the column name, and `username` as the new name for the column",
             "Try entering `ALTER TABLE second_table RENAME COLUMN name TO username;`",
@@ -733,7 +733,7 @@
               "aaf6f3b9f57b4f7ca12c54985481e6d670d4bc38"
             ]
           },
-          "content": "Take look at the details of `second_table` again to see if it got renamed.",
+          "content": "Take a look at the details of `second_table` again to see if it got renamed.",
           "hints": [
             "Use the **d**isplay shortcut command",
             "Here's an example: `\\d table_name`",
@@ -972,7 +972,7 @@
               "8f4ee718be2b4d3c95efcf6bce1e79902eee57a7"
             ]
           },
-          "content": "It's gone. You can scrap all this for the new database. **delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.",
+          "content": "It's gone. You can scrap all this for the new database. **Delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.",
           "hints": [
             "Use the `DELETE FROM` and `WHERE` keywords",
             "Here's the example: `DELETE FROM table_name WHERE condition;`",
@@ -1389,7 +1389,7 @@
               "adfedb1b64613569f051ad5acd4551e69ad0a948"
             ]
           },
-          "content": "Create a new table name `characters`, it will hold some basic information about Mario characters.",
+          "content": "Create a new table named `characters`, it will hold some basic information about Mario characters.",
           "hints": [
             "Use the `CREATE TABLE` keywords",
             "Don't forget the parenthesis and semi-colon at the end",
@@ -1494,7 +1494,7 @@
               "49459d469342bd77f71da1093421ef9dbd01e2e1"
             ]
           },
-          "content": "You can make another for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
+          "content": "You can make another column for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
           "hints": [
             "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
             "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
@@ -1573,7 +1573,7 @@
               "3e592006d6878829b576cba203f4b5d937f72d49"
             ]
           },
-          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis are the column names, you can put as many columns as you want. The second parenthesis are values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
+          "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
           "hints": [
             "Here's an example: `INSERT INTO table_name(column1, column2, column3) VALUES(value1, value2, value3);`",
             "Try using `INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');`",
@@ -1599,7 +1599,7 @@
               "5242422adb513ce8b12c783a7a2bc95a73be9048"
             ]
           },
-          "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see.",
+          "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see this.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -1709,7 +1709,7 @@
               "6b444ea219c8bb09048b9ce58ce4de15e0598f53"
             ]
           },
-          "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color)\nVALUES('Mario', 'Mushroom Kingdom', 'Red'),\n('Luigi', 'Mushroom Kingdom', 'Green'),\n('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one values of: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
+          "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color)\nVALUES('Mario', 'Mushroom Kingdom', 'Red'),\n('Luigi', 'Mushroom Kingdom', 'Green'),\n('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one the values: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
           "hints": [
             "Make sure you added commas and quotes where needed",
             "Try entering `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');` in the psql prompt",
@@ -1735,7 +1735,7 @@
               "b72ff377a4f94624a8d2605b90b38dc0bfb62895"
             ]
           },
-          "content": "If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one values of: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
+          "content": "If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
           "hints": [
             "Make sure you added commas and quotes where needed",
             "You previously used `INSERT INTO characters(name, homeland, favorite_color) VALUES('Toadstool', 'Mushroom Kingdom', 'Red'), ('Bowser', 'Mushroom Kingdom', 'Green');`",
@@ -1762,7 +1762,7 @@
               "d0c2a2f8bf0d2599b1ac51fbf3d190796e5ceeb2"
             ]
           },
-          "content": "Take a look all the data in your table with `SELECT` to see where you stand.",
+          "content": "Take a look at all the data in your table with `SELECT` to see where you stand.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -1815,7 +1815,7 @@
               "1434d2954e485bb9df69fbb05eb2b4b6fa75fc8d"
             ]
           },
-          "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look all the data in your table again to see if she got updated.",
+          "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look at all the data in your table again to see if she got updated.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -1868,7 +1868,7 @@
               "61d7949b5a959ad3d8288b2b6369aae9ad0a61e0"
             ]
           },
-          "content": "Take a look all the data in your table.",
+          "content": "Take a look at all the data in your table.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -1921,7 +1921,7 @@
               "5321c400d0dc332382a68e99aca1b908d38f1de8"
             ]
           },
-          "content": "Take a look all the data in your table again to see if Mario's name got changed back.",
+          "content": "Take a look at all the data in your table again to see if Mario's name got changed back.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -1975,7 +1975,7 @@
               "a88b8793f290de142a68c547bc1c1a61efdbcf74"
             ]
           },
-          "content": "Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows.",
+          "content": "Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows?",
           "hints": [
             "Use the `UPDATE`, `SET`, and `WHERE` keywords",
             "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
@@ -2002,7 +2002,7 @@
               "c27c9f585ea856ce7d16d37d21ef929d0e62997e"
             ]
           },
-          "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows.",
+          "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows?",
           "hints": [
             "Use the `UPDATE`, `SET`, and `WHERE` keywords",
             "Here's an example: `UPDATE table_name SET column_name=new_value WHERE condition;`",
@@ -2029,7 +2029,7 @@
               "f53ba21433896e14862c3105c23955bbc02821a7"
             ]
           },
-          "content": "Take a look all the data in your table again to make sure there's no more issues.",
+          "content": "Take a look at all the data in your table again to make sure there's no more issues.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example; `SELECT rows FROM table_name;`",
@@ -2140,7 +2140,7 @@
     },
     {
       "id": "830",
-      "title": "View `character` Details",
+      "title": "View `characters` Details",
       "summary": "",
       "content": "",
       "steps": [
@@ -2192,7 +2192,7 @@
     },
     {
       "id": "850",
-      "title": "View `character` Details",
+      "title": "View `characters` Details",
       "summary": "",
       "content": "",
       "steps": [
@@ -2438,7 +2438,7 @@
               "26e8239e13fbcfb1df4065e26bd516b0542440c9"
             ]
           },
-          "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be right of the decimal.",
+          "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be to the right of the decimal.",
           "hints": [
             "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
             "Here's an example: `ALTER TABLE table_name ADD COLUMN column_name DATATYPE;`",
@@ -2490,7 +2490,7 @@
               "a42b841eccbe204dab47abc31452b9970e44561d"
             ]
           },
-          "content": "There’s your four columns and the primary key you created at the bottom. To know what row a character is for, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
+          "content": "There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
           "hints": [
             "You can do it!",
             "Give it one more try",
@@ -2936,7 +2936,7 @@
               "ff68de58f6990042bdacf087c9f2559e3aadf244"
             ]
           },
-          "content": "Bowser is next. Find his ID by viewing the `character_id` and `name` columns for only his row.",
+          "content": "Bowser is next. Find his id by viewing the `character_id` and `name` columns for only his row.",
           "hints": [
             "Use the `SELECT`, `FROM`, and `WHERE` keywords",
             "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
@@ -2990,7 +2990,7 @@
               "9fdbf7f2e5ca2bba4c0a8354373aa67012a85e7b"
             ]
           },
-          "content": "Daisy is next. Find her ID by viewing the `character_id` and `name` columns for only her row.",
+          "content": "Daisy is next. Find her id by viewing the `character_id` and `name` columns for only her row.",
           "hints": [
             "Use the `SELECT`, `FROM`, and `WHERE` keywords",
             "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
@@ -3070,7 +3070,7 @@
               "aacd7273ff6a7d4dbc2ee0865bda2f601ba73705"
             ]
           },
-          "content": "Null values show up as blank. Yoshi is last. Find his ID by viewing the `character_id` and `name` columns for only his row.",
+          "content": "Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and `name` columns for only his row.",
           "hints": [
             "Use the `SELECT`, `FROM` and `WHERE` keywords",
             "Here's an example: `SELECT columns FROM table_name WHERE condition;`",
@@ -3316,7 +3316,7 @@
     },
     {
       "id": "1290",
-      "title": "View `sounds ` Details",
+      "title": "View `sounds` Details",
       "summary": "",
       "content": "",
       "steps": [
@@ -3356,7 +3356,7 @@
               "f6be395d974b68b68ff32a667df183628e3cfcc3"
             ]
           },
-          "content": "Next you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
+          "content": "Next, you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name ORDER BY column;`",
@@ -3543,7 +3543,7 @@
               "98e8929b916eb64d21d97fbb099c8a8cc00b8f42"
             ]
           },
-          "content": "View all the data in the `sounds`. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
+          "content": "View all the data in the `sounds` table. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
           "hints": [
             "Use the `SELECT` and `FROM` keywords",
             "Here's an example: `SELECT columns FROM table_name;`",
@@ -3968,7 +3968,7 @@
             "Use the `INSERT INTO` and `VALUES` keywords",
             "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
             "Try `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`",
-            "Or, enter the above command and use the correct ID's",
+            "Or, enter the above command and use the correct id's",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
           ]
         }
@@ -4024,7 +4024,7 @@
             "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
             "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(7, 1), (7, 2), (7, 3);`",
             "Try `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`",
-            "Or, enter the above command and use the correct ID's",
+            "Or, enter the above command and use the correct id's",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
           ]
         }
@@ -4054,7 +4054,7 @@
             "Here's an example: `INSERT INTO table_name(column_1, column_2) VALUES(value_1, value_2), (value_1, value_2);`",
             "You previously used `INSERT INTO character_actions(character_id, action_id) VALUES(6, 1), (6, 2), (6, 3);`",
             "Try `INSERT INTO character_actions(character_id, action_id) VALUES(5, 1), (5, 2), (5, 3);`",
-            "Or, enter the above command and use the correct ID's",
+            "Or, enter the above command and use the correct id's",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
           ]
         }
