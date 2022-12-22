@@ -3730,7 +3730,7 @@
               "933ea7cc0f466b79270f0d3969e8b331df041cda"
             ]
           },
-          "content": "It look good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
+          "content": "It looks good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
           "hints": [
             "Use the `CREATE TABLE` keywords",
             "You previously used `CREATE TABLE more_info();`",
