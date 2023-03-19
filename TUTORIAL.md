@@ -1765,7 +1765,7 @@ Inside those parenthesis you can put columns for a table so you don't need to ad
 CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
 ```
 
-Create a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.
+Create a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a constraint of `PRIMARY KEY`.
 
 #### HINTS
 
@@ -1788,7 +1788,7 @@ View the tables in `mario_database` to make sure it worked.
 
 ### 1270.1
 
-There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those contraints at the end of the query to add them all.
+There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those constraints at the end of the query to add them all.
 
 #### HINTS
 
