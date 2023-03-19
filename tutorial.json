@@ -3227,7 +3227,7 @@
               "2c9e2f2f13f14dd99401c9cb57b64defa68dba12"
             ]
           },
-          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a contraint of `PRIMARY KEY`.",
+          "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a constraint of `PRIMARY KEY`.",
           "hints": [
             "Try entering `CREATE TABLE sounds(sound_id SERIAL PRIMARY KEY);`",
             "Enter `psql --username=freecodecamp --dbname=mario_database` into the terminal to log in if you aren't already"
@@ -3276,7 +3276,7 @@
               "4adc54ff264056dcd98587236354333957e21675"
             ]
           },
-          "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those contraints at the end of the query to add them all.",
+          "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those constraints at the end of the query to add them all.",
           "hints": [
             "Use the `ALTER TABLE` and `ADD COLUMN` keywords",
             "Give it three properties: `VARCHAR(40) NOT NULL UNIQUE`",
