@@ -1,0 +1,27 @@
+image:
+  file: .gitpod.Dockerfile
+
+# Commands to start on workspace startup
+tasks:
+  - before: |
+      sudo cp /workspace/learn-bash-by-building-a-boilerplate/freeCodeCamp/.bashrc ~/.bashrc
+      exit
+
+    init: |
+      sudo touch /workspace/pg.log
+      sudo chmod 777 /workspace/pg.log
+      sudo touch /workspace/queryResults.log
+      sudo chmod 777 /workspace/queryResults.log
+      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/.psqlrc ~/.psqlrc
+      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
+      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
+      sudo chown -R postgres:postgres /var/lib/postgresql/12/main
+      exit
+
+    command: |
+      pg_stop && sudo service postgresql start && echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname='freecodecamp')\gexec" | psql -U postgres -X
+      exit
+
+vscode:
+  extensions:
+    - CodeRoad.coderoad
