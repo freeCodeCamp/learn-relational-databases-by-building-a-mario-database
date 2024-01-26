@@ -14,7 +14,7 @@ tasks:
       sudo chmod 777 /workspace/queryResults.log
       sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 
-    init: |
+    command: |
       pg_stop && sudo service postgresql start && echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname='freecodecamp')\gexec" | psql -U postgres -X
       exit
 
