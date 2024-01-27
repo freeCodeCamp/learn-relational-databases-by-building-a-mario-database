@@ -1,0 +1,20 @@
+repo_name: freeCodeCamp/learn-relational-databases-by-building-a-mario-database
+report_id: 80df8f955ece5d070183275858563935
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-27T03:51:45+00:00'
+requested_by: NabeelAbrahams
+provider: github
+branch: main
+detected_tools_count: 1
+tools:
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/freeCodeCamp/learn-relational-databases-by-building-a-mario-database
+  detection_source: Repo Metadata
