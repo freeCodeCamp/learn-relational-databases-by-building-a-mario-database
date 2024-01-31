@@ -1,17 +1,19 @@
 image:
   file: .gitpod.Dockerfile
 
-# Commands to start on workspace startup
+workspaceLocation: 'project'
+checkoutLocation: 'project'
+
 tasks:
   - before: |
-      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/.bashrc ~/.bashrc
-      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/.psqlrc ~/.psqlrc
-      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
-      sudo cp /workspace/learn-relational-databases-by-building-a-mario-database/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
+      sudo touch /workspace/.bash_history
+      sudo cp /workspace/project/.freeCodeCamp/.bashrc ~/.bashrc
+      sudo cp /workspace/project/.freeCodeCamp/.psqlrc ~/.psqlrc
+      sudo cp /workspace/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
+      sudo cp /workspace/project/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
       sudo touch /workspace/pg.log
-      sudo chmod 777 /workspace/pg.log
       sudo touch /workspace/queryResults.log
-      sudo chmod 777 /workspace/queryResults.log
+      sudo chmod -R 777 /workspace
       sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 
     command: |
