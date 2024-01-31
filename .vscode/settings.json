@@ -35,7 +35,7 @@
     "**/.DS_Store": true,
     ".vscode": true,
     ".gitignore": true,
-    ".freeCodeCamp": false,
+    ".freeCodeCamp": true,
     "learn-relational-databases-by-building-a-mario-database": true,
     ".gitpod.Dockerfile": true,
     ".gitpod.yml": true,
