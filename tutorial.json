@@ -12,7 +12,7 @@
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "4a8e3e485dbd6fb073599e92152c798e9b12eecb"
+        "e6e6ac52de4536ec17f4bb43b587d13a37778078"
       ]
     },
     "testRunner": {
@@ -67,7 +67,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "9e328578f7b754a18f90400594e45e9f7d7c2d09"
+              "81aa8eea1a33def0cd3ce7aad1a5ddf65c18783a"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello PostgreSQL` into the terminal and press enter.",
@@ -91,7 +91,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a43aaa6fa8588c083a2340a57d62d6bf51a7728f"
+              "b779cf360edd397ff103562e645c762ebbbd7111"
             ]
           },
           "content": "Your virtual machine comes with PostgreSQL installed. You will use the Psql terminal application to interact with it. Log in by typing `psql --username=freecodecamp --dbname=postgres` into the terminal and pressing enter.",
@@ -116,7 +116,7 @@
               "../pg.log"
             ],
             "commits": [
-              "0c0f3e1e1c96104bc6acfe7b7d867c1ec32214d6"
+              "9894c375e17529075e56633e3ad1a66f42e1f63c"
             ]
           },
           "content": "Notice that the prompt changed to let you know that you are now interacting with PostgreSQL. First thing to do is see what databases are here. Type `\\l` into the prompt to **l**ist them.",
@@ -140,7 +140,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ed5d5dfd051736d7c7d7ea0c6c5b87dbc21ac880"
+              "9b6958f91d2913e1cddfcfe7829690e1401b04bd"
             ]
           },
           "content": "The databases you see are there by default. You can make your own like this:\n\n```sql\nCREATE DATABASE database_name;\n```\n\nThe capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. Note that **all commands need a semi-colon at the end.** Create a new database named `first_database`.",
@@ -165,7 +165,7 @@
               "../pg.log"
             ],
             "commits": [
-              "e5dc29e3c33b8c3f098a32e87faff45f283e826d"
+              "a3b4b9df39ad88c1b7ef3d5958bb17f7a0748918"
             ]
           },
           "content": "Use the **l**ist shortcut command again to make sure your new database is there.",
@@ -190,7 +190,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "48bffadf5e082bc4a194df84a081ba5804fadc7e"
+              "11e30a273c0113ec10e93ff48d21e7f2a1ba880c"
             ]
           },
           "content": "It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named `second_database`.",
@@ -217,7 +217,7 @@
               "../pg.log"
             ],
             "commits": [
-              "e29fbfd2e9cea8064b25fc62cf42b96b6d82d68f"
+              "9dcdcb698324b34c979adbf73c7cf68c9dadc7d0"
             ]
           },
           "content": "You should have another new database now. **L**ist the databases to make sure.",
@@ -242,7 +242,7 @@
               "../pg.log"
             ],
             "commits": [
-              "29f2f81bbc28980ff6da960a9265dbfc682f0261"
+              "8c9b5d5a370afe33f10246b84ca57324b5e1aa22"
             ]
           },
           "content": "You can **c**onnect to a database by entering `\\c database_name`. You need to connect to add information. Connect to your `second_database`.",
@@ -266,7 +266,7 @@
               "../pg.log"
             ],
             "commits": [
-              "639d41001cba4671616077ae052caff26866e28f"
+              "d2498afc85755a3f56702f2eb766be71a324a088"
             ]
           },
           "content": "You should see a message that you are connected. Notice that the prompt changed to `second_database=>`. So the `postgres=>` prompt before must have meant you were connected to that database. A database is made of tables that hold your data. Enter `\\d` to **d**isplay the tables.",
@@ -290,7 +290,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f0e471e24ce88cd681fab583f923295ea9f8c796"
+              "80c41723cbc6ba6e388b6b9ad586fb51be01e2f9"
             ]
           },
           "content": "Looks like there's no tables or relations yet. Similar to how you created a database, you can create a table like this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nNote that the parenthesis are needed for this one. It will create the table in the database you are connected to. Create a table named `first_table` in `second_database`.",
@@ -315,7 +315,7 @@
               "../pg.log"
             ],
             "commits": [
-              "2cfc028f654798bc235643474c821a77e1d2ab90"
+              "58d2a65bde310059432cd6e30875deecc66c21bc"
             ]
           },
           "content": "View the tables in `second_database` again with the **d**isplay command. You should see your new table there with a little meta data about it.",
@@ -340,7 +340,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7f9ced2f2846a14f771606e9e87215872228b534"
+              "a0a502ff750281ad17f09f424cd7284d9dd3cc72"
             ]
           },
           "content": "Create another new table in this database. Give it a name of `second_table`.",
@@ -367,7 +367,7 @@
               "../pg.log"
             ],
             "commits": [
-              "605edcf6c0421052c4c11e7f9577f6d826ff9461"
+              "9166f15fab5ec5ea0fe00eb3f2ac2fac9a0fb705"
             ]
           },
           "content": "There should be two tables in this database now. **D**isplay them again to make sure.",
@@ -392,7 +392,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7a9343661676fc51ecfead7c6e57792fb291ee83"
+              "8a69253dd1389c44301019a4ec70c514674ff628"
             ]
           },
           "content": "You can view more details about a table by adding the table name after the **d**isplay command like this: `\\d table_name`. View more details about your `second_table`.",
@@ -416,7 +416,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "6a1bbc99b0d2ff0ba8de5ca40f94ab4a13261174"
+              "090c07566895cf2aa117704a32beee18b68d97c6"
             ]
           },
           "content": "Tables need **columns** to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE;\n```\n\nAdd a column to `second_table` named `first_column`. Give it a data type of `INT`. `INT` stands for integer. Don't forget the semi-colon. :smile:",
@@ -440,7 +440,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "728bc5f5b516e9879241b44599f4b7e8622f0f41"
+              "8382a78d808a0b1d7b8f2cbe65bdd4dc88a799cc"
             ]
           },
           "content": "Looks like it worked. **D**isplay the details of `second_table` again to see if your new column is there.",
@@ -467,7 +467,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "6bf6f3839ad256fa7eb8e0b18299bf4bd89f162d"
+              "2dd882e4af46f32b0377d6ae9e476cfa93013a22"
             ]
           },
           "content": "Your column is there :smile: Use `ALTER TABLE` and `ADD COLUMN` to add another column to `second_table` named `id` that's a type of `INT`.",
@@ -494,7 +494,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "292e1882121943d0e6d6b00878ac45e8a1a5eb15"
+              "6244d6a474f951a403f9621dcf4f115b2b7235c8"
             ]
           },
           "content": "Your table should have an `id` column added. View the details of `second_table` to make sure.",
@@ -521,7 +521,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8f48964a9ab0b239842f36286d5f20cb727b7bfd"
+              "791924cb000b65b3028ecfe707cd1c3a69065afd"
             ]
           },
           "content": "Add another column to `second_table` named `age`. Give it a data type of `INT`.",
@@ -548,7 +548,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "4cabd614b01b092100f9ca7ab01c01d937a4e9eb"
+              "e00d7049958152116bac6f3308521fc9275fad85"
             ]
           },
           "content": "Take a look at the details of `second_table` again.",
@@ -575,7 +575,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a01d2a5e591187745e8dd36430e9d0da961d6e66"
+              "625133713bf8e3a2f40ac8aaa317a8312d91f7f2"
             ]
           },
           "content": "Those are some good looking columns. You will probably need to know how to remove them. Here's an example:\n\n```sql\nALTER TABLE table_name DROP COLUMN column_name;\n```\n\nDrop your `age` column.",
@@ -599,7 +599,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0ef59fcd1f2bb4f262a018e3f810b6985c875ca6"
+              "e8fa0ea3dae760813168a616a85eafb63fc1dd3e"
             ]
           },
           "content": "View the details of `second_table` to see if it's gone.",
@@ -626,7 +626,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1207d56d9f149963b872608070f451d9e5095c6c"
+              "7b8713b8783f868797a763cad7b5d6101ef376bb"
             ]
           },
           "content": "It's gone. Use the `ALTER TABLE` and `DROP COLUMN` keywords again to drop `first_column`.",
@@ -652,7 +652,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1b235603299000ba1ccf4637158b92bdfb5a8ea2"
+              "e21edb248a9d53654301ee7769e0a848457392aa"
             ]
           },
           "content": "A common data type is `VARCHAR`. It's a short string of characters. You need to give it a maximum length when using it like this: `VARCHAR(30)`.\n\nAdd a new column to `second_table`, give it a name of `name` and a data type of `VARCHAR(30)`.",
@@ -679,7 +679,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ea5e8d5685ed75394b64b382f0eab9043c720a64"
+              "5216b8f9a51bbf2fb7f73b355e93a83c654acec3"
             ]
           },
           "content": "Take a look at the details of `second_table` to see your columns.",
@@ -705,7 +705,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e961148a19fe12193c8641803ab5ac8bf98a9b03"
+              "1f081d505b8e75924bbef4ae1912c1ab51465f3f"
             ]
           },
           "content": "You can see the `VARCHAR` type there. The `30` means the data in it can be a max of 30 characters. You named that column `name`, it should have been `username`. Here's how you can rename a column:\n\n```sql\nALTER TABLE table_name RENAME COLUMN column_name TO new_name;\n```\n\nRename the `name` column to `username`.",
@@ -730,7 +730,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "3b0e9d856c13b49076e6cab2fb8c59a80b6a227e"
+              "1cbef48510ec1f17499b3dd9e6ef816d6863d547"
             ]
           },
           "content": "Take a look at the details of `second_table` again to see if it got renamed.",
@@ -756,7 +756,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ca88ca87d9193322ae1b2263381132e0624f4108"
+              "3d3a5cea4cb868d95d5aee201da5631eb8579987"
             ]
           },
           "content": "It worked. Rows are the actual data in the table. You can add one like this:\n\n```sql\nINSERT INTO table_name(column_1, column_2) VALUES(value1, value2);\n```\n\nInsert a row into `second_table`. Give it an `id` of `1`, and a `username` of `Samus`. The username column expects a `VARCHAR`, so you need to put Samus in single quotes like this: `'Samus'`.",
@@ -783,7 +783,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4a2107f53cb320ffe0b06823e2feaa87bffa67a8"
+              "1f47f6efd5b85c1026602d25f1038a5dfcab62db"
             ]
           },
           "content": "You should have one row in your table. You can view the data in a table by querying it with the `SELECT` statement. Here's how it looks:\n\n```sql\nSELECT columns FROM table_name;\n```\n\nUse a `SELECT` statement to view **all** the columns in `second_table`. Use an asterisk (`*`) to denote that you want to see all the columns.",
@@ -809,7 +809,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d7b6b01f35f277e7d85de65cc63e612511c102d6"
+              "9077b27fb6fbee0c48cf46e46ee85592a668b054"
             ]
           },
           "content": "There's your one row. **Insert** another row **into** `second_table`. Fill in the `id` and `username` columns with the **values** `2` and `'Mario'`.",
@@ -837,7 +837,7 @@
               "../pg.log"
             ],
             "commits": [
-              "dbe9a81ce5bdebdc960c0b496e0fd63790d99bbc"
+              "16af467acbadd1a4b922f5480c99e6b9b3161e29"
             ]
           },
           "content": "You should now have two rows in the table. Use `SELECT` again to view **all** the columns and rows **from** `second_table`.",
@@ -863,7 +863,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "3272b9861506f625761a32a07b779f7153416b4f"
+              "fc7bbf107d4b4fc0f42441d08c73539be41b43e0"
             ]
           },
           "content": "**Insert** another row **into** `second_table`. Use `3` as the `id`, and `Luigi` as the `username` this time.",
@@ -891,7 +891,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d23e91927dcc4c5fd1bec5c182347e8ea1659ef7"
+              "fc0d782a7b55523652e557ea575d2662b483b7b3"
             ]
           },
           "content": "You should now have three rows. Use `SELECT` again to see **all** the data you entered.",
@@ -917,7 +917,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "46f5b1f6fda3c56a77dc18622bfe9d39968fc95f"
+              "035090d15ef03b44ff256dbf0943a795bf8a9e46"
             ]
           },
           "content": "That gives me an idea :smiley: You can make a database of Mario video game characters. You should start from scratch for it. Why don't you delete the record you just entered. Here's an example of how to delete a row:\n\n```sql\nDELETE FROM table_name WHERE condition;\n```\n\nRemove Luigi from your table. The condition you want to use is `username='Luigi'`.",
@@ -943,7 +943,7 @@
               "../pg.log"
             ],
             "commits": [
-              "63baa634f31ae5dcc25e2e45106eaf37a4051d8a"
+              "6d67f9a465537977c6c923dd59a72f2e5644d68a"
             ]
           },
           "content": "Luigi should be gone. Use `SELECT` again to see all the data and make sure he's not there.",
@@ -969,7 +969,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "132a999a92575f7cc8c54633a6799e6dd5d95ff3"
+              "81050c95a75d3cbab5df6e3b0dad8c03b44b0216"
             ]
           },
           "content": "It's gone. You can scrap all this for the new database. **Delete** Mario **from** `second_table` using the same command as before, except make the condition `username='Mario'` this time.",
@@ -997,7 +997,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "27b3fc45592c5a50bbfc3e0b005b77d44f28be0c"
+              "386fdc0c1dbf53c1eccb03d0ae8b65a69828ef38"
             ]
           },
           "content": "Only one more row should remain. **Delete** Samus **from** `second_table`.",
@@ -1025,7 +1025,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b461a86ef40ee37e35f1fd522ebffc3205233a74"
+              "e742dda48b2aaf0a989249c79ff4ed75318e5b4d"
             ]
           },
           "content": "Use `SELECT` again to see all the rows in `second_table` to make sure they're gone.",
@@ -1051,7 +1051,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "01162358823c6c34a9db2c165afda5cf514ac10f"
+              "7583ed4077ee467cdec708c05d388a3f94ed843d"
             ]
           },
           "content": "Looks like they're all gone. Remind yourself what columns you have in `second_table` by looking at its **d**etails.",
@@ -1078,7 +1078,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1035a94c0a96641a94a5a29297f7829bf15a5944"
+              "6057932e97880e0606177beb5e8811a7ecc0cf38"
             ]
           },
           "content": "There's two columns. You won't need either of them for the Mario database. **Alter** the **table** `second_table` and **drop** the **column** `username`.",
@@ -1105,7 +1105,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "df9d6a8d59d7cfd6165d5ca49f24e696531503b2"
+              "545da8c446b88102d0abc4e4d23888e3a3a68686"
             ]
           },
           "content": "Next, drop the `id` column.",
@@ -1132,7 +1132,7 @@
               "../pg.log"
             ],
             "commits": [
-              "4677f84fa9dfe7b2df07dd3c5fdc75bfc9e8a2e2"
+              "df2c731431460f3f8604f6d8e3695491e5210972"
             ]
           },
           "content": "Okay, the table has no rows or columns left. View the tables in this database to see what is here.",
@@ -1158,7 +1158,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "886bb3649f1ca5a516b16242c530f2fb5c811e8a"
+              "d04c78307a3af1e143b466ee4fb5fb6abae4595d"
             ]
           },
           "content": "Still two. You won't need either of those for the new database either. Drop `second_table` from your database. Here's an example:\n\n```sql\nDROP TABLE table_name;\n```",
@@ -1182,7 +1182,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "43c451baad24380900911092ff758ae6513e56a7"
+              "740d1c7a78c041709eecd88639e0eda2a519018a"
             ]
           },
           "content": "Next, drop `first_table` from the database.",
@@ -1207,7 +1207,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b0fc217bd864e5eb1c2466337edb9225d98ce0e5"
+              "3fa704c3344d8dd784ccee8b4faab91ca741cb2f"
             ]
           },
           "content": "All the tables are gone now, too. View all the databases using the command to **l**ist them.",
@@ -1232,7 +1232,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "32e48b676ddf96a02b72df4a3a2adeb7c3a3f948"
+              "aac9b931c6ec09544c5a6e0a0513b5296ab2c32b"
             ]
           },
           "content": "Rename `first_database` to `mario_database`. You can rename a database like this:\n\n```sql\nALTER DATABASE database_name RENAME TO new_database_name;\n```",
@@ -1256,7 +1256,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9d3a25f1d34ce6ebe1c85ab23debf5fb6774d0ce"
+              "7c9e14a4839ac78932a57cc1f69461b16ca96431"
             ]
           },
           "content": "List the databases to make sure it got renamed.",
@@ -1281,7 +1281,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9641d87bcfeabcd292e228a2ba8cdc8c62d15411"
+              "3f22d5db4ef4a811e89ea4c0efa64333dbddb1fc"
             ]
           },
           "content": "**C**onnect to your newly named database so you can start adding your characters.",
@@ -1308,7 +1308,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "15ff7a264ff1757cdd0e0703d14666096adb09dd"
+              "37001b4ed7e844c5ba7048921141d283d21760c3"
             ]
           },
           "content": "Now that you aren't connected to `second_database`, you can drop it. Use the `DROP DATABASE` keywords to do that.",
@@ -1335,7 +1335,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "cd6da28cc0c9d4a2ba9633327d34195c70fed321"
+              "922bcc7cf621ee02af306af4e19aa0698eeced6d"
             ]
           },
           "content": "List the databases again to make sure it's gone.",
@@ -1360,7 +1360,7 @@
               "../pg.log"
             ],
             "commits": [
-              "f33b581e1cd75d5154ca8dcbb039515095b69915"
+              "3badb6098f42d8e04c171a11f133068028aa5623"
             ]
           },
           "content": "Okay, I think you're ready to get started. I don't think you created any tables here, take a look to make sure.",
@@ -1386,7 +1386,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "dbdbd6e685283bc6ebe902f8a577fdf2b95fa8be"
+              "eb32e6421cdf79dd984cbf793df6f4506e5f42bd"
             ]
           },
           "content": "Create a new table named `characters`, it will hold some basic information about Mario characters.",
@@ -1413,7 +1413,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "4acd4c3179df4f7cfe5f2f20e3b7326e7991263d"
+              "bced14056dfc20c9ec06635a5c64f3d5fb6b7e51"
             ]
           },
           "content": "Next, you can add some columns to the table. Add a column named `character_id` to your new table that is a type of `SERIAL`.",
@@ -1439,7 +1439,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "53a59cd3e31f193909753094e2648a76cc38a7bc"
+              "5ce9d8d734ba6d8e3f23106a36dd554880bb2d60"
             ]
           },
           "content": "The `SERIAL` type will make your column an `INT` with a `NOT NULL` constraint, and automatically increment the integer when a new row is added. View the details of the `characters` table to see what `SERIAL` did for you.",
@@ -1465,7 +1465,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d93b5a91bdbd744cedf13e3118d0ecc6d528f602"
+              "afe9843eb4a5bfa5705edf58ff55956a52321f41"
             ]
           },
           "content": "Add a column to `characters` called `name`. Give it a data type of `VARCHAR(30)`, and a constraint of `NOT NULL`. Add a constraint by putting it right after the data type.",
@@ -1491,7 +1491,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e862f7637bf44b3f8d07a5774209aff03be4d4e4"
+              "b5632ad61fc27b0f71563b4a74ca19a0d84ef858"
             ]
           },
           "content": "You can make another column for where they are from. Add another column named `homeland`. Give it a data type of `VARCHAR` that has a max length of `60`.",
@@ -1517,7 +1517,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "440d93c63fb2f624081fac966eb8dd75efc975d1"
+              "00793ab231bac081b075fbc3965b8b08b09e31d8"
             ]
           },
           "content": "Video game characters are quite colorful. Add one more column named `favorite_color`. Make it a `VARCHAR` with a max length of `30`.",
@@ -1543,7 +1543,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2fbc21cf330833aa19960a377803160a18e217d1"
+              "95c7aa639a822de9d6588fed2442135312b3d408"
             ]
           },
           "content": "You should have four columns in `characters`. Take a look at the details of it to see how things are going.",
@@ -1570,7 +1570,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "12a77c70717828bd145e2e69e57ab783be89ee58"
+              "4f6ebd97ff7ae77f1d1193ecd8ba9e4e75c7e28a"
             ]
           },
           "content": "You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:\n\n```sql\nINSERT INTO second_table(id, username) VALUES(1, 'Samus');\n```\n\nThe first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a `name` of `Mario`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Red`. Make sure to use single quotes where needed.",
@@ -1596,7 +1596,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7161c84ebc7922525708f2a877f8d69b09e82250"
+              "cb50a5b7a072f7c745c233aa581fd5dcb813da50"
             ]
           },
           "content": "Mario should have a row now and his `character_id` should have been automatically added. View **all** the data in your `characters` table with `SELECT` to see this.",
@@ -1623,7 +1623,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "828f239aa8248b3667818503169b377439794d91"
+              "25355f5873e33d1f51bfd0d61fb81431a3561fda"
             ]
           },
           "content": "Add another row for Luigi. Give it a `name` of `Luigi`, a `homeland` of `Mushroom Kingdom`, and a `favorite_color` of `Green`.",
@@ -1651,7 +1651,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "944132bd316800ed1d9724c03a91928e84afbcde"
+              "aa324ea7e20b7e863d53eed387982a464ecc366e"
             ]
           },
           "content": "View all the data in your `characters` table with `SELECT` again.",
@@ -1678,7 +1678,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2b204c4ee5c0a2b4692622ab0a569b0cc90aef96"
+              "69a4058c2f12d8c96514a17b7efc732d241b0f09"
             ]
           },
           "content": "Okay, it looks like it's all working. Add another row for Peach. Give her the values: `Peach`, `Mushroom Kingdom`, and `Pink`.",
@@ -1706,7 +1706,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0f68c1bcab7bf3b36bc5f667018a1c62837bc281"
+              "415b84dc2616f468c39c432cf62362e3f105fb2f"
             ]
           },
           "content": "Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:\n\n```sql\nINSERT INTO characters(name, homeland, favorite_color)\nVALUES('Mario', 'Mushroom Kingdom', 'Red'),\n('Luigi', 'Mushroom Kingdom', 'Green'),\n('Peach', 'Mushroom Kingdom', 'Pink');\n```\n\nAdd two more rows. Give the first one the values: `Toadstool`, `Mushroom Kingdom`, and `Red`. Give the second one: `Bowser`, `Mushroom Kingdom`, and `Green`. Try to add them with one command.",
@@ -1732,7 +1732,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b7ca9a48efc8d7e2f65dc4f14f3057c4cb350d1d"
+              "39b7411ceabc26228bfec355f0e9c8618be3c1c5"
             ]
           },
           "content": "If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: `Daisy`, `Sarasaland`, and `Yellow`. The second: `Yoshi`, `Dinosaur Land`, and `Green`. Try to do it with one command.",
@@ -1759,7 +1759,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ddcedecbe133d4329edf06ba59aa3587606599fc"
+              "3910a74cadff86441369124c3e0acb51dc9e2849"
             ]
           },
           "content": "Take a look at all the data in your table with `SELECT` to see where you stand.",
@@ -1786,7 +1786,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "970e718d9b923c01720e97e683c968ca000fd1e8"
+              "d890d81cad8902daca23d34d61a3b957e4893a58"
             ]
           },
           "content": "It looks good, but there's a few mistakes. You can change a value like this:\n\n```sql\nUPDATE table_name SET column_name=new_value WHERE condition;\n```\n\nYou used `username='Samus'` as a condition earlier. `SET` Daisy's `favorite_color` to `Orange`. You can use the condition `name='Daisy'` to change her row.",
@@ -1812,7 +1812,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d22d6973aa048936fd76daf809c9426dd7e9ebcf"
+              "82dff47077eea3e7d9e47b21a7bb02b545a13411"
             ]
           },
           "content": "The command you just used does exactly what it sounds like. It finds the row where `name` is `Daisy`, and sets her `favorite_color` to `Orange`. Take a look at all the data in your table again to see if she got updated.",
@@ -1839,7 +1839,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2aa8dcf903c575a0be24f6eead3a9ad4f998ac0d"
+              "27ead1fd6a202522fbffea94e424d115ff86331a"
             ]
           },
           "content": "Her favorite color was updated. Toadstool's name is wrong as well, it's actually `Toad`. Use `UPDATE` to `SET` his `name` to `Toad`. Use the condition `favorite_color='Red'`.",
@@ -1865,7 +1865,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "78a99905136c1b647264f6de02160afe391d95a0"
+              "018e6cff9dccd0ce5ac89866174ac513813106f6"
             ]
           },
           "content": "Take a look at all the data in your table.",
@@ -1892,7 +1892,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1d3d2dcff3ed58ea4111726e01e72dd4cdedb6eb"
+              "a678e6723b3d8cb3f3728154f1ea42a6b56f69b0"
             ]
           },
           "content": "Using `favorite_color='Red'` was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the `character_id` is different. You will have to use that to change it back to `Mario`. Use `UPDATE` to set the `name` to `Mario` for the row with the lowest `character_id`.",
@@ -1918,7 +1918,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "20182a3cf32ba530aa01b467590597f46bdda696"
+              "29c5c9459c63a80d91c32a38213bc8614cecd00a"
             ]
           },
           "content": "Take a look at all the data in your table again to see if Mario's name got changed back.",
@@ -1945,7 +1945,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1fe6cb585abe1a582acc68f1a06021ea44b04775"
+              "d1c1080e9dbe0a7b1aabc049c550c22fe633beea"
             ]
           },
           "content": "Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to `Blue`. Use whatever condition you want, but don't change any of the other rows.",
@@ -1972,7 +1972,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "6c90f8cfb47486f6d9b00fca63e2504c25cec905"
+              "2bf618511d36c743815eb02ed50f4f1c6b84bc42"
             ]
           },
           "content": "Bowser's `favorite_color` is wrong. He likes `Yellow`. Why don't you update it without changing any of the other rows?",
@@ -1999,7 +1999,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2d73e7f9566e2a9a236a6ef77114174b2377dac7"
+              "121f36ce50eea1c347f60a6b5384f4770c7812b0"
             ]
           },
           "content": "Bowser's `homeland` is wrong as well. He's from the `Koopa Kingdom`. Why don't you change it to that without changing any other rows?",
@@ -2026,7 +2026,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7df2ca1a9706fc1c2affc7f94a52e01b3dce7e99"
+              "e8674493a312e5979c667afdb42fb9b6ea385d12"
             ]
           },
           "content": "Take a look at all the data in your table again to make sure there's no more issues.",
@@ -2052,7 +2052,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "58e9cceeaafa8b51b2630a4c9d3474c46a895d95"
+              "6618f4c23bd2a37e11c54776909e3e86da5f0113"
             ]
           },
           "content": "Actually, you should put that in order. Here's an example:\n\n```sql\nSELECT columns FROM table_name ORDER BY column_name;\n```\n\nView all the data again, but put it in order by `character_id`.",
@@ -2076,7 +2076,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "bc63736d4784d15dd9adfc659977e0ad0ed9e6e7"
+              "4f92a5036074620765f217ec555341ab9eb99a31"
             ]
           },
           "content": "It looks good. Next, you are going to add a **primary key**. It's a column that uniquely identifies each row in the table. Here's an example of how to set a `PRIMARY KEY`:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column_name);\n```\n\nThe `name` column is pretty unique, why don't you set that as the primary key for this table.",
@@ -2101,7 +2101,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b10ed380653faa0f8ec6b88cfcf5461ea18fdc87"
+              "fdb245f5d335c0948fdffde7d355d3673b1ed7a1"
             ]
           },
           "content": "You should set a primary key on every table and there can only be one per table. Take a look at the details of your `characters` table to see the primary key at the bottom.",
@@ -2127,7 +2127,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7a626e72868e9b7f31d15114dcb6deb217200271"
+              "456963d35e386b135943785ce2d0a0f058c7601a"
             ]
           },
           "content": "You can see the key for your `name` column at the bottom. It would have been better to use `character_id` for the primary key. Here's an example of how to drop a constraint:\n\n```sql\nALTER TABLE table_name DROP CONSTRAINT constraint_name;\n```\n\nDrop the primary key on the `name` column. You can see the **constraint name** is `characters_pkey`.",
@@ -2151,7 +2151,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e8b0452afa8b932f71815f7c3bd0c075119a683f"
+              "ddc9f1b7b3307026e8e8bcc26aa2f8d686407a08"
             ]
           },
           "content": "View the details of the `characters` table to make sure it's gone.",
@@ -2177,7 +2177,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c89291a589927016d72cc4520abdc41c7afaab55"
+              "c36609908ee707b00febd53cff7838d4064e8d56"
             ]
           },
           "content": "It's gone. Set the primary key again, but use the `character_id` column this time.",
@@ -2203,7 +2203,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "81c5777c2067f87b0f8385dde04245c48e0657a8"
+              "9b79156efe9891819fd181e4a580b56c2da8c246"
             ]
           },
           "content": "View the details of the `characters` table to see the new primary key.",
@@ -2229,7 +2229,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1a08464428fadec963c7931f22ffe703424ca517"
+              "d23c9f858ef36e31af3f25a9700a770aac798e9b"
             ]
           },
           "content": "That's better. The table looks complete for now. Next, create a new table named `more_info` for some extra info about the characters.",
@@ -2255,7 +2255,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "290ff2fdfa5824fdcb2c021c89c86a956b9cb696"
+              "1cc493fd0e99a2354e71fbde13cc424d5522fb82"
             ]
           },
           "content": "View the tables in `mario_database` again with the **d**isplay command. You should have two tables now.",
@@ -2280,7 +2280,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f99e4869f942aa011d51ea14723ecc3a3e4338b8"
+              "e832fb13a58e5ef942f24d8ce680524bedaa5e38"
             ]
           },
           "content": "I wonder what that third one is. It says `characters_character_id_seq`. I think I have a clue. View the details of the `characters` table.",
@@ -2307,7 +2307,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "766821f8bd5f94c1f3cf70201a8b14149a1d0143"
+              "e05b25b3ee7e2a0897c2eef2d2a0a35b50066c14"
             ]
           },
           "content": "That is what finds the next value for the `character_id` column. Add a column to your new table named `more_info_id`. Make it a type of `SERIAL`.",
@@ -2333,7 +2333,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2c2da6d3ffddd06cb52f987d6bae0c169c29a60b"
+              "08eaa0974a1e36a4317e093ff4f5c66c94637ba0"
             ]
           },
           "content": "Set your new column as the primary key for this table.",
@@ -2359,7 +2359,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "31c97f04c1433aa9c024a018a01629ff1404bf16"
+              "c35a9f02922713ceeefaf43ab8e10ee138bd1517"
             ]
           },
           "content": "View the tables in `mario_database` again with the display command. There should be another sequence there for the `more_info_id` because it also automatically increments.",
@@ -2383,7 +2383,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "216c47d12d51970832804f59dceca81ceab46186"
+              "e165c546c6370b5d2e672fc53ecb05ee31f3256d"
             ]
           },
           "content": "There it is. Add another column to `more_info` named `birthday`. Give it a data type of `DATE`.",
@@ -2409,7 +2409,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "24ca580fdd950d3647f83e65f1883482dea58ed4"
+              "aa0f927c31648f8e8a292423c5a2d31a6317341f"
             ]
           },
           "content": "Add a `height` column to `more_info` that's a type of `INT`.",
@@ -2435,7 +2435,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0f3bf41de9642fb7848235175384ba86cb478767"
+              "6eff5c90dee30aec923ec56548281f7ca069c632"
             ]
           },
           "content": "Add a `weight` column. Give it a type of `NUMERIC(4, 1)`. That data type is for decimals. `NUMERIC(4, 1)` has up to four digits and one of them has to be to the right of the decimal.",
@@ -2461,7 +2461,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e6461bd1632cce6ba032a3884149a9f7446e0b92"
+              "f7544751c3402571f8be9622a6c4593b7548e1c3"
             ]
           },
           "content": "Take a look at the details of `more_info` to see all your columns.",
@@ -2487,7 +2487,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "25d0147b0585baf83b38e3c95315703cb7b13c1a"
+              "b9a3aa82fee3598d7bfb3f50bd7568047f4a76ff"
             ]
           },
           "content": "There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a **foreign key** so you can relate rows from this table to rows from your `characters` table. Here's an example that creates a column as a foreign key:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);\n```\n\nThat's quite the command. In the `more_info` table, create a `character_id` column. Make it an `INT` and a foreign key that references the `character_id` column from the `characters` table. Good luck.",
@@ -2514,7 +2514,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7c4c8eaddce511c22238178cf8aa6397f03875f7"
+              "c5bab897d73d70579b3ffd1a4ce3c74e49c01306"
             ]
           },
           "content": "To set a row in `more_info` for Mario, you just need to set the `character_id` (foreign key) value to whatever it is in the `characters` table. Take a look at the details of `more_info` to see your foreign key.",
@@ -2540,7 +2540,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "40325d309e30bd6dac2bc9d6af9912a10266a20e"
+              "3977957a5e322920d30ffad5b1841d7f9d905f33"
             ]
           },
           "content": "There's your foreign key at the bottom. These tables have a \"one-to-one\" relationship. **One** row in the `characters` table will be related to exactly **one** row in `more_info` and vice versa. Enforce that by adding the `UNIQUE` constraint to your foreign key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD UNIQUE(column_name);\n```\n\nAdd the `UNIQUE` constraint to the column you just added.",
@@ -2565,7 +2565,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7bdfc4a460be4d81bc571854cf50556eed1048f7"
+              "ba604e4dde05a6786b73ca2796855d6fbfe847a5"
             ]
           },
           "content": "The column should also be `NOT NULL` since you don't want to have a row that is for nobody. Here's an example:\n\n```sql\nALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;\n```\n\nAdd the `NOT NULL` constraint to your foreign key column.",
@@ -2590,7 +2590,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0b38fd159777a12e613239909cc24ac4e287fc91"
+              "4b4751f082157217de6171ae139765ac1f548c9d"
             ]
           },
           "content": "Take a look at the details of your `more_info` table to see all the keys and constraints you added.",
@@ -2616,7 +2616,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "eeb5a46a4bf19f2b49c8010d53efd8cfa52f9f75"
+              "72a6e748112ca266f2db9187989d376ccedbc188"
             ]
           },
           "content": "The structure is set, now you can add some rows. First, you need to know what `character_id` you need for the foreign key column. You have viewed all columns in a table with `*`. You can pick columns by putting in the column name instead of `*`. Use `SELECT` to view the `character_id` column **from** the `characters` table.",
@@ -2641,7 +2641,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "7480894741f7f5568e462f7d7fe116af16599ac6"
+              "4cd6111ba7d83860d3f093a5c11385e193ec75f3"
             ]
           },
           "content": "That list of numbers doesn't really help. Use `SELECT` again to display both the `character_id` and `name` columns from the `characters` table. You can separate the column names with a comma to view both.",
@@ -2666,7 +2666,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c681ceaa7492fe0b6ecc3d8c48534270f60661c8"
+              "20258730bbc23e54958dc7dcd6255d5234748256"
             ]
           },
           "content": "That's better. You can see Mario's id there. Here's some more info for him:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1981-07-09 | 155    | 64.5   |\n\nAdd a row to `more_info` with the above data for Mario using the `INSERT INTO` and `VALUES` keywords. Be sure to set his `character_id` when adding him. Also, `DATE` values need a string with the format: `'YYYY-MM-DD'`.",
@@ -2693,7 +2693,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f16fe18389ce376a8f37b87507b3b5d3ccb46cc8"
+              "08c86b0eca11422d908a28024cbe5c67fa5d133b"
             ]
           },
           "content": "View all the data in `more_info` to make sure it's looking good.",
@@ -2720,7 +2720,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "66456caffdec4d06baedb5e06bb7f701b51b5184"
+              "b8245ceb9851c246ed821351af46849a54383bf3"
             ]
           },
           "content": "Next, you are going to add some info for Luigi. Use `SELECT` again to view the `character_id` and `name` columns **from** the `characters` table to find his id.",
@@ -2745,7 +2745,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "535804214c40656b49519f8f98ed75caa4557df5"
+              "7c64da872203eace81076700ba9255f694d54701"
             ]
           },
           "content": "You can see Luigi's id there. Here's his info:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1983-07-14 | 175    | 48.8   |\n\nAdd a row in `more_info` for Luigi using the above info. Be sure to add his `character_id` as well.",
@@ -2773,7 +2773,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1039528c265e5763d172fe9e4089cbed2d3ebfbb"
+              "ff5cd09f194fd3d7eb31f0dd50984d486a4f0bd3"
             ]
           },
           "content": "View all the data in `more_info` to see more info for Luigi.",
@@ -2800,7 +2800,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c379cdfeead440d6f471eab1cfae8b1d07312bda"
+              "14e7a2062663883afaee0b4b05e3dac4ffba8b42"
             ]
           },
           "content": "Peach is next. View the `character_id` and `name` columns from the `characters` table again so you can find her id.",
@@ -2826,7 +2826,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d6579ef91397dc6031a0bcaeb8cfb4c58b0cfe5f"
+              "609453380840212c8aff301a6dbebed6b8f76d7f"
             ]
           },
           "content": "Here's the additional info for Peach:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1985-10-18 | 173    | 52.2   |\n\nAdd a row for Peach using the above info. Be sure to add her `character_id` as well.",
@@ -2853,7 +2853,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "87c061ec05f6e9624940c2bd129aa8b8d6fc5688"
+              "202a893f4fbf425b506cb2e04431e91bd9fd26ec"
             ]
           },
           "content": "Toad is next. Instead of viewing all the rows to find his id, you can just view his row with a `WHERE` condition. You used several earlier to delete and update rows. You can use it to view rows as well. Here's an example:\n\n```sql\nSELECT columns FROM table_name WHERE condition;\n```\n\nA condition you used before was `username='Samus'`. Find Toad's id by viewing the `character_id` and `name` columns from `characters` for only his row.",
@@ -2879,7 +2879,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "41a1e102baa9932cc635a631e4a212c95bb13c2d"
+              "b248ba835f6739eae1b1181d4eacbf07007b55e9"
             ]
           },
           "content": "Here's what Toad's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1950-01-10 | 66     | 35.6   |\n\nAdd the above info for Toad. Be sure to add his `character_id`.",
@@ -2906,7 +2906,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1f1599bc5f398a65627bcc456436cbca3f52b2bf"
+              "2123329d0c09a80413d49bd1e6f42f55f6d5503b"
             ]
           },
           "content": "View all the data in `more_info` to see the rows you added.",
@@ -2933,7 +2933,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "614ff4e646de6e08ca0d6185b89953ed881bd0fd"
+              "f6a66042e74c40529171c643afd5142522e50c5a"
             ]
           },
           "content": "Bowser is next. Find his id by viewing the `character_id` and `name` columns for only his row.",
@@ -2960,7 +2960,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "37ff32158b42fd0ebdcb44d9b6a3903c2cbe3cbc"
+              "b189745881f574141cec1e105387637bdf8aff86"
             ]
           },
           "content": "Here's what Bowser's info looks like:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-10-29 | 258    | 300    |\n\nAdd the above info for Bowser. Don't forget to add his `character_id`.",
@@ -2987,7 +2987,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8c30a15c8e4803196e91ad373697947f9a2e07c6"
+              "3b897669e9c82f9cbde59151e2919677f81082c8"
             ]
           },
           "content": "Daisy is next. Find her id by viewing the `character_id` and `name` columns for only her row.",
@@ -3014,7 +3014,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "3204606f1670b257885bd41b96eb32e48afebfd8"
+              "2ed4c5c7027fa66af623db1754844419dd149db9"
             ]
           },
           "content": "The info for Daisy looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1989-07-31 | NULL   | NULL   |\n\nAdd the above info for Daisy to `more_info`. Be sure to add her `character_id` as well. You can use `NULL` or simply not include the null columns when inserting.",
@@ -3040,7 +3040,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "00b20900f1eb7a3e6a1cb1edce89bcdaf6009645"
+              "72ec97cd05d40ef2b78c700dcfed7405d3a1d90e"
             ]
           },
           "content": "View all the data in `more_info` to see the rows you added.",
@@ -3067,7 +3067,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "48fd447fd394008191850b171cf367fca8ddc561"
+              "902630915c16c7d3d95cab41dae750ec261a6b41"
             ]
           },
           "content": "Null values show up as blank. Yoshi is last. Find his id by viewing the `character_id` and `name` columns for only his row.",
@@ -3093,7 +3093,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "cfddfe90973df355f641b72b31bb1a083afdb3c4"
+              "d99b4ae8ed599597ff2a1c24c3bdb7f178869c17"
             ]
           },
           "content": "The info for Yoshi looks like this:\n\n| birthday   | height | weight |\n| ---------- | ------ | ------ |\n| 1990-04-13 | 162    | 59.1   |\n\nAdd the above info for Yoshi to `more_info`. Be sure to include his `character_id`.",
@@ -3120,7 +3120,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "50a68ab90ea25d8bd02e7bcda61ec505052a29bb"
+              "24821735885fa162b79614f995fdd6b65590a2bd"
             ]
           },
           "content": "There should be a lot of data in `more_info` now. Take a look at **all** the rows and columns in it.",
@@ -3146,7 +3146,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "bb0229dbfaa7820f26f28ea0de6a8b8fa9db48e5"
+              "384ade19005d89c51aa6ec8ffb53eba90a64efbf"
             ]
           },
           "content": "It looks good. There is something you can do to help out though. What units do the `height` and `weight` columns use? It's centimeters and kilograms, but nobody will know. Rename the `height` column to `height_in_cm`.",
@@ -3172,7 +3172,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "3ccf636a48c420950b996e0b7a48ac57ec3a4117"
+              "adb35ee178fdacfc62c0ab2b0515ae2ba353efc8"
             ]
           },
           "content": "Rename the `weight` column to `weight_in_kg`.",
@@ -3198,7 +3198,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "938d193739517762623b50fd6bdb73980d385494"
+              "1b668c383c1e107ed5a9a911d45550ec1ae450b7"
             ]
           },
           "content": "Take a quick look at all the data in `more_info` to see the new column names.",
@@ -3224,7 +3224,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d9d865c08746daf67f80b2d3f8ac9416cbffb3db"
+              "f4987b4bf1dd557910eae53e2155340a7026e6e8"
             ]
           },
           "content": "Next, you will make a `sounds` table that holds filenames of sounds the characters make. You created your other tables similar to this:\n\n```sql\nCREATE TABLE table_name();\n```\n\nInside those parenthesis you can put columns for a table so you don't need to add them with a separate command, like this:\n\n```sql\nCREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);\n```\n\nCreate a new table named `sounds`. Give it a column named `sound_id` of type `SERIAL` and a constraint of `PRIMARY KEY`.",
@@ -3248,7 +3248,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "994009b3b2742013730ae04f5a9524fb8c5cdb96"
+              "cc3c4c61d5acd9df0c32b337485950df3e91d10f"
             ]
           },
           "content": "View the tables in `mario_database` to make sure it worked.",
@@ -3273,7 +3273,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "bd39e842a470edf3dc4681582cefe241ff1d164a"
+              "9299bd9876c83440db4dfa8ac5f9ba40943edd49"
             ]
           },
           "content": "There's your `sounds` table. Add a column to it named `filename`. Make it a `VARCHAR` that has a max length of `40` and with constraints of `NOT NULL` and `UNIQUE`. You can put those constraints at the end of the query to add them all.",
@@ -3300,7 +3300,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f7097df14c9cd8d530e87c67abe28ecdbd6e070c"
+              "752fedc859dc454a6facc30049fe30c4ad10b16b"
             ]
           },
           "content": "You want to use `character_id` as a foreign key again. This will be a \"one-to-many\" relationship because **one** character will have **many** sounds, but no sound will have more than one character. Here's the example again:\n\n```sql\nALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);\n```\n\nAdd a column to `sounds` named `character_id`. Give it the properties `INT`, `NOT NULL`, and set it as a foreign key that references `character_id` from `characters`.",
@@ -3327,7 +3327,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "96584ccdf1dec6da35a8fd373f6252fd264173cd"
+              "12ce3058432cd2b302c32e18074143bfbcbca952"
             ]
           },
           "content": "Take a look at the details of the `sounds` table to see all the columns.",
@@ -3353,7 +3353,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fb48bddbff16c5e7e51db83521d5129009eb0700"
+              "ed110bb070810c413e12881e1986be4f35abc099"
             ]
           },
           "content": "Next, you will add some rows. But first, view all the data in `characters` so you can find the correct id's again. **Order** them **by** `character_id` like you did earlier.",
@@ -3380,7 +3380,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1910e73caa0134e9b0b7ecb5a1ae95a43727fa5f"
+              "da74ae04b00f455c139719c1ea3bc254b12f0d2b"
             ]
           },
           "content": "The first file is named `its-a-me.wav`. Insert it into the `sounds` table with Mario's id as the `character_id`.",
@@ -3408,7 +3408,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0ef09341f601376e066ee60379b25525da868233"
+              "bd66c18af244cd373655158c57e2a4904fc33b03"
             ]
           },
           "content": "Add another row with a `filename` of `yippee.wav`. Use Mario's `character_id` again for the foreign key value.",
@@ -3435,7 +3435,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "61c5d49ece1f341a03b461da74dcefe84d25f832"
+              "474604ab6add10cf9ed9dded94163931b93a99db"
             ]
           },
           "content": "Add another row to `sounds` for Luigi named `ha-ha.wav`. Use his `character_id` this time. Take a look at the data in `characters` to find his id if you need to.",
@@ -3461,7 +3461,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "4b8707d42648d8cf75fc9f3c17fe005841a1567d"
+              "32b7f59226dfdf7626f944dc7315dd6cfe8c90c3"
             ]
           },
           "content": "Add another row with a filename of `oh-yeah.wav`. This one is for Luigi as well so use his `character_id` again.",
@@ -3486,7 +3486,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "6b957ee39596119e6a8f9a596cac93117ea5c9eb"
+              "3497ab21edb4dc4c2c194996b3583b50d4cdfb49"
             ]
           },
           "content": "Add two more rows for Peach sounds. The filenames are `yay.wav` and `woo-hoo.wav`. Don't forget her `character_id`. Try to do it with one command.",
@@ -3513,7 +3513,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "17a4d575f5f8633d42f0a5e4100da1d3b48b8102"
+              "f2d4ca76445e3cd209dc40d6e761d844376d7696"
             ]
           },
           "content": "Add two more rows. The filenames are `mm-hmm.wav` and `yahoo.wav`. The first one is for Peach again, the second is for Mario, so use the correct foreign key values. Try to do it with one command.",
@@ -3540,7 +3540,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c6790bd23306c3f3e0c6a742d0baf2f51e41d3f9"
+              "9c4bdbd9748d947192de44cd1b6e34058af8c2c5"
             ]
           },
           "content": "View all the data in the `sounds` table. You should be able to see the \"one-to-many\" relationship better. One character has many sounds.",
@@ -3567,7 +3567,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "deac6fe5fd2a3187f0ff829365289dcc15b5b514"
+              "39713e259d38e95a6937d714ae58a899c202b347"
             ]
           },
           "content": "See the \"one-to-many\" relationship? Create another new table called `actions`. Give it a column named `action_id` that's a type of `SERIAL`, and make it the `PRIMARY KEY`. Try to create the table and add the column with one command.",
@@ -3593,7 +3593,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "dfb5cc243b3aedf9355d06dd76235dce9976bbc0"
+              "35a5a67285544d02f413091dd3e7475693fd6e59"
             ]
           },
           "content": "Add a column named `action` to your new table. Give it a type of `VARCHAR` that is a max length of `20` and has `UNIQUE` and `NOT NULL` constraints.",
@@ -3619,7 +3619,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ec465dfe025c6070351d21cc449a6808d0c55fdb"
+              "d2b490f4feb1706506ff8988c2ec64e5e7d18491"
             ]
           },
           "content": "The actions table won't have any foreign keys. It's going to have a \"many-to-many\" relationship with the characters table. This is because **many** of the characters can perform **many** actions. You will see why you don't need a foreign key later. Insert a row into the `actions` table. Give it an `action` of `run`.",
@@ -3646,7 +3646,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "6aabdabcdb604d96768226bc036867282d5548c5"
+              "fd6a891b2378450a20967eb88500085b0ae3015f"
             ]
           },
           "content": "Insert another row into the `actions` table. Give it an `action` of `jump`.",
@@ -3673,7 +3673,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "2af7cd57cf87bceedb97e53a195fbd9e6f47ca90"
+              "42304dd38cb23993a1dd728f178db382f14e7d81"
             ]
           },
           "content": "Add another action row with an `action` of `duck`.",
@@ -3700,7 +3700,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1496d160291136e837655ab90877737bdfc7acc8"
+              "c889927eef252c0c05ba54ff350e2b127794e398"
             ]
           },
           "content": "View all the data in `actions` to make sure there's no mistakes.",
@@ -3727,7 +3727,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "878540fd57011d7f3e13ab787deb3d63fbbb9329"
+              "6abb738106ee108541487b5ade3efe4e89eeedd4"
             ]
           },
           "content": "It looks good. \"Many-to-many\" relationships usually use a **junction** table to link two tables together, forming two \"one-to-many\" relationships. Your `characters` and `actions` table will be linked using a junction table. Create a new table called `character_actions`. It will describe what actions each character can perform.",
@@ -3753,7 +3753,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "57039900d6a6c2091a8ca022ccbcd55627eb0f0f"
+              "53231058d40b30503e0cf3359bbbb7278fd731b0"
             ]
           },
           "content": "Your junction table will use the primary keys from the `characters` and `actions` tables as foreign keys to create the relationship. Add a column named `character_id` to your junction table. Give it the type of `INT` and constraint of `NOT NULL`.",
@@ -3779,7 +3779,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9941b4f6dd0bf5d37d0dfc46f745e615a9a6aba3"
+              "883c8b4f63e9366fefa966b1faf3f89d8f4a4e37"
             ]
           },
           "content": "The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:\n\n```sql\nALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);\n```\n\nSet the `character_id` column you just added as a foreign key that references the `character_id` from the `characters` table.",
@@ -3805,7 +3805,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "99fa951a4a14dd76710c417c42297b2ec2a340ab"
+              "6a82f305a008ca7c4c3612a5638ac9f481424f6d"
             ]
           },
           "content": "View the details of the `character_actions` table to see the foreign key you added.",
@@ -3831,7 +3831,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9cd7e502814b1c94865a0859cc1e9ad1bf7f567b"
+              "001cf11a497c1d792fbc863795fa56ed11ed17cc"
             ]
           },
           "content": "Add another column to `character_actions` named `action_id`. Give it a type of `INT` and constraint of `NOT NULL`.",
@@ -3857,7 +3857,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9558368505cad9cb18f0d5ad866404750cd0cfe2"
+              "4d2e73697da00e443309540bdd62327c5b048071"
             ]
           },
           "content": "This will be a foreign key as well. Set the `action_id` column you just added as a foreign key that references the `action_id` column from the `actions` table.",
@@ -3884,7 +3884,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b824a1e7dc1fbbe42434ea2c467cd1ff31cd2240"
+              "d4312313a91d9521111131b780b3eaaa900fb077"
             ]
           },
           "content": "View the details of the `character_actions` table to see your keys.",
@@ -3910,7 +3910,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "e601913307623399f7c7c358715b5d54740452b9"
+              "b074d619d78639e13ea295748a6ffac96f7f88e9"
             ]
           },
           "content": "Every table should have a primary key. Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a **composite** primary key. Here's an example:\n\n```sql\nALTER TABLE table_name ADD PRIMARY KEY(column1, column2);\n```\n\nUse `character_id` and `action_id` to create a composite primary key for this table.",
@@ -3934,7 +3934,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "16cbef1ee233ff95821ec8d91a2e97014133801a"
+              "649c9604a5974b1a36b64ca85eaf6a97a790851a"
             ]
           },
           "content": "This table will have multiple rows with the same `character_id`, and multiple rows the same `action_id`. So neither of them are unique. But you will never have the same `character_id` and `action_id` in a single row. So the two columns together can be used to uniquely identify each row. View the details of the `character_actions` table to see your composite key.",
@@ -3960,7 +3960,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "45ce57c11fe96d33f54c88361564f1998054775a"
+              "3c270eab8ec9a327f296d56c03d8d81bc2c682c5"
             ]
           },
           "content": "Insert three rows into `character_actions` for all the actions Yoshi can perform. He can perform all of them in the `actions` table. View the data in the `characters` and `actions` table to find the correct id's for the information.",
@@ -3987,7 +3987,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "68265f6ad0bb39081a9bd5088d10b41a8cfdfcaa"
+              "9dac1b1bd55adf083f57cbfbd6a3d14fe4faf9a9"
             ]
           },
           "content": "View all the data in `character_actions` to see your rows.",
@@ -4014,7 +4014,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "57424aadf44b2c926eb17155e7f73921852e3a3e"
+              "8498b47255051579b33bf70e182c06f83d5ea3fc"
             ]
           },
           "content": "Add three more rows into `character_actions` for all of Daisy's actions. She can perform all of the actions, as well.",
@@ -4043,7 +4043,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fdc6029a96277d6d13840a9c54d29c811be9125c"
+              "f6f2d3bafabae6100e385d4b1110b19e4832e4dd"
             ]
           },
           "content": "Bowser can perform all the actions. Add three rows to the table for him.",
@@ -4073,7 +4073,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "603f540e6f1f0d9c9f5a6ccc576b58b1ebcb8019"
+              "dfe612ae5751c8610d0523a13ffb894369db14a5"
             ]
           },
           "content": "Next is Toad. Add three more rows for his actions.",
@@ -4102,7 +4102,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b84b2be4565586077b53db5ba137688fddecad7d"
+              "c410eff5061faeaa7ea22036d90c2f606e188c07"
             ]
           },
           "content": "You guessed it. Peach can perform all the actions as well, so add three more rows for her.",
@@ -4130,7 +4130,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "acef294ec45d413ba964af87e4c211d92ac1fd5b"
+              "66a074a82962d1991012abec8ed15f2d3cea7e75"
             ]
           },
           "content": "Add three more rows for Luigi's actions.",
@@ -4160,7 +4160,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a487ae7b10358187732943c0996777e490f5d3cb"
+              "e96c55d49444eeb9dddc4be81096c1a352360a9c"
             ]
           },
           "content": "Last is Mario, add three rows for his actions.",
@@ -4188,7 +4188,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "87df43085d52fa922fd1195561be94afea4a252c"
+              "87a09710dbdc48972d7873042d4a08fda2a90afc"
             ]
           },
           "content": "That was a lot of work. View all the data in `character_actions` to see the rows you ended up with.",
@@ -4215,7 +4215,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "c10592115b8ffc9e15a88d018d4743637c313bc2"
+              "b6319a57768999e9ccc8003d022dc004cbe1eb80"
             ]
           },
           "content": "Well done. The database is complete for now. Take a look around to see what you ended up with. First, display all the tables you created.",
@@ -4240,7 +4240,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ccf3bcb44fd319e1c8c02b8f5134296ef936bbf2"
+              "bd3dba30bfdbc12a952ad059f42205a9e996ce35"
             ]
           },
           "content": "There's five tables there. Nice job. Next, take a look at all the data in the `characters` table.",
@@ -4267,7 +4267,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "5d470240b25eb211cc293fdef95ec01843ebda19"
+              "418676910251a19b6f453444e47ad898b8d225ab"
             ]
           },
           "content": "Those are some lovely characters. View all the data in the `more_info` table.",
@@ -4294,7 +4294,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8bd42e3647b55b2c89b8f35d5c7937e17d93ed49"
+              "f8bfb392796136fb4fc0898a1b599be2acb1e8a8"
             ]
           },
           "content": "You can see the `character_id` there so you just need to find the matching id in the `characters` table to find out who it's for. Or... You added that as a foreign key, that means you can get all the data from both tables with a `JOIN` command:\n\n```sql\nSELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;\n```\n\nEnter a join command to see **all** the info from both tables. The two tables are `characters` and `more_info`. The columns are the `character_id` column from both tables since those are the linked keys.",
@@ -4321,7 +4321,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "42dc46790117a10b69219876786e974441506bfd"
+              "e4b21ca689aca1e150bfe1a09bdd5729fd93ef47"
             ]
           },
           "content": "Now you can see all the info from both tables. If you recall, that's a \"one-to-one\" relationship. So there's one row in each table that matches a row from the other. Use another `JOIN` command to view the `characters` and `sounds` tables together. They both use the `character_id` column for their keys as well.",
@@ -4348,7 +4348,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0fc233431bd1cfbb7f13930410afb34c68aeffd2"
+              "fb2a51fe70ec15f3830bd691c93f6a5a5f90044d"
             ]
           },
           "content": "This shows the \"one-to-many\" relationship. You can see that some of the characters have more than one row because they have **many** sounds. How can you see all the info from the `characters`, `actions`, and `character_actions` tables? Here's an example that joins three tables:\n\n```sql\nSELECT columns FROM junction_table\nFULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column\nFULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;\n```\n\nCongratulations on making it this far. This is the last step. View all the data from `characters`, `actions`, and `character_actions` by joining all three tables. When you see the data, be sure to check the \"many-to_many\" relationship. Many characters will have many actions.",
