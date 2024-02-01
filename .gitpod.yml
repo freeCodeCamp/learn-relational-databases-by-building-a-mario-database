@@ -16,6 +16,12 @@ tasks:
       sudo chmod -R 777 /workspace
       sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 
+    init: |
+      sudo rm /workspace/project/CHANGELOG.md
+      sudo rm /workspace/project/coderoad.yaml
+      sudo rm /workspace/project/tutorial.json
+      sudo rm /workspace/project/TUTORIAL.md
+
     command: |
       pg_stop && sudo service postgresql start && echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname='freecodecamp')\gexec" | psql -U postgres -X
       exit
