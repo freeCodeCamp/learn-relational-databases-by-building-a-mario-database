@@ -6,7 +6,7 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoClosingBrackets": "never",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.hover.enabled": false,
   "editor.inlineSuggest.enabled": false,
@@ -39,7 +39,6 @@
     "learn-relational-databases-by-building-a-mario-database": true,
     ".gitpod.Dockerfile": true,
     ".gitpod.yml": true,
-    "codeAlly.json": true,
     "CHANGELOG.md": true,
     "coderoad.yaml": true,
     "tutorial.json": true,
