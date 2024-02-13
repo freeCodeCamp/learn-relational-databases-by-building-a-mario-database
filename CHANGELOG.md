@@ -44,3 +44,7 @@ Whenever a new version is created, add the new branch name and the changes here
 
 - Fix test 890 to check for `more_info` table name
 - Fix test 895 - see issue: https://github.com/freeCodeCamp/freeCodeCamp/issues/48521
+
+## [v2.0.0]
+
+- Add Gitpod config
