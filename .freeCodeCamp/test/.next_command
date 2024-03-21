@@ -57,3 +57,4 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 echo hello postgresql
 echo hellp PostgreSQL
 echo hello PostgreSQL
+psql --username=freecodecamp --dbname=postgres
