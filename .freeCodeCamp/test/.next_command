@@ -25,3 +25,4 @@ git remote -v
 git push
 git remote -v
 echo hello PostgreSQL
+psql --username=freecodecamp --dbname=postgres
