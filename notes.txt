@@ -115,3 +115,6 @@ $ CREATE TABLE more_info();
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
 $ ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;
 $ ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);
+\d
+
+$ ALTER TABLE more_info ADD COLUMN birthday DATE;
