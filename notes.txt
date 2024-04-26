@@ -67,3 +67,8 @@ $ \c mario_database
 $ DROP DATABASE second_database;
 $ \d
 $ CREATE TABLE characters();
+
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+$ ALTER TABLE characters ADD COLUMN character_id SERIAL;
+
+
