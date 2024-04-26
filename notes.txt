@@ -79,3 +79,4 @@ $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushro
 $ SELECT * FROM characters;
 
 $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');
+$ INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');
