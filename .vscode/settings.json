@@ -1,5 +1,5 @@
 {
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "debug.internalConsoleOptions": "neverOpen",
   "debug.showInStatusBar": "never",
   "editor.acceptSuggestionOnCommitCharacter": false,
