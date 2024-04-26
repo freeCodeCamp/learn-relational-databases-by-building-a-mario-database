@@ -1,0 +1,9 @@
+>F1
+CodeRoad: Start
+echo hello PostgreSQL
+psql --username=freecodecamp --dbname=postgres
+\l #list
+CREATE DATABASE first_database;
+\d #display
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+ALTER TABLE table_name DROP COLUMN column_name;
