@@ -209,3 +209,5 @@ SELECT columns FROM table_name WHERE condition;
 $ SELECT character_id, name FROM characters WHERE name='Toad';
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1950-01-10', 66, 35.6, 4);
 
+$ SELECT character_id, name FROM characters WHERE name='Bowser';
+$ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-29', 258, 300, 5);
