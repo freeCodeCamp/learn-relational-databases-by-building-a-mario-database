@@ -76,3 +76,4 @@ $ ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);
 $ ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);
 
 $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');
+$ SELECT * FROM characters;
