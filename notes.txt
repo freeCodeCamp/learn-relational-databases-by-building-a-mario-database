@@ -203,5 +203,6 @@ mario_database=> SELECT * FROM more_info;
 |            1 | 1981-07-09 |    155 |   64.5 |            1 |
 +--------------+------------+--------+--------+--------------+
 (1 row)
+$ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);
 
 
