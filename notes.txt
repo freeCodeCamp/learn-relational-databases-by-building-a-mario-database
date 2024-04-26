@@ -52,3 +52,4 @@ $ SELECT * FROM second_table;
 
 $ \d second_table
 $ ALTER TABLE second_table DROP COLUMN username;
+$ ALTER TABLE second_table DROP COLUMN id;
