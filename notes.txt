@@ -49,3 +49,6 @@ $ SELECT * FROM second_table;
 $ DELETE FROM second_table WHERE username='Mario';
 $ DELETE FROM second_table WHERE username='Samus';
 $ SELECT * FROM second_table;
+
+$ \d second_table
+$ ALTER TABLE second_table DROP COLUMN username;
