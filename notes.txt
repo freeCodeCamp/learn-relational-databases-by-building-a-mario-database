@@ -57,3 +57,4 @@ $ \d
 
 DROP TABLE table_name;
 $ DROP TABLE second_table;
+$ DROP TABLE first_table;
