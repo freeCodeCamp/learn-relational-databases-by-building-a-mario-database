@@ -1,11 +1,38 @@
 >F1
 CodeRoad: Start
-echo hello PostgreSQL
-psql --username=freecodecamp --dbname=postgres
-\l #list
-CREATE DATABASE first_database;
-\d #display
+$ echo hello PostgreSQL
+$ psql --username=freecodecamp --dbname=postgres
+$ \l #list
+
+$ CREATE DATABASE first_database;
+$ CREATE DATABASE second_database;
+$ \d #display
+$ \c # connect database
+$ \c second_database
+
+CREATE TABLE table_name();
+$ CREATE TABLE first_table();
+$ CREATE TABLE second_table();
+$\d second_table
+
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
+$ ALTER TABLE second_table ADD COLUMN first_column INT;
+$\d second_table
+$ ALTER TABLE second_table ADD COLUMN id INT;
+$ ALTER TABLE second_table ADD COLUMN age INT;
+
 ALTER TABLE table_name DROP COLUMN column_name;
+$ ALTER TABLE second_table DROP COLUMN age;
+\d second_table
+$ ALTER TABLE second_table DROP COLUMN first_column;
+
+$ ALTER TABLE second_table ADD COLUMN name VARCHAR(30);
+
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
+$ ALTER TABLE second_table RENAME COLUMN name TO username;
+
 INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);
+$ INSERT INTO second_table(id, username) VALUES(1, 'Samus');
+
+SELECT columns FROM table_name;
+$ SELECT * FROM second_table;
