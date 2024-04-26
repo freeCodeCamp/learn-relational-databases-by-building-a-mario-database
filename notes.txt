@@ -108,3 +108,4 @@ $ \d characters
 
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
 $ ALTER TABLE characters DROP CONSTRAINT characters_pkey;
+$ ALTER TABLE characters ADD PRIMARY KEY(characters_id);
