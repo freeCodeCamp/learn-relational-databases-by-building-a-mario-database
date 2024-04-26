@@ -130,5 +130,20 @@ mario_database=>                         List of relations
 $ ALTER TABLE more_info ADD COLUMN birthday DATE;
 $ ALTER TABLE more_info ADD COLUMN height INT;
 $ ALTER TABLE more_info ADD COLUMN weight NUMERIC(4,1);
+$ \d more_info
+mario_database=>                                         Table "public.more_info"
++--------------+--------------+-----------+----------+-------------------------------------------------+
+|    Column    |     Type     | Collation | Nullable |                     Default                     |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer      |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
+| birthday     | date         |           |          |                                                 |
+| height       | integer      |           |          |                                                 |
+| weight       | numeric(4,1) |           |          |                                                 |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
 
-
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
+$ ALTER TABLE more_info 
+ADD COLUMN character_id 
+INT REFERENCES characters(character_id);
