@@ -101,4 +101,7 @@ $ SELECT * FROM characters;
 
 SELECT columns FROM table_name ORDER BY column_name;
 $ SELECT * FROM characters ORDER BY character_id;
-$ 
+
+ALTER TABLE table_name ADD PRIMARY KEY(column_name);
+$ ALTER TABLE characters ADD PRIMARY KEY(name);
+
