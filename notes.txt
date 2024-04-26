@@ -98,6 +98,19 @@ $ UPDATE characters SET favorite_color='Blue' WHERE character_id=4;
 $ UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;
 $ UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;
 $ SELECT * FROM characters;
+mario_database=>                                
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            1 | Mario  | Mushroom Kingdom | Red            |
+|            4 | Toad   | Mushroom Kingdom | Blue           |
+|            5 | Bowser | Koopa Kingdom    | Yellow         |
++--------------+--------+------------------+----------------+
+(7 rows)
 
 SELECT columns FROM table_name ORDER BY column_name;
 $ SELECT * FROM characters ORDER BY character_id;
@@ -147,4 +160,12 @@ ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_tab
 $ ALTER TABLE more_info 
 ADD COLUMN character_id 
 INT REFERENCES characters(character_id);
+$ \d more_info
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+Foreign-key constraints:
+    "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
+
+ALTER TABLE table_name ADD UNIQUE(column_name);
+$ ALTER TABLE more_info ADD UNIQUE(character_id);
 
