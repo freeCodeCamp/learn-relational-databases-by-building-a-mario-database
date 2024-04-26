@@ -61,3 +61,5 @@ $ DROP TABLE first_table;
 
 ALTER DATABASE database_name RENAME TO new_database_name;
 $ ALTER DATABASE first_database RENAME TO mario_database;
+$ \l
+
