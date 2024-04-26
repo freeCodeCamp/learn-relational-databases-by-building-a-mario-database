@@ -58,7 +58,7 @@
   "update.showReleaseNotes": false,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.colorCustomizations": {
     "[Tomorrow Night Blue]": {
       "menu.background": "#0a0a23",
