@@ -82,9 +82,13 @@ $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushro
 $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');
 
 $ INSERT INTO characters(name, homeland, favorite_color)
-    VALUES('Toadstool', 'Mushroom Kingdom', 'Red'),
-          ('Bowser', 'Mushroom Kingdom', 'Green');
+VALUES('Toadstool', 'Mushroom Kingdom', 'Red'),
+('Bowser', 'Mushroom Kingdom', 'Green');
 
-INSERT INTO characters(name, homeland, favorite_color)
+$ INSERT INTO characters(name, homeland, favorite_color)
 VALUES('Daisy', 'Sarasaland', 'Yellow'),
 ('Yoshi', 'Dinosaur Land', 'Green');
+$ SELECT * FROM characters;
+
+UPDATE table_name SET column_name=new_value WHERE condition;
+$ UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';
