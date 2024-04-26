@@ -2,12 +2,12 @@
 CodeRoad: Start
 $ echo hello PostgreSQL
 $ psql --username=freecodecamp --dbname=postgres
+$ \c # connect database
 $ \l #list databases
 
 $ CREATE DATABASE first_database;
 $ CREATE DATABASE second_database;
 $ \d #display
-$ \c # connect database
 $ \c second_database
 
 CREATE TABLE table_name();
@@ -171,4 +171,4 @@ $ ALTER TABLE more_info ADD UNIQUE(character_id);
 
 ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 $ ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;
-
+$ \d more_info
