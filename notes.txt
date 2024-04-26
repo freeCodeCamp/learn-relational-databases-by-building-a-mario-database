@@ -147,3 +147,4 @@ ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_tab
 $ ALTER TABLE more_info 
 ADD COLUMN character_id 
 INT REFERENCES characters(character_id);
+
