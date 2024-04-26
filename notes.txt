@@ -45,3 +45,7 @@ $ SELECT * FROM second_table;
 
 DELETE FROM table_name WHERE condition;
 $ DELETE FROM second_table WHERE username='Luigi';
+$ SELECT * FROM second_table;
+
+$ DELETE FROM second_table WHERE username='Mario';
+$ SELECT * FROM second_table;
