@@ -172,3 +172,10 @@ $ ALTER TABLE more_info ADD UNIQUE(character_id);
 ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
 $ ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;
 $ \d more_info
+mario_database=>                                         Table "public.more_info"
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+Foreign-key constraints:
+    "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
+
+$ SELECT character_id FROM characters;
