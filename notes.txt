@@ -104,4 +104,7 @@ $ SELECT * FROM characters ORDER BY character_id;
 
 ALTER TABLE table_name ADD PRIMARY KEY(column_name);
 $ ALTER TABLE characters ADD PRIMARY KEY(name);
+$ \d characters
 
+ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+$ ALTER TABLE characters DROP CONSTRAINT characters_pkey;
