@@ -129,4 +129,6 @@ mario_database=>                         List of relations
 
 $ ALTER TABLE more_info ADD COLUMN birthday DATE;
 $ ALTER TABLE more_info ADD COLUMN height INT;
+$ ALTER TABLE more_info ADD COLUMN weight NUMERICA(4,1);
+
 
