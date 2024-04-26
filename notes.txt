@@ -194,4 +194,5 @@ mario_database=>
 (7 rows)
 
 $ SELECT character_id, name FROM characters;
-$ UPDATE more_info SET birthday="1981-07-09", height=155, weight=64.5 WHERE character_id=1;
+$ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);
+
