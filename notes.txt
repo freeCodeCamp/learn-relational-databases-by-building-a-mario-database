@@ -81,6 +81,10 @@ $ SELECT * FROM characters;
 $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');
 $ INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');
 
+$ INSERT INTO characters(name, homeland, favorite_color)
+    VALUES('Toadstool', 'Mushroom Kingdom', 'Red'),
+          ('Bowser', 'Mushroom Kingdom', 'Green');
+
 INSERT INTO characters(name, homeland, favorite_color)
-VALUES('Toadstool', 'Mushroom Kingdom', 'Red'),
-('Bowser', 'Mushroom Kingdom', 'Green');
+VALUES('Daisy', 'Sarasaland', 'Yellow'),
+('Yoshi', 'Dinosaur Land', 'Green');
