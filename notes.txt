@@ -72,4 +72,4 @@ ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
 $ ALTER TABLE characters ADD COLUMN character_id SERIAL;
 $ \d characters
 $ ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;
-
+$ ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);
