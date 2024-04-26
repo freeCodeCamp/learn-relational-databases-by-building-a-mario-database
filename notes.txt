@@ -41,3 +41,7 @@ $ INSERT INTO second_table(id, username) VALUES(2, 'Mario');
 $ SELECT * FROM second_table;
 
 $ INSERT INTO second_table(id, username) VALUES(3, 'Luigi');
+$ SELECT * FROM second_table;
+
+DELETE FROM table_name WHERE condition;
+$ DELETE FROM second_table WHERE username='Luigi';
