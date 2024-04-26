@@ -195,4 +195,13 @@ mario_database=>
 
 $ SELECT character_id, name FROM characters;
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);
+mario_database=> SELECT * FROM more_info;
+                               
++--------------+------------+--------+--------+--------------+
+| more_info_id |  birthday  | height | weight | character_id |
++--------------+------------+--------+--------+--------------+
+|            1 | 1981-07-09 |    155 |   64.5 |            1 |
++--------------+------------+--------+--------+--------------+
+(1 row)
+
 
