@@ -179,30 +179,30 @@ Foreign-key constraints:
     "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
 
 $ SELECT character_id FROM characters;
-mario_database=>         
-+--------------+
-| character_id |
-+--------------+
-|            2 |
-|            3 |
-|            7 |
-|            6 |
-|            1 |
-|            4 |
-|            5 |
-+--------------+
+$ SELECT character_id, name FROM characters;
+mario_database=>              
++--------------+--------+
+| character_id |  name  |
++--------------+--------+
+|            2 | Luigi  |
+|            3 | Peach  |
+|            7 | Yoshi  |
+|            6 | Daisy  |
+|            1 | Mario  |
+|            4 | Toad   |
+|            5 | Bowser |
++--------------+--------+
 (7 rows)
 
-$ SELECT character_id, name FROM characters;
+$ SELECT * FROM more_info;
+                              
++--------------+----------+--------+--------+--------------+
+| more_info_id | birthday | height | weight | character_id |
++--------------+----------+--------+--------+--------------+
++--------------+----------+--------+--------+--------------+
+(0 rows)
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);
-mario_database=> SELECT * FROM more_info;
-                               
-+--------------+------------+--------+--------+--------------+
-| more_info_id |  birthday  | height | weight | character_id |
-+--------------+------------+--------+--------+--------------+
-|            1 | 1981-07-09 |    155 |   64.5 |            1 |
-+--------------+------------+--------+--------+--------------+
-(1 row)
+$ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1983-07-14', 175, 48.8, 2);
 
 
