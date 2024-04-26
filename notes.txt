@@ -169,3 +169,6 @@ Foreign-key constraints:
 ALTER TABLE table_name ADD UNIQUE(column_name);
 $ ALTER TABLE more_info ADD UNIQUE(character_id);
 
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+$ ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;
+
