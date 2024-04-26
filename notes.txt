@@ -214,3 +214,6 @@ $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-10-
 
 $ SELECT character_id, name FROM characters WHERE name='Daisy';
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1989-07-31', NULL, NULL, 6);
+
+$ SELECT character_id, name FROM characters WHERE name='Yoshi';
+$ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);
