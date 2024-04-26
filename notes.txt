@@ -219,4 +219,19 @@ $ SELECT character_id, name FROM characters WHERE name='Yoshi';
 $ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1990-04-13', 162, 59.1, 7);
 
 ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
-$ ALTER TABLE more_info RENAME COLUMN height, weight TO height_in_cm, weight_in_kg;
+$ ALTER TABLE more_info RENAME COLUMN height TO height_in_cm;
+$ ALTER TABLE more_info RENAME COLUMN weight TO weight_in_kg;
+$ SELECT * FROM more_info;
+mario_database=>                                      
++--------------+------------+--------------+--------------+--------------+
+| more_info_id |  birthday  | height_in_cm | weight_in_kg | character_id |
++--------------+------------+--------------+--------------+--------------+
+|            1 | 1981-07-09 |          155 |         64.5 |            1 |
+|            2 | 1983-07-14 |          175 |         48.8 |            2 |
+|            3 | 1985-10-18 |          173 |         52.2 |            3 |
+|            4 | 1950-01-10 |           66 |         35.6 |            4 |
+|            5 | 1990-10-29 |          258 |        300.0 |            5 |
+|            6 | 1989-07-31 |              |              |            6 |
+|            7 | 1990-04-13 |          162 |         59.1 |            7 |
++--------------+------------+--------------+--------------+--------------+
+(7 rows)
