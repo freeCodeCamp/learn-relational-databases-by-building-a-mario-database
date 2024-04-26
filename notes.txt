@@ -36,4 +36,8 @@ $ INSERT INTO second_table(id, username) VALUES(1, 'Samus');
 
 SELECT columns FROM table_name;
 $ SELECT * FROM second_table;
+
 $ INSERT INTO second_table(id, username) VALUES(2, 'Mario');
+$ SELECT * FROM second_table;
+
+$ INSERT INTO second_table(id, username) VALUES(3, 'Luigi');
