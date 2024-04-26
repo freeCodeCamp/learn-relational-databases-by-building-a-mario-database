@@ -96,3 +96,4 @@ $ UPDATE characters SET name='Toad' WHERE favorite_color='Red';
 $ UPDATE characters SET name='Mario' WHERE character_id=1;
 $ UPDATE characters SET favorite_color='Blue' WHERE character_id=4;
 $ UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;
+$ UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;
