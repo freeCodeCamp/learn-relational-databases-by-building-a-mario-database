@@ -73,3 +73,4 @@ $ ALTER TABLE characters ADD COLUMN character_id SERIAL;
 $ \d characters
 $ ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;
 $ ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);
+$ ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(60);
