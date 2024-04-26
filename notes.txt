@@ -97,3 +97,8 @@ $ UPDATE characters SET name='Mario' WHERE character_id=1;
 $ UPDATE characters SET favorite_color='Blue' WHERE character_id=4;
 $ UPDATE characters SET favorite_color='Yellow' WHERE character_id=5;
 $ UPDATE characters SET homeland='Koopa Kingdom' WHERE character_id=5;
+$ SELECT * FROM characters;
+
+SELECT columns FROM table_name ORDER BY column_name;
+$ SELECT * FROM characters ORDER BY character_id;
+$ 
