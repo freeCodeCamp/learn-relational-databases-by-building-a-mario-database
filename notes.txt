@@ -2,7 +2,7 @@
 CodeRoad: Start
 $ echo hello PostgreSQL
 $ psql --username=freecodecamp --dbname=postgres
-$ \l #list
+$ \l #list databases
 
 $ CREATE DATABASE first_database;
 $ CREATE DATABASE second_database;
