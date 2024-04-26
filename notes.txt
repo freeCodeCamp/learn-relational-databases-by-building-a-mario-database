@@ -93,3 +93,4 @@ $ SELECT * FROM characters;
 UPDATE table_name SET column_name=new_value WHERE condition;
 $ UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';
 $ UPDATE characters SET name='Toad' WHERE favorite_color='Red';
+$ UPDATE characters SET name='Mario' WHERE character_id=1;
