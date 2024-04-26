@@ -7,3 +7,4 @@ CREATE DATABASE first_database;
 \d #display
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
 ALTER TABLE table_name DROP COLUMN column_name;
+ALTER TABLE table_name RENAME COLUMN column_name TO new_name;
