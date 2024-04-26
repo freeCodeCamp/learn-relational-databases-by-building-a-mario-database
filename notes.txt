@@ -116,5 +116,17 @@ ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
 $ ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;
 $ ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);
 \d
+mario_database=>                         List of relations
++--------+-----------------------------+----------+--------------+
+| Schema |            Name             |   Type   |    Owner     |
++--------+-----------------------------+----------+--------------+
+| public | characters                  | table    | freecodecamp |
+| public | characters_character_id_seq | sequence | freecodecamp |
+| public | more_info                   | table    | freecodecamp |
+| public | more_info_more_info_id_seq  | sequence | freecodecamp |
++--------+-----------------------------+----------+--------------+
+(4 rows)
 
 $ ALTER TABLE more_info ADD COLUMN birthday DATE;
+$ ALTER TABLE more_info ADD COLUMN height INT;
+
